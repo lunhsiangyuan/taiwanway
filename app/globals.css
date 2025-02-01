@@ -2,20 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    /* 主色調改為更紅的棕色 */
+    --primary: 10 65% 45%;
+    --primary-foreground: 60 9.1% 97.8%;
+    /* 次要色調改為淺紅色 */
+    --secondary: 10 30% 95%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 10 30% 95%;
+    --muted-foreground: 25 5.3% 44.7%;
+    /* 強調色改為深紅色 */
+    --accent: 10 70% 40%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 10 65% 45%;
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
