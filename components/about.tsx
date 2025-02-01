@@ -27,11 +27,11 @@ export function About() {
           </p>
           <p className="text-lg text-muted-foreground">
             We are more than just a restaurant; we are a platform for cultural exchange. Here, you can taste the flavors
-            of home, experience Taiwan's warm hospitality, and immerse yourself in a unique culinary culture.
+            of home, experience Taiwan  warm hospitality, and immerse yourself in a unique culinary culture.
           </p>
           <p className="text-lg font-semibold">來 TaiwanWay，讓我們一起分享美食，傳遞溫暖，品味台灣！</p>
           <p className="text-lg font-semibold">
-            Come to Taiwan Way, let's share great food, spread warmth, and savor Taiwan together!
+            Come to Taiwan Way, let&apos;s share great food, spread warmth, and savor Taiwan together!
           </p>
         </div>
       </div>
