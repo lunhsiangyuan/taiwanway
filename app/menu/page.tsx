@@ -67,8 +67,8 @@ export default function MenuPage() {
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8">Full Menu 完整菜單</h1>
+      <div className="w-full max-w-7xl mx-auto py-8">
+        <h1 className="text-4xl font-bold mb-8 px-4">Full Menu 完整菜單</h1>
         {menuCategories.map((category) => (
           <MenuCategory key={category.id} id={category.id} title={category.title} items={category.items} />
         ))}

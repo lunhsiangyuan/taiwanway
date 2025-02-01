@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Mail, Phone } from "lucide-react"
 export function Footer() {
   return (
     <footer className="bg-secondary/30 border-t">
-      <div className="container py-8 md:py-12">
+      <div className="w-full px-4 md:px-6 lg:px-8 max-w-screen-2xl mx-auto py-8 pb-16 md:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-semibold mb-4">快速連結 Quick Links</h3>
@@ -42,9 +42,9 @@ export function Footer() {
             <p className="text-muted-foreground">845-381-1002</p>
             <p className="text-muted-foreground">usamyheish@gmail.com</p>
           </div>
-          <div>
+          <div className="pb-6 md:pb-0">
             <h3 className="font-semibold mb-4">關注我們 Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary">
                 <Facebook className="h-6 w-6" />
               </a>
