@@ -19,15 +19,16 @@ export function Contact() {
               <Clock className="h-8 w-8 text-primary" />
             </div>
             <h3 className="font-semibold mb-2">營業時間 Hours</h3>
+            <p className="text-muted-foreground">週一、二、五、六</p>
             <p className="text-muted-foreground">11:00 AM - 7:00 PM</p>
-            <p className="text-muted-foreground">週一至週日 Monday - Sunday</p>
           </div>
           <div className="text-center">
             <div className="flex justify-center mb-4">
               <Phone className="h-8 w-8 text-primary" />
             </div>
             <h3 className="font-semibold mb-2">聯絡我們 Contact</h3>
-            <p className="text-muted-foreground">+1 (555) 123-4567</p>
+            <p className="text-muted-foreground">845-381-1002</p>
+            <p className="text-muted-foreground">usamyheish@gmail.com</p>
           </div>
         </div>
         <div className="mt-12 text-center">

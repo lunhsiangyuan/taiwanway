@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Twitter } from "lucide-react"
+import { Facebook, Instagram, Twitter, Mail, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -33,14 +33,14 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-semibold mb-4">營業時間 Hours</h3>
-            <p className="text-muted-foreground">週一至週日 Mon-Sun</p>
+            <p className="text-muted-foreground">週一、二、五、六</p>
             <p className="text-muted-foreground">11:00 AM - 7:00 PM</p>
           </div>
           <div>
             <h3 className="font-semibold mb-4">聯絡我們 Contact</h3>
             <p className="text-muted-foreground">26 South St, Middletown NY</p>
-            <p className="text-muted-foreground">+1 (555) 123-4567</p>
-            <p className="text-muted-foreground">info@taiwanway.com</p>
+            <p className="text-muted-foreground">845-381-1002</p>
+            <p className="text-muted-foreground">usamyheish@gmail.com</p>
           </div>
           <div>
             <h3 className="font-semibold mb-4">關注我們 Follow Us</h3>
@@ -54,11 +54,17 @@ export function Footer() {
               <a href="#" className="text-muted-foreground hover:text-primary">
                 <Twitter className="h-6 w-6" />
               </a>
+              <a href="mailto:usamyheish@gmail.com" className="text-muted-foreground hover:text-primary">
+                <Mail className="h-6 w-6" />
+              </a>
+              <a href="tel:845-381-1002" className="text-muted-foreground hover:text-primary">
+                <Phone className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-muted-foreground">
-          <p>&copy; 2023 Taiwan Way. All rights reserved.</p>
+          <p>&copy; 2025 Taiwanway. All rights reserved.</p>
         </div>
       </div>
     </footer>

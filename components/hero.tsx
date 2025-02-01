@@ -3,35 +3,40 @@ import { Button } from "@/components/ui/button"
 
 export function Hero() {
   return (
-    <div className="relative bg-secondary">
-      <div className="container flex flex-col lg:flex-row items-center gap-8 py-20">
-        <div className="flex-1 text-center lg:text-left">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-            歡迎來到
-            <span className="text-primary"> 台灣之味</span>
-          </h1>
-          <p className="mx-auto lg:mx-0 mt-4 max-w-[700px] text-lg text-muted-foreground">
-            在紐約體驗道地的台灣美食。從我們的招牌牛肉麵到珍珠奶茶， 每一道菜都為您帶來台灣的溫暖與美味。
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              查看菜單 View Menu
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-              線上訂餐 Order Online
-            </Button>
+    <div>
+      {/* Image Section */}
+      <section className="relative h-[70vh] w-full">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9053.JPG-4ohewz2SiN4NhrcIua5RHH3DvjCKYW.jpeg"
+          alt="TaiwanWay storefront with beautiful pink dogwood blossoms"
+          fill
+          className="object-cover"
+          priority
+        />
+      </section>
+
+      {/* Content Section */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              歡迎來到
+              <span className="text-primary"> 台灣味</span>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8">
+              在紐約體驗道地的台灣美食。從我們的招牌牛肉麵到珍珠奶茶， 每一道菜都為您帶來台灣的溫暖與美味。
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
+                查看菜單 View Menu
+              </Button>
+              <Button size="lg" variant="outline">
+                線上訂餐 Order Online
+              </Button>
+            </div>
           </div>
         </div>
-        <div className="flex-1 relative aspect-square w-full max-w-[500px]">
-          <Image
-            src="/placeholder.svg"
-            alt="Taiwanese Cuisine"
-            fill
-            className="object-cover rounded-lg shadow-lg"
-            priority
-          />
-        </div>
-      </div>
+      </section>
     </div>
   )
 }
