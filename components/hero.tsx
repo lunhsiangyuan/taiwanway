@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <div>
       {/* Image Section */}
-      <section className="relative h-[50vh] md:h-[70vh] w-full overflow-hidden">
+      <section className="relative h-[70vh] w-full overflow-hidden">
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9053.JPG-4ohewz2SiN4NhrcIua5RHH3DvjCKYW.jpeg"
           alt="TaiwanWay storefront with beautiful pink dogwood blossoms"

@@ -7,13 +7,13 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 
 const menuItems = [
-  { name: "Full Menu 完整菜單", href: "/menu" },
   { name: "Snacks 小點心", href: "/menu#snacks" },
   { name: "Main Dishes 主餐", href: "/menu#main-dishes" },
-  { name: "Drinks 飲品", href: "/menu#drinks" },
   { name: "Desserts 甜點", href: "/menu#desserts" },
+  { name: "Drinks 飲品", href: "/menu#drinks" },
 ]
 
 export function Header() {
@@ -36,8 +36,17 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="w-full px-4 md:px-6 lg:px-8 max-w-screen-2xl mx-auto flex h-16 items-center">
-        <Link href="/" className="font-bold text-2xl text-primary mr-6">
+        <Link href="/" className="font-bold text-2xl text-primary mr-2 flex items-center gap-2">
           Taiwanway
+          <div className="hidden md:flex h-12 w-auto aspect-[2/1] relative">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-A(%E5%8E%BB%E8%83%8C)-01-md2UWlZPf63lgtuEOcu8FhyaJJySOU.png"
+              alt="Taiwanway Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </Link>
 
         <nav className="hidden md:flex gap-6 flex-1">
