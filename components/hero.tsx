@@ -5,14 +5,18 @@ export function Hero() {
   return (
     <div>
       {/* Image Section */}
-      <section className="relative h-[70vh] w-full overflow-hidden">
-        <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9053.JPG-4ohewz2SiN4NhrcIua5RHH3DvjCKYW.jpeg"
-          alt="TaiwanWay storefront with beautiful pink dogwood blossoms"
-          fill
-          className="object-cover object-center"
-          priority
-        />
+      <section className="relative h-[50vh] sm:h-[70vh] w-full overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9053.JPG-4ohewz2SiN4NhrcIua5RHH3DvjCKYW.jpeg"
+            alt="TaiwanWay storefront with beautiful pink dogwood blossoms"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       </section>
 
       {/* Content Section */}

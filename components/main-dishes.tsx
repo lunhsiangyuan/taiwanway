@@ -19,7 +19,7 @@ export function MainDishes() {
     <section id="main-dishes" className="mb-12 scroll-mt-20">
       <h2 className="text-3xl font-bold mb-6 px-4">Main Dishes 主餐</h2>
       <div className="px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {mainDishes.map((dish, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="relative h-48 w-full">

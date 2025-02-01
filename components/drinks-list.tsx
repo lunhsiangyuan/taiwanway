@@ -87,7 +87,7 @@ export function DrinksList() {
           nameCh: "蜂蜜烏龍奶茶",
           price: "5.25",
           options: "(H/C)",
-        }
+        },
       ],
     },
     {
@@ -159,7 +159,7 @@ export function DrinksList() {
                 </h3>
                 <div className="h-0.5 bg-primary w-full"></div>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {category.items.map((item, itemIndex) => (
                   <div key={itemIndex} className="flex justify-between items-start gap-4">
                     <div className="space-y-1">

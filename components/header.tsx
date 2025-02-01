@@ -10,9 +10,7 @@ import { usePathname } from "next/navigation"
 import Image from "next/image"
 
 const menuItems = [
-  { name: "Snacks 小點心", href: "/menu#snacks" },
   { name: "Main Dishes 主餐", href: "/menu#main-dishes" },
-  { name: "Desserts 甜點", href: "/menu#desserts" },
   { name: "Drinks 飲品", href: "/menu#drinks" },
 ]
 
