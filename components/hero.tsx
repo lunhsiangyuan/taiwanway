@@ -1,42 +1,51 @@
+'use client'
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function Hero() {
+  const { t } = useLanguage()
+
   return (
     <div>
       {/* Image Section */}
-      <section className="relative h-[50vh] sm:h-[70vh] w-full overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
+      <section className="relative h-[50vh] sm:h-[70vh] w-full overflow-hidden px-4 md:px-6">
+        <div className="absolute inset-0 w-full h-full rounded-lg">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9053.JPG-4ohewz2SiN4NhrcIua5RHH3DvjCKYW.jpeg"
             alt="TaiwanWay storefront with beautiful pink dogwood blossoms"
             fill
-            className="object-cover object-center"
+            className="object-cover rounded-lg sm:object-center object-[15%_center]"
             sizes="100vw"
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
       </section>
 
       {/* Content Section */}
       <section className="py-16 bg-secondary/30">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              歡迎來到
-              <span className="text-primary"> 台灣味</span>
+              {t('hero.welcome')}
+              <span className="text-primary"> {t('hero.brandName')}</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              在紐約體驗道地的台灣美食。從我們的招牌牛肉麵到珍珠奶茶， 每一道菜都為您帶來台灣的溫暖與美味。
+              {t('hero.description')}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
-                查看菜單 View Menu
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8" asChild>
+                <Link href="/menu">
+                  {t('hero.viewMenu')}
+                </Link>
               </Button>
-              <Button size="lg" variant="outline">
-                線上訂餐 Order Online
-              </Button>
+              {/* 訂餐功能尚未完成 */}
+              {/* <Button size="lg" variant="outline" className="hidden">
+                {t('hero.orderOnline')}
+              </Button> */}
             </div>
           </div>
         </div>

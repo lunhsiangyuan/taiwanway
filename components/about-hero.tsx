@@ -2,17 +2,14 @@ import Image from "next/image"
 
 export function AboutHero() {
   return (
-    <section className="relative h-[50vh] min-h-[300px] w-full">
-      <div className="absolute inset-0 w-full h-full">
-        <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9053.JPG-4ohewz2SiN4NhrcIua5RHH3DvjCKYW.jpeg"
-          alt="TaiwanWay storefront with beautiful pink dogwood blossoms"
-          fill
-          className="object-cover"
-          priority
+    <section className="relative h-[40vh] min-h-[320px] w-full bg-[#F5E6D3] px-4 md:px-6">
+      <div className="absolute inset-0 w-full h-full rounded-lg">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0329-4xKjbDPxXgMadO2d2D81rsDbqYYh6q.jpeg"
+          alt="Taiwanway Logo"
+          className="w-full h-full object-cover rounded-lg sm:object-center object-[15%_center]"
         />
       </div>
-      <div className="absolute inset-0 bg-black/30" />
     </section>
   )
 }
