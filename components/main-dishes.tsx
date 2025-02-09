@@ -1,46 +1,83 @@
 'use client'
 
 import { useLanguage } from "@/lib/i18n/language-context"
+import Image from "next/image"
+
+type MenuItem = {
+  name: string;
+  description: string;
+  price: string;
+}
+
+const menuImages = {
+  pineappleCake: "https://06jfzz4maekxll04.public.blob.vercel-storage.com/pineapple-cake-QtQVUryed5EphoMtw2te8NyLjQFrSq.jpg",
+  beefNoodle: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2467.JPG-12cMHEqSdXbYmVHMe0F7GS10Fauj7H.jpeg",
+  braisedPork: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2466.JPG-RIKgCt96QrGfXKlfWAgI8BjZN2thK1.jpeg",
+}
 
 export function MainDishes() {
   const { t } = useLanguage()
 
-  const mainDishes = [
-    {
-      key: 'braisedPork',
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2466.JPG-RIKgCt96QrGfXKlfWAgI8BjZN2thK1.jpeg",
-    },
-    {
-      key: 'beefNoodle',
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2467.JPG-12cMHEqSdXbYmVHMe0F7GS10Fauj7H.jpeg",
-    },
-    // 可以根据需要添加更多主菜
-  ]
+  const desserts = t('menu.mainDishesList.categories.desserts.items') as unknown as Record<string, MenuItem>
+  const mainDishItems = {
+    braisedPork: t('menu.mainDishesList.categories.riceDishes.items.braisedPork') as unknown as MenuItem,
+    beefNoodle: t('menu.mainDishesList.categories.noodleSoups.items.beefNoodle') as unknown as MenuItem,
+  }
 
   return (
-    <section id="main-dishes" className="mb-12 scroll-mt-20">
-      <h2 className="text-3xl font-bold mb-6 px-4">{t('menu.mainDishes')}</h2>
-      <div className="px-4 md:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {mainDishes.map((dish) => (
-            <div key={dish.key} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="relative h-48 w-full">
-                <img
-                  src={dish.image}
-                  alt={t(`menu.items.${dish.key}.name`)}
-                  className="object-cover object-center w-full h-full"
+    <div>      
+      {/* Main Dishes Section */}
+      <div id="main-dishes" className="mb-16 scroll-mt-20">
+        <h3 className="text-2xl font-semibold mb-8">{t('menu.sections.mainDishes.title')}</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {Object.entries(mainDishItems).map(([key, item]) => (
+            <div key={key} className="flex flex-col md:flex-row gap-6 items-start">
+              <div className="relative w-full md:w-48 h-48 rounded-lg overflow-hidden">
+                <Image
+                  src={menuImages[key as keyof typeof menuImages]}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2">{t(`menu.items.${dish.key}.name`)}</h3>
-                <p className="text-sm text-gray-600 mb-2">{t(`menu.items.${dish.key}.description`)}</p>
-                <p className="text-primary font-bold">${t(`menu.mainDishesList.categories.${dish.key === 'braisedPork' ? 'riceDishes' : 'noodleSoups'}.items.${dish.key}.price`)}</p>
+              <div className="flex-1 flex flex-col justify-between h-48">
+                <div>
+                  <h4 className="text-xl font-semibold">{item.name}</h4>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </div>
+                <p className="text-lg font-medium">${item.price}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </section>
+
+      {/* Desserts Section */}
+      <div id="desserts" className="mb-16 scroll-mt-20">
+        <h3 className="text-2xl font-semibold mb-8">{t('menu.mainDishesList.categories.desserts.title')}</h3>
+        <div className="grid gap-8">
+          {Object.entries(desserts).map(([key, item]) => (
+            <div key={key} className="flex flex-col md:flex-row gap-6 items-start">
+              <div className="relative w-full md:w-48 h-48 rounded-lg overflow-hidden">
+                <Image
+                  src={menuImages[key as keyof typeof menuImages]}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex-1 flex flex-col justify-between h-48">
+                <div>
+                  <h4 className="text-xl font-semibold">{item.name}</h4>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </div>
+                <p className="text-lg font-medium">${item.price}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 

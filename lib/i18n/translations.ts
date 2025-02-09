@@ -19,6 +19,7 @@ export const translations = {
     },
     menu: {
       mainDishes: '主餐',
+      desserts: '自製甜點',
       drinks: '飲品',
       items: {
         beefNoodle: {
@@ -32,6 +33,10 @@ export const translations = {
         dessert: {
           name: '自製甜點',
           description: '每日新鮮手作甜點',
+        },
+        pineappleCake: {
+          name: '台灣鳳梨酥',
+          description: '每日現作',
         },
         bubbleTea: {
           name: '珍珠奶茶',
@@ -174,6 +179,16 @@ export const translations = {
       },
       mainDishesList: {
         categories: {
+          desserts: {
+            title: "自製甜點",
+            items: {
+              pineappleCake: {
+                name: "台灣鳳梨酥",
+                description: "每日現作",
+                price: "2.85"
+              }
+            }
+          },
           riceDishes: {
             title: "飯類",
             items: {
@@ -254,6 +269,7 @@ export const translations = {
     },
     menu: {
       mainDishes: 'Main Dishes',
+      desserts: 'Homemade Desserts',
       drinks: 'Drinks',
       items: {
         beefNoodle: {
@@ -267,6 +283,10 @@ export const translations = {
         dessert: {
           name: 'Homemade Dessert',
           description: 'Fresh daily handmade desserts',
+        },
+        pineappleCake: {
+          name: 'Taiwan Pineapple Cake',
+          description: 'Freshly made daily',
         },
         bubbleTea: {
           name: 'Bubble Tea',
@@ -409,6 +429,16 @@ export const translations = {
       },
       mainDishesList: {
         categories: {
+          desserts: {
+            title: "Homemade Dessert",
+            items: {
+              pineappleCake: {
+                name: "Taiwan Pineapple Cake",
+                description: "Freshly made daily",
+                price: "2.85"
+              }
+            }
+          },
           riceDishes: {
             title: "Rice Dishes",
             items: {
@@ -489,6 +519,7 @@ export const translations = {
     },
     menu: {
       mainDishes: 'Platos Principales',
+      desserts: 'Postres Caseros',
       drinks: 'Bebidas',
       items: {
         beefNoodle: {
@@ -502,6 +533,10 @@ export const translations = {
         dessert: {
           name: 'Postres Caseros',
           description: 'Postres frescos hechos a mano diariamente',
+        },
+        pineappleCake: {
+          name: 'Pastel de Piña Taiwanesa',
+          description: 'Fresco hecho diariamente',
         },
         bubbleTea: {
           name: 'Té de Burbujas',
@@ -644,6 +679,16 @@ export const translations = {
       },
       mainDishesList: {
         categories: {
+          desserts: {
+            title: "Postres Caseros",
+            items: {
+              pineappleCake: {
+                name: "Pastel de Piña Taiwanesa",
+                description: "Fresco hecho diariamente",
+                price: "2.85"
+              }
+            }
+          },
           riceDishes: {
             title: "Platos de Arroz",
             items: {

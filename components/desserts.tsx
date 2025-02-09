@@ -7,28 +7,16 @@ export function Desserts() {
       image: "/placeholder.svg",
     },
     {
-      name: "芒果冰 Mango Shaved Ice",
-      description: "清爽消暑的夏日甜品",
-      price: "6.99",
-      image: "/placeholder.svg",
-    },
-    {
-      name: "豆花 Tofu Pudding",
-      description: "滑嫩香甜的傳統甜品",
-      price: "4.99",
-      image: "/placeholder.svg",
-    },
-    {
       name: "蛋糕捲 Cake Roll",
       description: "輕盈蓬鬆的美味蛋糕",
       price: "5.99",
       image: "/placeholder.svg",
-    },
+    }
   ]
 
   return (
     <section id="desserts" className="mb-12 scroll-mt-20">
-      <h2 className="text-3xl font-bold mb-6 px-4">Desserts 甜點</h2>
+      <h2 className="text-3xl font-bold mb-6 px-4">Desserts 自製甜點</h2>
       <div className="px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {desserts.map((dessert, index) => (
@@ -52,4 +40,3 @@ export function Desserts() {
     </section>
   )
 }
-

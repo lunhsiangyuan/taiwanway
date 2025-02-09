@@ -6,13 +6,14 @@ import { MapPin, Menu, ChevronDown, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 const menuItems = [
   { key: 'mainDishes', href: '/menu#main-dishes' },
+  { key: 'desserts', href: '/menu#desserts' },
   { key: 'drinks', href: '/menu#drinks' },
 ] as const
 
@@ -27,17 +28,22 @@ export function Header() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
+  const router = useRouter()
 
   const handleMenuClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (!href.includes("#")) return
+    e.preventDefault()
+    
+    const id = href.split("#")[1]
+    if (!id) return
 
-    if (pathname === "/menu") {
-      e.preventDefault()
-      const id = href.split("#")[1]
-      const element = document.getElementById(id)
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
-      }
+    if (pathname !== "/menu") {
+      router.push(`/menu#${id}`)
+      return
+    }
+
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
     }
   }
 
@@ -63,12 +69,12 @@ export function Header() {
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="font-medium hover:text-primary transition-colors flex items-center">
-              {t('nav.menu')} <ChevronDown className="ml-1 h-4 w-4" />
+              <Link href="/menu">{t('nav.menu')}</Link> <ChevronDown className="ml-1 h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               {menuItems.map((item) => (
-                <DropdownMenuItem key={item.key} className="font-medium">
-                  <Link href={item.href} onClick={(e) => handleMenuClick(e, item.href)}>
+                <DropdownMenuItem key={item.key} asChild>
+                  <Link href={item.href} onClick={(e) => handleMenuClick(e, item.href)} className="w-full">
                     {t(`menu.${item.key}`)}
                   </Link>
                 </DropdownMenuItem>

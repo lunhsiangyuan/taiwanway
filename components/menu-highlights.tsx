@@ -19,6 +19,10 @@ const highlights = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1167.JPG-2RGQnkcNjgJUfESKiEk8uNRWm7dqdR.jpeg",
   },
   {
+    key: 'pineappleCake',
+    image: "https://06jfzz4maekxll04.public.blob.vercel-storage.com/pineapple-cake-QtQVUryed5EphoMtw2te8NyLjQFrSq.jpg",
+  },
+  {
     key: 'bubbleTea',
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9009.JPG-8Ke0jB3xYx1Ws4ynQLZCXnhyQcsYEl.jpeg",
   },
@@ -70,4 +74,3 @@ export function MenuHighlights() {
     </div>
   )
 }
-
