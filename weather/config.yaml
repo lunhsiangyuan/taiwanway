@@ -1,0 +1,262 @@
+# Weather Prediction System Configuration
+# 天氣預測系統配置檔
+
+# 系統基本設定
+system:
+  name: "Weather Prediction System"
+  version: "1.0.0"
+  language: "zh-TW"
+  timezone: "America/New_York"
+
+# 地理位置 (餐廳所在地)
+location:
+  city: "New York"
+  state: "NY"
+  country: "US"
+  lat: 40.7128
+  lon: -74.0060
+
+# 資料路徑設定
+paths:
+  base: "weather"
+  data:
+    raw: "data/raw"
+    processed: "data/processed"
+    audit: "data/audit"
+  models:
+    local: "models/local"
+    gcp: "models/gcp"
+  predictions: "predictions"
+  reports: "reports"
+
+# 天氣 API 設定 (Open-Meteo - 免費、不需 API Key)
+weather_api:
+  provider: "open-meteo"
+  version: "1.0"
+  endpoints:
+    history: "https://archive-api.open-meteo.com/v1/archive"
+    forecast: "https://api.open-meteo.com/v1/forecast"
+  rate_limit:
+    calls_per_day: 10000
+    calls_per_second: 10
+    delay_between_calls: 0.1  # 秒
+  units: "metric"  # 攝氏溫度 (Open-Meteo 預設)
+  data_delay_days: 5  # 歷史數據延遲 5 天
+
+# 數據設定
+data:
+  # 歷史數據範圍
+  history:
+    start_date: "2024-04-01"
+    source: "square_payments"
+
+  # 預測範圍
+  forecast:
+    default_days: 7
+    max_days: 7
+
+  # 目標變數
+  targets:
+    - "visitor_count"
+    - "total_revenue"
+    - "bento_count"
+
+  # 特徵欄位
+  features:
+    weather:
+      - "temp_avg"
+      - "temp_high"
+      - "temp_low"
+      - "precipitation"
+      - "humidity"
+      - "wind_speed"
+    holiday:
+      - "is_holiday"
+      - "is_long_weekend"
+      - "is_school_break"
+      - "days_to_next_holiday"
+    time:
+      - "day_of_week"
+      - "month"
+      - "is_weekend"
+    derived:
+      - "temp_category"
+      - "is_rainy"
+      - "temp_delta"
+
+# 業務規則
+business_rules:
+  operating_days: [0, 1, 4, 5]  # Monday, Tuesday, Friday, Saturday
+  operating_hours:
+    open: 10
+    close: 20
+  closed_months: [6, 7]  # June, July (暑假)
+  special_closed_days:
+    - "12-25"  # Christmas
+    - "01-01"  # New Year
+
+# 稅率設定
+tax:
+  nyc_sales_tax: 0.08875
+  breakdown:
+    ny_state: 0.04
+    nyc: 0.045
+    mta: 0.00375
+
+# 模型設定
+model:
+  # 預設模型
+  default: "linear"
+
+  # 本地模型設定
+  local:
+    type: "LinearRegression"
+    features_to_scale:
+      - "temp_avg"
+      - "temp_high"
+      - "temp_low"
+      - "precipitation"
+      - "humidity"
+      - "days_to_next_holiday"
+    scaling_method: "minmax"
+
+  # GCP 模型設定
+  gcp:
+    project: "${GOOGLE_CLOUD_PROJECT}"
+    location: "us-central1"
+    bigquery_ml:
+      model_type: "BOOSTED_TREE_REGRESSOR"
+      num_parallel_tree: 8
+      max_iterations: 50
+    vertex_ai:
+      budget_milli_node_hours: 1000
+
+  # 模型選擇條件
+  selection_criteria:
+    use_local:
+      - "data_records < 1000"
+      - "simple_prediction"
+    use_gcp:
+      - "data_records >= 1000"
+      - "need_automl"
+
+# 驗證設定
+validation:
+  # 交叉驗證
+  cross_validation:
+    n_splits: 5
+    method: "TimeSeriesSplit"
+
+  # 評估閾值
+  thresholds:
+    mape:
+      excellent: 10
+      good: 15
+      acceptable: 20
+      warning: 30
+      fail: 30
+    r2:
+      excellent: 0.85
+      good: 0.75
+      acceptable: 0.60
+      warning: 0.50
+      fail: 0.50
+
+  # 預測值合理性檢查
+  prediction_bounds:
+    visitors:
+      min: 0
+      max: 200
+    revenue:
+      min: 0
+      max: 5000
+    bento:
+      min: 0
+      max_ratio_to_visitors: 0.6
+
+# Audit 設定
+audit:
+  # 數據品質閾值
+  quality_thresholds:
+    missing_pct_warning: 0.05
+    missing_pct_fail: 0.20
+    outlier_pct_warning: 0.02
+
+  # 人工確認
+  require_confirmation: true
+  skip_confirmation_flag: "--skip-audit"
+
+# 報告設定
+report:
+  formats:
+    - "markdown"
+    - "json"
+  charts:
+    enabled: true
+    dpi: 150
+    style: "seaborn"
+  include_sections:
+    - "weekly_summary"
+    - "daily_predictions"
+    - "preparation_recommendations"
+    - "risk_alerts"
+    - "model_performance"
+
+# 備料計算設定
+preparation:
+  buffer_percentage:
+    default: 0.15
+    holiday_week: 0.20
+    uncertain_weather: 0.25
+
+  material_per_bento:
+    rice_cups: 0.32
+    meat_lbs: 0.10
+    vegetables_lbs: 0.20
+    eggs: 1.0
+    containers: 1.1
+
+# 天氣影響係數
+weather_impact:
+  rain:
+    light: -0.05
+    moderate: -0.15
+    heavy: -0.25
+  temperature:
+    cold: -0.10
+    mild: 0
+    hot: -0.05
+  extreme:
+    snow_day: -0.40
+    storm: -0.50
+
+# 假日影響係數
+holiday_impact:
+  very_high: 0.50
+  high: 0.30
+  medium: 0.15
+  low: 0.05
+  long_weekend:
+    3_day: 0.20
+    4_day: 0.30
+  pre_holiday: 0.15
+
+# 星期影響係數
+day_impact:
+  monday: 0
+  tuesday: -0.05
+  friday: 0.08
+  saturday: 0.15
+
+# 日誌設定
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "weather/logs/prediction.log"
+
+# 效能設定
+performance:
+  parallel_execution: true
+  batch_size: 20
+  cache_enabled: true
+  cache_ttl: 3600  # 秒

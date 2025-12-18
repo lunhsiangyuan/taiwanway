@@ -1,0 +1,70 @@
+# Kaplan-Meier 存活分析與產品關聯分析摘要
+
+生成日期： 2025-11-16
+資料來源：Square POS (2025-01-01 至 2025-11-16)
+
+## 分析項目
+
+### 1. 顧客存活分析（Kaplan-Meier）
+
+- 用餐方式（內用/外帶/外送）對顧客保留的影響
+- 首購是否為 Combo 對顧客保留的影響
+- 是否曾購買 Combo 對顧客保留的影響
+- 商品多樣性（Category 層級）對顧客保留的影響
+- 商品多樣性（Item 層級）對顧客保留的影響
+
+統計方法：Log-rank (Mantel-Cox) 檢定，多組比較使用 Holm-Bonferroni 校正
+
+### 2. 產品關聯分析
+
+- 分析產品間的購買關聯（Association Rules）
+- 計算 support、confidence、lift 指標
+- 使用卡方檢定或 Fisher's exact test 評估顯著性
+- Lift > 1 表示正向關聯，< 1 表示負向關聯
+
+### 3. 時段產品偏好分析
+
+- 劃分三個時段：午餐（11-13）、下午茶（14-16）、晚餐（17-18）
+- 分析各時段的產品偏好（Lift 值）
+- 使用卡方檢定評估時段分佈顯著性
+
+## 輸出檔案
+
+### 報告
+- km_association_report.pdf：完整分析報告（KM 曲線 + 關聯分析）
+- km_heatmap_report.pdf：詳細報告（含 pairwise 比較和統計表）
+
+### 圖表
+- 5 張 KM 存活曲線圖（含 95% CI 和 risk table）
+- 產品關聯表格
+- 產品關聯熱力圖
+- 時段產品熱力圖
+- 時段偏好前 10 名圖表
+
+### 統計數據
+- logrank_results.csv：Log-rank 檢定結果
+- pairwise_comparisons.rds：Pairwise 比較 p 值
+- product_association.csv：產品關聯統計
+- time_product_stats.csv：時段產品統計
+
+## 解讀指南
+
+### Kaplan-Meier 曲線
+- Y 軸：存活機率（1 = 100% 保留，0 = 完全流失）
+- X 軸：存活時間（天數）
+- 陰影區域：95% 信賴區間
+- p 值 < 0.05：組間差異顯著
+
+### Lift 值
+- Lift > 1：正向關聯（一起購買的傾向高於期望）
+- Lift = 1：獨立（無關聯）
+- Lift < 1：負向關聯（一起購買的傾向低於期望）
+
+### 顯著性標記
+- * : p < 0.05
+- ** : p < 0.01
+- *** : p < 0.001
+- ns : not significant (p ≥ 0.05)
+
+---
+報告完成

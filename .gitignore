@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data files (large)
+*.csv
+*.json
+*.xlsx
+*.xls
+*.pkl
+*.pickle
+
+# Output files
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.html
+
+# Logs
+*.log
+# Keep important text files
+!commands.txt
+!README*.txt
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# MCP and API keys
+*.env
+.env.local
+config.local.yaml
+
+# Memory store
+agents/memory_store/
+

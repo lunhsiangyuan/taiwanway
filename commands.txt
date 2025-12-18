@@ -1,0 +1,331 @@
+================================================================================
+使用 MCP Square 工具下載剩餘的 cursor
+================================================================================
+
+總共需要下載: 694 個 cursor
+已完成: 0 個
+失敗: 0 個
+剩餘: 694 個
+================================================================================
+
+準備下載第 61-80 個 cursor (共 20 個)
+
+⚠️  此腳本需要使用 MCP Square 工具來實際下載
+   請使用以下命令在 MCP Square 中執行：
+
+# ───────────────────────────────────────────────────────
+# Cursor #61/694: 29c1cc61-e33e-4f1b-a27e-7d3b80a50fe5.txt
+# 日期範圍: 2025-09-29 to 2025-10-04
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTk1OTM5NDk0NjEsImlkIjoiWFQ4Q0JyTlhBWFlBRmpGeU5ITmxVdmxHdWFCIn0",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #62/694: e77f5afb-3cde-47ed-bf30-d49f86420688.txt
+# 日期範圍: 2025-08-23 to 2025-08-26
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTYyMjMzNjkyMTcsImlkIjoiUHhQckhLcUhMNVBDbVpJaEh1S0Q4ejdFdmFCIn0",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #63/694: f37276b4-9bb6-43de-8b7c-65f3dc43986f.txt
+# 日期範圍: 2025-02-04 to 2025-02-14
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3Mzk1NTY4NDQ3MzQsImlkIjoiQlFTREp6bGIzV2NEdlltNDZOVm55YzE5T2FkWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #64/694: 91bf2e43-8018-4f91-9bc7-2cbc19538069.txt
+# 日期範圍: 2024-06-10 to 2024-06-14
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3MTgzOTU5MjUxNzgsImlkIjoiZjk5UGVzWEh3bFpXRHpuNVBsdnlxeGh1dmFCIn0",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #65/694: 88adb13f-19c8-475e-8941-d3efd4fa5379.txt
+# 日期範圍: 2025-09-26 to 2025-09-29
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTkxODE4MjQ3MTIsImlkIjoiRExoTTVKNzBWZjh2b251ckwybHJkYTRMYTBYWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #66/694: 7c6129a6-8250-456f-8eab-36d93e87e471.txt
+# 日期範圍: 2025-02-04 to 2025-02-14
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3Mzk1NTU5ODg1MjEsImlkIjoidE9vYUVkcXgwRWlUUElkbHBkYzc2RVFWRnpNWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #67/694: c9583526-5abd-42ec-a035-b82b95f69069.txt
+# 日期範圍: 2025-03-04 to 2025-03-10
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NDE2MjQxNTUwMTMsImlkIjoiRExucGNBZmRQNFNHV2ZIODVwY3FWOGxSNjE4WVkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #68/694: 44140c4c-7a85-4c85-a435-fa914a32302d.txt
+# 日期範圍: 2025-09-16 to 2025-09-19
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTgzMjIwMDY4NzgsImlkIjoiRnd0dEh4RlZPdXpKWUVXbjhHNFVkRzNwSTBkWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #69/694: 37bda18d-da1c-427d-82f4-2e47018f9766.txt
+# 日期範圍: 2025-08-30 to 2025-09-02
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTY4Mzg1NzM4NDEsImlkIjoiaFU0eDN5YW1xZnZxNmtURlE2V3A4bE5zMXFKWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #70/694: a0456b39-c772-469e-baf6-1595b4ec8774.txt
+# 日期範圍: 2025-09-29 to 2025-10-03
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTk1MjE4NTc1MDEsImlkIjoiUDNHVHdqTzJiMWRvdkRJVzJwRml3Y2VaSU9QWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #71/694: 3f9bde71-4256-4e8c-a482-2fae5a211ea8.txt
+# 日期範圍: 2025-10-03 to 2025-10-06
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTk3NjcxODA1NjMsImlkIjoidEdBZWJYZ25tQUV5TTlRSXJUVmpERkZUVjJHWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #72/694: 07bdfb37-fc78-4b33-a213-ce688a132a75.txt
+# 日期範圍: 2025-09-23 to 2025-09-29
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTkxNjU2MDAzMTcsImlkIjoiOTJDZGZSVjlTSFVBTzJFTzBHbVROMXhkelZLWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #73/694: 7c32d8c9-b215-498c-b657-172c8274a5ab.txt
+# 日期範圍: 2025-10-07 to 2025-10-10
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NjAxMzQzNzA4MTgsImlkIjoiVndKTm5SUHBSOWRqNkdGclpzVUxLdkxCc29mWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #74/694: af255c20-3593-433e-aaf1-1d194a439bb3.txt
+# 日期範圍: 2025-09-13 to 2025-09-16
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTgwMzUzODk2NjMsImlkIjoieDBZUGRndzNpempmM296cVBDOXVEc2g1bXNSWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #75/694: 6ba97ce9-fbb9-4896-8475-4044187d99e2.txt
+# 日期範圍: 2025-11-03 to 2025-11-08
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NjIyMDEyNDcwNTgsImlkIjoiVEJJbWdTeXBUbWkyTU5XYWR0WlBtVVN3dXBYWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #76/694: 8feabbf5-384e-429c-ae0b-5c2fdb0f8163.txt
+# 日期範圍: 2024-05-29 to 2024-06-04
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3MTc1MTg5ODU0MjAsImlkIjoiRkFOTGEwd1M0SDU3OG9WbGtyTVJTTGR0dmFCIn0",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #77/694: 37ba91f3-f933-4523-a7cc-7d9a0aae703b.txt
+# 日期範圍: 2025-09-29 to 2025-10-04
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTk1OTM5NDk0NjEsImlkIjoiWFQ4Q0JyTlhBWFlBRmpGeU5ITmxVdmxHdWFCIn0",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #78/694: 42bc0025-05f9-4813-a7bb-888eef500ee2.txt
+# 日期範圍: 2025-09-26 to 2025-09-29
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTkxODE4MjQ3MTIsImlkIjoiRExoTTVKNzBWZjh2b251ckwybHJkYTRMYTBYWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #79/694: 556c61d3-63b7-4acf-a40f-845f616cb409.txt
+# 日期範圍: 2025-09-22 to 2025-09-26
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTg5MTE2ODMyNDYsImlkIjoiMWs3amlsMUJGQkMxWjRNTVpacFRnV2FBQ0ZaWlkifQ",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+# ───────────────────────────────────────────────────────
+# Cursor #80/694: 2b288c52-86ec-4c0a-a8af-11a4d4cfeff9.txt
+# 日期範圍: 2025-09-29 to 2025-10-04
+# ───────────────────────────────────────────────────────
+
+service: payments
+method: list
+request: {
+    "location_id": "LMDN6Z5DKNJ2P",
+    "cursor": "eyJjcmVhdGVkQXQiOjE3NTk1OTM5NDk0NjEsImlkIjoiWFQ4Q0JyTlhBWFlBRmpGeU5ITmxVdmxHdWFCIn0",
+    "limit": 100,
+    "sort_order": "ASC"
+}
+
+
+✅ 已保存命令到: /Users/lunhsiangyuan/Desktop/square/scripts/pending_cursor_commands.json
+================================================================================
+已生成 20 個下載命令
+================================================================================
+
+使用說明:
+1. 複製上面的每個命令到 MCP Square 工具中執行
+2. MCP 會自動保存文件到:
+   /Users/lunhsiangyuan/.cursor/projects/Users-lunhsiangyuan-Desktop-square/agent-tools
+3. 下載完成後，運行合併腳本:
+   python3 scripts/download_all_payments_mcp.py
+4. 繼續下載剩餘 cursor（重新運行此腳本）:
+   python3 scripts/download_cursors_with_mcp.py
+5. 檢查狀態:
+   python3 scripts/download_all_remaining.py
+
