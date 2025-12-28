@@ -13,8 +13,6 @@ type DrinkCategory = {
   items: Record<string, DrinkItem>
 }
 
-type DrinkCategories = Record<string, DrinkCategory>
-
 export function DrinksList() {
   const { t } = useLanguage()
 

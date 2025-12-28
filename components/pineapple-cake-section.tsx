@@ -7,7 +7,7 @@ export function PineappleCakeSection() {
   const { t } = useLanguage()
   return (
     <section id="pineapple-cake" className="py-20 bg-secondary/30">
-      <h2 className="text-3xl font-bold mb-6 px-4">手工點心</h2>
+      <h2 className="text-3xl font-bold mb-6 px-4">{t('menu.desserts')}</h2>
       <div className="container px-0 lg:px-4">
         <div className="flex flex-col items-center lg:flex-row">
           <div className="bg-white rounded-lg shadow-md overflow-hidden">

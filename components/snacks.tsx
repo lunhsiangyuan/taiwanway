@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function Snacks() {
   const snacks = [
     {
@@ -24,7 +26,6 @@ export function Snacks() {
       price: "5.99",
       image: "/placeholder.svg",
     },
-    // 可以根据需要添加更多小吃
   ]
 
   return (
@@ -35,10 +36,11 @@ export function Snacks() {
           {snacks.map((snack, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="relative h-40 w-full">
-                <img
+                <Image
                   src={snack.image || "/placeholder.svg"}
                   alt={snack.name}
-                  className="object-cover object-center w-full h-full"
+                  fill
+                  className="object-cover object-center"
                 />
               </div>
               <div className="p-4">
