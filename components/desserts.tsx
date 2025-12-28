@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function Desserts() {
   const desserts = [
     {
@@ -22,10 +24,11 @@ export function Desserts() {
           {desserts.map((dessert, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="relative h-40 w-full">
-                <img
+                <Image
                   src={dessert.image || "/placeholder.svg"}
                   alt={dessert.name}
-                  className="object-cover object-center w-full h-full"
+                  fill
+                  className="object-cover object-center"
                 />
               </div>
               <div className="p-4">

@@ -31,17 +31,6 @@ const highlights = [
 export function MenuHighlights() {
   const { t } = useLanguage()
 
-  const mainDishes = [
-    {
-      key: 'braisedPork',
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2466.JPG-RIKgCt96QrGfXKlfWAgI8BjZN2thK1.jpeg",
-    },
-    {
-      key: 'beefNoodle',
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2467.JPG-12cMHEqSdXbYmVHMe0F7GS10Fauj7H.jpeg",
-    },
-  ]
-
   return (
     <div>
       {highlights.map((item, index) => (

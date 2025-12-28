@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 type MenuItem = {
@@ -12,8 +13,6 @@ type MenuCategory = {
   title: string
   items: Record<string, MenuItem>
 }
-
-type MenuCategories = Record<string, MenuCategory>
 
 export function MainDishesList() {
   const { t } = useLanguage()
@@ -43,11 +42,12 @@ export function MainDishesList() {
                   <div className="space-y-6">
                     {Object.entries(category.items).map(([itemKey, item]) => (
                       <div key={itemKey} className="relative group">
-                        <div className="aspect-[4/3] overflow-hidden rounded-lg bg-gray-100">
-                          <img
+                        <div className="aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 relative">
+                          <Image
                             src={`/images/dishes/${itemKey}.jpg`}
                             alt={item.name}
-                            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
                         <div className="mt-4">
