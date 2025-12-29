@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react'
 import { Language, translations } from './translations'
+import { getCookie, setCookie, LANGUAGE_COOKIE_NAME } from '../cookies'
 
 type LanguageContextType = {
   language: Language
@@ -11,12 +12,19 @@ type LanguageContextType = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-const LANGUAGE_STORAGE_KEY = 'taiwanway-language'
-
 function getInitialLanguage(): Language {
   if (typeof window !== 'undefined') {
-    const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY)
+    // 優先從 Cookie 讀取
+    const cookieValue = getCookie(LANGUAGE_COOKIE_NAME)
+    if (cookieValue === 'zh' || cookieValue === 'en' || cookieValue === 'es') {
+      return cookieValue
+    }
+    // 向後兼容：檢查 localStorage（舊用戶）
+    const stored = localStorage.getItem('taiwanway-language')
     if (stored === 'zh' || stored === 'en' || stored === 'es') {
+      // 遷移到 Cookie
+      setCookie(LANGUAGE_COOKIE_NAME, stored, { expires: 365 })
+      localStorage.removeItem('taiwanway-language')
       return stored
     }
   }
@@ -35,7 +43,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang)
     if (typeof window !== 'undefined') {
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, lang)
+      setCookie(LANGUAGE_COOKIE_NAME, lang, { expires: 365 })
       document.documentElement.lang = lang
     }
   }, [])
