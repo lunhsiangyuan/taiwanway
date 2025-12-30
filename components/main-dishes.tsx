@@ -25,7 +25,7 @@ export function MainDishes() {
   }
 
   return (
-    <div>      
+    <div>
       {/* Main Dishes Section */}
       <div id="main-dishes" className="mb-16 scroll-mt-20">
         <h3 className="text-2xl font-semibold mb-8">{t('menu.sections.mainDishes.title')}</h3>
@@ -45,7 +45,8 @@ export function MainDishes() {
                   <h4 className="text-xl font-semibold">{item.name}</h4>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
-                <p className="text-lg font-medium">${item.price}</p>
+                {/* Price hidden by request */}
+                {/* <p className="text-lg font-medium">${item.price}</p> */}
               </div>
             </div>
           ))}
@@ -71,7 +72,8 @@ export function MainDishes() {
                   <h4 className="text-xl font-semibold">{item.name}</h4>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
-                <p className="text-lg font-medium">${item.price}</p>
+                {/* Price hidden by request */}
+                {/* <p className="text-lg font-medium">${item.price}</p> */}
               </div>
             </div>
           ))}

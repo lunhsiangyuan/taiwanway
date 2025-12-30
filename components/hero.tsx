@@ -42,10 +42,11 @@ export function Hero() {
                   {t('hero.viewMenu')}
                 </Link>
               </Button>
-              {/* 訂餐功能尚未完成 */}
-              {/* <Button size="lg" variant="outline" className="hidden">
-                {t('hero.orderOnline')}
-              </Button> */}
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" asChild>
+                <Link href="tel:8453811002">
+                  {t('hero.orderOnline')}
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

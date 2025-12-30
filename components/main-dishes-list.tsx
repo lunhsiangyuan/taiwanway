@@ -53,7 +53,8 @@ export function MainDishesList() {
                         <div className="mt-4">
                           <h4 className="text-xl font-medium">{item.name}</h4>
                           <p className="text-muted-foreground mt-1">{item.description}</p>
-                          <p className="text-primary font-medium mt-2">${item.price}</p>
+                          {/* Price hidden by request */}
+                          {/* <p className="text-primary font-medium mt-2">${item.price}</p> */}
                         </div>
                       </div>
                     ))}

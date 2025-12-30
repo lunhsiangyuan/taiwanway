@@ -50,7 +50,8 @@ export function DrinksList() {
                           <div className="text-xl font-medium">{item.name}</div>
                         </div>
                         <div className="text-right flex flex-col items-end">
-                          <div className="text-xl">${item.price}</div>
+                          {/* Price hidden by request */}
+                          {/* <div className="text-xl">${item.price}</div> */}
                           <div className="text-primary">{item.options}</div>
                         </div>
                       </div>

@@ -5,6 +5,8 @@ import { LanguageProvider } from "@/lib/i18n/language-context"
 import { CookieConsentBanner } from "@/components/cookie-consent"
 import { AnalyticsProvider, GoogleAnalyticsScript, FacebookPixelNoScript, GTMNoScript } from "@/components/analytics-provider"
 
+import { JsonLd } from "@/components/json-ld"
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -23,6 +25,7 @@ export default function RootLayout({
         <GoogleAnalyticsScript />
       </head>
       <body className={inter.className}>
+        <JsonLd />
         <FacebookPixelNoScript />
         <GTMNoScript />
         <LanguageProvider>

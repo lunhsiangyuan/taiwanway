@@ -32,7 +32,7 @@ export function Header() {
 
   const handleMenuClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
-    
+
     const id = href.split("#")[1]
     if (!id) return
 
@@ -125,7 +125,11 @@ export function Header() {
               {t('nav.getDirections')}
             </Link>
           </Button>
-          <Button className="hidden">{t('nav.orderPickup')}</Button>
+          <Button className="hidden md:flex" asChild>
+            <Link href="tel:8453811002">
+              {t('nav.orderPickup')}
+            </Link>
+          </Button>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -143,8 +147,8 @@ export function Header() {
                   {t('nav.home')}
                 </Link>
                 <div className="flex flex-col gap-2">
-                  <button 
-                    onClick={() => setMenuOpen(!menuOpen)} 
+                  <button
+                    onClick={() => setMenuOpen(!menuOpen)}
                     className="font-medium hover:text-primary transition-colors flex items-center justify-between"
                   >
                     {t('nav.menu')}
