@@ -1,13 +1,12 @@
 'use client'
 
 import { useEffect } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { initAllAnalytics, trackPageView, ANALYTICS_CONFIG } from '@/lib/analytics'
 import { getCookieConsent } from '@/lib/cookies'
 
 export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
 
   // 初始化分析追蹤
   useEffect(() => {
@@ -31,9 +30,11 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
 
   // 追蹤頁面瀏覽
   useEffect(() => {
-    const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '')
+    // 使用 window.location.search 代替 useSearchParams 以避免 SSR 問題
+    const search = typeof window !== 'undefined' ? window.location.search : ''
+    const url = pathname + search
     trackPageView(url)
-  }, [pathname, searchParams])
+  }, [pathname])
 
   return <>{children}</>
 }

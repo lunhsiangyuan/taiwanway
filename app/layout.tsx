@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { Suspense } from "react"
 import "./globals.css"
 import { LanguageProvider } from "@/lib/i18n/language-context"
 import { CookieConsentBanner } from "@/components/cookie-consent"
@@ -27,11 +26,9 @@ export default function RootLayout({
         <FacebookPixelNoScript />
         <GTMNoScript />
         <LanguageProvider>
-          <Suspense fallback={null}>
-            <AnalyticsProvider>
-              {children}
-            </AnalyticsProvider>
-          </Suspense>
+          <AnalyticsProvider>
+            {children}
+          </AnalyticsProvider>
           <CookieConsentBanner />
         </LanguageProvider>
       </body>
