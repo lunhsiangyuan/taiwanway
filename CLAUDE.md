@@ -17,6 +17,14 @@ TaiwanWay is a modern restaurant website for a Taiwanese restaurant located in M
 - **Deployment**: Vercel
 - **Image Hosting**: Vercel Blob Storage
 
+## Pending Tasks
+
+- [ ] Obtain and configure Analytics IDs in Vercel Environment Variables:
+  - `NEXT_PUBLIC_GA_MEASUREMENT_ID` (Google Analytics 4)
+  - `NEXT_PUBLIC_FB_PIXEL_ID` (Facebook Pixel)
+  - `NEXT_PUBLIC_HOTJAR_ID` (Hotjar)
+  - `NEXT_PUBLIC_GTM_ID` (Google Tag Manager - Optional)
+
 ## Directory Structure
 
 ```
