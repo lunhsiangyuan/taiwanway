@@ -42,6 +42,11 @@ export function Hero() {
                   {t('hero.viewMenu')}
                 </Link>
               </Button>
+              <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white px-8" asChild>
+                <Link href="#group-buy">
+                  團購專區 (+1)
+                </Link>
+              </Button>
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" asChild>
                 <Link href="tel:8453811002">
                   {t('hero.orderOnline')}
