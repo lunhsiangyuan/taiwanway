@@ -125,9 +125,9 @@ export function Header() {
               {t('nav.getDirections')}
             </Link>
           </Button>
-          <Button className="hidden md:flex" asChild>
-            <Link href="tel:8453811002">
-              {t('nav.orderPickup')}
+          <Button className="hidden md:flex bg-orange-600 hover:bg-orange-700" asChild>
+            <Link href="/group-buy">
+              {t('nav.orderPickup')} 🛒
             </Link>
           </Button>
 
