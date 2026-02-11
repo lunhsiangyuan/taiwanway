@@ -4,26 +4,31 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 20 14.3% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 10 65% 45%;
-    --primary-foreground: 60 9.1% 97.8%;
-    --secondary: 10 30% 95%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 10 30% 95%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 10 70% 40%;
-    --accent-foreground: 60 9.1% 97.8%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 10 65% 45%;
+    --background: 35 33% 96%;
+    --foreground: 17 40% 12%;
+    --card: 35 33% 96%;
+    --card-foreground: 17 40% 12%;
+    --popover: 35 33% 96%;
+    --popover-foreground: 17 40% 12%;
+    --primary: 17 45% 57%;
+    --primary-foreground: 35 33% 96%;
+    --secondary: 36 25% 74%;
+    --secondary-foreground: 17 40% 12%;
+    --accent: 12 100% 27%;
+    --accent-foreground: 35 33% 96%;
+    --muted: 30 20% 90%;
+    --muted-foreground: 17 20% 40%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 17 45% 57%;
     --radius: 0.5rem;
+    --gold: 44 80% 40%;
+    --cream: 35 33% 96%;
+    --terracotta: 17 45% 57%;
+    --sand: 36 25% 74%;
+    --dark: 17 40% 8%;
   }
 
   html {
@@ -31,3 +36,42 @@
   }
 }
 
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.grain-overlay {
+  position: relative;
+}
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}

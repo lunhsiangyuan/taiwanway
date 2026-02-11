@@ -1,18 +1,15 @@
-import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
-import { MenuHighlights } from "@/components/menu-highlights"
-import { Footer } from "@/components/footer"
-
-import { BusinessInfoSection } from "@/components/business-info-section"
+import { StorySection } from "@/components/story-section"
+import { MenuShowcase } from "@/components/menu-showcase"
+import { ContactSection } from "@/components/contact-section"
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
-      <Header />
+    <main>
       <Hero />
-      <BusinessInfoSection />
-      <MenuHighlights />
-      <Footer />
+      <StorySection />
+      <MenuShowcase />
+      <ContactSection />
     </main>
   )
 }

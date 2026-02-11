@@ -1,57 +1,121 @@
 'use client'
 
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useEffect, useState, useRef } from 'react'
+import { useLanguage } from '@/lib/i18n/language-context'
+import Link from 'next/link'
+import Image from 'next/image'
+import { ChevronDown } from 'lucide-react'
 
 export function Hero() {
-  const { t } = useLanguage()
+  const { language } = useLanguage()
+  const [scrollY, setScrollY] = useState(0)
+  const heroRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReducedMotion) return
+
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const subtitle = language === 'zh'
+    ? '正宗臺灣料理'
+    : language === 'es'
+      ? 'Autentica Cocina Taiwanesa'
+      : 'Authentic Taiwanese Cuisine'
+
+  const description = language === 'zh'
+    ? '從臺灣到紐約，將最道地的臺灣味帶到你的餐桌。每一口都是家的味道。'
+    : language === 'es'
+      ? 'Desde Taiwan hasta Nueva York, llevando los sabores mas autenticos de Taiwan a tu mesa.'
+      : 'From Taiwan to New York, bringing the most authentic Taiwanese flavors to your table. Every bite tastes like home.'
+
+  const viewMenu = language === 'zh' ? '瀏覽菜單' : language === 'es' ? 'Ver Menu' : 'View Menu'
+  const ourStory = language === 'zh' ? '我們的故事' : language === 'es' ? 'Nuestra Historia' : 'Our Story'
 
   return (
-    <div>
-      {/* Image Section */}
-      <section className="relative h-[50vh] sm:h-[70vh] w-full overflow-hidden px-4 md:px-6">
-        <div className="absolute inset-0 w-full h-full rounded-lg">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9053.JPG-4ohewz2SiN4NhrcIua5RHH3DvjCKYW.jpeg"
-            alt="TaiwanWay storefront with beautiful pink dogwood blossoms"
-            fill
-            className="object-cover rounded-lg sm:object-center object-[15%_center]"
-            sizes="100vw"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
-      </section>
+    <section ref={heroRef} className="relative h-screen w-full overflow-hidden">
+      {/* 背景圖片 */}
+      <div
+        className="absolute inset-0"
+        style={{ transform: `translateY(${scrollY * 0.15}px)` }}
+      >
+        <Image
+          src="/images/hero-bg.png"
+          alt="TaiwanWay authentic Taiwanese cuisine"
+          fill
+          priority
+          className="object-cover scale-110"
+          sizes="100vw"
+          quality={85}
+        />
+      </div>
 
-      {/* Content Section */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {t('hero.welcome')}
-              <span className="text-primary"> {t('hero.brandName')}</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              {t('hero.description')}
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8" asChild>
-                <Link href="/menu">
-                  {t('hero.viewMenu')}
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" asChild>
-                <Link href="tel:8453811002">
-                  {t('hero.orderOnline')}
-                </Link>
-              </Button>
-            </div>
-          </div>
+      {/* 暗色漸層覆蓋層 */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
+
+      {/* 主要內容 */}
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+        {/* 小標題 */}
+        <p
+          className="mb-4 font-body text-sm font-medium uppercase tracking-[0.3em] text-[hsl(44,80%,60%)] animate-fade-in-up"
+          style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
+        >
+          {subtitle}
+        </p>
+
+        {/* 主標題 */}
+        <h1
+          className="font-heading text-7xl font-black text-white md:text-8xl lg:text-9xl animate-fade-in-up drop-shadow-2xl"
+          style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
+        >
+          TaiwanWay
+        </h1>
+
+        {/* 中文副標題 */}
+        <p
+          className="mt-2 font-heading text-3xl text-white/80 md:text-4xl animate-fade-in-up"
+          style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
+        >
+          臺灣味
+        </p>
+
+        {/* 描述 */}
+        <p
+          className="mt-6 max-w-lg font-body text-lg leading-relaxed text-white/70 animate-fade-in-up"
+          style={{ animationDelay: '0.8s', animationFillMode: 'both' }}
+        >
+          {description}
+        </p>
+
+        {/* CTA 按鈕 */}
+        <div
+          className="mt-10 flex flex-col gap-4 sm:flex-row animate-fade-in-up"
+          style={{ animationDelay: '1s', animationFillMode: 'both' }}
+        >
+          <Link
+            href="/menu"
+            className="inline-flex items-center justify-center rounded-full bg-[hsl(44,80%,40%)] px-8 py-3.5 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[hsl(44,80%,35%)] hover:scale-105 cursor-pointer"
+          >
+            {viewMenu}
+          </Link>
+          <Link
+            href="/about"
+            className="inline-flex items-center justify-center rounded-full border-2 border-white/40 px-8 py-3.5 font-body text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/10 cursor-pointer"
+          >
+            {ourStory}
+          </Link>
         </div>
-      </section>
-    </div>
+      </div>
+
+      {/* 滾動指示器 */}
+      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 animate-bounce">
+        <span className="font-body text-xs uppercase tracking-widest">Scroll</span>
+        <ChevronDown className="h-5 w-5" />
+      </div>
+    </section>
   )
 }
-
