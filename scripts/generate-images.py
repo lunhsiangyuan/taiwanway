@@ -10,8 +10,11 @@ from pathlib import Path
 from google import genai
 from google.genai import types
 
-# 設定 API
-API_KEY = "AIzaSyDHwneH3Z99JHfyY76ufDVQSrO-6eZP0OA"
+# 設定 API（從環境變數讀取）
+API_KEY = os.environ.get("GEMINI_API_KEY")
+if not API_KEY:
+    print("錯誤: 請設定環境變數 GEMINI_API_KEY")
+    sys.exit(1)
 client = genai.Client(api_key=API_KEY)
 
 OUTPUT_DIR = Path(__file__).parent.parent / "public" / "images"
