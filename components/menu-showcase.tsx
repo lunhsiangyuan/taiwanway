@@ -73,17 +73,6 @@ const menuItems: MenuItem[] = [
     image: '/images/oolong-tea.png',
     category: 'drink',
   },
-  {
-    nameZh: '刈包',
-    nameEn: 'Gua Bao',
-    nameEs: 'Gua Bao',
-    descZh: '台式漢堡——蒸軟饅頭夾滷五花肉',
-    descEn: 'Taiwanese steamed bun with braised pork belly',
-    descEs: 'Pan al vapor taiwanes con panceta estofada',
-    price: '$10.95',
-    image: '/images/gua-bao.png',
-    category: 'main',
-  },
 ]
 
 export function MenuShowcase() {

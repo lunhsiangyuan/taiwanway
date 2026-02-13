@@ -116,7 +116,7 @@ export function Header() {
             asChild
             className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full px-6"
           >
-            <Link href="tel:8453811002">
+            <Link href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjMzMiVFOCU5QiU4QiVFNiU4RCVCMiUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUp0Ukk4U3pHVWJqUVJnaTI1VUlGeTJsUSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EyMy40Nzg1NzMyOTk5OTk5OTclMkMlMjJsb25naXR1ZGUlMjIlM0ExMjAuNDUyOTQwNCU3RA%3D%3D" target="_blank" rel="noopener noreferrer">
               Order Online
             </Link>
           </Button>
@@ -183,7 +183,7 @@ export function Header() {
                   asChild
                   className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full mt-4"
                 >
-                  <Link href="tel:8453811002" onClick={() => setIsOpen(false)}>
+                  <Link href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjMzMiVFOCU5QiU4QiVFNiU4RCVCMiUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUp0Ukk4U3pHVWJqUVJnaTI1VUlGeTJsUSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EyMy40Nzg1NzMyOTk5OTk5OTclMkMlMjJsb25naXR1ZGUlMjIlM0ExMjAuNDUyOTQwNCU3RA%3D%3D" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                     Order Online
                   </Link>
                 </Button>

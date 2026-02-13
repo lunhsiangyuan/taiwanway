@@ -43,21 +43,6 @@ const menuCategories: MenuCategory[] = [
       { nameZh: '招牌珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas Especial', descZh: 'Q彈珍珠配濃郁奶香，經典臺灣味', descEn: 'Chewy tapioca pearls with rich milk tea, classic Taiwan flavor', descEs: 'Perlas de tapioca con té de leche' },
       { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，手工麵條', descEn: 'Rich broth with tender beef and handmade noodles', descEs: 'Caldo con res y fideos hechos a mano' },
       { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '慢火燉煮，古早味入味白飯', descEn: 'Slow-braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz' },
-      { nameZh: '刈包', nameEn: 'Gua Bao', nameEs: 'Gua Bao', descZh: '台式漢堡——蒸軟饅頭夾滷五花肉', descEn: 'Steamed bun with braised pork belly', descEs: 'Pan al vapor con panceta' },
-    ],
-  },
-  {
-    id: 'old-fashioned',
-    titleZh: '懷舊古早味',
-    titleEn: 'Old-Fashioned',
-    titleEs: 'Clásico Nostálgico',
-    subtitleZh: '記憶中的味道',
-    subtitleEn: 'Tastes of Nostalgia',
-    subtitleEs: 'Sabores de la Nostalgia',
-    image: '/images/iced-black-tea.png',
-    items: [
-      { nameZh: '冰紅茶', nameEn: 'Iced Black Tea', nameEs: 'Té Negro Helado', options: '冷飲' },
-      { nameZh: '鮮奶茶', nameEn: 'Fresh Milk Tea', nameEs: 'Té con Leche Fresca', options: '冷飲' },
     ],
   },
   {
@@ -159,9 +144,7 @@ const menuCategories: MenuCategory[] = [
     items: [
       { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，手工麵條', descEn: 'Rich broth, tender beef, handmade noodles', descEs: 'Caldo, res tierna, fideos artesanales' },
       { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '入味滷肉，搭配香Q白飯', descEn: 'Savory braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz' },
-      { nameZh: '嫩煎雞肉飯', nameEn: 'Chicken Rice', nameEs: 'Arroz con Pollo', descZh: '嫩煎雞腿肉，搭配特製醬汁', descEn: 'Pan-seared chicken thigh with special sauce', descEs: 'Pollo a la plancha con salsa especial' },
-      { nameZh: '餛飩麵', nameEn: 'Wonton Noodle Soup', nameEs: 'Sopa de Wonton', descZh: '手工餛飩，清甜湯頭', descEn: 'Handmade wontons in clear broth', descEs: 'Wonton artesanales en caldo' },
-      { nameZh: '刈包', nameEn: 'Gua Bao', nameEs: 'Gua Bao', descZh: '蒸軟饅頭夾滷五花肉', descEn: 'Steamed bun with braised pork belly', descEs: 'Pan al vapor con panceta estofada' },
+      { nameZh: '嘉義雞肉飯', nameEn: 'Chiayi Chicken Rice', nameEs: 'Arroz con Pollo de Chiayi', descZh: '火雞肉絲，搭配油蔥與醬汁', descEn: 'Shredded turkey with fried shallots and sauce', descEs: 'Pavo desmenuzado con chalotes fritos y salsa' },
     ],
   },
   {
@@ -298,6 +281,10 @@ export function MenuCarousel() {
                 />
                 {/* 圖片上的漸層 */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                {/* 示意圖標籤 */}
+                <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/20">
+                  示意圖
+                </div>
               </div>
               {/* 裝飾圓點 */}
               <div className="absolute -top-3 -right-3 h-16 w-16 rounded-full bg-[hsl(44,80%,40%)]/10" />
