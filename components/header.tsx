@@ -116,7 +116,7 @@ export function Header() {
             asChild
             className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full px-6"
           >
-            <Link href="https://taiwanway-order.vercel.app" target="_blank" rel="noopener noreferrer">
+            <Link href="https://order.taiwanwayny.com" target="_blank" rel="noopener noreferrer">
               Order Online
             </Link>
           </Button>
@@ -183,7 +183,7 @@ export function Header() {
                   asChild
                   className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full mt-4"
                 >
-                  <Link href="https://taiwanway-order.vercel.app" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+                  <Link href="https://order.taiwanwayny.com" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                     Order Online
                   </Link>
                 </Button>
