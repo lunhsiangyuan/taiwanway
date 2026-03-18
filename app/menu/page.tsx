@@ -17,10 +17,10 @@ import { MenuCarousel } from "@/components/menu-carousel"
 
 export default function MenuPage() {
   return (
-    <main id="main-content">
+    <main id="main-content" className="pt-20">
       <h1 className="sr-only">TaiwanWay Menu — Bubble Tea, Beef Noodle Soup & Taiwanese Cuisine</h1>
 
-      {/* 訂餐橫幅 */}
+      {/* 訂餐橫幅 — sticky 在 header 下方 */}
       <OrderBanner />
 
       {/* 輪播展示 */}

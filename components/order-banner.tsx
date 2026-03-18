@@ -20,7 +20,7 @@ export function OrderBanner() {
     : 'Mon/Tue/Fri/Sat 11AM–7PM'
 
   return (
-    <div className="bg-[hsl(17,45%,47%)] text-white">
+    <div className="sticky top-20 z-40 bg-[hsl(17,45%,47%)] text-white">
       <div className="mx-auto max-w-6xl px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-sm">
           <span className="font-semibold">{title}</span>
