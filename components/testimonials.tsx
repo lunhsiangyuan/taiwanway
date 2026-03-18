@@ -36,18 +36,6 @@ const reviews: Review[] = [
     text: 'Great bubble tea as well as desserts! Braised pork bowl was delicious!! Service is friendly',
     source: 'Yelp',
   },
-  {
-    name: 'Eve M.',
-    rating: 4,
-    text: "It's a very cute and open place. Very welcoming! The staff and service was wonderful! I did get an iced matcha latte and a matcha pana cotta that was really good.",
-    source: 'Yelp',
-  },
-  {
-    name: 'Ming W.',
-    rating: 4,
-    text: 'Delicious dessert and boba tea. Not too sweet. The prices are reasonable. Interesting selections on imported snacks as well.',
-    source: 'Yelp',
-  },
 ]
 
 const sectionTitles: Record<string, string> = {
@@ -96,7 +84,7 @@ function ReviewCard({
 
   return (
     <div
-      className="flex-shrink-0 w-[300px] sm:w-[340px] bg-white rounded-2xl p-6 shadow-md
+      className="flex-shrink-0 w-[300px] sm:w-[340px] min-h-[220px] bg-white rounded-2xl p-6 shadow-md
                  border border-[#2D1810]/5 flex flex-col justify-between
                  hover:shadow-lg transition-shadow duration-300"
     >
