@@ -12,7 +12,7 @@ export function Contact() {
     <div className="py-20">
       <div className="container px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">{t('contact.title')}</h2>
+          <h1 className="text-4xl font-bold mb-12 text-center">{t('contact.title')}</h1>
 
           {/* Contact Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -62,7 +62,7 @@ export function Contact() {
             <h3 className="text-xl font-semibold">{t('contact.findUs')}</h3>
             <div className="aspect-[21/9] relative rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.7851508083437!2d-74.42330812346005!3d41.44533459467247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c33c1e0cef2c35%3A0x3f4a36d8e3c3c3c3!2s26%20South%20St%2C%20Middletown%2C%20NY%2010940!5e0!3m2!1sen!2sus!4v1708561234567!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.0!2d-74.4206521!3d41.4437301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c33262597cb655%3A0x968db5356171d2eb!2s26%20South%20St%2C%20Middletown%2C%20NY%2010940!5e0!3m2!1sen!2sus!4v1706810757943!5m2!1sen!2sus"
                 className="absolute inset-0 w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"
