@@ -63,6 +63,7 @@ export const PRODUCTS: Product[] = [
       en: 'Rich brown sugar syrup cascades down the cup creating mesmerizing tiger stripes. Fresh milk paired with handcrafted brown sugar tapioca pearls-each pearl perfectly chewy with caramel notes. The sweetness of brown sugar and creaminess of milk create pure bliss in every sip.',
       es: 'El rico jarabe de azúcar morena cae por la taza creando rayas de tigre fascinantes. Leche fresca combinada con perlas de tapioca de azúcar morena hechas a mano, cada perla perfectamente masticable con notas de caramelo.',
     },
+    price: 6.45,
     allergens: ['乳製品'],
   },
   {
@@ -84,6 +85,7 @@ export const PRODUCTS: Product[] = [
       en: 'The classic original Taiwanese bubble tea served hot to warm your soul. Premium black tea perfectly blended with fresh milk, aromatic and smooth. Each tapioca pearl is handcrafted daily for optimal texture. The perfect warm companion for cold days.',
       es: 'El clásico té de burbujas taiwanés original servido caliente para calentar tu alma. Té negro premium perfectamente mezclado con leche fresca, aromático y suave. Cada perla de tapioca se elabora artesanalmente todos los días.',
     },
+    price: 5.95,
     allergens: ['乳製品'],
   },
   {
@@ -105,6 +107,7 @@ export const PRODUCTS: Product[] = [
       en: 'Premium high-mountain jasmine green tea with elegant floral aroma and lingering tea notes. Paired with chewy tapioca pearls for a refreshing, non-greasy experience. The jasmine fragrance intertwines with green tea sweetness while pearls add delightful texture.',
       es: 'Té verde de jazmín premium de alta montaña con elegante aroma floral y notas de té persistentes. Combinado con perlas de tapioca masticables para una experiencia refrescante y sin grasa.',
     },
+    price: 6.25,
     allergens: [],
   },
   {
@@ -126,6 +129,7 @@ export const PRODUCTS: Product[] = [
       en: 'Taiwan high-mountain oolong tea with unique honey fragrance from leafhopper bites. Golden amber tea with rich honey aroma and lingering sweet aftertaste. Paired with handcrafted pearls for complex layers, the ultimate treat for oolong tea lovers.',
       es: 'Té oolong de alta montaña de Taiwán con fragancia única de miel de picaduras de saltahojas. Té ámbar dorado con rico aroma a miel y regusto dulce persistente. Combinado con perlas artesanales.',
     },
+    price: 6.25,
     allergens: [],
   },
 
@@ -149,6 +153,7 @@ export const PRODUCTS: Product[] = [
       en: 'Classic Taiwanese milk tea with Ceylon black tea and rich fresh milk in perfect proportion. Tea aroma and milk fragrance beautifully balanced-not too sweet, not too rich, smooth and refreshing. The purest taste of Taiwan and a childhood memory for every Taiwanese.',
       es: 'Té con leche taiwanés clásico con té negro de Ceilán y leche fresca rica en proporción perfecta. Aroma a té y fragancia a leche bellamente equilibrados, no demasiado dulce, ni demasiado rico, suave y refrescante.',
     },
+    price: 4.95,
     allergens: ['乳製品'],
   },
   {
@@ -170,6 +175,7 @@ export const PRODUCTS: Product[] = [
       en: 'Refreshing jasmine green tea meets creamy fresh milk in an elegant flavor collision. Subtle jasmine fragrance complements the sweet green tea and smooth milk. Light and refreshing, perfect for those who prefer delicate flavors-a symphony of floral and tea notes.',
       es: 'El refrescante té verde de jazmín se encuentra con leche fresca cremosa en una elegante colisión de sabores. La sutil fragancia de jazmín complementa el té verde dulce y la leche suave.',
     },
+    price: 5.25,
     allergens: ['乳製品'],
   },
 
@@ -193,6 +199,7 @@ export const PRODUCTS: Product[] = [
       en: "High-mountain jasmine green tea enhanced with natural honey for sweet freshness. Elegant jasmine meets rich honey in perfect harmony, creating golden amber tea that's refreshing with a sweet aftertaste. No artificial sweeteners-pure tea flavor for health-conscious tea lovers.",
       es: 'Té verde de jazmín de alta montaña realzado con miel natural para una frescura dulce. El elegante jazmín se encuentra con la rica miel en perfecta armonía, creando té ámbar dorado que es refrescante.',
     },
+    price: 5.25,
     allergens: [],
   },
 
@@ -216,6 +223,7 @@ export const PRODUCTS: Product[] = [
       en: 'Traditional Taiwanese beverage with handcrafted winter melon syrup and fresh lemon juice. The subtle sweetness of winter melon perfectly balances the tangy lemon, refreshing and thirst-quenching. The ultimate summer companion-every sip brings cooling satisfaction.',
       es: 'Bebida tradicional taiwanesa con jarabe de melón de invierno artesanal y jugo de limón fresco. La dulzura sutil del melón de invierno equilibra perfectamente el limón picante, refrescante y que quita la sed.',
     },
+    price: 5.25,
     allergens: [],
   },
 
@@ -239,6 +247,7 @@ export const PRODUCTS: Product[] = [
       en: 'Italian pannacotta meets tropical flavors-coconut milk fragrance intertwines with sweet mango. Silky smooth texture paired with fresh mango cubes delivers sunshine in every bite. Light and refreshing, the perfect ending to any meal.',
       es: 'La pannacotta italiana se encuentra con sabores tropicales: la fragancia de leche de coco se entrelaza con el mango dulce. Textura sedosa y suave combinada con cubos de mango fresco.',
     },
+    price: 4.50,
     allergens: ['乳製品'],
   },
   {
@@ -260,6 +269,7 @@ export const PRODUCTS: Product[] = [
       en: 'Premium Dajia taro handcrafted into puree and perfectly blended with Italian pannacotta. The creamy sweetness of taro complements the silky texture-elegant lavender hue. Every spoonful delivers natural taro fragrance, a taro lover\'s dream dessert.',
       es: 'Taro premium de Dajia elaborado artesanalmente en puré y perfectamente mezclado con pannacotta italiana. La dulzura cremosa del taro complementa la textura sedosa: elegante tono lavanda.',
     },
+    price: 4.50,
     allergens: ['乳製品'],
   },
   {
@@ -281,6 +291,7 @@ export const PRODUCTS: Product[] = [
       en: 'Traditional Taiwanese pastry handcrafted fresh daily. Delicate mung bean filling wrapped in flaky, non-sticky pastry. Subtle tea aroma complements the sweet mung bean-perfect with tea for afternoon enjoyment. An ideal gift or teatime companion.',
       es: 'Pastelería tradicional taiwanesa elaborada a mano fresca diariamente. Delicado relleno de frijol mungo envuelto en hojaldre no pegajoso. El sutil aroma a té complementa el dulce frijol mungo.',
     },
+    price: 2.85,
     allergens: ['麩質'],
   },
 ];

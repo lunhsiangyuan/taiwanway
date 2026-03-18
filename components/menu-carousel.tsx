@@ -14,6 +14,7 @@ type MenuItemData = {
   descEn?: string
   descEs?: string
   options?: string
+  price?: string
 }
 
 type MenuCategory = {
@@ -40,9 +41,9 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Clásicos Imperdibles',
     image: '/images/hero-bg.png',
     items: [
-      { nameZh: '招牌珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas Especial', descZh: 'Q彈珍珠配濃郁奶香，經典臺灣味', descEn: 'Chewy tapioca pearls with rich milk tea, classic Taiwan flavor', descEs: 'Perlas de tapioca con té de leche' },
-      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，手工麵條', descEn: 'Rich broth with tender beef and handmade noodles', descEs: 'Caldo con res y fideos hechos a mano' },
-      { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '慢火燉煮，古早味入味白飯', descEn: 'Slow-braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz' },
+      { nameZh: '招牌珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas Especial', descZh: 'Q彈珍珠配濃郁奶香，經典臺灣味', descEn: 'Chewy tapioca pearls with rich milk tea, classic Taiwan flavor', descEs: 'Perlas de tapioca con té de leche', price: '5.95' },
+      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，手工麵條', descEn: 'Rich broth with tender beef and handmade noodles', descEs: 'Caldo con res y fideos hechos a mano', price: '12.99' },
+      { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '慢火燉煮，古早味入味白飯', descEn: 'Slow-braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz', price: '8.99' },
     ],
   },
   {
@@ -55,9 +56,9 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Aroma del Té Local',
     image: '/images/honey-black-tea.png',
     items: [
-      { nameZh: '台灣蜜香紅茶', nameEn: 'Taiwan Honey Black Tea', nameEs: 'Té Negro con Miel', options: '熱 / 冷' },
-      { nameZh: '招牌珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas', options: '熱 / 冷' },
-      { nameZh: '蜜香奶茶', nameEn: 'Honey Milk Tea', nameEs: 'Té de Leche con Miel', options: '熱 / 冷' },
+      { nameZh: '台灣蜜香紅茶', nameEn: 'Taiwan Honey Black Tea', nameEs: 'Té Negro con Miel', options: '熱 / 冷', price: '5.95' },
+      { nameZh: '招牌珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas', options: '熱 / 冷', price: '5.95' },
+      { nameZh: '蜜香奶茶', nameEn: 'Honey Milk Tea', nameEs: 'Té de Leche con Miel', options: '熱 / 冷', price: '4.95' },
     ],
   },
   {
@@ -70,7 +71,7 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Suave y Ligero',
     image: '/images/brown-sugar-milk.png',
     items: [
-      { nameZh: '黑糖珍珠鮮奶', nameEn: 'Brown Sugar Pearl Fresh Milk', nameEs: 'Leche con Perlas de Azúcar Morena', options: '熱 / 冷' },
+      { nameZh: '黑糖珍珠鮮奶', nameEn: 'Brown Sugar Pearl Fresh Milk', nameEs: 'Leche con Perlas de Azúcar Morena', options: '熱 / 冷', price: '6.45' },
     ],
   },
   {
@@ -83,8 +84,8 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Frescura Floral',
     image: '/images/jasmine-tea.png',
     items: [
-      { nameZh: '茉莉蜂蜜綠茶', nameEn: 'Jasmine Honey Green Tea', nameEs: 'Té Verde Jazmín con Miel', options: '冷飲' },
-      { nameZh: '茉莉珍珠奶綠', nameEn: 'Jasmine Pearl Milk Green Tea', nameEs: 'Té Verde Jazmín con Perlas', options: '熱 / 冷' },
+      { nameZh: '茉莉蜂蜜綠茶', nameEn: 'Jasmine Honey Green Tea', nameEs: 'Té Verde Jazmín con Miel', options: '冷飲', price: '5.25' },
+      { nameZh: '茉莉珍珠奶綠', nameEn: 'Jasmine Pearl Milk Green Tea', nameEs: 'Té Verde Jazmín con Perlas', options: '熱 / 冷', price: '6.25' },
     ],
   },
   {
@@ -97,8 +98,8 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Elegancia Semi-Fermentada',
     image: '/images/oolong-tea.png',
     items: [
-      { nameZh: '蜂蜜烏龍珍珠奶茶', nameEn: 'Honey Oolong Bubble Tea', nameEs: 'Oolong con Miel y Perlas', options: '熱 / 冷' },
-      { nameZh: '蜂蜜烏龍奶茶', nameEn: 'Honey Oolong Milk Tea', nameEs: 'Oolong con Miel y Leche', options: '熱 / 冷' },
+      { nameZh: '蜂蜜烏龍珍珠奶茶', nameEn: 'Honey Oolong Bubble Tea', nameEs: 'Oolong con Miel y Perlas', options: '熱 / 冷', price: '6.25' },
+      { nameZh: '蜂蜜烏龍奶茶', nameEn: 'Honey Oolong Milk Tea', nameEs: 'Oolong con Miel y Leche', options: '熱 / 冷', price: '5.25' },
     ],
   },
   {
@@ -111,8 +112,8 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Belleza de la Ceremonia',
     image: '/images/matcha-latte.png',
     items: [
-      { nameZh: '抹茶拿鐵', nameEn: 'Matcha Latte', nameEs: 'Latte de Matcha', options: '熱 / 冷' },
-      { nameZh: '珍珠抹茶拿鐵', nameEn: 'Pearl Matcha Latte', nameEs: 'Latte de Matcha con Perlas', options: '熱 / 冷' },
+      { nameZh: '抹茶拿鐵', nameEn: 'Matcha Latte', nameEs: 'Latte de Matcha', options: '熱 / 冷', price: '5.65' },
+      { nameZh: '珍珠抹茶拿鐵', nameEn: 'Pearl Matcha Latte', nameEs: 'Latte de Matcha con Perlas', options: '熱 / 冷', price: '6.85' },
     ],
   },
   {
@@ -125,11 +126,11 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Auténtico de Tetera',
     image: '/images/pot-brewed-tea.png',
     items: [
-      { nameZh: '冬片', nameEn: 'Winter Harvest', nameEs: 'Cosecha de Invierno', options: '熱飲' },
-      { nameZh: '春茶', nameEn: 'Spring Tea', nameEs: 'Té de Primavera', options: '熱飲' },
-      { nameZh: '金萱', nameEn: 'Jin Xuan', nameEs: 'Jin Xuan', options: '熱飲' },
-      { nameZh: '鐵觀音', nameEn: 'Tieguanyin', nameEs: 'Tieguanyin', options: '熱飲' },
-      { nameZh: '阿里山紅茶', nameEn: 'Alishan Black Tea', nameEs: 'Té Negro Alishan', options: '熱飲' },
+      { nameZh: '冬片', nameEn: 'Winter Harvest', nameEs: 'Cosecha de Invierno', options: '熱飲', price: '5' },
+      { nameZh: '春茶', nameEn: 'Spring Tea', nameEs: 'Té de Primavera', options: '熱飲', price: '5' },
+      { nameZh: '金萱', nameEn: 'Jin Xuan', nameEs: 'Jin Xuan', options: '熱飲', price: '5' },
+      { nameZh: '鐵觀音', nameEn: 'Tieguanyin', nameEs: 'Tieguanyin', options: '熱飲', price: '6' },
+      { nameZh: '阿里山紅茶', nameEn: 'Alishan Black Tea', nameEs: 'Té Negro Alishan', options: '熱飲', price: '5' },
     ],
   },
   {
@@ -142,9 +143,9 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Sabor Auténtico',
     image: '/images/beef-noodle.png',
     items: [
-      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，手工麵條', descEn: 'Rich broth, tender beef, handmade noodles', descEs: 'Caldo, res tierna, fideos artesanales' },
-      { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '入味滷肉，搭配香Q白飯', descEn: 'Savory braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz' },
-      { nameZh: '嘉義雞肉飯', nameEn: 'Chiayi Chicken Rice', nameEs: 'Arroz con Pollo de Chiayi', descZh: '火雞肉絲，搭配油蔥與醬汁', descEn: 'Shredded turkey with fried shallots and sauce', descEs: 'Pavo desmenuzado con chalotes fritos y salsa' },
+      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，手工麵條', descEn: 'Rich broth, tender beef, handmade noodles', descEs: 'Caldo, res tierna, fideos artesanales', price: '12.99' },
+      { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '入味滷肉，搭配香Q白飯', descEn: 'Savory braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz', price: '8.99' },
+      { nameZh: '嘉義雞肉飯', nameEn: 'Chiayi Chicken Rice', nameEs: 'Arroz con Pollo de Chiayi', descZh: '火雞肉絲，搭配油蔥與醬汁', descEn: 'Shredded turkey with fried shallots and sauce', descEs: 'Pavo desmenuzado con chalotes fritos y salsa', price: '9.99' },
     ],
   },
   {
@@ -157,7 +158,7 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Finales Dulces',
     image: '/images/pineapple-cake.png',
     items: [
-      { nameZh: '台灣鳳梨酥', nameEn: 'Taiwan Pineapple Cake', nameEs: 'Pastel de Piña', descZh: '酥脆外皮包裹鳳梨內餡，每日現作', descEn: 'Buttery pastry with pineapple filling, freshly made daily', descEs: 'Pastel de mantequilla con piña, hecho diariamente' },
+      { nameZh: '台灣鳳梨酥', nameEn: 'Taiwan Pineapple Cake', nameEs: 'Pastel de Piña', descZh: '酥脆外皮包裹鳳梨內餡，每日現作', descEn: 'Buttery pastry with pineapple filling, freshly made daily', descEs: 'Pastel de mantequilla con piña, hecho diariamente', price: '2.85' },
     ],
   },
 ]
@@ -314,11 +315,18 @@ export function MenuCarousel() {
                         <h3 className="font-heading text-xl text-white group-hover:text-[hsl(44,80%,60%)] transition-colors">
                           {getName(item)}
                         </h3>
-                        {item.options && (
-                          <span className="font-body text-xs text-[hsl(44,80%,40%)]/70 whitespace-nowrap flex-shrink-0">
-                            {item.options}
-                          </span>
-                        )}
+                        <div className="flex items-baseline gap-3 flex-shrink-0">
+                          {item.options && (
+                            <span className="font-body text-xs text-[hsl(44,80%,40%)]/70 whitespace-nowrap">
+                              {item.options}
+                            </span>
+                          )}
+                          {item.price && (
+                            <span className="font-heading text-lg text-[hsl(44,80%,50%)] whitespace-nowrap">
+                              ${item.price}
+                            </span>
+                          )}
+                        </div>
                       </div>
                       {/* 副名稱 */}
                       <p className="font-body text-sm text-white/60 mt-0.5">

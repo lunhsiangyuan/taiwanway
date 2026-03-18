@@ -63,6 +63,10 @@
   animation: slideInRight 0.8s ease-out forwards;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .grain-overlay {
   position: relative;
 }
