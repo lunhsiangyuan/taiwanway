@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { useLanguage } from '@/lib/i18n/language-context'
 import Link from 'next/link'
+import { Truck, ShoppingBag } from 'lucide-react'
 import Image from 'next/image'
 
 type MenuItem = {
@@ -98,6 +99,8 @@ export function MenuShowcase() {
       ? 'Platos y Bebidas Exclusivas'
       : 'Signature Dishes & Drinks'
   const viewFullMenu = language === 'zh' ? '查看完整菜單' : language === 'es' ? 'Ver Menu Completo' : 'View Full Menu'
+  const pickupLabel = language === 'zh' ? '來店自取' : language === 'es' ? 'Recoger' : 'Pickup'
+  const deliveryLabel = language === 'zh' ? '外送 Uber Eats' : 'Delivery'
 
   const getName = (item: MenuItem) => language === 'zh' ? item.nameZh : language === 'es' ? item.nameEs : item.nameEn
   const getSubName = (item: MenuItem) => language === 'zh' ? item.nameEn : item.nameZh
@@ -162,9 +165,12 @@ export function MenuShowcase() {
                   </p>
                 </div>
 
-                {/* 裝飾虛線 */}
-                <div className="hidden sm:flex items-center flex-shrink-0">
-                  <div className="w-16 lg:w-24 border-b border-dotted border-white/10" />
+                {/* 價格 */}
+                <div className="hidden sm:flex items-center flex-shrink-0 gap-4">
+                  <div className="w-8 lg:w-16 border-b border-dotted border-white/10" />
+                  <span className="font-heading text-lg text-[hsl(44,80%,60%)] whitespace-nowrap">
+                    {item.price}
+                  </span>
                 </div>
               </div>
 
@@ -175,7 +181,21 @@ export function MenuShowcase() {
         </div>
 
         {/* CTA 按鈕 */}
-        <div className={`mt-16 text-center transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <a
+            href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#06C167] px-8 py-3.5 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[#05a557] hover:scale-105 cursor-pointer"
+          >
+            <Truck className="h-4 w-4" /> {deliveryLabel}
+          </a>
+          <a
+            href="https://order.taiwanwayny.com/order"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[hsl(44,80%,40%)] px-8 py-3.5 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[hsl(44,80%,35%)] hover:scale-105 cursor-pointer"
+          >
+            <ShoppingBag className="h-4 w-4" /> {pickupLabel}
+          </a>
           <Link
             href="/menu"
             className="inline-flex items-center justify-center rounded-full border-2 border-[hsl(44,80%,40%)] px-8 py-3.5 font-body text-sm font-semibold text-[hsl(44,80%,40%)] transition-all duration-300 hover:bg-[hsl(44,80%,40%)] hover:text-white cursor-pointer"

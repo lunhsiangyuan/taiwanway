@@ -321,12 +321,12 @@ export function MenuCarousel() {
                         )}
                       </div>
                       {/* 副名稱 */}
-                      <p className="font-body text-sm text-white/25 mt-0.5">
+                      <p className="font-body text-sm text-white/60 mt-0.5">
                         {language === 'zh' ? item.nameEn : item.nameZh}
                       </p>
                       {/* 描述 */}
                       {getDesc(item) && (
-                        <p className="font-body text-sm text-white/40 mt-1.5 leading-relaxed">
+                        <p className="font-body text-sm text-white/65 mt-1.5 leading-relaxed">
                           {getDesc(item)}
                         </p>
                       )}
@@ -371,7 +371,7 @@ export function MenuCarousel() {
                 />
               ))}
             </div>
-            <span className="font-body text-xs text-white/30 ml-2">{pageLabel}</span>
+            <span className="font-body text-xs text-white/60 ml-2">{pageLabel}</span>
           </div>
 
           {/* 下一頁按鈕 */}

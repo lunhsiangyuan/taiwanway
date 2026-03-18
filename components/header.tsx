@@ -117,15 +117,26 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Order Online CTA */}
-          <Button
-            asChild
-            className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full px-6"
-          >
-            <Link href="https://order.taiwanwayny.com" target="_blank" rel="noopener noreferrer">
-              Order Online
-            </Link>
-          </Button>
+          {/* Order CTA — 雙通道 */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full px-6">
+                Order Online <ChevronDown className="ml-1 h-3.5 w-3.5" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-48">
+              <DropdownMenuItem asChild className="cursor-pointer font-body gap-2">
+                <a href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A" target="_blank" rel="noopener noreferrer">
+                  🛵 {t('nav.delivery') || 'Delivery (Uber Eats)'}
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="cursor-pointer font-body gap-2">
+                <a href="https://order.taiwanwayny.com/order">
+                  🏪 {t('nav.pickup') || 'Pickup (Order Online)'}
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Mobile Hamburger */}
@@ -187,14 +198,18 @@ export function Header() {
                     {t(item.key)}
                   </Link>
                 ))}
-                <Button
-                  asChild
-                  className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full mt-4"
-                >
-                  <Link href="https://order.taiwanwayny.com" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
-                    Order Online
-                  </Link>
-                </Button>
+                <div className="flex flex-col gap-3 mt-4">
+                  <Button asChild className="bg-[#06C167] text-white hover:bg-[#05a557] font-body font-semibold rounded-full">
+                    <a href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+                      🛵 {t('nav.delivery') || 'Delivery (Uber Eats)'}
+                    </a>
+                  </Button>
+                  <Button asChild className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full">
+                    <a href="https://order.taiwanwayny.com/order" onClick={() => setIsOpen(false)}>
+                      🏪 {t('nav.pickup') || 'Pickup (Order Online)'}
+                    </a>
+                  </Button>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>

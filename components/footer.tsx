@@ -70,7 +70,7 @@ export function Footer() {
                 href="https://www.instagram.com/taiwanway10940/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/40 hover:text-white transition-colors"
+                className="text-white/60 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
@@ -79,7 +79,7 @@ export function Footer() {
                 href="https://www.facebook.com/taiwanway10940/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/40 hover:text-white transition-colors"
+                className="text-white/60 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -116,10 +116,10 @@ export function Footer() {
             <div className="space-y-2">
               {hours.map((item) => (
                 <div key={item.day} className="flex justify-between gap-4">
-                  <span className={`font-body text-sm ${item.hours ? 'text-white/50' : 'text-white/30'}`}>
+                  <span className={`font-body text-sm ${item.hours ? 'text-white/50' : 'text-white/60'}`}>
                     {getDayName(item)}
                   </span>
-                  <span className={`font-body text-sm ${item.hours ? 'text-white/50' : 'text-white/30'}`}>
+                  <span className={`font-body text-sm ${item.hours ? 'text-white/50' : 'text-white/60'}`}>
                     {item.hours || closedLabels[language] || 'Closed'}
                   </span>
                 </div>
@@ -134,13 +134,13 @@ export function Footer() {
             </h3>
             <div className="space-y-3">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-white/60 mt-0.5 flex-shrink-0" />
                 <p className="text-white/50 font-body text-sm leading-relaxed">
                   26 South St,<br />Middletown, NY 10940
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-white/40 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-white/60 flex-shrink-0" />
                 <a
                   href="tel:845-381-1002"
                   className="text-white/50 hover:text-white font-body text-sm transition-colors"
@@ -149,7 +149,7 @@ export function Footer() {
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-white/40 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-white/60 flex-shrink-0" />
                 <a
                   href="mailto:usamyheish@gmail.com"
                   className="text-white/50 hover:text-white font-body text-sm transition-colors"
@@ -163,7 +163,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8">
-          <p className="text-white/30 text-sm text-center font-body">
+          <p className="text-white/60 text-sm text-center font-body">
             &copy; 2026 TaiwanWay. {t('footer.allRights')}.
           </p>
         </div>

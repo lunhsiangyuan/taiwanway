@@ -138,7 +138,7 @@ export function CookieConsentBanner() {
         <div className="bg-[#1A0F0A] border-t border-white/[0.08]">
           <div className="mx-auto max-w-3xl px-6 py-6">
             <h3 className="font-heading text-lg text-white mb-1">{t.settingsTitle}</h3>
-            <p className="font-body text-sm text-white/40 mb-5">{t.description}</p>
+            <p className="font-body text-sm text-white/60 mb-5">{t.description}</p>
 
             <div className="space-y-4">
               {/* 必要 Cookie */}
@@ -148,7 +148,7 @@ export function CookieConsentBanner() {
                     <span className="font-body text-sm font-medium text-white">{t.necessary}</span>
                     <span className="font-body text-[11px] text-[hsl(44,80%,40%)] bg-[hsl(44,80%,40%)]/10 px-2 py-0.5 rounded-full">{t.alwaysOn}</span>
                   </div>
-                  <p className="font-body text-xs text-white/30 mt-0.5 leading-relaxed">{t.necessaryDesc}</p>
+                  <p className="font-body text-xs text-white/60 mt-0.5 leading-relaxed">{t.necessaryDesc}</p>
                 </div>
                 <Toggle checked={true} disabled />
               </div>
@@ -159,7 +159,7 @@ export function CookieConsentBanner() {
               <div className="flex items-center justify-between gap-4">
                 <div className="flex-1 min-w-0">
                   <span className="font-body text-sm font-medium text-white">{t.analytics}</span>
-                  <p className="font-body text-xs text-white/30 mt-0.5">{t.analyticsDesc}</p>
+                  <p className="font-body text-xs text-white/60 mt-0.5">{t.analyticsDesc}</p>
                 </div>
                 <Toggle checked={preferences.analytics} onChange={(v) => setPreferences(p => ({ ...p, analytics: v }))} />
               </div>
@@ -170,7 +170,7 @@ export function CookieConsentBanner() {
               <div className="flex items-center justify-between gap-4">
                 <div className="flex-1 min-w-0">
                   <span className="font-body text-sm font-medium text-white">{t.marketing}</span>
-                  <p className="font-body text-xs text-white/30 mt-0.5">{t.marketingDesc}</p>
+                  <p className="font-body text-xs text-white/60 mt-0.5">{t.marketingDesc}</p>
                 </div>
                 <Toggle checked={preferences.marketing} onChange={(v) => setPreferences(p => ({ ...p, marketing: v }))} />
               </div>
@@ -181,7 +181,7 @@ export function CookieConsentBanner() {
               <div className="flex items-center justify-between gap-4">
                 <div className="flex-1 min-w-0">
                   <span className="font-body text-sm font-medium text-white">{t.preferences}</span>
-                  <p className="font-body text-xs text-white/30 mt-0.5">{t.preferencesDesc}</p>
+                  <p className="font-body text-xs text-white/60 mt-0.5">{t.preferencesDesc}</p>
                 </div>
                 <Toggle checked={preferences.preferences} onChange={(v) => setPreferences(p => ({ ...p, preferences: v }))} />
               </div>
@@ -240,7 +240,7 @@ export function CookieSettingsButton() {
   return (
     <button
       onClick={handleOpenSettings}
-      className="font-body text-sm text-white/40 hover:text-[hsl(44,80%,40%)] transition-colors cursor-pointer"
+      className="font-body text-sm text-white/60 hover:text-[hsl(44,80%,40%)] transition-colors cursor-pointer"
     >
       {t.title}
     </button>

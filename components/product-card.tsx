@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useLanguage } from '@/lib/i18n/language-context'
+import { ShoppingBag } from 'lucide-react'
 import type { Product } from '@/lib/menu-data'
 
 interface ProductCardProps {
@@ -73,14 +74,28 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
               {description}
             </p>
 
-            {/* 底部資訊 - 僅顯示過敏原 */}
-            {product.allergens && product.allergens.length > 0 && (
-              <div className="pt-4 border-t border-gray-200">
-                <span className="text-xs text-gray-500">
-                  過敏原：{product.allergens.join(', ')}
-                </span>
+            {/* 價格 + 訂餐按鈕 */}
+            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+              <div>
+                {product.price && (
+                  <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
+                    ${product.price.toFixed(2)}
+                  </span>
+                )}
+                {product.allergens && product.allergens.length > 0 && (
+                  <p className="text-xs text-gray-400 mt-1">
+                    {language === 'zh' ? '過敏原' : 'Allergens'}: {product.allergens.join(', ')}
+                  </p>
+                )}
               </div>
-            )}
+              <a
+                href="https://order.taiwanwayny.com/order"
+                className="inline-flex items-center gap-1.5 rounded-full bg-[hsl(17,45%,47%)] px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-[hsl(17,45%,42%)] active:scale-95"
+              >
+                <ShoppingBag className="h-3.5 w-3.5" />
+                {language === 'zh' ? '點餐' : 'Order'}
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -132,21 +147,28 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
           {description}
         </p>
 
-        {/* 底部資訊 - 價格已移除 */}
-        {product.allergens && product.allergens.length > 0 && (
-          <div className="pt-4 border-t border-gray-200">
-            <span className="text-xs text-gray-500">
-              過敏原：{product.allergens.join(', ')}
-            </span>
+        {/* 價格 + 訂餐按鈕 */}
+        <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+          <div>
+            {product.price && (
+              <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
+                ${product.price.toFixed(2)}
+              </span>
+            )}
+            {product.allergens && product.allergens.length > 0 && (
+              <p className="text-xs text-gray-400 mt-1">
+                {language === 'zh' ? '過敏原' : 'Allergens'}: {product.allergens.join(', ')}
+              </p>
+            )}
           </div>
-        )}
-
-        {/* 備註 */}
-        <p className="text-xs text-gray-400 mt-3 italic">
-          {language === 'zh'
-            ? '圖片僅供參考，商品以實際現場供應為主。'
-            : 'Images are for reference only. Actual products may vary.'}
-        </p>
+          <a
+            href="https://order.taiwanwayny.com/order"
+            className="inline-flex items-center gap-1.5 rounded-full bg-[hsl(17,45%,47%)] px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-[hsl(17,45%,42%)] active:scale-95"
+          >
+            <ShoppingBag className="h-3.5 w-3.5" />
+            {language === 'zh' ? '點餐' : 'Order'}
+          </a>
+        </div>
       </div>
     </div>
   )

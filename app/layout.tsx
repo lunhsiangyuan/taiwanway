@@ -8,6 +8,7 @@ import { AnalyticsProvider, GoogleAnalyticsScript, FacebookPixelNoScript, GTMNoS
 import { JsonLd } from "@/components/json-ld"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FloatingOrderCTA } from "@/components/floating-order-cta"
 
 const playfairDisplaySC = Playfair_Display_SC({
   subsets: ['latin'],
@@ -69,6 +70,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <FloatingOrderCTA />
           </AnalyticsProvider>
           <CookieConsentBanner />
         </LanguageProvider>

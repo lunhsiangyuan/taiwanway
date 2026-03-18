@@ -9,6 +9,8 @@ export const translations = {
       contact: '聯絡',
       getDirections: '前往地圖',
       orderPickup: '線上訂餐',
+      delivery: '外送 (Uber Eats)',
+      pickup: '來店自取',
     },
     hero: {
       welcome: '歡迎來到',
@@ -259,6 +261,8 @@ export const translations = {
       contact: 'CONTACT',
       getDirections: 'Get Directions',
       orderPickup: 'Order For Pickup',
+      delivery: 'Delivery (Uber Eats)',
+      pickup: 'Pickup (Order Online)',
     },
     hero: {
       welcome: 'Welcome to',
@@ -509,6 +513,8 @@ export const translations = {
       contact: 'CONTACTO',
       getDirections: 'Cómo Llegar',
       orderPickup: 'Ordenar para Recoger',
+      delivery: 'Delivery (Uber Eats)',
+      pickup: 'Recoger en Tienda',
     },
     hero: {
       welcome: 'Bienvenido a',
