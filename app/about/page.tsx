@@ -15,7 +15,7 @@ export default function AboutPage() {
   }, [language])
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main id="main-content" className="min-h-screen flex flex-col">
       <Header />
       <div className="flex-1">
         {/* Hero Image Section */}

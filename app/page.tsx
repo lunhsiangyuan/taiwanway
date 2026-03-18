@@ -18,7 +18,7 @@ import { ContactSection } from "@/components/contact-section"
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <Hero />
       <StorySection />
       <MenuShowcase />
