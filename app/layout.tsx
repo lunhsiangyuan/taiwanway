@@ -24,8 +24,30 @@ const karla = Karla({
 })
 
 export const metadata: Metadata = {
-  title: "Taiwanway | Authentic Taiwanese Cuisine",
-  description: "Authentic Taiwanese beef noodles, braised pork rice, pineapple cakes and bubble tea in New York",
+  metadataBase: new URL('https://taiwanwayny.com'),
+  title: {
+    default: 'TaiwanWay | Authentic Taiwanese Cuisine in Middletown, NY',
+    template: '%s | TaiwanWay',
+  },
+  description:
+    'TaiwanWay 臺灣味 — 紐約 Middletown 正宗臺灣料理。招牌牛肉麵、滷肉飯、珍珠奶茶、鳳梨酥。Authentic Taiwanese beef noodles, braised pork rice, bubble tea in Middletown, NY.',
+  openGraph: {
+    siteName: 'TaiwanWay',
+    locale: 'zh_TW',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
+  },
 }
 
 export default function RootLayout({
@@ -34,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="zh-TW">
       <head>
         <GoogleAnalyticsScript />
       </head>
