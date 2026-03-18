@@ -267,7 +267,7 @@ export function MenuCarousel() {
             : 'opacity-100 translate-x-0'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 pt-16 pb-12 lg:pt-24 lg:pb-20">
+        <div className="max-w-7xl mx-auto px-4 pt-20 pb-12 lg:pt-28 lg:pb-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             {/* 左側 - 大圖 */}
             <div className="relative">
