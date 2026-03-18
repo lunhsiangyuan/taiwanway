@@ -89,7 +89,7 @@ export function ContactSection() {
           >
             <div className="aspect-video overflow-hidden rounded-2xl shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.0!2d-74.4222!3d41.4459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDI2JzQ1LjIiTiA3NMKwMjUnMTkuOSJX!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.7851508083437!2d-74.42330812346005!3d41.44533459467247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c33c1e0cef2c35%3A0x3f4a36d8e3c3c3c3!2s26%20South%20St%2C%20Middletown%2C%20NY%2010940!5e0!3m2!1sen!2sus!4v1708561234567!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
