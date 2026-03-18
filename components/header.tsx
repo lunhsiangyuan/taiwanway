@@ -45,6 +45,12 @@ export function Header() {
           : 'bg-transparent'
       )}
     >
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-gold focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:font-body"
+      >
+        Skip to main content
+      </a>
       <div className="w-full px-4 md:px-6 lg:px-8 max-w-screen-2xl mx-auto flex h-20 items-center justify-between">
         {/* Logo */}
         <Link
@@ -130,6 +136,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
+                aria-label="Switch language"
                 className={cn(
                   'transition-colors duration-300',
                   scrolled ? 'text-foreground' : 'text-white'
@@ -159,6 +166,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
+                aria-label="Open navigation menu"
                 className={cn(
                   'transition-colors duration-300',
                   scrolled ? 'text-foreground' : 'text-white'

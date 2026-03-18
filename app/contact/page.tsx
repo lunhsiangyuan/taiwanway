@@ -16,7 +16,7 @@ export default function ContactPage() {
   }, [language])
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main id="main-content" className="min-h-screen flex flex-col">
       <Header />
       <div className="flex-1">
         <ContactHero />

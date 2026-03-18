@@ -16,7 +16,7 @@ import { MenuCarousel } from "@/components/menu-carousel"
 
 export default function MenuPage() {
   return (
-    <main>
+    <main id="main-content">
       {/* 輪播展示 */}
       <MenuCarousel />
 
