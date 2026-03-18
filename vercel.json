@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.taiwanwayny.com"
+        }
+      ],
+      "destination": "https://taiwanwayny.com/$1",
+      "permanent": true
+    }
+  ]
+}
