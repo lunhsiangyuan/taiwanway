@@ -50,7 +50,9 @@ export function Contact() {
                 <a href="tel:845-381-1002" className="text-muted-foreground hover:text-primary block">
                   845-381-1002
                 </a>
-                <p className="text-muted-foreground">usamyheish@gmail.com</p>
+                <a href="mailto:usamyheish@gmail.com" className="text-muted-foreground hover:text-primary block">
+                  usamyheish@gmail.com
+                </a>
               </div>
             </Card>
           </div>
