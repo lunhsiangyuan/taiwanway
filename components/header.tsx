@@ -71,7 +71,7 @@ export function Header() {
               key={item.key}
               href={item.href}
               className={cn(
-                'font-body font-medium text-sm uppercase tracking-wider transition-colors duration-300 hover:text-gold',
+                'font-body font-medium text-sm uppercase tracking-wider transition-colors duration-300 hover:text-gold focus-visible:outline-2 focus-visible:outline-[hsl(44,80%,40%)]',
                 scrolled ? 'text-foreground' : 'text-white'
               )}
             >

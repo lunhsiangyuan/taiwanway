@@ -239,12 +239,14 @@ export function MenuCarousel() {
       {/* 頂部分類標籤列（固定在 Header 下方） */}
       <div className="sticky top-20 z-20 bg-[#1A0F0A]/95 backdrop-blur-md border-b border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 py-3 overflow-x-auto scrollbar-hide">
-          <div className="flex gap-2 min-w-max">
+          <div className="flex gap-2 min-w-max" role="tablist" aria-label="Menu categories">
             {menuCategories.map((c, i) => (
               <button
                 key={c.id}
+                role="tab"
+                aria-selected={i === currentPage}
                 onClick={() => goToPage(i)}
-                className={`px-4 py-2 rounded-full font-body text-sm whitespace-nowrap transition-all duration-300 cursor-pointer ${
+                className={`px-4 py-2 rounded-full font-body text-sm whitespace-nowrap transition-all duration-300 cursor-pointer focus-visible:ring-2 focus-visible:ring-[hsl(44,80%,40%)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A0F0A] ${
                   i === currentPage
                     ? 'bg-[hsl(44,80%,40%)] text-white'
                     : 'text-white/50 hover:text-white hover:bg-white/[0.06]'

@@ -79,7 +79,7 @@ export function ProductsShowcase() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* 分類導航（桌面版） */}
-            <nav className="hidden md:flex space-x-6 overflow-x-auto">
+            <nav className="hidden md:flex space-x-6 overflow-x-auto" role="tablist" aria-label="Menu categories">
               {Object.values(CATEGORIES).map((category) => {
                 const products = getProductsByCategory(category)
                 if (products.length === 0) return null
@@ -87,6 +87,8 @@ export function ProductsShowcase() {
                 return (
                   <button
                     key={category}
+                    role="tab"
+                    aria-selected={activeCategory === category}
                     onClick={() => scrollToCategory(category)}
                     className={`whitespace-nowrap px-4 py-2 rounded-full font-medium transition-all ${
                       activeCategory === category
@@ -131,7 +133,7 @@ export function ProductsShowcase() {
 
           {/* 分類導航（手機版） */}
           <div className="md:hidden mt-4 overflow-x-auto">
-            <div className="flex space-x-3 pb-2">
+            <div className="flex space-x-3 pb-2" role="tablist" aria-label="Menu categories">
               {Object.values(CATEGORIES).map((category) => {
                 const products = getProductsByCategory(category)
                 if (products.length === 0) return null
@@ -139,6 +141,8 @@ export function ProductsShowcase() {
                 return (
                   <button
                     key={category}
+                    role="tab"
+                    aria-selected={activeCategory === category}
                     onClick={() => scrollToCategory(category)}
                     className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-all ${
                       activeCategory === category
