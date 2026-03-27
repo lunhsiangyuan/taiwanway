@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 }
 import { StorySection } from "@/components/story-section"
 import { MenuShowcase } from "@/components/menu-showcase"
+import { SnackShop } from "@/components/snack-shop"
 import { Testimonials } from "@/components/testimonials"
 import { ContactSection } from "@/components/contact-section"
 
@@ -23,6 +24,7 @@ export default function Home() {
       <Hero />
       <StorySection />
       <MenuShowcase />
+      <SnackShop />
       <Testimonials />
       <ContactSection />
     </main>
