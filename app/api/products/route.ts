@@ -1,11 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseClient } from '@/lib/supabase';
-
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
-
-function isAdmin(request: NextRequest): boolean {
-  return request.headers.get('x-admin-password') === ADMIN_PASSWORD;
-}
+import { isAdmin, unauthorizedResponse } from '@/lib/auth';
 
 // Field allowlist — only these fields can be written
 const ALLOWED_FIELDS = [
@@ -46,9 +41,7 @@ export async function GET(request: NextRequest) {
 
 // POST /api/products
 export async function POST(request: NextRequest) {
-  if (!isAdmin(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+  if (!isAdmin(request)) return unauthorizedResponse();
   const supabase = getSupabaseClient(true);
   const body = await request.json();
   const safe = pickAllowed(body);
@@ -67,9 +60,7 @@ export async function POST(request: NextRequest) {
 
 // PATCH /api/products
 export async function PATCH(request: NextRequest) {
-  if (!isAdmin(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+  if (!isAdmin(request)) return unauthorizedResponse();
   const supabase = getSupabaseClient(true);
   const body = await request.json();
   const { id } = body;
@@ -98,9 +89,7 @@ export async function PATCH(request: NextRequest) {
 
 // DELETE /api/products (soft delete)
 export async function DELETE(request: NextRequest) {
-  if (!isAdmin(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+  if (!isAdmin(request)) return unauthorizedResponse();
   const supabase = getSupabaseClient(true);
   const { id } = await request.json();
 

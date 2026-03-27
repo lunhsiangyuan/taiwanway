@@ -1,12 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { put } from '@vercel/blob';
-
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+import { isAdmin, unauthorizedResponse } from '@/lib/auth';
 
 export async function POST(request: NextRequest) {
-  if (request.headers.get('x-admin-password') !== ADMIN_PASSWORD) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+  if (!isAdmin(request)) return unauthorizedResponse();
 
   const formData = await request.formData();
   const file = formData.get('file') as File | null;

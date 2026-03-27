@@ -43,9 +43,12 @@ function LoginForm({ onLogin }: { onLogin: () => void }) {
   const [error, setError] = useState('');
 
   const handleLogin = async () => {
-    localStorage.setItem(ADMIN_PW_KEY, pw);
-    const res = await fetch('/api/products', { headers: { 'x-admin-password': pw } });
+    const res = await fetch('/api/auth/verify', {
+      method: 'POST',
+      headers: { 'x-admin-password': pw },
+    });
     if (res.ok) {
+      localStorage.setItem(ADMIN_PW_KEY, pw);
       onLogin();
     } else {
       setError('密碼錯誤');
