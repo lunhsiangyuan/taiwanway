@@ -22,39 +22,15 @@ type Product = {
   origin: string | null;
 };
 
-const langLabel = { zh: '中文', en: 'EN', es: 'ES' } as const;
-
 export default function ProductDetail({ product }: { product: Product }) {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
 
   const name = product[`name_${language}`] || product.name_en;
   const description = product[`description_${language}`] || product.description_en;
   const howToUse = product[`how_to_use_${language}`] || product.how_to_use_en;
 
   return (
-    <div className="min-h-screen bg-amber-50">
-      {/* Header */}
-      <header className="bg-amber-900 text-white py-3 px-4 flex items-center justify-between">
-        <Link href="/" className="text-lg font-bold tracking-wide">
-          台灣味 Taiwanway
-        </Link>
-        <div className="flex gap-1">
-          {(['zh', 'en', 'es'] as const).map((lang) => (
-            <button
-              key={lang}
-              onClick={() => setLanguage(lang)}
-              className={`px-2 py-1 rounded text-sm font-medium transition-colors ${
-                language === lang
-                  ? 'bg-white text-amber-900'
-                  : 'bg-amber-800 text-amber-100 hover:bg-amber-700'
-              }`}
-            >
-              {langLabel[lang]}
-            </button>
-          ))}
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-amber-50 pt-20">
       {/* Product Image */}
       <div className="relative w-full aspect-square max-w-lg mx-auto bg-white">
         <Image

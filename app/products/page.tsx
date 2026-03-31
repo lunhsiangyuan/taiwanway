@@ -48,14 +48,11 @@ export default function ProductsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-amber-50">
-      <header className="bg-amber-900 text-white py-6 px-4 text-center">
-        <Link href="/" className="text-lg font-bold tracking-wide">
-          台灣味 Taiwanway
-        </Link>
-        <h1 className="text-2xl font-bold mt-2">{title}</h1>
+    <div className="min-h-screen bg-amber-50 pt-20">
+      <div className="bg-amber-900 text-white py-8 px-4 text-center">
+        <h1 className="text-2xl font-bold">{title}</h1>
         <p className="text-amber-200 text-sm mt-1">{subtitle}</p>
-      </header>
+      </div>
 
       <div className="max-w-5xl mx-auto px-4 py-8">
         {products.length === 0 ? (
@@ -99,11 +96,11 @@ export default function ProductsPage() {
         )}
       </div>
 
-      <footer className="text-center py-6 text-xs text-amber-500">
+      <div className="text-center py-6 text-xs text-amber-500">
         <Link href="/" className="hover:underline">
           ← {language === 'zh' ? '回到台灣味' : 'Back to Taiwanway'}
         </Link>
-      </footer>
+      </div>
     </div>
   );
 }
