@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Menu, Globe, ChevronDown } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
@@ -28,6 +29,8 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { language, setLanguage, t } = useLanguage()
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,11 +41,14 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // 內頁沒有深色 hero，nav 應永遠使用深色文字
+  const useDarkText = scrolled || !isHome
+
   return (
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled
+        useDarkText
           ? 'bg-cream/95 backdrop-blur-md shadow-sm'
           : 'bg-transparent'
       )}
@@ -59,7 +65,7 @@ export function Header() {
           href="/"
           className={cn(
             'font-heading text-2xl font-bold tracking-wide transition-colors duration-300',
-            scrolled ? 'text-foreground' : 'text-white'
+            useDarkText ? 'text-foreground' : 'text-white'
           )}
         >
           TaiwanWay
@@ -73,7 +79,7 @@ export function Header() {
               href={item.href}
               className={cn(
                 'font-body font-medium text-sm uppercase tracking-wider transition-colors duration-300 hover:text-gold focus-visible:outline-2 focus-visible:outline-[hsl(44,80%,40%)]',
-                scrolled ? 'text-foreground' : 'text-white'
+                useDarkText ? 'text-foreground' : 'text-white'
               )}
             >
               {t(item.key)}
@@ -91,7 +97,7 @@ export function Header() {
                 size="sm"
                 className={cn(
                   'flex items-center gap-1.5 transition-colors duration-300',
-                  scrolled
+                  useDarkText
                     ? 'text-foreground hover:text-gold'
                     : 'text-white hover:text-gold'
                 )}
@@ -152,7 +158,7 @@ export function Header() {
                 aria-label="Switch language"
                 className={cn(
                   'transition-colors duration-300',
-                  scrolled ? 'text-foreground' : 'text-white'
+                  useDarkText ? 'text-foreground' : 'text-white'
                 )}
               >
                 <Globe className="h-5 w-5" />
@@ -182,7 +188,7 @@ export function Header() {
                 aria-label="Open navigation menu"
                 className={cn(
                   'transition-colors duration-300',
-                  scrolled ? 'text-foreground' : 'text-white'
+                  useDarkText ? 'text-foreground' : 'text-white'
                 )}
               >
                 <Menu className="h-6 w-6" />

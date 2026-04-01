@@ -47,11 +47,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const product = await getProduct(slug);
   if (!product) {
-    return { title: 'Product Not Found | Taiwanway' };
+    return { title: 'Product Not Found' };
   }
 
   return {
-    title: `${product.name_en} | Taiwanway`,
+    title: `${product.name_en}`,
     description: product.description_en,
     openGraph: {
       title: `${product.name_zh} ${product.name_en}`,

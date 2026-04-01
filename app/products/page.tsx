@@ -4,7 +4,7 @@ import type { Product } from '@/types/product';
 import ProductsGrid from './products-grid';
 
 export const metadata: Metadata = {
-  title: 'Products | TaiwanWay',
+  title: 'Products',
   description: 'Curated Taiwanese goods — tea, snacks, and specialty items from Taiwan.',
 };
 
