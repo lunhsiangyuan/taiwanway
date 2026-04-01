@@ -7,23 +7,18 @@ import { Card } from '@/components/ui/card'
 const cateringMenuItems = [
   {
     name: { zh: '牛肉麵派對盤 (10人份)', en: 'Beef Noodle Soup Tray (10 servings)', es: 'Bandeja de Sopa de Fideos con Res (10 porciones)' },
-    price: '$109.99',
   },
   {
     name: { zh: '滷肉飯派對盤 (10人份)', en: 'Braised Pork Rice Tray (10 servings)', es: 'Bandeja de Arroz con Cerdo Guisado (10 porciones)' },
-    price: '$79.99',
   },
   {
     name: { zh: '珍珠奶茶派對組 (12杯)', en: 'Bubble Tea Party Pack (12 cups)', es: 'Paquete de Fiesta de Té de Burbujas (12 vasos)' },
-    price: '$59.99',
   },
   {
     name: { zh: '鳳梨酥綜合禮盒 (12入)', en: 'Assorted Pineapple Cake Box (12 pcs)', es: 'Caja de Pasteles de Piña Surtidos (12 pzas)' },
-    price: '$29.99',
   },
   {
     name: { zh: '綜合茶飲組合 (6杯, 6種口味)', en: 'Mixed Tea Sampler (6 cups, 6 flavors)', es: 'Muestrario de Té Mixto (6 vasos, 6 sabores)' },
-    price: '$34.99',
   },
 ]
 
@@ -151,20 +146,25 @@ export function CateringPage() {
             {cateringMenuItems.map((item, index) => (
               <div
                 key={item.name.en}
-                className={`flex items-center justify-between py-5 ${
+                className={`py-5 ${
                   index < cateringMenuItems.length - 1 ? 'border-b border-[hsl(30,15%,85%)]' : ''
                 }`}
               >
-                <span className="font-body text-[#2D1810] text-base md:text-lg pr-4">
+                <span className="font-body text-[#2D1810] text-base md:text-lg">
                   {getText(item.name)}
-                </span>
-                <span className="font-heading text-lg md:text-xl font-bold text-[hsl(17,45%,57%)] whitespace-nowrap">
-                  {item.price}
                 </span>
               </div>
             ))}
           </div>
-          <p className="font-body text-sm text-[hsl(17,20%,40%)] text-center mt-8 leading-relaxed">
+          <div className="mt-10 text-center p-6 bg-[hsl(44,80%,40%)]/10 rounded-xl">
+            <p className="font-heading text-lg font-semibold text-[#2D1810] mb-2">
+              {getText({ zh: '價格請私訊或來電洽詢', en: 'Contact us for pricing', es: 'Contáctenos para precios' })}
+            </p>
+            <p className="font-body text-sm text-[hsl(17,20%,40%)]">
+              {getText({ zh: '📞 845-381-1002 ｜ ✉️ usamyheish@gmail.com', en: '📞 845-381-1002 ｜ ✉️ usamyheish@gmail.com', es: '📞 845-381-1002 ｜ ✉️ usamyheish@gmail.com' })}
+            </p>
+          </div>
+          <p className="font-body text-sm text-[hsl(17,20%,40%)] text-center mt-6 leading-relaxed">
             {getText(sectionText.menuNote)}
           </p>
         </div>
