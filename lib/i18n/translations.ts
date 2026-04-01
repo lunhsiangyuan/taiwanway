@@ -5,6 +5,7 @@ export const translations = {
     nav: {
       home: '首頁',
       menu: '菜單',
+      products: '商品',
       about: '關於',
       contact: '聯絡',
       catering: '團餐',
@@ -259,6 +260,7 @@ export const translations = {
     nav: {
       home: 'HOME',
       menu: 'MENUS',
+      products: 'PRODUCTS',
       about: 'ABOUT',
       contact: 'CONTACT',
       catering: 'CATERING',
@@ -513,6 +515,7 @@ export const translations = {
     nav: {
       home: 'INICIO',
       menu: 'MENÚ',
+      products: 'PRODUCTOS',
       about: 'SOBRE',
       contact: 'CONTACTO',
       catering: 'CATERING',

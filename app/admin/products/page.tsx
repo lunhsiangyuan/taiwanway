@@ -2,35 +2,15 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import type { Product } from '@/types/product';
 
 const ADMIN_PW_KEY = 'tw-admin-pw';
-
-type Product = {
-  id: string;
-  slug: string;
-  image_url: string;
-  price: number | null;
-  brand: string | null;
-  name_zh: string;
-  name_en: string;
-  name_es: string;
-  description_zh: string;
-  description_en: string;
-  description_es: string;
-  how_to_use_zh: string | null;
-  how_to_use_en: string | null;
-  how_to_use_es: string | null;
-  origin: string | null;
-  qr_code_url: string | null;
-  is_active: boolean;
-  created_at: string;
-};
 
 
 
 function getPassword(): string {
   if (typeof window === 'undefined') return '';
-  return localStorage.getItem(ADMIN_PW_KEY) || '';
+  return sessionStorage.getItem(ADMIN_PW_KEY) || '';
 }
 
 function adminHeaders(): Record<string, string> {
@@ -48,11 +28,11 @@ function LoginForm({ onLogin }: { onLogin: () => void }) {
       headers: { 'x-admin-password': pw },
     });
     if (res.ok) {
-      localStorage.setItem(ADMIN_PW_KEY, pw);
+      sessionStorage.setItem(ADMIN_PW_KEY, pw);
       onLogin();
     } else {
       setError('密碼錯誤');
-      localStorage.removeItem(ADMIN_PW_KEY);
+      sessionStorage.removeItem(ADMIN_PW_KEY);
     }
   };
 
@@ -270,7 +250,7 @@ export default function AdminProductsPage() {
           throw new Error();
         })
         .then((data) => setProducts(data || []))
-        .catch(() => localStorage.removeItem(ADMIN_PW_KEY))
+        .catch(() => sessionStorage.removeItem(ADMIN_PW_KEY))
         .finally(() => setLoading(false));
     } else {
       setLoading(false);

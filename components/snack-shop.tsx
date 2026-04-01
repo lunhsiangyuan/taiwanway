@@ -4,20 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 import { useLanguage } from '@/lib/i18n/language-context'
 import Image from 'next/image'
 import Link from 'next/link'
-
-type Product = {
-  id: string
-  slug: string
-  image_url: string
-  price: number | null
-  brand: string | null
-  name_zh: string
-  name_en: string
-  name_es: string
-  description_zh: string
-  description_en: string
-  description_es: string
-}
+import type { Product } from '@/types/product'
 
 export function SnackShop() {
   const { language } = useLanguage()

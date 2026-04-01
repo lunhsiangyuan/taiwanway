@@ -1,27 +1,12 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getSupabaseClient } from '@/lib/supabase';
+import type { Product } from '@/types/product';
+import { isValidSlug } from '@/types/product';
 import ProductDetail from './product-detail';
 
-type Product = {
-  id: string;
-  slug: string;
-  image_url: string;
-  price: number | null;
-  brand: string | null;
-  name_zh: string;
-  name_en: string;
-  name_es: string;
-  description_zh: string;
-  description_en: string;
-  description_es: string;
-  how_to_use_zh: string | null;
-  how_to_use_en: string | null;
-  how_to_use_es: string | null;
-  origin: string | null;
-};
-
 async function getProduct(slug: string): Promise<Product | null> {
+  if (!isValidSlug(slug)) return null;
   try {
     const supabase = getSupabaseClient(false);
     const { data } = await supabase

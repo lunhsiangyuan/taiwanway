@@ -51,6 +51,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Missing required fields: slug, name_zh, name_en, name_es, image_url' }, { status: 400 });
   }
 
+  // Validate slug format
+  const { isValidSlug } = await import('@/types/product');
+  if (!isValidSlug(safe.slug as string)) {
+    return NextResponse.json({ error: 'Invalid slug format. Use lowercase letters, numbers, and hyphens only.' }, { status: 400 });
+  }
+
   const { data, error } = await supabase.from('products').insert([safe]).select().single();
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });

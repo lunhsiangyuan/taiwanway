@@ -3,31 +3,15 @@
 import { useLanguage } from '@/lib/i18n/language-context';
 import Image from 'next/image';
 import Link from 'next/link';
-
-type Product = {
-  id: string;
-  slug: string;
-  image_url: string;
-  price: number | null;
-  brand: string | null;
-  name_zh: string;
-  name_en: string;
-  name_es: string;
-  description_zh: string;
-  description_en: string;
-  description_es: string;
-  how_to_use_zh: string | null;
-  how_to_use_en: string | null;
-  how_to_use_es: string | null;
-  origin: string | null;
-};
+import type { Product } from '@/types/product';
+import { getProductName, getProductDescription, getProductHowToUse } from '@/types/product';
 
 export default function ProductDetail({ product }: { product: Product }) {
   const { language } = useLanguage();
 
-  const name = product[`name_${language}`] || product.name_en;
-  const description = product[`description_${language}`] || product.description_en;
-  const howToUse = product[`how_to_use_${language}`] || product.how_to_use_en;
+  const name = getProductName(product, language);
+  const description = getProductDescription(product, language);
+  const howToUse = getProductHowToUse(product, language);
 
   return (
     <div className="min-h-screen bg-amber-50 pt-20">
