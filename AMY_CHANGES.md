@@ -33,6 +33,36 @@
 
 ---
 
+## [2026-04-19 14:25] About 頁字型尺寸校正 + Header logo 縮小
+
+**檔案：**
+- `app/about/page.tsx`（改）— h1 / 副標 / 內文尺寸、欄寬、段距
+- `components/header.tsx`（改）— 左上 logo 字級縮小
+
+**改動：**
+- **Header logo**：`text-2xl`（24px）→ `text-xl`（20px），視覺更輕盈
+- **About h1**：`text-4xl md:text-5xl`（桌機 48px）→ `font-heading text-3xl md:text-4xl tracking-tight`（桌機 36px）— 縮 25%
+- **About 副標**：`text-xl`（20px）→ `text-base md:text-lg`，與主標拉開層級落差
+- **內文段落**：`text-lg`（18px）→ `text-base md:text-[1.0625rem]`（桌機 17px），容器 `max-w-3xl` → `max-w-2xl` 縮窄閱讀欄寬
+- **區塊 padding**：`py-12` → `py-16 md:py-20`，搭配欄寬縮窄改善呼吸感
+- 移除 `prose prose-lg` 容器，改用 `space-y-5 font-body` 搭配明確 className
+
+**原因：**
+Amy 看了新的 About 頁後反映「關於我們那四個字太大了」、Header「logo 也有點太大」。整體需要重新校正字型層級。
+
+**測試：**
+- `bun dev` 於 `http://localhost:3000/about`
+- `getComputedStyle` 量測：logo 20px ✓、h1 30px（手機 294px）／36px（md+）✓、內文段落 16px（手機）／17px（md+）✓
+- 新文案 "TaiwanWay is Middletown's first Taiwanese café..." 正常顯示（與本 PR 的文案重寫一同 deploy）
+
+**設計備註：**
+- 本次 commit 與同一 PR 的「文案重寫」commit 合併上 review（Amy 瀏覽時需要同時看到新文案 + 新尺寸才能判斷是否滿意）
+- 不碰 hero 圖與其他頁
+
+**PR：** #7（合併進原有 about-page-rewrite PR）
+
+---
+
 ## [2026-04-19 14:00] About 頁三語文案重寫：對齊首頁品牌敘事
 
 **檔案：**

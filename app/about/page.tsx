@@ -20,21 +20,23 @@ export default function AboutPage() {
       </section>
 
       {/* Content Section */}
-      <section className="py-12 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('about.title')}</h1>
-              <p className="text-xl text-muted-foreground">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-10">
+              <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3 tracking-tight">
+                {t('about.title')}
+              </h1>
+              <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
                 {t('hero.description')}
               </p>
             </div>
 
-            <div className="prose prose-lg">
-              <p className="text-lg leading-relaxed">{t('about.story1')}</p>
-              <p className="text-lg leading-relaxed">{t('about.story2')}</p>
-              <p className="text-lg leading-relaxed">{t('about.story3')}</p>
-              <p className="text-lg leading-relaxed font-medium text-primary">{t('about.closing')}</p>
+            <div className="space-y-5 font-body">
+              <p className="text-base md:text-[1.0625rem] leading-relaxed text-foreground/85">{t('about.story1')}</p>
+              <p className="text-base md:text-[1.0625rem] leading-relaxed text-foreground/85">{t('about.story2')}</p>
+              <p className="text-base md:text-[1.0625rem] leading-relaxed text-foreground/85">{t('about.story3')}</p>
+              <p className="text-base md:text-[1.0625rem] leading-relaxed font-semibold text-primary pt-2">{t('about.closing')}</p>
             </div>
           </div>
         </div>
