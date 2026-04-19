@@ -60,37 +60,17 @@ export const translations = {
       },
       drinksList: {
         categories: {
-          oldFashioned: {
-            title: "懷舊古早味",
-            items: {
-              blackTea: {
-                name: "冰紅茶",
-                price: "2.99",
-                options: "(冷飲)"
-              },
-              milkTea: {
-                name: "鮮奶茶",
-                price: "4.35",
-                options: "(冷飲)"
-              }
-            }
-          },
           taiwaneseBlackTea: {
             title: "台灣紅茶",
             items: {
-              honeyBlackTea: {
-                name: "台灣蜜香紅茶",
-                price: "5.95",
-                options: "(熱/冷)"
-              },
               bubbleTea: {
                 name: "招牌珍珠奶茶",
-                price: "5.95",
+                price: "6.45",
                 options: "(熱/冷)"
               },
               milkTea: {
                 name: "蜜香奶茶",
-                price: "4.95",
+                price: "5.65",
                 options: "(熱/冷)"
               }
             }
@@ -110,12 +90,12 @@ export const translations = {
             items: {
               honeyJasmine: {
                 name: "茉莉蜂蜜綠茶",
-                price: "5.25",
+                price: "4.85",
                 options: "(冷飲)"
               },
               jasmineBubble: {
                 name: "茉莉珍珠奶綠",
-                price: "6.25",
+                price: "6.45",
                 options: "(熱/冷)"
               }
             }
@@ -125,12 +105,12 @@ export const translations = {
             items: {
               honeyOolongBubble: {
                 name: "蜂蜜烏龍珍珠奶茶",
-                price: "6.25",
+                price: "6.65",
                 options: "(熱/冷)"
               },
               honeyOolongMilk: {
                 name: "蜂蜜烏龍奶茶",
-                price: "5.25",
+                price: "5.85",
                 options: "(熱/冷)"
               }
             }
@@ -140,12 +120,7 @@ export const translations = {
             items: {
               matchaLatte: {
                 name: "抹茶拿鐵",
-                price: "5.65",
-                options: "(熱/冷)"
-              },
-              bubbleMatchaLatte: {
-                name: "珍珠抹茶拿鐵",
-                price: "6.85",
+                price: "5.95",
                 options: "(熱/冷)"
               }
             }
@@ -190,7 +165,7 @@ export const translations = {
               pineappleCake: {
                 name: "台灣鳳梨酥",
                 description: "每日現作",
-                price: "2.85"
+                price: "3.25"
               }
             }
           },
@@ -200,12 +175,12 @@ export const translations = {
               braisedPork: {
                 name: "滷肉飯",
                 description: "入味滷肉，搭配香Q白飯",
-                price: "8.99"
+                price: "10.99 / 12.99"
               },
               chickenRice: {
                 name: "雞肉飯",
                 description: "嫩煎雞腿肉，搭配特製醬汁",
-                price: "9.99"
+                price: "10.99 / 12.99"
               }
             }
           },
@@ -215,12 +190,7 @@ export const translations = {
               beefNoodle: {
                 name: "牛肉麵",
                 description: "香濃湯頭，嫩滑牛肉，手工麵條",
-                price: "12.99"
-              },
-              wontonNoodle: {
-                name: "餛飩麵",
-                description: "手工餛飩，清甜湯頭",
-                price: "10.99"
+                price: "13.99 / 15.99"
               }
             }
           }
@@ -315,37 +285,17 @@ export const translations = {
       },
       drinksList: {
         categories: {
-          oldFashioned: {
-            title: "Taiwanese Old-Fashioned Tea",
-            items: {
-              blackTea: {
-                name: "Classic Black Tea",
-                price: "2.99",
-                options: "(Cold)"
-              },
-              milkTea: {
-                name: "Classic Milk Tea (Whole Milk)",
-                price: "4.35",
-                options: "(Cold)"
-              }
-            }
-          },
           taiwaneseBlackTea: {
             title: "Taiwanese Black Tea",
             items: {
-              honeyBlackTea: {
-                name: "Nature Honey-flavored Black Tea",
-                price: "5.95",
-                options: "(Hot/Cold)"
-              },
               bubbleTea: {
                 name: "Taiwanese Bubble Tea",
-                price: "5.95",
+                price: "6.45",
                 options: "(Hot/Cold)"
               },
               milkTea: {
                 name: "Taiwanese Milk Tea",
-                price: "4.95",
+                price: "5.65",
                 options: "(Hot/Cold)"
               }
             }
@@ -365,12 +315,12 @@ export const translations = {
             items: {
               honeyJasmine: {
                 name: "Honey Jasmine Green Tea",
-                price: "5.25",
+                price: "4.85",
                 options: "(Cold)"
               },
               jasmineBubble: {
                 name: "Jasmine Green Bubble Tea",
-                price: "6.25",
+                price: "6.45",
                 options: "(Hot/Cold)"
               }
             }
@@ -380,12 +330,12 @@ export const translations = {
             items: {
               honeyOolongBubble: {
                 name: "Honey Oolong Bubble Tea",
-                price: "6.25",
+                price: "6.65",
                 options: "(Hot/Cold)"
               },
               honeyOolongMilk: {
                 name: "Honey Oolong Milk Tea",
-                price: "5.25",
+                price: "5.85",
                 options: "(Hot/Cold)"
               }
             }
@@ -395,12 +345,7 @@ export const translations = {
             items: {
               matchaLatte: {
                 name: "Matcha Latte",
-                price: "5.65",
-                options: "(Hot/Cold)"
-              },
-              bubbleMatchaLatte: {
-                name: "Bubble Matcha Latte",
-                price: "6.85",
+                price: "5.95",
                 options: "(Hot/Cold)"
               }
             }
@@ -445,7 +390,7 @@ export const translations = {
               pineappleCake: {
                 name: "Taiwan Pineapple Cake",
                 description: "Freshly made daily",
-                price: "2.85"
+                price: "3.25"
               }
             }
           },
@@ -455,12 +400,12 @@ export const translations = {
               braisedPork: {
                 name: "Braised Pork Rice",
                 description: "Savory braised pork over steamed rice",
-                price: "8.99"
+                price: "10.99 / 12.99"
               },
               chickenRice: {
                 name: "Chicken Rice",
                 description: "Pan-seared chicken thigh with special sauce",
-                price: "9.99"
+                price: "10.99 / 12.99"
               }
             }
           },
@@ -470,12 +415,7 @@ export const translations = {
               beefNoodle: {
                 name: "Beef Noodle Soup",
                 description: "Rich broth, tender beef, handmade noodles",
-                price: "12.99"
-              },
-              wontonNoodle: {
-                name: "Wonton Noodle Soup",
-                description: "Handmade wontons in clear broth",
-                price: "10.99"
+                price: "13.99 / 15.99"
               }
             }
           }
@@ -570,37 +510,17 @@ export const translations = {
       },
       drinksList: {
         categories: {
-          oldFashioned: {
-            title: "Té Tradicional Taiwanés",
-            items: {
-              blackTea: {
-                name: "Té Negro Clásico",
-                price: "2.99",
-                options: "(Frío)"
-              },
-              milkTea: {
-                name: "Té con Leche Clásico (Leche Entera)",
-                price: "4.35",
-                options: "(Frío)"
-              }
-            }
-          },
           taiwaneseBlackTea: {
             title: "Té Negro Taiwanés",
             items: {
-              honeyBlackTea: {
-                name: "Té Negro con Miel Natural",
-                price: "5.95",
-                options: "(Caliente/Frío)"
-              },
               bubbleTea: {
                 name: "Té de Burbujas Taiwanés",
-                price: "5.95",
+                price: "6.45",
                 options: "(Caliente/Frío)"
               },
               milkTea: {
                 name: "Té con Leche Taiwanés",
-                price: "4.95",
+                price: "5.65",
                 options: "(Caliente/Frío)"
               }
             }
@@ -620,12 +540,12 @@ export const translations = {
             items: {
               honeyJasmine: {
                 name: "Té Verde al Jazmín con Miel",
-                price: "5.25",
+                price: "4.85",
                 options: "(Frío)"
               },
               jasmineBubble: {
                 name: "Té Verde al Jazmín con Burbujas",
-                price: "6.25",
+                price: "6.45",
                 options: "(Caliente/Frío)"
               }
             }
@@ -635,12 +555,12 @@ export const translations = {
             items: {
               honeyOolongBubble: {
                 name: "Té Oolong con Miel y Burbujas",
-                price: "6.25",
+                price: "6.65",
                 options: "(Caliente/Frío)"
               },
               honeyOolongMilk: {
                 name: "Té Oolong con Miel y Leche",
-                price: "5.25",
+                price: "5.85",
                 options: "(Caliente/Frío)"
               }
             }
@@ -650,12 +570,7 @@ export const translations = {
             items: {
               matchaLatte: {
                 name: "Matcha Latte",
-                price: "5.65",
-                options: "(Caliente/Frío)"
-              },
-              bubbleMatchaLatte: {
-                name: "Matcha Latte con Burbujas",
-                price: "6.85",
+                price: "5.95",
                 options: "(Caliente/Frío)"
               }
             }
@@ -700,7 +615,7 @@ export const translations = {
               pineappleCake: {
                 name: "Pastel de Piña Taiwanesa",
                 description: "Fresco hecho diariamente",
-                price: "2.85"
+                price: "3.25"
               }
             }
           },
@@ -710,12 +625,12 @@ export const translations = {
               braisedPork: {
                 name: "Arroz con Cerdo Guisado",
                 description: "Cerdo guisado sabroso sobre arroz al vapor",
-                price: "8.99"
+                price: "10.99 / 12.99"
               },
               chickenRice: {
                 name: "Arroz con Pollo",
                 description: "Muslo de pollo salteado con salsa especial",
-                price: "9.99"
+                price: "10.99 / 12.99"
               }
             }
           },
@@ -725,12 +640,7 @@ export const translations = {
               beefNoodle: {
                 name: "Sopa de Fideos con Res",
                 description: "Caldo rico, res tierna, fideos hechos a mano",
-                price: "12.99"
-              },
-              wontonNoodle: {
-                name: "Sopa de Fideos con Wonton",
-                description: "Wontons hechos a mano en caldo claro",
-                price: "10.99"
+                price: "13.99 / 15.99"
               }
             }
           }

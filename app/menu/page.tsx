@@ -5,12 +5,27 @@ import { OrderBanner } from "@/components/order-banner"
 export const metadata: Metadata = {
   title: 'Menu | Bubble Tea, Beef Noodle Soup & More',
   description:
-    'TaiwanWay 完整菜單 — 珍珠奶茶、牛肉麵、滷肉飯、鳳梨酥、烏龍茶。Full menu: bubble tea, beef noodle soup, braised pork rice & Taiwanese desserts.',
+    'TaiwanWay 完整菜單 — 珍珠奶茶、牛肉麵、滷肉飯、鳳梨酥、烏龍茶。Full menu: bubble tea, beef noodle soup, braised pork rice & Taiwanese desserts in Middletown, NY.',
+  keywords: [
+    'TaiwanWay menu',
+    'Taiwanese menu Middletown',
+    'bubble tea flavors',
+    'beef noodle soup menu',
+    'braised pork rice price',
+    'Taiwanese pineapple cake',
+    'oolong tea Middletown',
+    'jasmine green tea',
+    'matcha latte',
+    'Taiwanese desserts NY',
+    '珍珠奶茶 菜單',
+    '台灣茶 紐約',
+  ],
   alternates: { canonical: '/menu' },
   openGraph: {
     title: 'Menu | TaiwanWay - Taiwanese Restaurant Middletown NY',
     description: 'Browse our full menu — bubble tea, oolong tea, beef noodle soup, braised pork rice & handmade Taiwanese desserts.',
     url: '/menu',
+    images: ['/images/og-storefront.jpg'],
   },
 }
 import { MenuCarousel } from "@/components/menu-carousel"

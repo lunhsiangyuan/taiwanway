@@ -46,7 +46,7 @@ export function MenuHighlights() {
               <div className="lg:w-2/3 relative h-[400px] lg:h-[600px] w-full">
                 <Image
                   src={item.image}
-                  alt={t(`menu.items.${item.key}.name`)}
+                  alt={`${t(`menu.items.${item.key}.name`)} — Authentic Taiwanese dish at TaiwanWay Middletown, NY`}
                   fill
                   className="object-cover rounded-t-xl"
                   priority={index === 0}

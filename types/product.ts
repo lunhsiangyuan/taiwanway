@@ -16,6 +16,8 @@ export type Product = {
   origin: string | null;
   qr_code_url?: string | null;
   is_active?: boolean;
+  is_new_arrival?: boolean;
+  featured_until?: string | null;
   created_at?: string;
 };
 

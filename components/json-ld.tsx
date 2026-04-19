@@ -1,7 +1,7 @@
 export function JsonLd() {
     const restaurantJsonLd = {
         "@context": "https://schema.org",
-        "@type": "Restaurant",
+        "@type": "CafeOrCoffeeShop",
         "@id": "https://taiwanwayny.com/#restaurant",
         "name": "TaiwanWay 臺灣味",
         "image": [
@@ -79,7 +79,7 @@ export function JsonLd() {
                             "description": "Traditional Taiwanese braised pork over rice",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "8.99",
+                                "price": "10.99",
                                 "priceCurrency": "USD"
                             }
                         },
@@ -89,7 +89,7 @@ export function JsonLd() {
                             "description": "Taiwanese-style chicken over rice",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "9.99",
+                                "price": "10.99",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -105,17 +105,7 @@ export function JsonLd() {
                             "description": "Signature Taiwanese braised beef noodle soup",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "12.99",
-                                "priceCurrency": "USD"
-                            }
-                        },
-                        {
-                            "@type": "MenuItem",
-                            "name": "Wonton Noodle Soup (餛飩麵)",
-                            "description": "Handmade wonton noodle soup",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "10.99",
+                                "price": "13.99",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -131,31 +121,7 @@ export function JsonLd() {
                             "description": "Handmade Taiwanese pineapple pastry",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "2.85",
-                                "priceCurrency": "USD"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "@type": "MenuSection",
-                    "name": "Taiwanese Old-Fashioned Tea",
-                    "hasMenuItem": [
-                        {
-                            "@type": "MenuItem",
-                            "name": "Classic Black Tea (冰紅茶)",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "2.99",
-                                "priceCurrency": "USD"
-                            }
-                        },
-                        {
-                            "@type": "MenuItem",
-                            "name": "Classic Milk Tea (鮮奶茶)",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "4.35",
+                                "price": "3.25",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -167,19 +133,10 @@ export function JsonLd() {
                     "hasMenuItem": [
                         {
                             "@type": "MenuItem",
-                            "name": "Nature Honey-flavored Black Tea (台灣蜜香紅茶)",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "5.95",
-                                "priceCurrency": "USD"
-                            }
-                        },
-                        {
-                            "@type": "MenuItem",
                             "name": "Taiwanese Bubble Tea (招牌珍珠奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "5.95",
+                                "price": "6.45",
                                 "priceCurrency": "USD"
                             }
                         },
@@ -188,7 +145,7 @@ export function JsonLd() {
                             "name": "Taiwanese Milk Tea (蜜香奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "4.95",
+                                "price": "5.65",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -218,7 +175,7 @@ export function JsonLd() {
                             "name": "Honey Jasmine Green Tea (茉莉蜂蜜綠茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "5.25",
+                                "price": "4.85",
                                 "priceCurrency": "USD"
                             }
                         },
@@ -227,7 +184,7 @@ export function JsonLd() {
                             "name": "Jasmine Green Bubble Tea (茉莉珍珠奶綠)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "6.25",
+                                "price": "6.45",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -242,7 +199,7 @@ export function JsonLd() {
                             "name": "Honey Oolong Bubble Tea (蜂蜜烏龍珍珠奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "6.25",
+                                "price": "6.65",
                                 "priceCurrency": "USD"
                             }
                         },
@@ -251,7 +208,7 @@ export function JsonLd() {
                             "name": "Honey Oolong Milk Tea (蜂蜜烏龍奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "5.25",
+                                "price": "5.85",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -266,16 +223,7 @@ export function JsonLd() {
                             "name": "Matcha Latte (抹茶拿鐵)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "5.65",
-                                "priceCurrency": "USD"
-                            }
-                        },
-                        {
-                            "@type": "MenuItem",
-                            "name": "Bubble Matcha Latte (珍珠抹茶拿鐵)",
-                            "offers": {
-                                "@type": "Offer",
-                                "price": "6.85",
+                                "price": "5.95",
                                 "priceCurrency": "USD"
                             }
                         }

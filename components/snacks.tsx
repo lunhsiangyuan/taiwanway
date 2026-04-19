@@ -1,32 +1,7 @@
 import Image from "next/image"
 
 export function Snacks() {
-  const snacks = [
-    {
-      name: "鹽酥雞 Taiwanese Popcorn Chicken",
-      description: "香脆可口的台式炸雞",
-      price: "6.99",
-      image: "/placeholder.svg",
-    },
-    {
-      name: "蔥油餅 Scallion Pancake",
-      description: "外酥內軟的傳統小吃",
-      price: "4.99",
-      image: "/placeholder.svg",
-    },
-    {
-      name: "滷味拼盤 Braised Delights Platter",
-      description: "多種滷味的美味組合",
-      price: "8.99",
-      image: "/placeholder.svg",
-    },
-    {
-      name: "炸豆腐 Fried Tofu",
-      description: "外酥內嫩的黃金豆腐",
-      price: "5.99",
-      image: "/placeholder.svg",
-    },
-  ]
+  const snacks: { name: string; description: string; price: string; image: string }[] = []
 
   return (
     <section id="snacks" className="mb-12 scroll-mt-20">

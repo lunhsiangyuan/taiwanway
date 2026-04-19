@@ -45,7 +45,7 @@ export function MainDishesList() {
                         <div className="aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 relative">
                           <Image
                             src={`/images/dishes/${itemKey}.jpg`}
-                            alt={item.name}
+                            alt={`${item.name} — Authentic Taiwanese dish at TaiwanWay Middletown, NY`}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
                           />

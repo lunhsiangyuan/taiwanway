@@ -96,7 +96,7 @@ export function ContactSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="TaiwanWay Restaurant Location"
+                title="TaiwanWay Café Location — Middletown, NY"
               />
             </div>
           </div>

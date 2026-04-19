@@ -36,7 +36,7 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
           <div className="relative w-full md:w-64 h-48 md:h-auto flex-shrink-0">
             <Image
               src={imageSrc}
-              alt={name}
+              alt={`${name} — TaiwanWay Taiwanese product, Middletown NY`}
               fill
               className="object-cover"
               sizes="(min-width: 768px) 256px, 100vw"
@@ -109,7 +109,7 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
       <div className="relative w-full h-64 overflow-hidden">
         <Image
           src={imageSrc}
-          alt={name}
+          alt={`${name} — TaiwanWay Taiwanese product, Middletown NY`}
           fill
           className="object-cover transition-transform duration-300 hover:scale-105"
           sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"

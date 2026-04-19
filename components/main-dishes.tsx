@@ -35,7 +35,7 @@ export function MainDishes() {
               <div className="relative w-full md:w-48 h-48 rounded-lg overflow-hidden">
                 <Image
                   src={menuImages[key as keyof typeof menuImages]}
-                  alt={item.name}
+                  alt={`${item.name} — Authentic Taiwanese dish at TaiwanWay Middletown, NY`}
                   fill
                   className="object-cover"
                 />
@@ -62,7 +62,7 @@ export function MainDishes() {
               <div className="relative w-full md:w-48 h-48 rounded-lg overflow-hidden">
                 <Image
                   src={menuImages[key as keyof typeof menuImages]}
-                  alt={item.name}
+                  alt={`${item.name} — Authentic Taiwanese dish at TaiwanWay Middletown, NY`}
                   fill
                   className="object-cover"
                 />

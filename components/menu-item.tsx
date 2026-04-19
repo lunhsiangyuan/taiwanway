@@ -12,7 +12,7 @@ export function MenuItem({ image, name, description }: MenuItemProps) {
       <div className="relative w-32 h-32 mr-4">
         <Image
           src={image}
-          alt={name}
+          alt={`${name} — TaiwanWay Taiwanese menu item, Middletown NY`}
           fill
           className="object-cover rounded-md"
         />

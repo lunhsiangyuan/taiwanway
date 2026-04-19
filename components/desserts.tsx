@@ -5,13 +5,7 @@ export function Desserts() {
     {
       name: "鳳梨酥 Pineapple Cake",
       description: "酥脆外皮，內餡飽滿的台灣名產",
-      price: "3.99",
-      image: "/placeholder.svg",
-    },
-    {
-      name: "蛋糕捲 Cake Roll",
-      description: "輕盈蓬鬆的美味蛋糕",
-      price: "5.99",
+      price: "3.25",
       image: "/placeholder.svg",
     }
   ]

@@ -9,6 +9,7 @@ const ALLOWED_FIELDS = [
   'description_zh', 'description_en', 'description_es',
   'how_to_use_zh', 'how_to_use_en', 'how_to_use_es',
   'origin', 'qr_code_url', 'is_active',
+  'is_new_arrival', 'featured_until',
 ] as const;
 
 function pickAllowed(body: Record<string, unknown>): Record<string, unknown> {

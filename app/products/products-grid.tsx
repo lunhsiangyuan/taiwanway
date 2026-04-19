@@ -37,8 +37,13 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
                 <Link
                   key={p.id}
                   href={`/product/${p.slug}`}
-                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                  className="relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                 >
+                  {p.is_new_arrival && (!p.featured_until || p.featured_until >= new Date().toISOString().slice(0, 10)) && (
+                    <div className="absolute top-2 right-2 z-10 bg-amber-500 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow">
+                      NEW
+                    </div>
+                  )}
                   <div className="relative aspect-square bg-gray-50">
                     <Image
                       src={p.image_url}

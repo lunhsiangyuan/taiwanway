@@ -21,16 +21,16 @@ export function Hero() {
   }, [])
 
   const subtitle = language === 'zh'
-    ? '正宗臺灣料理'
+    ? '招牌珍奶 · 台灣茶 · 家常料理'
     : language === 'es'
-      ? 'Autentica Cocina Taiwanesa'
-      : 'Authentic Taiwanese Cuisine'
+      ? 'Te de Burbujas · Te Taiwanes · Comida Casera'
+      : 'Signature Bubble Tea · Taiwan Tea · Comfort Food'
 
   const description = language === 'zh'
-    ? '從臺灣到紐約，將最道地的臺灣味帶到你的餐桌。每一口都是家的味道。'
+    ? '巴黎咖啡館的悠閒，台灣茶館的溫度。招牌手搖珍珠奶茶、阿里山高山茶、慢燉牛肉麵。'
     : language === 'es'
-      ? 'Desde Taiwan hasta Nueva York, llevando los sabores mas autenticos de Taiwan a tu mesa.'
-      : 'From Taiwan to New York, bringing the most authentic Taiwanese flavors to your table. Every bite tastes like home.'
+      ? 'Mananas parisinas, tardes de Taiwan. Te de burbujas artesanal, te de alta montana de Alishan, fideos con carne a fuego lento.'
+      : 'Parisian mornings meet Taiwan afternoons. Signature hand-shaken bubble tea, Alishan high-mountain tea, slow-simmered beef noodle soup.'
 
   const viewMenu = language === 'zh' ? '瀏覽菜單' : language === 'es' ? 'Ver Menu' : 'View Menu'
   const pickup = language === 'zh' ? '來店自取' : language === 'es' ? 'Recoger en Tienda' : 'Pickup'
@@ -45,8 +45,8 @@ export function Hero() {
         style={{ transform: `translateY(${scrollY * 0.15}px)` }}
       >
         <Image
-          src="/images/hero-bg.png"
-          alt="TaiwanWay authentic Taiwanese cuisine"
+          src="/images/hero-bg-v2.jpg"
+          alt="TaiwanWay 臺灣味 — Taiwanese café table with beef noodle soup, bubble tea, sea-salt caramel latte, Alishan oolong tea, braised pork rice and pineapple cakes in Middletown, NY"
           fill
           priority
           className="object-cover scale-110"
@@ -71,7 +71,7 @@ export function Hero() {
 
         {/* 主標題 */}
         <h1
-          className="font-heading text-5xl font-black text-white sm:text-7xl md:text-8xl lg:text-9xl animate-fade-in-up drop-shadow-2xl"
+          className="font-heading text-4xl font-black text-white sm:text-6xl md:text-7xl lg:text-8xl animate-fade-in-up drop-shadow-2xl"
           style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
         >
           TaiwanWay
@@ -87,7 +87,7 @@ export function Hero() {
 
         {/* 描述 */}
         <p
-          className="mt-6 max-w-lg font-body text-lg leading-relaxed text-white/70 animate-fade-in-up"
+          className="mt-8 max-w-2xl font-body text-xl md:text-2xl leading-relaxed text-white/85 animate-fade-in-up"
           style={{ animationDelay: '0.8s', animationFillMode: 'both' }}
         >
           {description}

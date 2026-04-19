@@ -31,7 +31,7 @@ export function MenuSection({ id, title, titleCh, items, layout }: MenuSectionPr
                   <div className="relative h-64 w-full">
                     <Image
                       src={item.image || "/placeholder.svg"}
-                      alt={item.name}
+                      alt={`${item.name} — TaiwanWay Taiwanese menu, Middletown NY`}
                       fill
                       className="object-cover object-center"
                       sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"

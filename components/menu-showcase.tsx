@@ -23,21 +23,32 @@ const menuItems: MenuItem[] = [
     nameZh: '珍珠奶茶',
     nameEn: 'Bubble Tea',
     nameEs: 'Te de Burbujas',
-    descZh: '經典臺灣手搖珍珠奶茶，Q彈珍珠配濃郁奶香',
-    descEn: 'Classic hand-shaken bubble milk tea with chewy tapioca pearls',
-    descEs: 'Te de leche con perlas clasico hecho a mano',
-    price: '$6.50',
+    descZh: '台灣空運蜜香紅茶，每日手煮 Q 彈珍珠',
+    descEn: 'Honey-scented black tea air-shipped from Taiwan, hand-cooked tapioca pearls daily',
+    descEs: 'Te negro miel de Taiwan, perlas cocidas a mano cada dia',
+    price: '$6.45',
     image: '/images/bubble-tea.png',
+    category: 'drink',
+  },
+  {
+    nameZh: '阿里山高山烏龍',
+    nameEn: 'Alishan High-Mountain Oolong',
+    nameEs: 'Oolong de Alta Montana Alishan',
+    descZh: '海拔千米以上茶園，壺泡現沏，茶香回甘',
+    descEn: 'Grown above 1,000m in Taiwan\'s Alishan mountains, pot-brewed fresh to order',
+    descEs: 'Cultivado sobre 1,000m en las montanas de Alishan, preparado al momento',
+    price: '$5.00',
+    image: '/images/oolong-tea.png',
     category: 'drink',
   },
   {
     nameZh: '牛肉麵',
     nameEn: 'Beef Noodle Soup',
     nameEs: 'Sopa de Fideos con Res',
-    descZh: '紅燒牛肉湯底配手工麵條，香濃入味',
-    descEn: 'Braised beef broth with handmade noodles, rich and flavorful',
-    descEs: 'Caldo de res estofada con fideos hechos a mano',
-    price: '$15.95',
+    descZh: '紅燒牛肉湯底慢燉一整天，配手工麵條',
+    descEn: 'Slow-simmered all day — rich braised beef broth with handmade noodles',
+    descEs: 'Caldo de res estofada cocido todo el dia, con fideos hechos a mano',
+    price: 'M $13.99 / L $15.99',
     image: '/images/beef-noodle.png',
     category: 'main',
   },
@@ -45,34 +56,23 @@ const menuItems: MenuItem[] = [
     nameZh: '滷肉飯',
     nameEn: 'Braised Pork Rice',
     nameEs: 'Arroz con Cerdo Estofado',
-    descZh: '慢火燉煮滷肉澆淋白飯，古早味',
-    descEn: 'Savory braised pork over steamed rice, old-school flavor',
-    descEs: 'Cerdo estofado sobre arroz al vapor',
-    price: '$12.95',
-    image: '/images/braised-pork.png',
+    descZh: '慢火燉煮滷肉澆淋白飯，台灣人的 comfort food',
+    descEn: 'Savory braised pork over steamed rice — Taiwan\'s ultimate comfort food',
+    descEs: 'Cerdo estofado sobre arroz al vapor — el comfort food de Taiwan',
+    price: 'M $10.99 / L $12.99',
+    image: '/images/braised-pork-v3.jpg',
     category: 'main',
   },
   {
     nameZh: '鳳梨酥',
     nameEn: 'Pineapple Cake',
     nameEs: 'Pastel de Pina',
-    descZh: '酥脆外皮包裹鳳梨內餡，伴手禮首選',
-    descEn: 'Buttery pastry with pineapple filling, perfect gift',
-    descEs: 'Pastel de mantequilla con relleno de pina',
-    price: '$3.50',
+    descZh: '手工現作，酥脆外皮包裹土鳳梨內餡',
+    descEn: 'Handmade in-house — buttery pastry with Taiwan pineapple filling',
+    descEs: 'Hecho a mano — masa mantecosa con relleno de pina de Taiwan',
+    price: '$3.25',
     image: '/images/pineapple-cake.png',
     category: 'dessert',
-  },
-  {
-    nameZh: '烏龍茶',
-    nameEn: 'Oolong Tea',
-    nameEs: 'Te Oolong',
-    descZh: '高山半發酵茶，茶香回甘',
-    descEn: 'Mountain-grown semi-fermented tea with lingering finish',
-    descEs: 'Te semi-fermentado cultivado en montana',
-    price: '$4.50',
-    image: '/images/oolong-tea.png',
-    category: 'drink',
   },
 ]
 
@@ -94,10 +94,10 @@ export function MenuShowcase() {
 
   const title = language === 'zh' ? '經典推薦' : language === 'es' ? 'Nuestro Menu' : 'Our Menu'
   const subtitle = language === 'zh'
-    ? '招牌料理與飲品'
+    ? '招牌飲品 · 家常料理'
     : language === 'es'
-      ? 'Platos y Bebidas Exclusivas'
-      : 'Signature Dishes & Drinks'
+      ? 'Bebidas Artesanales · Comida Casera'
+      : 'Handcrafted Drinks · Comfort Food'
   const viewFullMenu = language === 'zh' ? '查看完整菜單' : language === 'es' ? 'Ver Menu Completo' : 'View Full Menu'
   const pickupLabel = language === 'zh' ? '來店自取' : language === 'es' ? 'Recoger' : 'Pickup'
   const deliveryLabel = language === 'zh' ? '外送 Uber Eats' : 'Delivery'
