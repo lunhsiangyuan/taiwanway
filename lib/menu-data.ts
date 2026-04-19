@@ -53,9 +53,9 @@ export const PRODUCTS: Product[] = [
     id: 'braised-beef-noodle-soup',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/beef-noodle-soup-v2.jpg',
-      product: '/images/beef-noodle-soup-v2.jpg',
-      thumbnail: '/images/beef-noodle-soup-v2.jpg',
+      hero: '/images/beef-noodle-soup-v3.jpg',
+      product: '/images/beef-noodle-soup-v3.jpg',
+      thumbnail: '/images/beef-noodle-soup-v3.jpg',
     },
     name: {
       zh: '紅燒牛肉麵',
