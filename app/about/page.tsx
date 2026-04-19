@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-10">
-              <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3 tracking-tight">
+              <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6 tracking-tight">
                 {t('about.title')}
               </h1>
               <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
