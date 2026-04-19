@@ -75,9 +75,9 @@ export const PRODUCTS: Product[] = [
     id: 'sesame-beef-noodles',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/sesame-beef-noodles-v2.jpg',
-      product: '/images/sesame-beef-noodles-v2.jpg',
-      thumbnail: '/images/sesame-beef-noodles-v2.jpg',
+      hero: '/images/sesame-beef-noodles-v3.jpg',
+      product: '/images/sesame-beef-noodles-v3.jpg',
+      thumbnail: '/images/sesame-beef-noodles-v3.jpg',
     },
     name: {
       zh: '麻醬牛肉乾麵',
