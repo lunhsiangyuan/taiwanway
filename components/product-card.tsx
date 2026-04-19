@@ -89,11 +89,13 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
                 )}
               </div>
               <a
-                href="https://order.taiwanwayny.com/order"
+                href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-full bg-[hsl(17,45%,47%)] px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-[hsl(17,45%,42%)] active:scale-95"
               >
                 <ShoppingBag className="h-3.5 w-3.5" />
-                {language === 'zh' ? '點餐' : 'Order'}
+                {language === 'zh' ? '點餐' : language === 'es' ? 'Pedir' : 'Order'}
               </a>
             </div>
           </div>
@@ -162,11 +164,13 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
             )}
           </div>
           <a
-            href="https://order.taiwanwayny.com/order"
+            href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full bg-[hsl(17,45%,47%)] px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-[hsl(17,45%,42%)] active:scale-95"
           >
             <ShoppingBag className="h-3.5 w-3.5" />
-            {language === 'zh' ? '點餐' : 'Order'}
+            {language === 'zh' ? '點餐' : language === 'es' ? 'Pedir' : 'Order'}
           </a>
         </div>
       </div>
