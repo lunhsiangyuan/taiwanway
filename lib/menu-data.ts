@@ -53,9 +53,9 @@ export const PRODUCTS: Product[] = [
     id: 'braised-beef-noodle-soup',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/products/beef-noodle-soup-hero.webp',
-      product: '/images/products/beef-noodle-soup-product.webp',
-      thumbnail: '/images/products/beef-noodle-soup-thumbnail.webp',
+      hero: '/images/beef-noodle-soup-v2.jpg',
+      product: '/images/beef-noodle-soup-v2.jpg',
+      thumbnail: '/images/beef-noodle-soup-v2.jpg',
     },
     name: {
       zh: '紅燒牛肉麵',
@@ -75,9 +75,9 @@ export const PRODUCTS: Product[] = [
     id: 'sesame-beef-noodles',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/sesame-beef-noodles.jpg',
-      product: '/images/sesame-beef-noodles.jpg',
-      thumbnail: '/images/sesame-beef-noodles.jpg',
+      hero: '/images/sesame-beef-noodles-v2.jpg',
+      product: '/images/sesame-beef-noodles-v2.jpg',
+      thumbnail: '/images/sesame-beef-noodles-v2.jpg',
     },
     name: {
       zh: '麻醬牛肉乾麵',
@@ -97,9 +97,9 @@ export const PRODUCTS: Product[] = [
     id: 'braised-pork-rice',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/products/braised-pork-rice-hero.webp',
-      product: '/images/products/braised-pork-rice-product.webp',
-      thumbnail: '/images/products/braised-pork-rice-thumbnail.webp',
+      hero: '/images/braised-pork-rice-v2.jpg',
+      product: '/images/braised-pork-rice-v2.jpg',
+      thumbnail: '/images/braised-pork-rice-v2.jpg',
     },
     name: {
       zh: '古早味滷肉飯',
@@ -119,9 +119,9 @@ export const PRODUCTS: Product[] = [
     id: 'chiayi-chicken-rice',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/chicken-rice.png',
-      product: '/images/chicken-rice.png',
-      thumbnail: '/images/chicken-rice.png',
+      hero: '/images/chiayi-chicken-rice-v2.jpg',
+      product: '/images/chiayi-chicken-rice-v2.jpg',
+      thumbnail: '/images/chiayi-chicken-rice-v2.jpg',
     },
     name: {
       zh: '嘉義雞肉飯',
@@ -141,9 +141,9 @@ export const PRODUCTS: Product[] = [
     id: 'sakura-shrimp-sticky-rice',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/sakura-shrimp-rice.jpg',
-      product: '/images/sakura-shrimp-rice.jpg',
-      thumbnail: '/images/sakura-shrimp-rice.jpg',
+      hero: '/images/sakura-shrimp-rice-v2.jpg',
+      product: '/images/sakura-shrimp-rice-v2.jpg',
+      thumbnail: '/images/sakura-shrimp-rice-v2.jpg',
     },
     name: {
       zh: '櫻花蝦米糕',
