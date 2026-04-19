@@ -289,7 +289,10 @@ export function JsonLd() {
         "@type": "WebSite",
         "@id": "https://taiwanwayny.com/#website",
         "name": "TaiwanWay 臺灣味",
+        "alternateName": ["TaiwanWay", "臺灣味", "台灣味"],
         "url": "https://taiwanwayny.com",
+        "inLanguage": ["en-US", "zh-TW", "es"],
+        "publisher": { "@id": "https://taiwanwayny.com/#restaurant" },
         "potentialAction": {
             "@type": "SearchAction",
             "target": {
@@ -297,6 +300,66 @@ export function JsonLd() {
                 "urlTemplate": "https://taiwanwayny.com/menu?q={search_term_string}"
             },
             "query-input": "required name=search_term_string"
+        }
+    }
+
+    const localBusinessJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://taiwanwayny.com/#localbusiness",
+        "name": "TaiwanWay 臺灣味",
+        "legalName": "FONGFOOD LLC",
+        "alternateName": ["TaiwanWay", "臺灣味"],
+        "url": "https://taiwanwayny.com",
+        "telephone": "+1-845-381-1002",
+        "email": "usamyheish@gmail.com",
+        "image": "https://taiwanwayny.com/images/storefront.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "26 South St",
+            "addressLocality": "Middletown",
+            "addressRegion": "NY",
+            "postalCode": "10940",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.4437301,
+            "longitude": -74.4206521
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Middletown, NY" },
+            { "@type": "AdministrativeArea", "name": "Orange County, NY" },
+            { "@type": "AdministrativeArea", "name": "Hudson Valley" }
+        ],
+        "priceRange": "$$",
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Cash, Credit Card",
+        "sameAs": [
+            "https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
+        ],
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "11:00", "closes": "19:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "11:00", "closes": "19:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "19:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:00", "closes": "19:00" }
+        ]
+    }
+
+    const organizationJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://taiwanwayny.com/#organization",
+        "name": "FONGFOOD LLC d/b/a TaiwanWay",
+        "alternateName": "TaiwanWay 臺灣味",
+        "url": "https://taiwanwayny.com",
+        "logo": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-A(%E5%8E%BB%E8%83%8C)-01-md2UWlZPf63lgtuEOcu8FhyaJJySOU.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-845-381-1002",
+            "contactType": "customer service",
+            "email": "usamyheish@gmail.com",
+            "availableLanguage": ["en", "zh-Hant", "es"]
         }
     }
 
@@ -308,8 +371,36 @@ export function JsonLd() {
             />
             <script
                 type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
             />
         </>
+    )
+}
+
+// Breadcrumb schema — use on inner pages. Pass ordered list of {name, url}
+export function BreadcrumbJsonLd({ items }: { items: Array<{ name: string; url: string }> }) {
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": items.map((item, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": item.name,
+            "item": item.url,
+        })),
+    }
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
     )
 }

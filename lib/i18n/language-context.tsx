@@ -28,11 +28,12 @@ function getInitialLanguage(): Language {
       return stored
     }
   }
-  return 'zh'
+  // 無 cookie 時預設英文（主要 SEO 市場為美國英文使用者）
+  return 'en'
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('zh')
+  const [language, setLanguageState] = useState<Language>('en')
   const [isHydrated, setIsHydrated] = useState(false)
 
   useEffect(() => {

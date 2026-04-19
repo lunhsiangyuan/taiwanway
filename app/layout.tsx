@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Playfair_Display_SC, Karla } from "next/font/google"
+import { cookies } from "next/headers"
 import "./globals.css"
 import { LanguageProvider } from "@/lib/i18n/language-context"
 import { CookieConsentBanner } from "@/components/cookie-consent"
@@ -9,6 +10,12 @@ import { JsonLd } from "@/components/json-ld"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FloatingOrderCTA } from "@/components/floating-order-cta"
+
+const LANG_ATTR: Record<string, string> = {
+  zh: 'zh-TW',
+  en: 'en',
+  es: 'es',
+}
 
 const playfairDisplaySC = Playfair_Display_SC({
   subsets: ['latin'],
@@ -48,9 +55,19 @@ export const metadata: Metadata = {
     'Middletown NY restaurant',
     'TaiwanWay 臺灣味',
   ],
+  alternates: {
+    canonical: 'https://taiwanwayny.com',
+    languages: {
+      'en-US': 'https://taiwanwayny.com',
+      'zh-TW': 'https://taiwanwayny.com',
+      'es': 'https://taiwanwayny.com',
+      'x-default': 'https://taiwanwayny.com',
+    },
+  },
   openGraph: {
     siteName: 'TaiwanWay',
-    locale: 'zh_TW',
+    locale: 'en_US',
+    alternateLocale: ['zh_TW', 'es'],
     type: 'website',
     images: [
       {
@@ -76,13 +93,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const cookieStore = await cookies()
+  const langCookie = cookieStore.get('taiwanway-language')?.value
+  const htmlLang = LANG_ATTR[langCookie ?? ''] ?? 'en'
+
   return (
-    <html lang="zh-TW">
+    <html lang={htmlLang}>
       <head>
         <GoogleAnalyticsScript />
       </head>
