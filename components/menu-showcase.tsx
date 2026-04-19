@@ -99,7 +99,6 @@ export function MenuShowcase() {
       ? 'Bebidas Artesanales · Comida Casera'
       : 'Handcrafted Drinks · Comfort Food'
   const viewFullMenu = language === 'zh' ? '查看完整菜單' : language === 'es' ? 'Ver Menu Completo' : 'View Full Menu'
-  const pickupLabel = language === 'zh' ? '來店自取' : language === 'es' ? 'Recoger' : 'Pickup'
   const deliveryLabel = language === 'zh' ? '外送 Uber Eats' : 'Delivery'
 
   const getName = (item: MenuItem) => language === 'zh' ? item.nameZh : language === 'es' ? item.nameEs : item.nameEn
@@ -189,12 +188,6 @@ export function MenuShowcase() {
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[#06C167] px-8 py-3.5 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[#05a557] hover:scale-105 cursor-pointer"
           >
             <Truck className="h-4 w-4" /> {deliveryLabel}
-          </a>
-          <a
-            href="https://order.taiwanwayny.com/order"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[hsl(44,80%,40%)] px-8 py-3.5 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[hsl(44,80%,35%)] hover:scale-105 cursor-pointer"
-          >
-            <ShoppingBag className="h-4 w-4" /> {pickupLabel}
           </a>
           <Link
             href="/menu"

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { ProductsShowcase } from "@/components/products-showcase"
-import { OrderBanner } from "@/components/order-banner"
 
 export const metadata: Metadata = {
   title: 'Menu | Bubble Tea, Beef Noodle Soup & More',
@@ -40,9 +39,6 @@ export default function MenuPage() {
 
       {/* 產品展示 - 春水堂風格 */}
       <ProductsShowcase />
-
-      {/* 訂餐橫幅 — 菜單底部 */}
-      <OrderBanner />
     </main>
   )
 }

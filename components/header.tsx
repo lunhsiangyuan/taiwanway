@@ -127,25 +127,11 @@ export function Header() {
           </DropdownMenu>
 
           {/* Order CTA — 雙通道 */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full px-6">
-                {t('nav.orderOnline')} <ChevronDown className="ml-1 h-3.5 w-3.5" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-48">
-              <DropdownMenuItem asChild className="cursor-pointer font-body gap-2">
-                <a href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A" target="_blank" rel="noopener noreferrer">
-                  🛵 {t('nav.delivery')}
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className="cursor-pointer font-body gap-2">
-                <a href="https://order.taiwanwayny.com/order">
-                  🏪 {t('nav.pickup')}
-                </a>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Button asChild className="bg-[#06C167] text-white hover:bg-[#05a557] font-body font-semibold rounded-full px-6">
+            <a href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A" target="_blank" rel="noopener noreferrer">
+              🛵 {t('nav.delivery')}
+            </a>
+          </Button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -211,11 +197,6 @@ export function Header() {
                   <Button asChild className="bg-[#06C167] text-white hover:bg-[#05a557] font-body font-semibold rounded-full">
                     <a href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                       🛵 {t('nav.delivery')}
-                    </a>
-                  </Button>
-                  <Button asChild className="bg-gold text-white hover:bg-gold/90 font-body font-semibold rounded-full">
-                    <a href="https://order.taiwanwayny.com/order" onClick={() => setIsOpen(false)}>
-                      🏪 {t('nav.pickup')}
                     </a>
                   </Button>
                 </div>

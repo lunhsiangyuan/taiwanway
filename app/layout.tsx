@@ -9,7 +9,6 @@ import { AnalyticsProvider, GoogleAnalyticsScript, FacebookPixelNoScript, GTMNoS
 import { JsonLd } from "@/components/json-ld"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { FloatingOrderCTA } from "@/components/floating-order-cta"
 
 const LANG_ATTR: Record<string, string> = {
   zh: 'zh-TW',
@@ -116,7 +115,6 @@ export default async function RootLayout({
             <Header />
             {children}
             <Footer />
-            <FloatingOrderCTA />
           </AnalyticsProvider>
           <CookieConsentBanner />
         </LanguageProvider>

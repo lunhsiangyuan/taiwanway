@@ -260,12 +260,12 @@ export function Testimonials() {
           }`}
         >
           <a
-            href="https://www.yelp.com/biz/taiwan-way-middletown"
+            href="https://www.google.com/maps/place//@41.4437301,-74.4206521,17z/data=!4m8!3m7!1s0x89c33262597cb655:0x968db5356171d2eb!8m2!3d41.4437301!4d-74.4206521!9m1!1b1"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 font-body text-sm text-[#FAF7F2]/60 hover:text-[hsl(44,80%,40%)] transition-colors"
           >
-            View all reviews on Yelp →
+            View all reviews on Google →
           </a>
         </div>
       </div>
