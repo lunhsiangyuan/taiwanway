@@ -97,9 +97,9 @@ export const PRODUCTS: Product[] = [
     id: 'braised-pork-rice',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/braised-pork-rice-v2.jpg',
-      product: '/images/braised-pork-rice-v2.jpg',
-      thumbnail: '/images/braised-pork-rice-v2.jpg',
+      hero: '/images/braised-pork-rice-v3.jpg',
+      product: '/images/braised-pork-rice-v3.jpg',
+      thumbnail: '/images/braised-pork-rice-v3.jpg',
     },
     name: {
       zh: '古早味滷肉飯',
@@ -119,9 +119,9 @@ export const PRODUCTS: Product[] = [
     id: 'chiayi-chicken-rice',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/chiayi-chicken-rice-v2.jpg',
-      product: '/images/chiayi-chicken-rice-v2.jpg',
-      thumbnail: '/images/chiayi-chicken-rice-v2.jpg',
+      hero: '/images/chiayi-chicken-rice-v3.jpg',
+      product: '/images/chiayi-chicken-rice-v3.jpg',
+      thumbnail: '/images/chiayi-chicken-rice-v3.jpg',
     },
     name: {
       zh: '嘉義雞肉飯',
