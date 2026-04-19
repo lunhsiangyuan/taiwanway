@@ -23,6 +23,11 @@ export interface Product {
     es?: string;
   };
   price?: number;
+  // 雙尺寸定價（主餐常見：小碗 / 大碗）。若同時存在，顯示時優先使用 priceRange
+  priceRange?: {
+    regular: number;
+    large: number;
+  };
   allergens?: string[];  // 過敏原
 }
 
@@ -39,9 +44,121 @@ export const CATEGORIES = {
 } as const;
 
 /**
- * 產品目錄（僅包含飲料品項，主餐已在輪播中展示）
+ * 產品目錄
  */
 export const PRODUCTS: Product[] = [
+
+  // ============ 主餐 ============
+  {
+    id: 'braised-beef-noodle-soup',
+    category: CATEGORIES.MAIN_DISHES,
+    image: {
+      hero: '/images/products/beef-noodle-soup-hero.webp',
+      product: '/images/products/beef-noodle-soup-product.webp',
+      thumbnail: '/images/products/beef-noodle-soup-thumbnail.webp',
+    },
+    name: {
+      zh: '紅燒牛肉麵',
+      en: 'Braised Beef Noodle Soup',
+      es: 'Sopa de Fideos con Ternera Estofada',
+    },
+    tags: ['主餐', '湯麵'],
+    description: {
+      zh: '台灣經典紅燒牛肉麵——精選牛腩以香料與醬油慢燉一整天，湯頭濃郁鮮甜。搭配 Q 彈手工麵條與當季青菜，一碗上桌，就是最道地的台灣午後。',
+      en: 'The Taiwanese classic — beef brisket slow-simmered all day in a rich spiced soy broth, served over hand-pulled chewy noodles with seasonal greens. Every bowl captures a Taiwan afternoon.',
+      es: 'El clásico taiwanés — pecho de res cocinado a fuego lento todo el día en caldo especiado de salsa de soja, servido sobre fideos artesanales con verduras de temporada. Un bol que captura una tarde en Taiwán.',
+    },
+    priceRange: { regular: 13.99, large: 15.99 },
+    allergens: ['麩質', '大豆'],
+  },
+  {
+    id: 'sesame-beef-noodles',
+    category: CATEGORIES.MAIN_DISHES,
+    image: {
+      hero: '/images/sesame-beef-noodles.jpg',
+      product: '/images/sesame-beef-noodles.jpg',
+      thumbnail: '/images/sesame-beef-noodles.jpg',
+    },
+    name: {
+      zh: '麻醬牛肉乾麵',
+      en: 'Sesame Beef Noodles',
+      es: 'Fideos con Ternera y Pasta de Sésamo',
+    },
+    tags: ['主餐', '乾麵'],
+    description: {
+      zh: '手工 Q 彈麵條淋上濃香芝麻醬，搭配滷製入味的牛腱肉片與當季青菜。攪拌均勻的瞬間，整碗的芝麻香氣瞬間釋放。',
+      en: 'Hand-pulled chewy noodles tossed in rich sesame paste, topped with tender braised beef shank and seasonal greens. Mix to release a bowlful of toasted-sesame aroma.',
+      es: 'Fideos artesanales al dente con pasta de sésamo, cubiertos con jarrete de ternera estofado y verduras de temporada. Mezcla para liberar el aroma del sésamo tostado.',
+    },
+    priceRange: { regular: 13.99, large: 15.99 },
+    allergens: ['麩質', '芝麻', '大豆'],
+  },
+  {
+    id: 'braised-pork-rice',
+    category: CATEGORIES.MAIN_DISHES,
+    image: {
+      hero: '/images/products/braised-pork-rice-hero.webp',
+      product: '/images/products/braised-pork-rice-product.webp',
+      thumbnail: '/images/products/braised-pork-rice-thumbnail.webp',
+    },
+    name: {
+      zh: '古早味滷肉飯',
+      en: 'Braised Pork Rice',
+      es: 'Arroz con Cerdo Estofado',
+    },
+    tags: ['主餐', '飯類'],
+    description: {
+      zh: '阿嬤的古早味——豬五花切小丁，以醬油、糖與五香慢燉至融化入味，淋在熱騰騰的香 Q 白飯上。一口，就是台灣街邊最經典的家常滋味。',
+      en: 'Grandma\u2019s traditional braise — minced pork belly slow-cooked in soy, sugar, and five-spice until melt-in-your-mouth tender, ladled over steaming rice. The classic taste of Taiwan street food.',
+      es: 'La receta tradicional de la abuela — panceta de cerdo picada cocinada a fuego lento con soja, azúcar y cinco especias, servida sobre arroz humeante. El sabor clásico de la comida callejera taiwanesa.',
+    },
+    priceRange: { regular: 10.99, large: 12.99 },
+    allergens: ['大豆'],
+  },
+  {
+    id: 'chiayi-chicken-rice',
+    category: CATEGORIES.MAIN_DISHES,
+    image: {
+      hero: '/images/chicken-rice.png',
+      product: '/images/chicken-rice.png',
+      thumbnail: '/images/chicken-rice.png',
+    },
+    name: {
+      zh: '嘉義雞肉飯',
+      en: 'Chiayi Chicken Rice',
+      es: 'Arroz con Pollo al Estilo Chiayi',
+    },
+    tags: ['主餐', '飯類'],
+    description: {
+      zh: '來自台灣嘉義的經典——火雞肉手撕成絲，淋上金黃紅蔥頭酥與特製醬汁，鋪在粒粒分明的白飯上。簡單三層味道，卻是很多台灣人心中的白月光。',
+      en: 'A classic from Chiayi, Taiwan — hand-shredded turkey over fluffy steamed rice, finished with golden fried shallots and a signature sauce. Three simple layers every Taiwanese dreams of.',
+      es: 'Un clásico de Chiayi, Taiwán — pavo desmenuzado a mano sobre arroz al vapor, terminado con chalotas doradas fritas y salsa de la casa. Tres capas simples con las que sueña todo taiwanés.',
+    },
+    priceRange: { regular: 10.99, large: 12.99 },
+    allergens: ['大豆'],
+  },
+  {
+    id: 'sakura-shrimp-sticky-rice',
+    category: CATEGORIES.MAIN_DISHES,
+    image: {
+      hero: '/images/sakura-shrimp-rice.jpg',
+      product: '/images/sakura-shrimp-rice.jpg',
+      thumbnail: '/images/sakura-shrimp-rice.jpg',
+    },
+    name: {
+      zh: '櫻花蝦米糕',
+      en: 'Sakura Shrimp Sticky Rice',
+      es: 'Arroz Glutinoso con Gambas Sakura',
+    },
+    tags: ['主餐', '糯米'],
+    description: {
+      zh: '台灣糯米蒸煮至粒粒晶瑩，拌入香氣撲鼻的櫻花蝦、乾香菇與炒過的紅蔥頭。鹹香入味，每一口都是海潮與山林的交融。',
+      en: 'Taiwanese sticky rice steamed to a glossy finish, tossed with fragrant sakura shrimp, dried shiitake, and golden fried shallots. Savory and complex — a harmony of sea and forest.',
+      es: 'Arroz glutinoso taiwanés cocido al vapor, mezclado con gambas sakura fragantes, shiitake seco y chalotas doradas. Sabroso y complejo — una armonía de mar y bosque.',
+    },
+    price: 12.99,
+    allergens: ['甲殼類', '大豆'],
+  },
 
   // ============ 珍珠奶茶系列 ============
   {
