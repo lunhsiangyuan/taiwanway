@@ -161,7 +161,7 @@ export function CateringPage() {
               {getText({ zh: '價格請私訊或來電洽詢', en: 'Contact us for pricing', es: 'Contáctenos para precios' })}
             </p>
             <p className="font-body text-sm text-[hsl(17,20%,40%)]">
-              {getText({ zh: '📞 845-381-1002 ｜ ✉️ usamyheish@gmail.com', en: '📞 845-381-1002 ｜ ✉️ usamyheish@gmail.com', es: '📞 845-381-1002 ｜ ✉️ usamyheish@gmail.com' })}
+              {getText({ zh: '📞 845-381-1002 ｜ ✉️ taiwanway10940@gmail.com', en: '📞 845-381-1002 ｜ ✉️ taiwanway10940@gmail.com', es: '📞 845-381-1002 ｜ ✉️ taiwanway10940@gmail.com' })}
             </p>
           </div>
           <p className="font-body text-sm text-[hsl(17,20%,40%)] text-center mt-6 leading-relaxed">
@@ -206,10 +206,10 @@ export function CateringPage() {
                 {getText(sectionText.email)}
               </h3>
               <a
-                href="mailto:usamyheish@gmail.com"
+                href="mailto:taiwanway10940@gmail.com"
                 className="font-body text-white/70 hover:text-white transition-colors"
               >
-                usamyheish@gmail.com
+                taiwanway10940@gmail.com
               </a>
             </div>
 
