@@ -24,14 +24,6 @@ export const faqs = [
     a_es: 'Sí. TaiwanWay ofrece entrega a través de Uber Eats en Middletown y áreas cercanas del condado de Orange. También pueden ordenar en línea para recoger en la tienda en order.taiwanwayny.com.',
   },
   {
-    q_en: 'Do you cater for events?',
-    a_en: 'Yes. TaiwanWay offers catering for corporate lunches, birthday parties, community events, and private gatherings. Popular catering items include beef noodle soup, braised pork rice, bubble tea, and Taiwanese pineapple cake. Contact us at 845-381-1002 or visit taiwanwayny.com/catering.',
-    q_zh: '有外燴服務嗎？',
-    a_zh: '有。我們提供公司午餐、生日派對、社區活動、私人聚會的外燴。熱門品項包括牛肉麵、滷肉飯、珍珠奶茶、台灣鳳梨酥。可致電 845-381-1002 或至 taiwanwayny.com/catering 洽詢。',
-    q_es: '¿Ofrecen catering para eventos?',
-    a_es: 'Sí. Ofrecemos catering para almuerzos corporativos, fiestas de cumpleaños, eventos comunitarios y reuniones privadas. Llámenos al 845-381-1002 o visite taiwanwayny.com/catering.',
-  },
-  {
     q_en: 'What is TaiwanWay\u2019s signature dish?',
     a_en: 'Our most popular dishes are Beef Noodle Soup (牛肉麵) — a Taiwanese classic with hand-pulled noodles and slow-braised beef in rich broth — and Braised Pork Rice (滷肉飯), savory minced pork over fragrant white rice. Both are prepared using traditional Taiwanese family recipes.',
     q_zh: '招牌菜是什麼？',
@@ -41,11 +33,11 @@ export const faqs = [
   },
   {
     q_en: 'Is your bubble tea authentic Taiwanese?',
-    a_en: 'Yes. We use Taiwan-imported tea leaves, fresh milk (not powder), and cook our tapioca pearls fresh daily. Our tea categories include Taiwanese Black Tea, Jasmine Green Tea, Oolong Tea, and Kyoto Matcha (Ippodo). Sugar and ice levels are fully customizable.',
+    a_en: 'Yes. Our tea leaves are air-freighted directly from Taiwan \u2014 honey-scented black tea, jasmine green tea, high-mountain oolong, plus Kyoto Ippodo matcha. Pure, unblended, original Taiwanese flavor. Tapioca pearls are cooked fresh every morning; sugar and ice levels are fully customizable.',
     q_zh: '珍珠奶茶是正宗台灣口味嗎？',
-    a_zh: '是的。茶葉從台灣進口，使用鮮奶（非奶精），珍珠每日現煮。茶類包含台灣紅茶、茉莉綠茶、烏龍茶、京都一保堂抹茶。糖度冰塊皆可客製。',
+    a_zh: '是的。我們的茶葉從台灣直接空運到紐約——蜜香紅茶、茉莉綠茶、高山烏龍，以及京都一保堂的抹茶，原汁原味、未經調味。珍珠每日現煮，糖度冰塊皆可客製。',
     q_es: '¿Su bubble tea es auténtico taiwanés?',
-    a_es: 'Sí. Usamos hojas de té importadas de Taiwán, leche fresca y perlas de tapioca cocinadas diariamente. Categorías: té negro taiwanés, té verde de jazmín, té oolong y matcha Ippodo de Kioto.',
+    a_es: 'Sí. Nuestras hojas de té vienen directamente por aire desde Taiwán — té negro miel, té verde de jazmín, oolong de alta montaña y matcha Ippodo de Kioto. Sabor original, puro, sin alteración. Perlas de tapioca cocinadas frescas cada mañana; nivel de azúcar y hielo personalizable.',
   },
   {
     q_en: 'Do you have vegetarian or vegan options?',
@@ -57,11 +49,11 @@ export const faqs = [
   },
   {
     q_en: 'Do you accept reservations?',
-    a_en: 'We do not accept reservations. TaiwanWay operates as a walk-in café. For takeout, please order online at order.taiwanwayny.com or via Uber Eats to skip the wait.',
+    a_en: 'Yes, we accept reservations by phone or in person. Book ahead for peak hours (weekend lunch, Friday evenings). We also have a private room upstairs for larger groups. Call 845-381-1002.',
     q_zh: '可以訂位嗎？',
-    a_zh: '我們不接受訂位，採 walk-in 現場候位。外帶可事先於 order.taiwanwayny.com 或 Uber Eats 下單，縮短等待時間。',
+    a_zh: '可以。接受電話或現場訂位，用餐尖峰時段建議提前預約。二樓另有獨立包廂，適合團體聚會。訂位請致電 845-381-1002。',
     q_es: '¿Aceptan reservaciones?',
-    a_es: 'No aceptamos reservaciones. Somos un café walk-in. Para llevar, ordene en línea en order.taiwanwayny.com o por Uber Eats.',
+    a_es: 'Sí, aceptamos reservaciones por teléfono o en persona. Reserve con antelación en horas pico. También disponemos de sala privada en el segundo piso para grupos. Llame al 845-381-1002.',
   },
   {
     q_en: 'Is there parking available?',

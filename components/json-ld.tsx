@@ -62,7 +62,7 @@ export function JsonLd() {
             "bestRating": "5"
         },
         "menu": "https://taiwanwayny.com/menu",
-        "acceptsReservations": "No",
+        "acceptsReservations": "Yes",
         "description": "Authentic Taiwanese cuisine in Middletown, NY. Serving Beef Noodle Soup, Braised Pork Rice, Bubble Tea, and Homemade Desserts.",
         "hasMenu": {
             "@type": "Menu",
