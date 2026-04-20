@@ -51,10 +51,10 @@ export function FaqClient() {
           </ol>
         </nav>
 
-        <h1 className="font-heading text-4xl sm:text-5xl font-black text-foreground mb-3">
+        <h1 className="font-body text-3xl sm:text-4xl font-bold text-foreground mb-3 tracking-tight">
           {title}
         </h1>
-        <p className="text-muted-foreground mb-10">{subtitle}</p>
+        <p className="font-body text-base text-muted-foreground mb-10">{subtitle}</p>
 
         <div className="space-y-3">
           {faqs.map((faq, i) => {
@@ -75,17 +75,17 @@ export function FaqClient() {
                 className="group rounded-lg border border-border bg-white shadow-sm overflow-hidden"
               >
                 <summary className="flex items-center justify-between gap-4 cursor-pointer list-none px-5 py-4 hover:bg-sand/20 transition">
-                  <h2 className="font-heading text-lg font-semibold text-foreground">
+                  <h2 className="font-body text-base sm:text-lg font-semibold text-foreground leading-snug">
                     {q}
                   </h2>
                   <ChevronDown
-                    className={`h-5 w-5 text-terracotta transition-transform ${
+                    className={`h-5 w-5 flex-shrink-0 text-terracotta transition-transform ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                     aria-hidden
                   />
                 </summary>
-                <div className="px-5 pb-5 pt-0 text-foreground/80 leading-relaxed">
+                <div className="font-body px-5 pb-5 pt-0 text-[0.95rem] text-foreground/80 leading-relaxed">
                   {a}
                 </div>
               </details>

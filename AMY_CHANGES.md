@@ -64,3 +64,67 @@ Amy 表示線上訂餐頁已關閉，但 `/products` 頁上每張商品卡片的
 **PR：** 進行中。
 
 ---
+
+## [2026-04-19 13:10] FAQ 字型從 Playfair Display SC 改為 Karla 無襯線
+
+**檔案：**
+- `app/faq/faq-client.tsx`（改）— h1 / h2 / 內文段落的 `font-heading` 改為 `font-body`；新增 `leading-snug` 與 `flex-shrink-0` 等微調
+
+**改動：**
+FAQ 頁的 `<h1>Frequently Asked Questions</h1>` 與每題 `<h2>` 原本用 `font-heading`（Playfair Display SC — serif 字型且為 small-caps 樣式），長句如 "Where is TaiwanWay located?" 閱讀困難。改用 `font-body`（Karla — 無襯線易讀字型），並把 H1 尺寸略縮（`text-4xl sm:text-5xl` → `text-3xl sm:text-4xl`）避免視覺過大、加上 `tracking-tight` 保留品牌感。
+
+**原因：**
+Amy 在實際瀏覽 `/faq` 時反映「字體字型不容易閱讀」。Playfair Display SC 適合短標題與裝飾性 hero，但不適合長問句。保留 logo 與首頁 hero 的 `font-heading` 使用不動，僅針對 FAQ 頁的閱讀體驗做調整。
+
+**測試：**
+1. `bun dev` 啟動於 `http://localhost:3000/faq`
+2. 確認 H1、每題 summary、內文皆改為 Karla 字型
+3. 切換中 / 英 / 西三語，長句換行與粗體皆正常
+4. Screenshot 對比：改前 serif-caps 難讀 → 改後 sans-serif 清晰
+
+**PR：** 進行中 — 由此條目觸發。
+
+---
+
+## [2026-04-19 13:05] Repo 重啟為 fork，改用 PR-based 工作流
+
+**檔案：**
+- `AMY_CHANGES.md`（重建）
+- Local git remotes 重設（origin → `amyheish-prog/taiwanway-website` 新 fork；新增 `upstream` → `lunhsiangyuan/taiwanway`）
+- Local main branch 重設為 `upstream/main`（HEAD = `49c154b`）
+
+**改動：**
+1. 刪除舊的 `amyheish-prog/taiwanway-website`（非 fork 版本）
+2. 從 `lunhsiangyuan/taiwanway` 重新 fork，維持 repo 名稱 `taiwanway-website`
+3. 本機 `Taiwanway 網站設計/` 資料夾 remotes 改為 origin=fork、upstream=Lun-Hsiang
+4. 本機 main 硬重設為 `upstream/main`
+
+**原因：**
+舊的 repo 是直接 push 的獨立分支，無法與 Lun-Hsiang 的主線同步、也沒有 PR review 機制。改為 fork + PR 流程後：
+- Amy 改動會走 feature branch → PR → Lun-Hsiang review → merge 上 Vercel
+- 本機可以定期 `git fetch upstream && git merge --ff-only` 追最新
+- Vercel 會自動為每個 PR 產 preview URL
+
+**舊版本保存：**
+之前 Amy 分支的兩個 commit（`3f3bcc6` SEO + GEO overhaul、`e57af2c` FAQ 字型修正）已匯出為 patch 檔保存於：
+- `~/Desktop/taiwanway-patches/0001-SEO-GEO-overhaul-6-items.patch`
+- `~/Desktop/taiwanway-patches/0002-FAQ-switch-to-sans-serif-body-font-for-readability.patch`
+
+Lun-Hsiang 的 upstream `30c0b14 feat(amy-collab): SEO + GEO overhaul (round 2, 2026-04-19 12:30)` 已包含大部分 SEO/GEO 功能（含 `/faq` 頁、`/llms.txt`、動態 `<html lang>`、LocalBusiness schema 等），因此 patch `0001` 大概率冗餘；但 patch `0002`（FAQ 字型從 Playfair Display SC serif-caps 改為 Karla sans-serif）upstream 還沒做，之後會以 PR 形式送回去。
+
+**測試：**
+- `git log --oneline -5` → HEAD 為 `49c154b`，與 `upstream/main` 一致
+- `git remote -v` → origin 指向新 fork、upstream 指向 Lun-Hsiang
+- `bun dev` dev server 已在執行，`/`、`/faq`、`/menu`、`/products`、`/llms.txt`、`/sitemap.xml` 全部 200 OK
+
+**後續：**
+之後 Amy 每次改動一律走此流程：
+1. `git fetch upstream && git merge upstream/main --ff-only`
+2. `git checkout -b feature/<描述>`
+3. 改檔案 + append 本檔案
+4. `git commit` + `git push -u origin feature/<描述>`
+5. `gh pr create` 開 PR 給 Lun-Hsiang
+
+**PR：** (無 — 此變更為 local 環境設定，不走 PR)
+
+---
