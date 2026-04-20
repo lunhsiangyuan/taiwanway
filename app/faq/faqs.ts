@@ -24,14 +24,6 @@ export const faqs = [
     a_es: 'Sí. TaiwanWay ofrece entrega a través de Uber Eats en Middletown y áreas cercanas del condado de Orange. También pueden ordenar en línea para recoger en la tienda en order.taiwanwayny.com.',
   },
   {
-    q_en: 'Do you cater for events?',
-    a_en: 'Yes. TaiwanWay offers catering for corporate lunches, birthday parties, community events, and private gatherings. Popular catering items include beef noodle soup, braised pork rice, bubble tea, and Taiwanese pineapple cake. Contact us at 845-381-1002 or visit taiwanwayny.com/catering.',
-    q_zh: '有外燴服務嗎？',
-    a_zh: '有。我們提供公司午餐、生日派對、社區活動、私人聚會的外燴。熱門品項包括牛肉麵、滷肉飯、珍珠奶茶、台灣鳳梨酥。可致電 845-381-1002 或至 taiwanwayny.com/catering 洽詢。',
-    q_es: '¿Ofrecen catering para eventos?',
-    a_es: 'Sí. Ofrecemos catering para almuerzos corporativos, fiestas de cumpleaños, eventos comunitarios y reuniones privadas. Llámenos al 845-381-1002 o visite taiwanwayny.com/catering.',
-  },
-  {
     q_en: 'What is TaiwanWay\u2019s signature dish?',
     a_en: 'Our most popular dishes are Beef Noodle Soup (牛肉麵) — a Taiwanese classic with hand-pulled noodles and slow-braised beef in rich broth — and Braised Pork Rice (滷肉飯), savory minced pork over fragrant white rice. Both are prepared using traditional Taiwanese family recipes.',
     q_zh: '招牌菜是什麼？',
