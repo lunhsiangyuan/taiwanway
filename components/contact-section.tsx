@@ -150,10 +150,10 @@ export function ContactSection() {
                   {t('contact.email')}
                 </p>
                 <a
-                  href="mailto:usamyheish@gmail.com"
+                  href="mailto:taiwanway10940@gmail.com"
                   className="font-body text-[#2D1810]/70 hover:text-terracotta transition-colors"
                 >
-                  usamyheish@gmail.com
+                  taiwanway10940@gmail.com
                 </a>
               </div>
             </div>
