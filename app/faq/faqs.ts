@@ -57,19 +57,11 @@ export const faqs = [
   },
   {
     q_en: 'Do you accept reservations?',
-    a_en: 'Yes, we accept reservations by phone or in person. We recommend booking ahead during peak hours (weekend lunch, Friday evenings). For parties larger than 6 guests or special gatherings, see the next question about our private room. Call 845-381-1002 or email taiwanway10940@gmail.com.',
+    a_en: 'Yes, we accept reservations by phone or in person. Book ahead for peak hours (weekend lunch, Friday evenings). We also have a private room upstairs for larger groups. Call 845-381-1002.',
     q_zh: '可以訂位嗎？',
-    a_zh: '可以。我們接受電話或現場訂位，用餐尖峰時段（週末午餐、週五晚上）建議提前預約。6 人以上或特殊聚會請參考下一題的包廂資訊。訂位請致電 845-381-1002 或 email taiwanway10940@gmail.com。',
+    a_zh: '可以。接受電話或現場訂位，用餐尖峰時段建議提前預約。二樓另有獨立包廂，適合團體聚會。訂位請致電 845-381-1002。',
     q_es: '¿Aceptan reservaciones?',
-    a_es: 'Sí, aceptamos reservaciones por teléfono o en persona. Recomendamos reservar con antelación en horas pico (mediodía de fin de semana, viernes por la noche). Para grupos de más de 6 personas o reuniones especiales, consulte la siguiente pregunta sobre nuestra sala privada. Llame al 845-381-1002 o escriba a taiwanway10940@gmail.com.',
-  },
-  {
-    q_en: 'Do you have a private room for group gatherings?',
-    a_en: 'Yes. We have a dedicated private room on the second floor, ideal for birthday parties, corporate lunches, family gatherings, and small celebrations. Custom menus and catering coordination available. Please call 845-381-1002 or email taiwanway10940@gmail.com to reserve.',
-    q_zh: '有包廂或團體聚會空間嗎？',
-    a_zh: '有。我們二樓設有獨立的包廂空間，適合生日派對、公司聚餐、家庭聚會等小型慶祝活動。可提供客製菜單與外燴搭配。預約請致電 845-381-1002 或 email taiwanway10940@gmail.com。',
-    q_es: '¿Tienen sala privada para reuniones de grupo?',
-    a_es: 'Sí. Contamos con una sala privada independiente en el segundo piso, ideal para cumpleaños, comidas de empresa, reuniones familiares y pequeñas celebraciones. Ofrecemos menús a medida y coordinación de catering. Para reservar, llame al 845-381-1002 o escriba a taiwanway10940@gmail.com.',
+    a_es: 'Sí, aceptamos reservaciones por teléfono o en persona. Reserve con antelación en horas pico. También disponemos de sala privada en el segundo piso para grupos. Llame al 845-381-1002.',
   },
   {
     q_en: 'Is there parking available?',
