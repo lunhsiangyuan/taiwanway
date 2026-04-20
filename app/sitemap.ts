@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { BLOG_POSTS } from './blog/posts'
 
 const BASE_URL = 'https://taiwanwayny.com'
 
@@ -53,7 +54,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
   ]
+
+  // Blog posts
+  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
 
   // Product detail pages — fetch published slugs from API
   const productRoutes: MetadataRoute.Sitemap = []
@@ -77,5 +92,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Silent fail — sitemap stays static if API unavailable at build time
   }
 
-  return [...staticRoutes, ...productRoutes]
+  return [...staticRoutes, ...blogRoutes, ...productRoutes]
 }
