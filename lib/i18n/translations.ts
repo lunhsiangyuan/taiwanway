@@ -209,10 +209,10 @@ export const translations = {
     },
     about: {
       title: '關於我們',
-      story1: '歡迎來到 TaiwanWay，這裡是紐約地道台灣美食的家園。我們的故事始於一位母親，她陪伴小孩來到Middletown念書，愛上了這裡，為了照顧小孩並解鄉愁，開了這家店。',
-      story2: '在 TaiwanWay，每道菜都承載著我們對台灣的思念與對食材的敬重。我們每日精選Adams的新鮮食材，搭配來自台灣的獨特香料與茶葉，堅持純天然、不過度加工。從濃郁的牛肉麵到Q彈的珍珠奶茶，我們用心烹調每一道料理，只為帶給您最道地的台灣滋味。',
-      story3: '我們不僅僅是一家餐廳，更是一個文化交流的平台。在這裡，您可以品嚐到家鄉的味道，感受台灣的熱情好客，體驗獨特的飲食文化。',
-      closing: '來 TaiwanWay，讓我們一起分享美食，傳遞溫暖，品味台灣！',
+      story1: 'TaiwanWay 是 Middletown 的第一間台式咖啡廳——把台灣茶館的細節、巴黎咖啡館的閒適，一起放進 Hudson Valley 的紅磚老屋裡。店址在 26 South St，離紐約市約 60 英里，每一次營業都當成請客人來家裡。',
+      story2: '最自豪的一杯是招牌手搖珍珠奶茶——台灣空運蜜香紅茶、阿里山高山烏龍、京都一保堂抹茶，搭配每日清晨手煮的 Q 彈珍珠。食物部分，牛肉麵慢燉一整天、滷肉飯照家鄉做法入味；咖啡則是法式深烘焙拿鐵。沒有濃縮糖漿、沒有預煮的珍珠。',
+      story3: '我們不想只做外帶窗口。店裡有壁爐、吊燈、整面牆的台灣茶葉與伴手禮。可以點一碗滷肉飯配招牌珍奶當午餐、帶筆電來待一個下午、跟朋友分享一壺阿里山烏龍，或挑一盒鳳梨酥回家送人。',
+      closing: '門推開，就是台灣的午後——歡迎來到 Middletown 的 TaiwanWay。',
     },
     contact: {
       title: '與我們聯繫',
@@ -436,10 +436,10 @@ export const translations = {
     },
     about: {
       title: 'About Us',
-      story1: 'Welcome to TaiwanWay, a home for authentic Taiwanese cuisine in New York. Our story begins with a mother who accompanied her child to Middletown for school, fell in love with the place, and opened this restaurant to care for her child and ease her homesickness.',
-      story2: 'At TaiwanWay, each dish is a reflection of our longing for Taiwan and respect for ingredients. We carefully select fresh ingredients from Adams daily, paired with unique spices and teas from Taiwan, insisting on natural, minimally processed foods. From our rich beef noodle soup to the chewy bubble tea, we put our heart into every dish to bring you the most authentic taste of Taiwan.',
-      story3: 'We are more than just a restaurant; we are a platform for cultural exchange. Here, you can taste the flavors of home, experience Taiwan\'s warm hospitality, and immerse yourself in a unique culinary culture.',
-      closing: 'Come to TaiwanWay, let\'s share great food, spread warmth, and savor Taiwan together!',
+      story1: 'TaiwanWay is Middletown\u2019s first Taiwanese caf\u00e9 \u2014 the care of a Taiwanese tea house meets the ease of a Paris caf\u00e9, inside a historic red-brick building at 26 South St, about 60 miles northwest of New York City. Every service is treated like inviting guests into our home.',
+      story2: 'Our proudest cup is our signature hand-shaken bubble tea \u2014 honey-scented black tea air-shipped from Taiwan, Alishan high-mountain oolong, and Kyoto Ippodo matcha, paired with tapioca pearls hand-cooked every morning. On the food side, our beef noodle soup simmers all day and the braised pork rice follows a family recipe from home; coffee is French dark-roast latte. No flavored syrups, no pre-boiled pearls.',
+      story3: 'We never wanted TaiwanWay to be just a takeout window. Inside you\u2019ll find a fireplace, a chandelier, and a full wall of Taiwan-imported teas and gift items. Come for a bowl of braised pork rice with your bubble tea at lunch, bring your laptop for an afternoon, share a pot of Alishan oolong with friends, or take a box of pineapple cakes home as a gift.',
+      closing: 'Open the door \u2014 it\u2019s a Taiwanese afternoon. Welcome to TaiwanWay in Middletown.',
     },
     contact: {
       title: 'Contact Us',
@@ -663,10 +663,10 @@ export const translations = {
     },
     about: {
       title: 'Sobre Nosotros',
-      story1: 'Bienvenido a TaiwanWay, un hogar para la auténtica cocina taiwanesa en Nueva York. Nuestra historia comienza con una madre que acompañó a su hijo a Middletown para estudiar, se enamoró del lugar y abrió este restaurante para cuidar de su hijo y aliviar su nostalgia.',
-      story2: 'En TaiwanWay, cada plato es un reflejo de nuestra añoranza por Taiwán y respeto por los ingredientes. Seleccionamos cuidadosamente ingredientes frescos de Adams diariamente, combinados con especias y tés únicos de Taiwán, insistiendo en alimentos naturales y mínimamente procesados. Desde nuestra rica sopa de fideos con res hasta el té de burbujas masticable, ponemos nuestro corazón en cada plato para traerte el sabor más auténtico de Taiwán.',
-      story3: 'Somos más que un restaurante; somos una plataforma para el intercambio cultural. Aquí puedes probar los sabores de casa, experimentar la cálida hospitalidad de Taiwán y sumergirte en una cultura culinaria única.',
-      closing: '¡Ven a TaiwanWay, compartamos buena comida, difundamos calidez y saboreemos Taiwán juntos!',
+      story1: 'TaiwanWay es el primer café taiwanés de Middletown — el cuidado de una casa de té taiwanesa se encuentra con la calma de un café parisino, dentro de un edificio histórico de ladrillo rojo en 26 South St, a unas 60 millas al noroeste de la ciudad de Nueva York. Cada servicio lo tratamos como si invitáramos a los clientes a nuestra casa.',
+      story2: 'Nuestra taza más orgullosa es el té de burbujas agitado a mano — té negro miel enviado por aire desde Taiwán, oolong de alta montaña de Alishan y matcha Ippodo de Kioto, con perlas de tapioca cocinadas a mano cada mañana. En la comida, la sopa de fideos con ternera se cocina a fuego lento todo el día y el arroz con cerdo estofado sigue una receta familiar de casa; el café es latte francés de tueste oscuro. Sin jarabes de sabor, sin perlas precocidas.',
+      story3: 'Nunca quisimos que TaiwanWay fuera solo una ventanilla para llevar. Dentro hay chimenea, lámpara de araña y una pared entera de tés y regalos importados de Taiwán. Ven a por un bol de arroz con cerdo estofado acompañado de té de burbujas al mediodía, trae tu portátil para pasar la tarde, comparte una tetera de oolong de Alishan con amigos, o llévate una caja de pasteles de piña de regalo.',
+      closing: 'Abre la puerta — una tarde taiwanesa. Bienvenido a TaiwanWay en Middletown.',
     },
     contact: {
       title: 'Contáctenos',
