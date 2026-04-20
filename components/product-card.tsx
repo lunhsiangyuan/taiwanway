@@ -77,11 +77,15 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
             {/* 價格 + 訂餐按鈕 */}
             <div className="flex items-center justify-between pt-4 border-t border-gray-200">
               <div>
-                {product.price && (
+                {product.priceRange ? (
+                  <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
+                    ${product.priceRange.regular.toFixed(2)} / ${product.priceRange.large.toFixed(2)}
+                  </span>
+                ) : product.price !== undefined ? (
                   <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
                     ${product.price.toFixed(2)}
                   </span>
-                )}
+                ) : null}
                 {product.allergens && product.allergens.length > 0 && (
                   <p className="text-xs text-gray-400 mt-1">
                     {language === 'zh' ? '過敏原' : 'Allergens'}: {product.allergens.join(', ')}
@@ -152,11 +156,15 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
         {/* 價格 + 訂餐按鈕 */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-200">
           <div>
-            {product.price && (
+            {product.priceRange ? (
+              <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
+                ${product.priceRange.regular.toFixed(2)} / ${product.priceRange.large.toFixed(2)}
+              </span>
+            ) : product.price !== undefined ? (
               <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
                 ${product.price.toFixed(2)}
               </span>
-            )}
+            ) : null}
             {product.allergens && product.allergens.length > 0 && (
               <p className="text-xs text-gray-400 mt-1">
                 {language === 'zh' ? '過敏原' : 'Allergens'}: {product.allergens.join(', ')}
