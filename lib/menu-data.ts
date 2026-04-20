@@ -97,9 +97,9 @@ export const PRODUCTS: Product[] = [
     id: 'braised-pork-rice',
     category: CATEGORIES.MAIN_DISHES,
     image: {
-      hero: '/images/braised-pork-rice-v3.jpg',
-      product: '/images/braised-pork-rice-v3.jpg',
-      thumbnail: '/images/braised-pork-rice-v3.jpg',
+      hero: '/images/braised-pork-rice-v4.jpg',
+      product: '/images/braised-pork-rice-v4.jpg',
+      thumbnail: '/images/braised-pork-rice-v4.jpg',
     },
     name: {
       zh: '古早味滷肉飯',
