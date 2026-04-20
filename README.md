@@ -153,7 +153,7 @@ Consent-aware tracking with support for:
 
 - **Address**: 26 South St, Middletown, NY
 - **Phone**: 845-381-1002
-- **Email**: usamyheish@gmail.com
+- **Email**: taiwanway10940@gmail.com
 - **Hours**: Mon/Tue/Fri/Sat 11AM-7PM
 
 ## Learn More

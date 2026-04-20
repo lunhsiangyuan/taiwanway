@@ -26,7 +26,7 @@ export function JsonLd() {
         },
         "url": "https://taiwanwayny.com",
         "telephone": "845-381-1002",
-        "email": "usamyheish@gmail.com",
+        "email": "taiwanway10940@gmail.com",
         "servesCuisine": ["Taiwanese", "Bubble Tea", "Asian"],
         "priceRange": "$$",
         "openingHoursSpecification": [
@@ -312,7 +312,7 @@ export function JsonLd() {
         "alternateName": ["TaiwanWay", "臺灣味"],
         "url": "https://taiwanwayny.com",
         "telephone": "+1-845-381-1002",
-        "email": "usamyheish@gmail.com",
+        "email": "taiwanway10940@gmail.com",
         "image": "https://taiwanwayny.com/images/storefront.jpg",
         "address": {
             "@type": "PostalAddress",
@@ -358,7 +358,7 @@ export function JsonLd() {
             "@type": "ContactPoint",
             "telephone": "+1-845-381-1002",
             "contactType": "customer service",
-            "email": "usamyheish@gmail.com",
+            "email": "taiwanway10940@gmail.com",
             "availableLanguage": ["en", "zh-Hant", "es"]
         }
     }
