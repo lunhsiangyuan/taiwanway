@@ -65,7 +65,7 @@ export function Header() {
         <Link
           href="/"
           className={cn(
-            'font-heading text-2xl font-bold tracking-wide transition-colors duration-300',
+            'font-heading text-xl font-bold tracking-wide transition-colors duration-300',
             useDarkText ? 'text-foreground' : 'text-white'
           )}
         >
