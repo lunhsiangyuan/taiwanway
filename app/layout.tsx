@@ -33,11 +33,11 @@ const karla = Karla({
 export const metadata: Metadata = {
   metadataBase: new URL('https://taiwanwayny.com'),
   title: {
-    default: 'TaiwanWay | Authentic Taiwanese Cuisine in Middletown, NY',
+    default: 'TaiwanWay | Taiwan Street Bowls + Bubble Bar in Middletown, NY',
     template: '%s | TaiwanWay',
   },
   description:
-    'TaiwanWay 臺灣味 — 紐約 Middletown 正宗臺灣料理。招牌牛肉麵、滷肉飯、珍珠奶茶、鳳梨酥。Authentic Taiwanese beef noodles, braised pork rice, bubble tea in Middletown, NY. Serving Orange County & Hudson Valley.',
+    'TaiwanWay 臺灣味 — A home-style Taiwanese café in Middletown, NY 10940. Slow-braised beef noodle soup, classic braised pork rice, handcrafted bubble tea, and freshly baked pineapple cakes. Serving Orange County and the Hudson Valley — dine-in, takeout, and delivery.',
   keywords: [
     'Taiwanese restaurant Middletown NY',
     'Taiwanese food near me',

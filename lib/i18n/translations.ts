@@ -18,8 +18,8 @@ export const translations = {
     },
     hero: {
       welcome: '歡迎來到',
-      brandName: '台灣味',
-      description: '在紐約體驗道地的台灣美食。從我們的招牌牛肉麵到珍珠奶茶， 每一道菜都為您帶來台灣的溫暖與美味。',
+      brandName: '臺灣味',
+      description: '位於紐約 Middletown 的家鄉味台式咖啡館 — 牛肉麵、滷肉飯、珍珠奶茶，以及來自家鄉的溫暖風味。',
       viewMenu: '查看菜單',
       orderOnline: '線上訂餐',
     },
@@ -208,10 +208,10 @@ export const translations = {
     },
     about: {
       title: '關於我們',
-      story1: '歡迎來到 TaiwanWay，這裡是紐約地道台灣美食的家園。我們的故事始於一位母親，她陪伴小孩來到Middletown念書，愛上了這裡，為了照顧小孩並解鄉愁，開了這家店。',
-      story2: '在 TaiwanWay，每道菜都承載著我們對台灣的思念與對食材的敬重。我們每日精選Adams的新鮮食材，搭配來自台灣的獨特香料與茶葉，堅持純天然、不過度加工。從濃郁的牛肉麵到Q彈的珍珠奶茶，我們用心烹調每一道料理，只為帶給您最道地的台灣滋味。',
-      story3: '我們不僅僅是一家餐廳，更是一個文化交流的平台。在這裡，您可以品嚐到家鄉的味道，感受台灣的熱情好客，體驗獨特的飲食文化。',
-      closing: '來 TaiwanWay，讓我們一起分享美食，傳遞溫暖，品味台灣！',
+      story1: 'TaiwanWay 把家鄉味帶到紐約 Middletown 10940 — 一家位於 Hudson Valley 的家鄉味台式咖啡館。從慢燉牛肉麵、經典滷肉飯，到手作珍珠奶茶與每日現烤鳳梨酥，每一道菜都承襲真正的台灣街頭飲食傳統，端上桌的是溫暖與鄰里的問候。',
+      story2: '我們的故事始於一位母親 — 她陪伴孩子來到 Middletown 念書，愛上了這個小鎮，為了照顧家人也安撫鄉愁，開了這家店。我們每日精選 Adams 的新鮮食材，搭配來自台灣的香料與茶葉，堅持純天然、不過度加工。從香濃湯頭到 Q 彈珍珠，每一道都用心料理。',
+      story3: '我們不只是一家咖啡館，更是 Hudson Valley 裡的一小片台灣 — 在這裡，您可以嚐到家鄉的味道、感受台灣的熱情好客、沉浸在獨特的飲食文化裡。',
+      closing: '來 TaiwanWay — 一起分享美食，傳遞溫暖，品味台灣！',
     },
     contact: {
       title: '與我們聯繫',
@@ -245,7 +245,7 @@ export const translations = {
     hero: {
       welcome: 'Welcome to',
       brandName: 'Taiwanway',
-      description: 'Experience authentic Taiwanese cuisine in New York. From our signature beef noodle soup to bubble tea, each dish brings you the warmth and flavor of Taiwan.',
+      description: 'A Taiwanese café in Middletown, NY — beef noodle soup, braised pork rice, bubble tea, and comforting flavors from home.',
       viewMenu: 'View Menu',
       orderOnline: 'Order Online',
     },
@@ -434,10 +434,10 @@ export const translations = {
     },
     about: {
       title: 'About Us',
-      story1: 'Welcome to TaiwanWay, a home for authentic Taiwanese cuisine in New York. Our story begins with a mother who accompanied her child to Middletown for school, fell in love with the place, and opened this restaurant to care for her child and ease her homesickness.',
-      story2: 'At TaiwanWay, each dish is a reflection of our longing for Taiwan and respect for ingredients. We carefully select fresh ingredients from Adams daily, paired with unique spices and teas from Taiwan, insisting on natural, minimally processed foods. From our rich beef noodle soup to the chewy bubble tea, we put our heart into every dish to bring you the most authentic taste of Taiwan.',
-      story3: 'We are more than just a restaurant; we are a platform for cultural exchange. Here, you can taste the flavors of home, experience Taiwan\'s warm hospitality, and immerse yourself in a unique culinary culture.',
-      closing: 'Come to TaiwanWay, let\'s share great food, spread warmth, and savor Taiwan together!',
+      story1: 'TaiwanWay brings the flavors of Taiwan to Middletown, NY 10940 — a home-style Taiwanese café in the Hudson Valley. From slow-braised beef noodle soup and classic braised pork rice to handcrafted bubble tea and freshly baked pineapple cakes, every dish is rooted in real Taiwanese street-food traditions, served with warmth and a welcoming neighborhood feel.',
+      story2: 'Our story begins with a mother who accompanied her child to Middletown for school, fell in love with the small town, and opened this café to care for her family and ease her homesickness. We carefully select fresh ingredients from Adams daily, paired with unique spices and teas brought from Taiwan, insisting on natural, minimally processed foods. From rich broth to chewy pearls, every dish is made by hand.',
+      story3: 'We are more than just a café — we are a small piece of Taiwan in the Hudson Valley, where you can taste the flavors of home, experience Taiwan\'s warm hospitality, and immerse yourself in a unique culinary culture.',
+      closing: 'Come to TaiwanWay — let\'s share great food, spread warmth, and savor Taiwan together!',
     },
     contact: {
       title: 'Contact Us',
@@ -471,7 +471,7 @@ export const translations = {
     hero: {
       welcome: 'Bienvenido a',
       brandName: 'Taiwanway',
-      description: 'Experimenta la auténtica cocina taiwanesa en Nueva York. Desde nuestra sopa de fideos con res hasta el té de burbujas, cada plato te trae el calor y el sabor de Taiwán.',
+      description: 'Un café taiwanés en Middletown, NY — sopa de fideos con res, arroz con cerdo guisado, té de burbujas y sabores reconfortantes de casa.',
       viewMenu: 'Ver Menú',
       orderOnline: 'Ordenar en Línea',
     },
@@ -660,10 +660,10 @@ export const translations = {
     },
     about: {
       title: 'Sobre Nosotros',
-      story1: 'Bienvenido a TaiwanWay, un hogar para la auténtica cocina taiwanesa en Nueva York. Nuestra historia comienza con una madre que acompañó a su hijo a Middletown para estudiar, se enamoró del lugar y abrió este restaurante para cuidar de su hijo y aliviar su nostalgia.',
-      story2: 'En TaiwanWay, cada plato es un reflejo de nuestra añoranza por Taiwán y respeto por los ingredientes. Seleccionamos cuidadosamente ingredientes frescos de Adams diariamente, combinados con especias y tés únicos de Taiwán, insistiendo en alimentos naturales y mínimamente procesados. Desde nuestra rica sopa de fideos con res hasta el té de burbujas masticable, ponemos nuestro corazón en cada plato para traerte el sabor más auténtico de Taiwán.',
-      story3: 'Somos más que un restaurante; somos una plataforma para el intercambio cultural. Aquí puedes probar los sabores de casa, experimentar la cálida hospitalidad de Taiwán y sumergirte en una cultura culinaria única.',
-      closing: '¡Ven a TaiwanWay, compartamos buena comida, difundamos calidez y saboreemos Taiwán juntos!',
+      story1: 'TaiwanWay trae los sabores de Taiwán a Middletown, NY 10940 — un café taiwanés casero en el valle del Hudson. Desde sopa de fideos con res a fuego lento y arroz con cerdo guisado clásico, hasta té de burbujas artesanal y pasteles de piña recién horneados, cada plato está enraizado en auténticas tradiciones de comida callejera taiwanesa, servido con calidez y un acogedor ambiente de barrio.',
+      story2: 'Nuestra historia comienza con una madre que acompañó a su hijo a Middletown para estudiar, se enamoró del pueblo y abrió este café para cuidar de su familia y aliviar su nostalgia. Seleccionamos cuidadosamente ingredientes frescos de Adams diariamente, combinados con especias y tés traídos de Taiwán, insistiendo en alimentos naturales y mínimamente procesados. Desde el caldo intenso hasta las perlas masticables, cada plato está hecho a mano.',
+      story3: 'Somos más que un café — somos un pequeño pedazo de Taiwán en el valle del Hudson, donde puedes probar los sabores de casa, experimentar la cálida hospitalidad de Taiwán y sumergirte en una cultura culinaria única.',
+      closing: '¡Ven a TaiwanWay — compartamos buena comida, difundamos calidez y saboreemos Taiwán juntos!',
     },
     contact: {
       title: 'Contáctenos',

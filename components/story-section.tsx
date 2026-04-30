@@ -23,28 +23,28 @@ export function StorySection() {
   const title = language === 'zh' ? '我們的故事' : language === 'es' ? 'Nuestra Historia' : 'Our Story'
 
   const paragraph1 = language === 'zh'
-    ? 'Middletown 的第一間台式咖啡廳，最自豪的一杯是我們的招牌手搖珍珠奶茶。巴黎咖啡館的悠閒遇上台灣茶館的溫度——從 Middletown 開始，把一杯台灣味，帶進 Hudson Valley。'
+    ? 'Middletown 10940 的家鄉味台式咖啡館。從一碗慢燉牛肉麵、一杯手作珍珠奶茶開始——把家鄉的味道，帶到 Hudson Valley 的這個小角落。'
     : language === 'es'
-      ? "El primer cafe taiwanes de Middletown — nuestro mayor orgullo es el te de burbujas artesanal. Donde las mananas parisinas se encuentran con las tardes de Taiwan — desde Middletown, llevando un sabor de Taiwan al Hudson Valley."
-      : "Middletown's first Taiwanese café — and our proudest cup is our signature hand-shaken bubble tea. Where Parisian mornings meet Taiwan afternoons — starting in Middletown, bringing a taste of Taiwan to the Hudson Valley."
+      ? "Un café taiwanés casero en Middletown 10940. Desde un tazón de fideos con res a fuego lento y un té de burbujas artesanal — llevando los sabores de casa a este pequeño rincón del valle del Hudson."
+      : "A home-style Taiwanese café in Middletown 10940. From a bowl of slow-braised beef noodle soup to a hand-shaken bubble tea — bringing the comforting flavors of home to this quiet corner of the Hudson Valley."
 
   const paragraph2 = language === 'zh'
-    ? '我們用做茶的規格做每一杯珍奶。台灣空運蜜香紅茶、阿里山高山茶、京都一保堂抹茶——搭配每日手煮的 Q 彈珍珠。另有法式深烘焙拿鐵、慢燉一整天的牛肉麵和滷肉飯。'
+    ? '我們用做茶的規格做每一杯珍奶。台灣空運蜜香紅茶、阿里山高山茶、京都一保堂抹茶——搭配每日手煮的 Q 彈珍珠。再加上慢燉一整天的牛肉麵、經典滷肉飯，與每日現烤的鳳梨酥——每一道都用手做。'
     : language === 'es'
-      ? "Tratamos cada te de burbujas con el rigor de una casa de te. Te negro miel enviado desde Taiwan, oolong de alta montana de Alishan, matcha de Ippodo en Kioto — con perlas cocinadas a mano cada dia. Ademas, lattes de tueste oscuro frances, fideos con carne a fuego lento y arroz con cerdo estofado."
-      : "We treat every bubble tea with the rigor of a tea house. Honey-scented black tea air-shipped from Taiwan, Alishan high-mountain oolong, Kyoto Ippodo matcha — paired with tapioca pearls hand-cooked daily. Plus French dark-roast lattes, slow-simmered beef noodle soup, and braised pork rice."
+      ? "Tratamos cada té de burbujas con el rigor de una casa de té. Té negro miel enviado desde Taiwán, oolong de alta montaña de Alishan, matcha de Ippodo en Kioto — con perlas cocinadas a mano cada día. Además, sopa de fideos con res a fuego lento, arroz con cerdo guisado clásico y pasteles de piña recién horneados — cada plato hecho a mano."
+      : "We treat every bubble tea with the rigor of a tea house. Honey-scented black tea air-shipped from Taiwan, Alishan high-mountain oolong, Kyoto Ippodo matcha — paired with tapioca pearls hand-cooked daily. Plus slow-braised beef noodle soup, classic braised pork rice, and freshly baked pineapple cakes — every dish made by hand."
 
   const paragraph3 = language === 'zh'
-    ? '點一杯招牌珍奶配一碗滷肉飯當午餐、帶筆電待一個下午、或和朋友分享一壺阿里山烏龍。不只是一間咖啡廳——是你在 Middletown 的角落客廳。'
+    ? '點一杯招牌珍奶配一碗滷肉飯當午餐、帶筆電待一個下午、或和朋友分享一壺阿里山烏龍。不只是一間咖啡廳——是你在 Middletown 像家一樣的小角落。'
     : language === 'es'
-      ? "Pide nuestro te de burbujas artesanal con un tazon de arroz con cerdo estofado para el almuerzo, trae tu laptop para trabajar una tarde, o comparte una tetera de oolong de Alishan con amigos. Mas que un cafe — somos tu rincon en Middletown."
-      : "Order our signature bubble tea with a bowl of braised pork rice for lunch, bring your laptop for an afternoon of work, or share a pot of Alishan oolong with friends. More than a café — we're your corner retreat in Middletown."
+      ? "Pide nuestro té de burbujas artesanal con un tazón de arroz con cerdo guisado para el almuerzo, trae tu laptop para trabajar una tarde, o comparte una tetera de oolong de Alishan con amigos. Más que un café — somos tu rincón en Middletown, donde Taiwán sabe a casa."
+      : "Order our signature bubble tea with a bowl of braised pork rice for lunch, bring your laptop for an afternoon of work, or share a pot of Alishan oolong with friends. More than a café — we're your corner of Middletown, where Taiwan tastes like home."
 
   const quote = language === 'zh'
-    ? '「門推開，就是台灣的午後。」'
+    ? '「門推開，就像回到台灣的家。」'
     : language === 'es'
-      ? '"Abre la puerta — una tarde en Taiwan."'
-      : '"Open the door — it\'s a Taiwanese afternoon."'
+      ? '"Abre la puerta — sabe a casa, en taiwanés."'
+      : '"Open the door — it tastes like home, in Taiwanese."'
 
   return (
     <section ref={sectionRef} className="relative bg-[#FAF7F2] py-24 overflow-hidden">

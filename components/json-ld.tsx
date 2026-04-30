@@ -26,7 +26,7 @@ export function JsonLd() {
         },
         "url": "https://taiwanwayny.com",
         "telephone": "845-381-1002",
-        "email": "usamyheish@gmail.com",
+        "email": "taiwanway10940@gmail.com",
         "servesCuisine": ["Taiwanese", "Bubble Tea", "Asian"],
         "priceRange": "$$",
         "openingHoursSpecification": [
@@ -63,7 +63,7 @@ export function JsonLd() {
         },
         "menu": "https://taiwanwayny.com/menu",
         "acceptsReservations": "No",
-        "description": "Authentic Taiwanese cuisine in Middletown, NY. Serving Beef Noodle Soup, Braised Pork Rice, Bubble Tea, and Homemade Desserts.",
+        "description": "TaiwanWay 臺灣味 is a home-style Taiwanese café in Middletown, NY 10940, known for Taiwan Street Bowls, handcrafted bubble tea, slow-braised beef noodle soup, classic braised pork rice, freshly baked pineapple cakes, and Taiwanese desserts. Located at 26 South St, we bring Asian comfort food and the comforting flavors of Taiwan to Orange County and the Hudson Valley — for dine-in, takeout, and delivery. Made by hand, served with warmth.",
         "hasMenu": {
             "@type": "Menu",
             "name": "TaiwanWay Menu",
@@ -312,7 +312,7 @@ export function JsonLd() {
         "alternateName": ["TaiwanWay", "臺灣味"],
         "url": "https://taiwanwayny.com",
         "telephone": "+1-845-381-1002",
-        "email": "usamyheish@gmail.com",
+        "email": "taiwanway10940@gmail.com",
         "image": "https://taiwanwayny.com/images/storefront.jpg",
         "address": {
             "@type": "PostalAddress",
@@ -358,7 +358,7 @@ export function JsonLd() {
             "@type": "ContactPoint",
             "telephone": "+1-845-381-1002",
             "contactType": "customer service",
-            "email": "usamyheish@gmail.com",
+            "email": "taiwanway10940@gmail.com",
             "availableLanguage": ["en", "zh-Hant", "es"]
         }
     }

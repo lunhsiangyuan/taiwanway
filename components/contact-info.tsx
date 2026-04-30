@@ -50,7 +50,7 @@ export function ContactInfo() {
                 </div>
                 <h3 className="font-semibold text-xl mb-2">{t('contact.phone')}</h3>
                 <p className="text-muted-foreground">845-381-1002</p>
-                <p className="text-muted-foreground">usamyheish@gmail.com</p>
+                <p className="text-muted-foreground">taiwanway10940@gmail.com</p>
               </div>
             </CardContent>
           </Card>
