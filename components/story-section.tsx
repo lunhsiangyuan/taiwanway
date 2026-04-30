@@ -35,16 +35,16 @@ export function StorySection() {
       : "We treat every bubble tea with the rigor of a tea house. Honey-scented black tea imported from Taiwan, Alishan high-mountain oolong, Kyoto Ippodo matcha — paired with tapioca pearls cooked fresh daily. Plus French dark-roast lattes, slow-simmered beef noodle soup, and braised pork rice."
 
   const paragraph3 = language === 'zh'
-    ? '點一杯招牌珍奶配一碗滷肉飯當午餐、帶筆電待一個下午、或和朋友分享一壺阿里山烏龍。不只是一間咖啡廳——是你在 Middletown 的角落客廳。'
+    ? '點一杯招牌珍奶配一碗滷肉飯當午餐、帶筆電待一個下午、或和朋友分享一壺阿里山烏龍。不只是一間咖啡廳——是你在 Middletown 像家一樣的小角落。'
     : language === 'es'
-      ? "Pide nuestro te de burbujas artesanal con un tazon de arroz con cerdo estofado para el almuerzo, trae tu laptop para trabajar una tarde, o comparte una tetera de oolong de Alishan con amigos. Mas que un cafe — somos tu rincon en Middletown."
-      : "Order our signature bubble tea with a bowl of braised pork rice for lunch, bring your laptop for an afternoon of work, or share a pot of Alishan oolong with friends. More than a café — we're your corner retreat in Middletown."
+      ? "Pide nuestro té de burbujas artesanal con un tazón de arroz con cerdo guisado para el almuerzo, trae tu laptop para trabajar una tarde, o comparte una tetera de oolong de Alishan con amigos. Más que un café — somos tu rincón en Middletown, donde Taiwán sabe a casa."
+      : "Order our signature bubble tea with a bowl of braised pork rice for lunch, bring your laptop for an afternoon of work, or share a pot of Alishan oolong with friends. More than a café — we're your corner of Middletown, where Taiwan tastes like home."
 
   const quote = language === 'zh'
-    ? '「門推開，就是台灣的午後。」'
+    ? '「門推開，就像回到台灣的家。」'
     : language === 'es'
-      ? '"Abre la puerta — una tarde en Taiwan."'
-      : '"Open the door — it\'s a Taiwanese afternoon."'
+      ? '"Abre la puerta — sabe a casa, en taiwanés."'
+      : '"Open the door — it tastes like home, in Taiwanese."'
 
   return (
     <section ref={sectionRef} className="relative bg-[#FAF7F2] py-24 overflow-hidden">

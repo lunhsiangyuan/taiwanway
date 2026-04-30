@@ -2,25 +2,28 @@ import type { Metadata } from 'next'
 import { Hero } from "@/components/hero"
 
 export const metadata: Metadata = {
-  title: 'TaiwanWay | Authentic Taiwanese Cuisine in Middletown, NY',
+  title: 'TaiwanWay | Taiwan Street Bowls + Bubble Bar in Middletown, NY',
   description:
-    'TaiwanWay 臺灣味 — 紐約 Middletown 正宗臺灣料理。招牌牛肉麵、滷肉飯、珍珠奶茶、鳳梨酥。Visit us at 26 South St, Middletown, NY 10940. Serving Orange County & Hudson Valley.',
+    'A Taiwanese café in Middletown, NY 10940 — beef noodle soup, braised pork rice, bubble tea, and comforting flavors from home. Serving Orange County and the Hudson Valley.',
   keywords: [
     'Taiwanese restaurant near me',
     'Middletown NY Taiwanese food',
+    'Middletown 10940 restaurants',
+    'Taiwan Street Bowls',
     'bubble tea Middletown',
     'beef noodle soup',
     'braised pork rice',
-    'authentic Taiwanese cuisine',
+    'home-style Taiwanese cafe',
     'Orange County NY restaurant',
-    'Hudson Valley Asian food',
+    'Hudson Valley Taiwanese',
     'boba near me',
+    'pineapple cake Hudson Valley',
     '台灣味 紐約',
   ],
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'TaiwanWay | Authentic Taiwanese Cuisine in Middletown, NY',
-    description: 'Authentic Taiwanese beef noodles, braised pork rice, bubble tea & pineapple cakes. 26 South St, Middletown, NY 10940.',
+    title: 'TaiwanWay | Taiwan Street Bowls + Bubble Bar in Middletown, NY',
+    description: 'A home-style Taiwanese café in Middletown, NY 10940. Slow-braised beef noodle soup, classic braised pork rice, handcrafted bubble tea, and freshly baked pineapple cakes. Made with care, served with warmth.',
     url: '/',
     images: ['/images/og-storefront.jpg'],
   },

@@ -19,8 +19,8 @@ export const translations = {
     },
     hero: {
       welcome: '歡迎來到',
-      brandName: '台灣味',
-      description: '在紐約體驗道地的台灣美食。從我們的招牌牛肉麵到珍珠奶茶， 每一道菜都為您帶來台灣的溫暖與美味。',
+      brandName: '臺灣味',
+      description: '位於紐約 Middletown 的家鄉味台式咖啡館 — 牛肉麵、滷肉飯、珍珠奶茶，以及來自家鄉的溫暖風味。',
       viewMenu: '查看菜單',
       orderOnline: '線上訂餐',
     },
@@ -209,8 +209,8 @@ export const translations = {
     },
     about: {
       title: '關於我們',
-      story1: 'TaiwanWay 是 Middletown 的第一間台式咖啡廳——把台灣茶館的細節、巴黎咖啡館的閒適，一起放進 Hudson Valley 的紅磚老屋裡。店址在 26 South St，離紐約市約 60 英里，每一次營業都當成請客人來家裡。',
-      story2: '最自豪的一杯是招牌手搖珍珠奶茶——台灣空運蜜香紅茶、阿里山高山烏龍、京都一保堂抹茶，搭配每日清晨手煮的 Q 彈珍珠。食物部分，牛肉麵慢燉一整天、滷肉飯照家鄉做法入味；咖啡則是法式深烘焙拿鐵。沒有濃縮糖漿、沒有預煮的珍珠。',
+      story1: 'TaiwanWay 把家鄉味帶到紐約 Middletown 10940 — 一家位於 Hudson Valley 的家鄉味台式咖啡館。從慢燉牛肉麵、經典滷肉飯，到手作珍珠奶茶與每日現烤鳳梨酥，每一道菜都承襲真正的台灣街頭飲食傳統，端上桌的是溫暖與鄰里的問候。',
+      story2: '最自豪的一杯是招牌手搖珍珠奶茶——台灣蜜香紅茶、阿里山高山烏龍、京都一保堂抹茶，搭配每日清晨手煮的 Q 彈珍珠。食物部分，牛肉麵慢燉一整天、滷肉飯照家鄉做法入味；咖啡則是法式深烘焙拿鐵。沒有濃縮糖漿、沒有預煮的珍珠。',
       story3: '我們不想只做外帶窗口。店裡有壁爐、吊燈、整面牆的台灣茶葉與伴手禮。可以點一碗滷肉飯配招牌珍奶當午餐、帶筆電來待一個下午、跟朋友分享一壺阿里山烏龍，或挑一盒鳳梨酥回家送人。',
       closing: '門推開，就是台灣的午後——歡迎來到 Middletown 的 TaiwanWay。',
     },
@@ -247,7 +247,7 @@ export const translations = {
     hero: {
       welcome: 'Welcome to',
       brandName: 'Taiwanway',
-      description: 'Experience authentic Taiwanese cuisine in New York. From our signature beef noodle soup to bubble tea, each dish brings you the warmth and flavor of Taiwan.',
+      description: 'A Taiwanese café in Middletown, NY — beef noodle soup, braised pork rice, bubble tea, and comforting flavors from home.',
       viewMenu: 'View Menu',
       orderOnline: 'Order Online',
     },
@@ -436,8 +436,8 @@ export const translations = {
     },
     about: {
       title: 'About Us',
-      story1: 'TaiwanWay is Middletown\u2019s first Taiwanese caf\u00e9 \u2014 the care of a Taiwanese tea house meets the ease of a Paris caf\u00e9, inside a historic red-brick building at 26 South St, about 60 miles northwest of New York City. Every service is treated like inviting guests into our home.',
-      story2: 'Our proudest cup is our signature hand-shaken bubble tea \u2014 honey-scented black tea air-shipped from Taiwan, Alishan high-mountain oolong, and Kyoto Ippodo matcha, paired with tapioca pearls hand-cooked every morning. On the food side, our beef noodle soup simmers all day and the braised pork rice follows a family recipe from home; coffee is French dark-roast latte. No flavored syrups, no pre-boiled pearls.',
+      story1: 'TaiwanWay brings the flavors of Taiwan to Middletown, NY 10940 \u2014 a home-style Taiwanese caf\u00e9 in the Hudson Valley. From slow-braised beef noodle soup and classic braised pork rice to handcrafted bubble tea and freshly baked pineapple cakes, every dish is rooted in real Taiwanese street-food traditions, served with warmth and a welcoming neighborhood feel.',
+      story2: 'Our proudest cup is our signature hand-shaken bubble tea \u2014 honey-scented black tea from Taiwan, Alishan high-mountain oolong, and Kyoto Ippodo matcha, paired with tapioca pearls cooked fresh every morning. On the food side, our beef noodle soup simmers all day and the braised pork rice follows a family recipe from home; coffee is French dark-roast latte. No flavored syrups, no pre-boiled pearls.',
       story3: 'We never wanted TaiwanWay to be just a takeout window. Inside you\u2019ll find a fireplace, a chandelier, and a full wall of Taiwan-imported teas and gift items. Come for a bowl of braised pork rice with your bubble tea at lunch, bring your laptop for an afternoon, share a pot of Alishan oolong with friends, or take a box of pineapple cakes home as a gift.',
       closing: 'Open the door \u2014 it\u2019s a Taiwanese afternoon. Welcome to TaiwanWay in Middletown.',
     },
@@ -474,7 +474,7 @@ export const translations = {
     hero: {
       welcome: 'Bienvenido a',
       brandName: 'Taiwanway',
-      description: 'Experimenta la auténtica cocina taiwanesa en Nueva York. Desde nuestra sopa de fideos con res hasta el té de burbujas, cada plato te trae el calor y el sabor de Taiwán.',
+      description: 'Un café taiwanés en Middletown, NY — sopa de fideos con res, arroz con cerdo guisado, té de burbujas y sabores reconfortantes de casa.',
       viewMenu: 'Ver Menú',
       orderOnline: 'Ordenar en Línea',
     },
@@ -663,8 +663,8 @@ export const translations = {
     },
     about: {
       title: 'Sobre Nosotros',
-      story1: 'TaiwanWay es el primer café taiwanés de Middletown — el cuidado de una casa de té taiwanesa se encuentra con la calma de un café parisino, dentro de un edificio histórico de ladrillo rojo en 26 South St, a unas 60 millas al noroeste de la ciudad de Nueva York. Cada servicio lo tratamos como si invitáramos a los clientes a nuestra casa.',
-      story2: 'Nuestra taza más orgullosa es el té de burbujas agitado a mano — té negro miel enviado por aire desde Taiwán, oolong de alta montaña de Alishan y matcha Ippodo de Kioto, con perlas de tapioca cocinadas a mano cada mañana. En la comida, la sopa de fideos con ternera se cocina a fuego lento todo el día y el arroz con cerdo estofado sigue una receta familiar de casa; el café es latte francés de tueste oscuro. Sin jarabes de sabor, sin perlas precocidas.',
+      story1: 'TaiwanWay trae los sabores de Taiwán a Middletown, NY 10940 — un café taiwanés casero en el valle del Hudson. Desde sopa de fideos con res a fuego lento y arroz con cerdo guisado clásico, hasta té de burbujas artesanal y pasteles de piña recién horneados, cada plato está enraizado en auténticas tradiciones de comida callejera taiwanesa, servido con calidez y un acogedor ambiente de barrio.',
+      story2: 'Nuestra taza más orgullosa es el té de burbujas agitado a mano — té negro miel desde Taiwán, oolong de alta montaña de Alishan y matcha Ippodo de Kioto, con perlas de tapioca cocidas frescas cada mañana. En la comida, la sopa de fideos con ternera se cocina a fuego lento todo el día y el arroz con cerdo estofado sigue una receta familiar de casa; el café es latte francés de tueste oscuro. Sin jarabes de sabor, sin perlas precocidas.',
       story3: 'Nunca quisimos que TaiwanWay fuera solo una ventanilla para llevar. Dentro hay chimenea, lámpara de araña y una pared entera de tés y regalos importados de Taiwán. Ven a por un bol de arroz con cerdo estofado acompañado de té de burbujas al mediodía, trae tu portátil para pasar la tarde, comparte una tetera de oolong de Alishan con amigos, o llévate una caja de pasteles de piña de regalo.',
       closing: 'Abre la puerta — una tarde taiwanesa. Bienvenido a TaiwanWay en Middletown.',
     },

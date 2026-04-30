@@ -60,10 +60,10 @@ export function Footer() {
             </p>
             <p className="text-white/50 font-body text-sm mt-3 leading-relaxed">
               {language === 'zh'
-                ? '在紐約體驗道地的台灣美食'
+                ? '家鄉味台式咖啡館 · Middletown, NY 10940'
                 : language === 'es'
-                  ? 'Auténtica cocina taiwanesa en Nueva York'
-                  : 'Authentic Taiwanese cuisine in New York'}
+                  ? 'Café taiwanés casero · Middletown, NY 10940'
+                  : 'Home-style Taiwanese café · Middletown, NY 10940'}
             </p>
             {/* Social Icons */}
             <div className="flex items-center gap-4 mt-5">

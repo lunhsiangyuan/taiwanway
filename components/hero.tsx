@@ -20,17 +20,14 @@ export function Hero() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const subtitle = language === 'zh'
-    ? '招牌珍奶 · 台灣茶 · 家常料理'
-    : language === 'es'
-      ? 'Te de Burbujas · Te Taiwanes · Comida Casera'
-      : 'Signature Bubble Tea · Taiwan Tea · Comfort Food'
+  // Brand tagline — kept in English across languages (it's a brand mark, like "Taiwan Beer")
+  const subtitle = 'Taiwan Street Bowls + Bubble Bar'
 
   const description = language === 'zh'
-    ? '巴黎咖啡館的悠閒，台灣茶館的溫度。招牌手搖珍珠奶茶、阿里山高山茶、慢燉牛肉麵。'
+    ? '位於紐約 Middletown 的家鄉味台式咖啡館 — 牛肉麵、滷肉飯、珍珠奶茶，以及來自家鄉的溫暖風味。'
     : language === 'es'
-      ? 'Mananas parisinas, tardes de Taiwan. Te de burbujas artesanal, te de alta montana de Alishan, fideos con carne a fuego lento.'
-      : 'Parisian mornings meet Taiwan afternoons. Signature hand-shaken bubble tea, Alishan high-mountain tea, slow-simmered beef noodle soup.'
+      ? 'Un café taiwanés en Middletown, NY — sopa de fideos con res, arroz con cerdo guisado, té de burbujas y sabores reconfortantes de casa.'
+      : 'A Taiwanese café in Middletown, NY — beef noodle soup, braised pork rice, bubble tea, and comforting flavors from home.'
 
   const viewMenu = language === 'zh' ? '瀏覽菜單' : language === 'es' ? 'Ver Menu' : 'View Menu'
   const delivery = language === 'zh' ? '外送點餐' : language === 'es' ? 'Delivery' : 'Delivery'
