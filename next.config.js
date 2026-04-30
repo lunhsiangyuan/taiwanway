@@ -20,6 +20,20 @@ const nextConfig = {
   async headers() {
     return [
       {
+        // Agent-discovery Link headers for the homepage (RFC 8288)
+        // Points AI crawlers / agents at sitemap, llms.txt, and feeds.
+        source: '/',
+        headers: [
+          {
+            key: 'Link',
+            value: [
+              '</sitemap.xml>; rel="sitemap"; type="application/xml"',
+              '</llms.txt>; rel="describedby"; type="text/plain"; title="AI-friendly site summary"',
+            ].join(', '),
+          },
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           {
