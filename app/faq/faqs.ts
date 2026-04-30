@@ -17,11 +17,11 @@ export const faqs = [
   },
   {
     q_en: 'Do you offer delivery?',
-    a_en: 'Yes. TaiwanWay offers delivery through Uber Eats throughout Middletown and nearby Orange County areas. You can also order online for in-store pickup at order.taiwanwayny.com.',
+    a_en: 'Yes. TaiwanWay offers delivery through Uber Eats throughout Middletown and nearby Orange County areas. For pickup, walk in or call ahead at (845) 381-1002.',
     q_zh: '有外送嗎？',
-    a_zh: '有。我們透過 Uber Eats 提供外送服務，涵蓋 Middletown 及 Orange County 周邊地區。也可以在 order.taiwanwayny.com 線上訂餐到店自取。',
+    a_zh: '有。我們透過 Uber Eats 提供外送服務，涵蓋 Middletown 及 Orange County 周邊地區。外帶請直接到店或來電預訂 (845) 381-1002。',
     q_es: '¿Ofrecen entrega a domicilio?',
-    a_es: 'Sí. TaiwanWay ofrece entrega a través de Uber Eats en Middletown y áreas cercanas del condado de Orange. También pueden ordenar en línea para recoger en la tienda en order.taiwanwayny.com.',
+    a_es: 'Sí. TaiwanWay ofrece entrega a través de Uber Eats en Middletown y áreas cercanas del condado de Orange. Para llevar, visite la tienda o llame al (845) 381-1002.',
   },
   {
     q_en: 'What is TaiwanWay\u2019s signature dish?',
@@ -49,11 +49,11 @@ export const faqs = [
   },
   {
     q_en: 'Do you accept reservations?',
-    a_en: 'We do not accept reservations. TaiwanWay operates as a walk-in café. For takeout, please order online at order.taiwanwayny.com or via Uber Eats to skip the wait.',
+    a_en: 'We do not accept reservations. TaiwanWay operates as a walk-in café. For takeout, order via Uber Eats or call (845) 381-1002 to skip the wait.',
     q_zh: '可以訂位嗎？',
-    a_zh: '我們不接受訂位，採 walk-in 現場候位。外帶可事先於 order.taiwanwayny.com 或 Uber Eats 下單，縮短等待時間。',
+    a_zh: '我們不接受訂位，採 walk-in 現場候位。外帶可透過 Uber Eats 下單，或來電 (845) 381-1002 預訂，縮短等待時間。',
     q_es: '¿Aceptan reservaciones?',
-    a_es: 'No aceptamos reservaciones. Somos un café walk-in. Para llevar, ordene en línea en order.taiwanwayny.com o por Uber Eats.',
+    a_es: 'No aceptamos reservaciones. Somos un café walk-in. Para llevar, ordene por Uber Eats o llame al (845) 381-1002.',
   },
   {
     q_en: 'Is there parking available?',

@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { useLanguage } from '@/lib/i18n/language-context'
-import { ShoppingBag } from 'lucide-react'
 import type { Product } from '@/lib/menu-data'
 
 interface ProductCardProps {
@@ -74,27 +73,18 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
               {description}
             </p>
 
-            {/* 價格 + 訂餐按鈕 */}
-            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-              <div>
-                {product.price && (
-                  <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
-                    ${product.price.toFixed(2)}
-                  </span>
-                )}
-                {product.allergens && product.allergens.length > 0 && (
-                  <p className="text-xs text-gray-400 mt-1">
-                    {language === 'zh' ? '過敏原' : 'Allergens'}: {product.allergens.join(', ')}
-                  </p>
-                )}
-              </div>
-              <a
-                href="https://order.taiwanwayny.com/order"
-                className="inline-flex items-center gap-1.5 rounded-full bg-[hsl(17,45%,47%)] px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-[hsl(17,45%,42%)] active:scale-95"
-              >
-                <ShoppingBag className="h-3.5 w-3.5" />
-                {language === 'zh' ? '點餐' : 'Order'}
-              </a>
+            {/* 價格 */}
+            <div className="pt-4 border-t border-gray-200">
+              {product.price && (
+                <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
+                  ${product.price.toFixed(2)}
+                </span>
+              )}
+              {product.allergens && product.allergens.length > 0 && (
+                <p className="text-xs text-gray-400 mt-1">
+                  {language === 'zh' ? '過敏原' : 'Allergens'}: {product.allergens.join(', ')}
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -147,27 +137,18 @@ export function ProductCard({ product, variant = 'grid' }: ProductCardProps) {
           {description}
         </p>
 
-        {/* 價格 + 訂餐按鈕 */}
-        <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-          <div>
-            {product.price && (
-              <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
-                ${product.price.toFixed(2)}
-              </span>
-            )}
-            {product.allergens && product.allergens.length > 0 && (
-              <p className="text-xs text-gray-400 mt-1">
-                {language === 'zh' ? '過敏原' : 'Allergens'}: {product.allergens.join(', ')}
-              </p>
-            )}
-          </div>
-          <a
-            href="https://order.taiwanwayny.com/order"
-            className="inline-flex items-center gap-1.5 rounded-full bg-[hsl(17,45%,47%)] px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-[hsl(17,45%,42%)] active:scale-95"
-          >
-            <ShoppingBag className="h-3.5 w-3.5" />
-            {language === 'zh' ? '點餐' : 'Order'}
-          </a>
+        {/* 價格 */}
+        <div className="pt-4 border-t border-gray-200">
+          {product.price && (
+            <span className="text-lg font-bold text-[hsl(17,45%,47%)]">
+              ${product.price.toFixed(2)}
+            </span>
+          )}
+          {product.allergens && product.allergens.length > 0 && (
+            <p className="text-xs text-gray-400 mt-1">
+              {language === 'zh' ? '過敏原' : 'Allergens'}: {product.allergens.join(', ')}
+            </p>
+          )}
         </div>
       </div>
     </div>

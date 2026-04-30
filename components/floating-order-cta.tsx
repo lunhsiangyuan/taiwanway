@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useLanguage } from '@/lib/i18n/language-context'
-import { ShoppingBag, Truck } from 'lucide-react'
+import { Truck } from 'lucide-react'
 
 export function FloatingOrderCTA() {
   const { language } = useLanguage()
@@ -16,8 +16,7 @@ export function FloatingOrderCTA() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const pickupLabel = language === 'zh' ? '來店自取' : language === 'es' ? 'Recoger' : 'Pickup'
-  const deliveryLabel = language === 'zh' ? '外送' : 'Delivery'
+  const deliveryLabel = language === 'zh' ? '外送 (Uber Eats)' : language === 'es' ? 'Delivery (Uber Eats)' : 'Order on Uber Eats'
 
   return (
     <div
@@ -26,24 +25,15 @@ export function FloatingOrderCTA() {
       }`}
     >
       <div className="bg-[hsl(17,40%,12%)]/95 backdrop-blur-md px-4 py-3 shadow-[0_-4px_12px_rgba(0,0,0,0.15)]">
-        <div className="flex gap-2">
-          <a
-            href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1.5 flex-1 rounded-full bg-[#06C167] py-3 font-body text-sm font-bold text-white transition-all active:scale-95"
-          >
-            <Truck className="h-4 w-4" />
-            {deliveryLabel}
-          </a>
-          <a
-            href="https://order.taiwanwayny.com/order"
-            className="flex items-center justify-center gap-1.5 flex-1 rounded-full bg-white py-3 font-body text-sm font-bold text-[hsl(17,45%,40%)] transition-all active:scale-95"
-          >
-            <ShoppingBag className="h-4 w-4" />
-            {pickupLabel}
-          </a>
-        </div>
+        <a
+          href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-1.5 w-full rounded-full bg-[#06C167] py-3 font-body text-sm font-bold text-white transition-all active:scale-95"
+        >
+          <Truck className="h-4 w-4" />
+          {deliveryLabel}
+        </a>
       </div>
     </div>
   )

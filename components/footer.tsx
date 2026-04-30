@@ -7,7 +7,6 @@ import { useLanguage } from '@/lib/i18n/language-context'
 const navLinks = [
   { key: 'nav.home', href: '/' },
   { key: 'nav.menu', href: '/menu' },
-  { key: 'nav.catering', href: '/catering' },
   { key: 'nav.about', href: '/about' },
   { key: 'nav.contact', href: '/contact' },
 ] as const
