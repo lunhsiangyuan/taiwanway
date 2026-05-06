@@ -23,16 +23,16 @@ export function StorySection() {
   const title = language === 'zh' ? '我們的故事' : language === 'es' ? 'Nuestra Historia' : 'Our Story'
 
   const paragraph1 = language === 'zh'
-    ? 'Middletown 的第一間台式咖啡廳，最自豪的一杯是我們的招牌手搖珍珠奶茶。巴黎咖啡館的悠閒遇上台灣茶館的溫度——從 Middletown 開始，把一杯台灣味，帶進 Hudson Valley。'
+    ? 'Middletown 的家鄉味台式咖啡廳，最自豪的一杯是我們的招牌手搖珍珠奶茶。巴黎咖啡館的悠閒遇上台灣茶館的溫度——從 Middletown 開始，把一杯台灣味，帶進 Hudson Valley。'
     : language === 'es'
-      ? "El primer cafe taiwanes de Middletown — nuestro mayor orgullo es el te de burbujas artesanal. Donde las mananas parisinas se encuentran con las tardes de Taiwan — desde Middletown, llevando un sabor de Taiwan al Hudson Valley."
-      : "Middletown's first Taiwanese café — and our proudest cup is our signature hand-shaken bubble tea. Where Parisian mornings meet Taiwan afternoons — starting in Middletown, bringing a taste of Taiwan to the Hudson Valley."
+      ? "Un cafe taiwanes en Middletown — nuestro mayor orgullo es el te de burbujas artesanal. Donde las mananas parisinas se encuentran con las tardes de Taiwan — desde Middletown, llevando un sabor de Taiwan al Hudson Valley."
+      : "A home-style Taiwanese café in Middletown — and our proudest cup is our signature hand-shaken bubble tea. Where Parisian mornings meet Taiwan afternoons — starting in Middletown, bringing a taste of Taiwan to the Hudson Valley."
 
   const paragraph2 = language === 'zh'
-    ? '我們用做茶的規格做每一杯珍奶。台灣空運蜜香紅茶、阿里山高山茶、京都一保堂抹茶——搭配每日手煮的 Q 彈珍珠。另有法式深烘焙拿鐵、慢燉一整天的牛肉麵和滷肉飯。'
+    ? '我們用做茶的規格做每一杯珍奶。台灣蜜香紅茶、阿里山高山茶、京都一保堂抹茶——搭配每日手煮的 Q 彈珍珠。另有法式深烘焙拿鐵、慢燉一整天的牛肉麵和滷肉飯。'
     : language === 'es'
-      ? "Tratamos cada te de burbujas con el rigor de una casa de te. Te negro miel enviado desde Taiwan, oolong de alta montana de Alishan, matcha de Ippodo en Kioto — con perlas cocinadas a mano cada dia. Ademas, lattes de tueste oscuro frances, fideos con carne a fuego lento y arroz con cerdo estofado."
-      : "We treat every bubble tea with the rigor of a tea house. Honey-scented black tea air-shipped from Taiwan, Alishan high-mountain oolong, Kyoto Ippodo matcha — paired with tapioca pearls hand-cooked daily. Plus French dark-roast lattes, slow-simmered beef noodle soup, and braised pork rice."
+      ? "Tratamos cada te de burbujas con el rigor de una casa de te. Te negro miel importado de Taiwan, oolong de alta montana de Alishan, matcha de Ippodo en Kioto — con perlas cocinadas frescas cada dia. Ademas, lattes de tueste oscuro frances, fideos con carne a fuego lento y arroz con cerdo estofado."
+      : "We treat every bubble tea with the rigor of a tea house. Honey-scented black tea imported from Taiwan, Alishan high-mountain oolong, Kyoto Ippodo matcha — paired with tapioca pearls cooked fresh daily. Plus French dark-roast lattes, slow-simmered beef noodle soup, and braised pork rice."
 
   const paragraph3 = language === 'zh'
     ? '點一杯招牌珍奶配一碗滷肉飯當午餐、帶筆電待一個下午、或和朋友分享一壺阿里山烏龍。不只是一間咖啡廳——是你在 Middletown 的角落客廳。'

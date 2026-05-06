@@ -31,7 +31,7 @@ export const translations = {
       items: {
         beefNoodle: {
           name: '牛肉麵',
-          description: '香濃湯頭，嫩滑牛肉，手工麵條',
+          description: '香濃湯頭，嫩滑牛肉，Q彈麵條',
         },
         braisedPork: {
           name: '滷肉飯',
@@ -191,7 +191,7 @@ export const translations = {
             items: {
               beefNoodle: {
                 name: "牛肉麵",
-                description: "香濃湯頭，嫩滑牛肉，手工麵條",
+                description: "香濃湯頭，嫩滑牛肉，Q彈麵條",
                 price: "13.99 / 15.99"
               }
             }
@@ -258,7 +258,7 @@ export const translations = {
       items: {
         beefNoodle: {
           name: 'Beef Noodle Soup',
-          description: 'Rich broth, tender beef, handmade noodles',
+          description: 'Rich broth, tender beef, springy noodles',
         },
         braisedPork: {
           name: 'Braised Pork Rice',
@@ -418,7 +418,7 @@ export const translations = {
             items: {
               beefNoodle: {
                 name: "Beef Noodle Soup",
-                description: "Rich broth, tender beef, handmade noodles",
+                description: "Rich broth, tender beef, springy noodles",
                 price: "13.99 / 15.99"
               }
             }
