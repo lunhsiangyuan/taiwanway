@@ -57,10 +57,14 @@ export function GoogleAnalyticsScript() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('consent', 'default', {
-              'analytics_storage': 'denied',
+              'analytics_storage': 'granted',
               'ad_storage': 'denied',
               'ad_user_data': 'denied',
               'ad_personalization': 'denied'
+            });
+            gtag('config', '${ANALYTICS_CONFIG.GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+              anonymize_ip: true
             });
           `,
         }}
