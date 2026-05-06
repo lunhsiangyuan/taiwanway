@@ -237,7 +237,7 @@ export const PRODUCTS: Product[] = [
       thumbnail: '/images/products/mango-coconut-pannacotta-v3.jpg',
     },
     name: {
-      zh: '芒果椰香奶酪',
+      zh: '芒果椰奶奶酪',
       en: 'Mango Coconut Pannacotta',
       es: 'Pannacotta de Coco y Mango',
     },

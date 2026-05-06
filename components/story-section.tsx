@@ -29,10 +29,10 @@ export function StorySection() {
       : "A home-style Taiwanese café in Middletown 10940. From a bowl of slow-braised beef noodle soup to a hand-shaken bubble tea — bringing the comforting flavors of home to this quiet corner of the Hudson Valley."
 
   const paragraph2 = language === 'zh'
-    ? '我們用做茶的規格做每一杯珍奶。台灣空運蜜香紅茶、阿里山高山茶、京都一保堂抹茶——搭配每日手煮的 Q 彈珍珠。再加上慢燉一整天的牛肉麵、經典滷肉飯，與每日現烤的鳳梨酥——每一道都用手做。'
+    ? '我們用做茶的規格做每一杯珍奶。台灣蜜香紅茶、阿里山高山茶、京都一保堂抹茶——搭配每日手煮的 Q 彈珍珠。再加上慢燉一整天的牛肉麵、經典滷肉飯，與每日現烤的鳳梨酥——每一道都用心做。'
     : language === 'es'
-      ? "Tratamos cada té de burbujas con el rigor de una casa de té. Té negro miel enviado desde Taiwán, oolong de alta montaña de Alishan, matcha de Ippodo en Kioto — con perlas cocinadas a mano cada día. Además, sopa de fideos con res a fuego lento, arroz con cerdo guisado clásico y pasteles de piña recién horneados — cada plato hecho a mano."
-      : "We treat every bubble tea with the rigor of a tea house. Honey-scented black tea air-shipped from Taiwan, Alishan high-mountain oolong, Kyoto Ippodo matcha — paired with tapioca pearls hand-cooked daily. Plus slow-braised beef noodle soup, classic braised pork rice, and freshly baked pineapple cakes — every dish made by hand."
+      ? "Tratamos cada té de burbujas con el rigor de una casa de té. Té negro miel importado de Taiwán, oolong de alta montaña de Alishan, matcha de Ippodo en Kioto — con perlas cocinadas frescas cada día. Además, sopa de fideos con res a fuego lento, arroz con cerdo guisado clásico y pasteles de piña recién horneados — cada plato hecho con dedicación."
+      : "We treat every bubble tea with the rigor of a tea house. Honey-scented black tea imported from Taiwan, Alishan high-mountain oolong, Kyoto Ippodo matcha — paired with tapioca pearls cooked fresh daily. Plus slow-braised beef noodle soup, classic braised pork rice, and freshly baked pineapple cakes — every dish made with care."
 
   const paragraph3 = language === 'zh'
     ? '點一杯招牌珍奶配一碗滷肉飯當午餐、帶筆電待一個下午、或和朋友分享一壺阿里山烏龍。不只是一間咖啡廳——是你在 Middletown 像家一樣的小角落。'

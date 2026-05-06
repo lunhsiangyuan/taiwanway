@@ -42,7 +42,7 @@ const menuCategories: MenuCategory[] = [
     image: '/images/signature-trio.jpg',
     items: [
       { nameZh: '台灣珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas Especial', descZh: 'Q彈珍珠配濃郁奶香，經典臺灣味', descEn: 'Chewy tapioca pearls with rich milk tea, classic Taiwan flavor', descEs: 'Perlas de tapioca con té de leche', price: '6.45' },
-      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，手工麵條', descEn: 'Rich broth with tender beef and handmade noodles', descEs: 'Caldo con res y fideos hechos a mano', price: '$13.99 / $15.99' },
+      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，Q彈麵條', descEn: 'Rich broth with tender beef and springy noodles', descEs: 'Caldo con res y fideos al estilo tradicional', price: '$13.99 / $15.99' },
       { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '慢火燉煮，古早味入味白飯', descEn: 'Slow-braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz', price: '$10.99 / $12.99' },
     ],
   },
@@ -67,9 +67,9 @@ const menuCategories: MenuCategory[] = [
     titleZh: '咖啡專區',
     titleEn: 'Coffee',
     titleEs: 'Café',
-    subtitleZh: '台灣空運法式深烘焙',
-    subtitleEn: 'French Dark Roast, Air-shipped from Taiwan',
-    subtitleEs: 'Tueste Oscuro Francés, Enviado desde Taiwán',
+    subtitleZh: '台灣法式深烘焙',
+    subtitleEn: 'French Dark Roast, Imported from Taiwan',
+    subtitleEs: 'Tueste Oscuro Francés, Importado de Taiwán',
     image: '/images/coffee-tab.jpg',
     items: [
       { nameZh: '美式咖啡', nameEn: 'Americano', nameEs: 'Americano', options: '熱 / 冷', price: '4.25' },
@@ -177,8 +177,8 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Sabor Auténtico',
     image: '/images/beef-noodle.png',
     items: [
-      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，手工麵條', descEn: 'Rich broth, tender beef, handmade noodles', descEs: 'Caldo, res tierna, fideos artesanales', price: '$13.99 / $15.99' },
-      { nameZh: '麻醬牛肉乾麵', nameEn: 'Sesame Beef Noodles', nameEs: 'Fideos Secos con Res y Sésamo', descZh: '手工Q彈麵條淋上芝麻醬，配滷牛肉與青菜', descEn: 'Chewy noodles tossed in fragrant sesame sauce with braised beef and greens', descEs: 'Fideos con salsa de sésamo, res estofada y verduras', price: '$13.99 / $15.99' },
+      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，Q彈麵條', descEn: 'Rich broth, tender beef, springy noodles', descEs: 'Caldo, res tierna, fideos al estilo tradicional', price: '$13.99 / $15.99' },
+      { nameZh: '麻醬牛肉乾麵', nameEn: 'Sesame Beef Noodles', nameEs: 'Fideos Secos con Res y Sésamo', descZh: 'Q彈麵條淋上芝麻醬，配滷牛肉與青菜', descEn: 'Chewy noodles tossed in fragrant sesame sauce with braised beef and greens', descEs: 'Fideos con salsa de sésamo, res estofada y verduras', price: '$13.99 / $15.99' },
       { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '入味滷肉，搭配香Q白飯', descEn: 'Savory braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz', price: '$10.99 / $12.99' },
       { nameZh: '嘉義雞肉飯', nameEn: 'Chiayi Chicken Rice', nameEs: 'Arroz con Pollo de Chiayi', descZh: '火雞肉絲，搭配油蔥與醬汁', descEn: 'Shredded turkey with fried shallots and sauce', descEs: 'Pavo desmenuzado con chalotes fritos y salsa', price: '$10.99 / $12.99' },
       { nameZh: '櫻花蝦米糕', nameEn: 'Sakura Shrimp Sticky Rice', nameEs: 'Arroz Glutinoso con Camarón Sakura', descZh: '糯米蒸煮，拌入櫻花蝦、香菇與油蔥', descEn: 'Savory glutinous rice steamed with sakura shrimp, mushrooms & crispy shallots', descEs: 'Arroz glutinoso al vapor con camarón sakura, setas y chalotes', price: '12.99' },
