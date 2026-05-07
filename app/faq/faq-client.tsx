@@ -19,10 +19,10 @@ export function FaqClient() {
 
   const subtitle =
     language === 'zh'
-      ? '關於 TaiwanWay 臺灣味的常見問題 — 營業時間、菜單、外送、外燴'
+      ? '關於 TaiwanWay 臺灣味的常見問題 — 營業時間、菜單、外送'
       : language === 'es'
-        ? 'Preguntas comunes sobre TaiwanWay — horarios, menú, entrega y catering'
-        : 'Common questions about TaiwanWay — hours, menu, delivery, and catering'
+        ? 'Preguntas comunes sobre TaiwanWay — horarios, menú y entrega'
+        : 'Common questions about TaiwanWay — hours, menu, and delivery'
 
   const contactLine =
     language === 'zh'

@@ -6,12 +6,12 @@ import { BreadcrumbJsonLd } from '@/components/json-ld'
 export const metadata: Metadata = {
   title: 'FAQ — Frequently Asked Questions',
   description:
-    'Common questions about TaiwanWay 臺灣味 — hours, location, menu, delivery, catering, and more. Authentic Taiwanese restaurant in Middletown, NY.',
+    'Common questions about TaiwanWay 臺灣味 — hours, location, menu, delivery, and more. Home-style Taiwanese café in Middletown, NY.',
   alternates: {
     canonical: 'https://taiwanwayny.com/faq',
   },
   openGraph: {
-    title: 'TaiwanWay FAQ — Hours, Menu, Delivery, Catering',
+    title: 'TaiwanWay FAQ — Hours, Menu, and Delivery',
     description:
       'Answers to common questions about TaiwanWay — the Taiwanese restaurant at 26 South St, Middletown, NY.',
     url: 'https://taiwanwayny.com/faq',
