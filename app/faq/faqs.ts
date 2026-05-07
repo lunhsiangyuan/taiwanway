@@ -25,9 +25,9 @@ export const faqs = [
   },
   {
     q_en: 'What is TaiwanWay\u2019s signature dish?',
-    a_en: 'Our most popular dishes are Beef Noodle Soup (牛肉麵) — a Taiwanese classic with hand-pulled noodles and slow-braised beef in rich broth — and Braised Pork Rice (滷肉飯), savory minced pork over fragrant white rice. Both are prepared using traditional Taiwanese family recipes.',
+    a_en: 'Our most popular dishes are Beef Noodle Soup (牛肉麵) — a Taiwanese classic with springy noodles and slow-braised beef in rich broth — and Braised Pork Rice (滷肉飯), savory minced pork over fragrant white rice. Both are prepared using traditional Taiwanese family recipes.',
     q_zh: '招牌菜是什麼？',
-    a_zh: '牛肉麵和滷肉飯是最受歡迎的招牌。牛肉麵使用手工麵條和慢燉牛肉，湯頭濃郁；滷肉飯則是傳統台灣家常菜。兩道都依照家傳食譜製作。',
+    a_zh: '牛肉麵和滷肉飯是最受歡迎的招牌。牛肉麵使用 Q 彈麵條和慢燉牛肉，湯頭濃郁；滷肉飯則是傳統台灣家常菜。兩道都依照家傳食譜製作。',
     q_es: '¿Cuál es el plato estrella?',
     a_es: 'Los más populares son la Sopa de Fideos con Ternera (牛肉麵) y el Arroz con Cerdo Estofado (滷肉飯), ambos preparados con recetas tradicionales taiwanesas.',
   },

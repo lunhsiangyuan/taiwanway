@@ -64,8 +64,8 @@ export const PRODUCTS: Product[] = [
     },
     tags: ['主餐', '湯麵'],
     description: {
-      zh: '台灣經典紅燒牛肉麵——精選牛腩以香料與醬油慢燉一整天，湯頭濃郁鮮甜。搭配 Q 彈手工麵條與當季青菜，一碗上桌，就是最道地的台灣午後。',
-      en: 'The Taiwanese classic — beef brisket slow-simmered all day in a rich spiced soy broth, served over hand-pulled chewy noodles with seasonal greens. Every bowl captures a Taiwan afternoon.',
+      zh: '台灣經典紅燒牛肉麵——精選牛腩以香料與醬油慢燉一整天，湯頭濃郁鮮甜。搭配 Q 彈麵條與當季青菜，一碗上桌，就是最道地的台灣午後。',
+      en: 'The Taiwanese classic — beef brisket slow-simmered all day in a rich spiced soy broth, served over springy noodles with seasonal greens. Every bowl captures a Taiwan afternoon.',
       es: 'El clásico taiwanés — pecho de res cocinado a fuego lento todo el día en caldo especiado de salsa de soja, servido sobre fideos artesanales con verduras de temporada. Un bol que captura una tarde en Taiwán.',
     },
     priceRange: { regular: 13.99, large: 15.99 },
