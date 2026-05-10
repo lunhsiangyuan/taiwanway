@@ -99,7 +99,6 @@ export function MenuShowcase() {
       ? 'Bebidas Artesanales · Comida Casera'
       : 'Handcrafted Drinks · Comfort Food'
   const viewFullMenu = language === 'zh' ? '查看完整菜單' : language === 'es' ? 'Ver Menu Completo' : 'View Full Menu'
-  const deliveryLabel = language === 'zh' ? '外送 Uber Eats' : 'Delivery'
 
   const getName = (item: MenuItem) => language === 'zh' ? item.nameZh : language === 'es' ? item.nameEs : item.nameEn
   const getSubName = (item: MenuItem) => language === 'zh' ? item.nameEn : item.nameZh
@@ -180,18 +179,26 @@ export function MenuShowcase() {
         </div>
 
         {/* CTA 按鈕 */}
-        <div className={`mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`mt-16 flex flex-wrap items-center justify-center gap-4 transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <a
             href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#06C167] px-8 py-3.5 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[#05a557] hover:scale-105 cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#06C167] px-6 py-3.5 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[#05a557] hover:scale-105 cursor-pointer"
           >
-            <Truck className="h-4 w-4" /> {deliveryLabel}
+            <Truck className="h-4 w-4" /> Uber Eats
+          </a>
+          <a
+            href="https://www.doordash.com/store/taiwan-way-middletown-42843267/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FF3008] px-6 py-3.5 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[#d92806] hover:scale-105 cursor-pointer"
+          >
+            <Truck className="h-4 w-4" /> DoorDash
           </a>
           <Link
             href="/menu"
-            className="inline-flex items-center justify-center rounded-full border-2 border-[hsl(44,80%,40%)] px-8 py-3.5 font-body text-sm font-semibold text-[hsl(44,80%,40%)] transition-all duration-300 hover:bg-[hsl(44,80%,40%)] hover:text-white cursor-pointer"
+            className="inline-flex items-center justify-center rounded-full border-2 border-[hsl(44,80%,40%)] px-6 py-3.5 font-body text-sm font-semibold text-[hsl(44,80%,40%)] transition-all duration-300 hover:bg-[hsl(44,80%,40%)] hover:text-white cursor-pointer"
           >
             {viewFullMenu}
           </Link>

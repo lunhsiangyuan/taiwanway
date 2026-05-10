@@ -13,7 +13,6 @@ export function OrderBanner() {
       : 'Order Online'
 
   const pickupLabel = language === 'zh' ? '來店自取' : language === 'es' ? 'Recoger' : 'Pickup'
-  const deliveryLabel = language === 'zh' ? '外送 Uber Eats' : 'Delivery (Uber Eats)'
 
   const hours = language === 'zh'
     ? '週一二五六 11AM–7PM'
@@ -31,7 +30,7 @@ export function OrderBanner() {
             <MapPin className="h-3.5 w-3.5" /> 26 South St, Middletown
           </span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center justify-center gap-2">
           <a
             href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
             target="_blank"
@@ -39,7 +38,16 @@ export function OrderBanner() {
             className="inline-flex items-center gap-1.5 rounded-full bg-[#06C167] px-4 py-2 text-sm font-bold text-white transition-all hover:bg-[#05a557] active:scale-95 whitespace-nowrap"
           >
             <Truck className="h-3.5 w-3.5" />
-            {deliveryLabel}
+            Uber Eats
+          </a>
+          <a
+            href="https://www.doordash.com/store/taiwan-way-middletown-42843267/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full bg-[#FF3008] px-4 py-2 text-sm font-bold text-white transition-all hover:bg-[#d92806] active:scale-95 whitespace-nowrap"
+          >
+            <Truck className="h-3.5 w-3.5" />
+            DoorDash
           </a>
           <a
             href="https://order.taiwanwayny.com/order"

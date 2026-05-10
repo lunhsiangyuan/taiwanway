@@ -17,7 +17,6 @@ export function FloatingOrderCTA() {
   }, [])
 
   const pickupLabel = language === 'zh' ? '來店自取' : language === 'es' ? 'Recoger' : 'Pickup'
-  const deliveryLabel = language === 'zh' ? '外送' : 'Delivery'
 
   return (
     <div
@@ -26,19 +25,30 @@ export function FloatingOrderCTA() {
       }`}
     >
       <div className="bg-[hsl(17,40%,12%)]/95 backdrop-blur-md px-4 py-3 shadow-[0_-4px_12px_rgba(0,0,0,0.15)]">
-        <div className="flex gap-2">
-          <a
-            href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1.5 flex-1 rounded-full bg-[#06C167] py-3 font-body text-sm font-bold text-white transition-all active:scale-95"
-          >
-            <Truck className="h-4 w-4" />
-            {deliveryLabel}
-          </a>
+        <div className="flex flex-col gap-2">
+          <div className="flex gap-2">
+            <a
+              href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 flex-1 rounded-full bg-[#06C167] py-2.5 font-body text-sm font-bold text-white transition-all active:scale-95"
+            >
+              <Truck className="h-4 w-4" />
+              Uber Eats
+            </a>
+            <a
+              href="https://www.doordash.com/store/taiwan-way-middletown-42843267/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 flex-1 rounded-full bg-[#FF3008] py-2.5 font-body text-sm font-bold text-white transition-all active:scale-95"
+            >
+              <Truck className="h-4 w-4" />
+              DoorDash
+            </a>
+          </div>
           <a
             href="https://order.taiwanwayny.com/order"
-            className="flex items-center justify-center gap-1.5 flex-1 rounded-full bg-white py-3 font-body text-sm font-bold text-[hsl(17,45%,40%)] transition-all active:scale-95"
+            className="flex items-center justify-center gap-1.5 rounded-full bg-white py-2.5 font-body text-sm font-bold text-[hsl(17,45%,40%)] transition-all active:scale-95"
           >
             <ShoppingBag className="h-4 w-4" />
             {pickupLabel}

@@ -336,7 +336,8 @@ export function JsonLd() {
         "currenciesAccepted": "USD",
         "paymentAccepted": "Cash, Credit Card",
         "sameAs": [
-            "https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
+            "https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A",
+            "https://www.doordash.com/store/taiwan-way-middletown-42843267/"
         ],
         "openingHoursSpecification": [
             { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "11:00", "closes": "19:00" },
