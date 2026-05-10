@@ -126,10 +126,15 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Order CTA — 雙通道 */}
-          <Button asChild className="bg-[#06C167] text-white hover:bg-[#05a557] font-body font-semibold rounded-full px-6">
+          {/* Order CTA — Uber Eats + DoorDash 並列 */}
+          <Button asChild className="bg-[#06C167] text-white hover:bg-[#05a557] font-body font-semibold rounded-full px-4">
             <a href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A" target="_blank" rel="noopener noreferrer">
-              🛵 {t('nav.delivery')}
+              🛵 Uber Eats
+            </a>
+          </Button>
+          <Button asChild className="bg-[#FF3008] text-white hover:bg-[#d92806] font-body font-semibold rounded-full px-4">
+            <a href="https://www.doordash.com/store/taiwan-way-middletown-42843267/" target="_blank" rel="noopener noreferrer">
+              🛵 DoorDash
             </a>
           </Button>
         </div>
@@ -196,7 +201,12 @@ export function Header() {
                 <div className="flex flex-col gap-3 mt-4">
                   <Button asChild className="bg-[#06C167] text-white hover:bg-[#05a557] font-body font-semibold rounded-full">
                     <a href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
-                      🛵 {t('nav.delivery')}
+                      🛵 Uber Eats
+                    </a>
+                  </Button>
+                  <Button asChild className="bg-[#FF3008] text-white hover:bg-[#d92806] font-body font-semibold rounded-full">
+                    <a href="https://www.doordash.com/store/taiwan-way-middletown-42843267/" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+                      🛵 DoorDash
                     </a>
                   </Button>
                 </div>
