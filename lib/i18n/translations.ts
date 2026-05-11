@@ -180,7 +180,7 @@ export const translations = {
               },
               chickenRice: {
                 name: "雞肉飯",
-                description: "嫩煎雞腿肉，搭配特製醬汁",
+                description: "雞胸肉絲，搭配油蔥與醬汁",
                 price: "10.99 / 12.99"
               }
             }
@@ -406,7 +406,7 @@ export const translations = {
               },
               chickenRice: {
                 name: "Chicken Rice",
-                description: "Pan-seared chicken thigh with special sauce",
+                description: "Shredded chicken breast with fried shallots and sauce",
                 price: "10.99 / 12.99"
               }
             }
@@ -632,7 +632,7 @@ export const translations = {
               },
               chickenRice: {
                 name: "Arroz con Pollo",
-                description: "Muslo de pollo salteado con salsa especial",
+                description: "Pechuga de pollo desmenuzada con chalotes fritos y salsa",
                 price: "10.99 / 12.99"
               }
             }
