@@ -8,8 +8,8 @@ TaiwanWay is a modern restaurant website for a Taiwanese restaurant located in M
 
 ## Tech Stack
 
-- **Framework**: Next.js 15.1.6 (App Router with Turbopack)
-- **React**: 19.0.0
+- **Framework**: Next.js 16.1.1 (App Router with Turbopack)
+- **React**: 19.2.3
 - **Styling**: Tailwind CSS 3.4.1 + CSS Variables
 - **UI Components**: shadcn/ui (New York style) + Radix UI
 - **Icons**: Lucide React
@@ -94,10 +94,10 @@ taiwanway/
 ## Development Commands
 
 ```bash
-npm run dev      # Start dev server with Turbopack
-npm run build    # Production build
-npm run start    # Start production server
-npm run lint     # ESLint checking
+bun run dev      # Start dev server with Turbopack
+bun run build    # Production build
+bun run start    # Start production server
+bun run lint     # ESLint checking
 ```
 
 ## Important Patterns
@@ -180,3 +180,27 @@ if (hasConsent('analytics')) {
 - The site is bilingual-first (Chinese primary, English secondary)
 - Use Tailwind CSS classes, avoid inline styles
 - Test responsive design (mobile-first approach)
+
+<!-- SESSION-PROGRESS-START -->
+
+## 🔄 Last Session (auto-generated)
+
+> **2026-05-16 12:57** · branch: `main`
+
+**Commits (today)**
+- c1582f6 fix(seo): allow Next assets in robots
+- f54b46e Merge pull request #18 from amyheish-prog/fix/chicken-rice-description
+- c62c30f fix: 雞肉飯描述統一為雞胸肉絲，移除誤導性「嘉義/台灣」前綴
+
+**Recent Commits (for context)**
+- e59c8e2 Merge pull request #16 from amyheish-prog/feature/add-doordash-delivery-button
+- fa3e159 feat(delivery): add DoorDash alongside Uber Eats across the site
+- 04ff772 feat(content): remove entire /catering route + all catering references
+- 41e4770 fix(content): clean up hand-pulled / 手工麵條 missed by PR #15
+- 6c839a7 feat(amy-collab): brand voice v1.1 — home-style Taiwanese café (SEO+GEO round 3)
+- 788c47b chore(nav): remove catering link from header + footer
+- 1d12a47 feat(seo): agent-readiness — Content Signals + Link headers (RFC 8288)
+- fa56b55 fix(content): 芒果椰奶奶酪改名換圖 + 移除高風險 claim (#15)
+- cc81138 fix(content): 芒果椰奶奶酪改名換圖 + 移除高風險 claim
+
+<!-- SESSION-PROGRESS-END -->
