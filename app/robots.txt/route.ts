@@ -17,7 +17,6 @@ export function GET() {
     'User-agent: *',
     'Allow: /',
     'Disallow: /api/',
-    'Disallow: /_next/',
     'Disallow: /admin/',
     '',
     '# Content Signals — declared AI/search usage preferences',
