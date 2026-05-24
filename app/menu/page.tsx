@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'Menu | TaiwanWay - Taiwanese Restaurant Middletown NY',
     description: 'Browse our full menu — bubble tea, oolong tea, beef noodle soup, braised pork rice & handmade Taiwanese desserts.',
     url: '/menu',
-    images: ['/images/og-storefront.jpg'],
+    images: ['/images/og-cover.jpg'],
   },
 }
 import { MenuCarousel } from "@/components/menu-carousel"

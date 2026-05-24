@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Contact TaiwanWay | Hours & Location',
     description: '26 South St, Middletown, NY 10940. Call 845-381-1002. Open Mon/Tue/Fri/Sat 11AM-7PM.',
     url: '/contact',
-    images: ['/images/og-storefront.jpg'],
+    images: ['/images/og-cover.jpg'],
   },
 }
 

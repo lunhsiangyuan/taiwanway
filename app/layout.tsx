@@ -33,7 +33,7 @@ const karla = Karla({
 export const metadata: Metadata = {
   metadataBase: new URL('https://taiwanwayny.com'),
   title: {
-    default: 'TaiwanWay | Taiwan Street Bowls + Bubble Bar in Middletown, NY',
+    default: 'TaiwanWay | Taiwanese Street Bowls · Bubble Tea · Bakery in Middletown, NY',
     template: '%s | TaiwanWay',
   },
   description:
@@ -70,16 +70,16 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/og-storefront.jpg',
+        url: '/images/og-cover.jpg',
         width: 1200,
         height: 630,
-        alt: 'TaiwanWay 臺灣味 storefront at 26 South St, Middletown NY — Taiwanese café',
+        alt: 'TaiwanWay 臺灣味 — Taiwanese Street Bowls, Bubble Tea & Bakery in Middletown, NY. Beef noodle soup, braised pork rice, bubble tea, and pineapple cakes.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/images/og-storefront.jpg'],
+    images: ['/images/og-cover.jpg'],
   },
   robots: {
     index: true,
