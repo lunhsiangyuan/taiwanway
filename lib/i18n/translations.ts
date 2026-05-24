@@ -228,6 +228,9 @@ export const translations = {
       closed: '週三、四、日公休',
       description: '歡迎蒞臨品嚐我們的美食，或透過電話、電子郵件與我們聯繫。我們期待為您服務！',
     },
+    announcement: {
+      closure: '📢 公告｜本店將於 6/1 至 8/13 暫停營業，8/14 起恢復正常營業時間。感謝您的支持！',
+    },
   },
   en: {
     nav: {
@@ -456,6 +459,9 @@ export const translations = {
       closed: 'Closed on Wednesday, Thursday, and Sunday',
       description: 'Welcome to visit and taste our food, or contact us by phone or email. We look forward to serving you!',
     },
+    announcement: {
+      closure: "📢 Notice: We will be closed from June 1 to August 13. We'll reopen on August 14. Thank you for your support!",
+    },
   },
   es: {
     nav: {
@@ -683,6 +689,9 @@ export const translations = {
       time: '11:00 AM - 7:00 PM',
       closed: 'Cerrado los Miércoles, Jueves y Domingos',
       description: '¡Bienvenido a visitar y probar nuestra comida, o contáctenos por teléfono o correo electrónico. ¡Esperamos poder servirle!',
+    },
+    announcement: {
+      closure: '📢 Aviso: Estaremos cerrados del 1 de junio al 13 de agosto. Reabriremos el 14 de agosto. ¡Gracias por su apoyo!',
     },
   },
 } as const; 
