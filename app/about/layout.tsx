@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'About TaiwanWay | Our Story',
     description: 'From Taiwan to Middletown, NY — our journey of bringing authentic Taiwanese cuisine to Hudson Valley.',
     url: '/about',
-    images: ['/images/og-storefront.jpg'],
+    images: ['/images/og-cover.jpg'],
   },
 }
 
