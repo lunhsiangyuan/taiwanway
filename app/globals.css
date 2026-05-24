@@ -79,3 +79,16 @@
   pointer-events: none;
   z-index: 1;
 }
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee-scroll 20s linear infinite;
+  will-change: transform;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
