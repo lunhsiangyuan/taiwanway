@@ -63,7 +63,7 @@ export function JsonLd() {
         },
         "menu": "https://taiwanwayny.com/menu",
         "acceptsReservations": "Yes",
-        "description": "TaiwanWay 臺灣味 is a home-style Taiwanese café in Middletown, NY 10940, known for Taiwan Street Bowls, handcrafted bubble tea, slow-braised beef noodle soup, classic braised pork rice, freshly baked pineapple cakes, and Taiwanese desserts. Located at 26 South St, we bring Asian comfort food and the comforting flavors of Taiwan to Orange County and the Hudson Valley — for dine-in, takeout, and delivery. Made with care, served with warmth.",
+        "description": "TaiwanWay 臺灣味 is a home-style Taiwanese café in Middletown, NY 10940, known for slow-braised beef noodle soup, classic braised pork rice, handcrafted boba, freshly baked pineapple cakes, and Taiwanese desserts. Located at 26 South St, we bring Asian comfort food and the comforting flavors of Taiwan to Orange County and the Hudson Valley — for dine-in, takeout, and delivery. Made with care, served with warmth.",
         "hasMenu": {
             "@type": "Menu",
             "name": "TaiwanWay Menu",
