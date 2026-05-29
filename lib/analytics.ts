@@ -318,6 +318,12 @@ export function trackPhoneClick(): void {
   trackFBCustomEvent('ClickPhone')
 }
 
+// 線上點餐外送點擊（Uber Eats / DoorDash）
+export function trackOrderClick(platform: 'ubereats' | 'doordash'): void {
+  trackEvent('order_click', { platform })
+  trackFBCustomEvent('OrderClick', { platform })
+}
+
 // 地圖點擊
 export function trackMapClick(): void {
   trackEvent('click_map')
