@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { initAllAnalytics, trackPageView, ANALYTICS_CONFIG } from '@/lib/analytics'
+import { initAllAnalytics, trackPageView, trackOrderClick, trackPhoneClick, trackMenuView, ANALYTICS_CONFIG } from '@/lib/analytics'
 import { getCookieConsent } from '@/lib/cookies'
 
 export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
@@ -35,6 +35,25 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
     const url = pathname + search
     trackPageView(url)
   }, [pathname])
+
+  // 追蹤菜單頁瀏覽（含從 Google 搜尋直接進來的訪客）
+  useEffect(() => {
+    if (pathname === '/menu') trackMenuView()
+  }, [pathname])
+
+  // 委派監聽外送與電話點擊：一次接好全站所有按鈕（含未來新增的）
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      const anchor = (e.target as HTMLElement | null)?.closest('a')
+      if (!anchor) return
+      const href = anchor.getAttribute('href') || ''
+      if (href.includes('ubereats.com')) trackOrderClick('ubereats')
+      else if (href.includes('doordash.com')) trackOrderClick('doordash')
+      else if (href.startsWith('tel:')) trackPhoneClick()
+    }
+    document.addEventListener('click', handleClick)
+    return () => document.removeEventListener('click', handleClick)
+  }, [])
 
   return <>{children}</>
 }
