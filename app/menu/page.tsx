@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import { ProductsShowcase } from "@/components/products-showcase"
 
 export const metadata: Metadata = {
-  title: 'Menu | Bubble Tea, Beef Noodle Soup & More',
+  title: 'Menu · Beef Noodle Soup, Boba & More',
   description:
-    'TaiwanWay 完整菜單 — 珍珠奶茶、牛肉麵、滷肉飯、鳳梨酥、烏龍茶。Full menu: bubble tea, beef noodle soup, braised pork rice & Taiwanese desserts in Middletown, NY.',
+    'TaiwanWay 完整菜單 — 珍珠奶茶、牛肉麵、滷肉飯、鳳梨酥、烏龍茶。Full menu: beef noodle soup, braised pork rice, boba & Taiwanese desserts in Middletown, NY.',
   keywords: [
     'TaiwanWay menu',
     'Taiwanese menu Middletown',
-    'bubble tea flavors',
+    'boba flavors Middletown',
     'beef noodle soup menu',
     'braised pork rice price',
     'Taiwanese pineapple cake',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/menu' },
   openGraph: {
     title: 'Menu | TaiwanWay - Taiwanese Restaurant Middletown NY',
-    description: 'Browse our full menu — bubble tea, oolong tea, beef noodle soup, braised pork rice & handmade Taiwanese desserts.',
+    description: 'Browse our full menu — beef noodle soup, braised pork rice, boba, oolong tea & handmade Taiwanese desserts.',
     url: '/menu',
     images: ['/images/og-cover.jpg'],
   },
@@ -32,7 +32,7 @@ import { MenuCarousel } from "@/components/menu-carousel"
 export default function MenuPage() {
   return (
     <main id="main-content">
-      <h1 className="sr-only">TaiwanWay Menu — Bubble Tea, Beef Noodle Soup & Taiwanese Cuisine</h1>
+      <h1 className="sr-only">TaiwanWay Menu — Beef Noodle Soup, Boba & Taiwanese Cuisine</h1>
 
       {/* 輪播展示 */}
       <MenuCarousel />
