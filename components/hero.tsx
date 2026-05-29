@@ -21,7 +21,7 @@ export function Hero() {
   }, [])
 
   // Brand tagline — kept in English across languages (it's a brand mark, like "Taiwan Beer")
-  const subtitle = 'Taiwan Street Bowls + Bubble Bar'
+  const subtitle = 'Beef Noodle Soup · Boba · Café'
 
   const description = language === 'zh'
     ? '位於紐約 Middletown 的家鄉味台式咖啡館 — 牛肉麵、滷肉飯、珍珠奶茶，以及來自家鄉的溫暖風味。'
