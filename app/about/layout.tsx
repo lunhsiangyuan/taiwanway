@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us | Our Story',
+  title: 'About · Taiwanese Café in Middletown NY',
   description:
     'TaiwanWay 的故事 — 從臺灣到紐約 Middletown，將正宗臺灣味帶到 Hudson Valley。Our story of bringing authentic Taiwanese cuisine to Middletown, NY.',
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About TaiwanWay | Our Story',
+    title: 'About TaiwanWay · Taiwanese Café in Middletown NY',
     description: 'From Taiwan to Middletown, NY — our journey of bringing authentic Taiwanese cuisine to Hudson Valley.',
     url: '/about',
     images: ['/images/og-cover.jpg'],
