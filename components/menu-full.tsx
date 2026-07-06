@@ -25,6 +25,15 @@ const PHOTOS: Record<string, string> = {
   '每日現做各式起司蛋糕': 'cheesecake.jpg',
 }
 
+/* 品項 → 手繪 SVG icon */
+const ICON_SVG: Record<string, string> = {
+  '紅燒牛肉麵': '/images/icons/icon-braised-beef-noodle-soup.svg',
+  '麻醬牛肉乾麵': '/images/icons/icon-sesame-beef-dry-noodles.svg',
+  '古早味滷肉飯': '/images/icons/icon-braised-pork-rice.svg',
+  '雞肉飯': '/images/icons/icon-chicken-rice.svg',
+  '櫻花蝦米糕': '/images/icons/icon-sakura-shrimp-sticky-rice.svg',
+}
+
 /* 標籤定義：hot=人氣、rec=主廚推薦、diet=成分/過敏原 */
 type TagKind = 'hot' | 'rec' | 'diet'
 const T: Record<string, { label: Record<Lang, string>; kind: TagKind }> = {
@@ -163,32 +172,26 @@ export function MenuFull() {
         {mains && (
           <CardSection id="mains" kicker="Rice Bowls & Noodles" title={lang === 'zh' ? '主餐' : 'Mains'}
             items={mains.items} lang={lang} name={name} subName={subName} desc={desc} fmt={fmt} icon={Soup}
-            banner="/images/menu-cards/mains-banner.png" />
+            banner={{ src: '/images/menu-cards/mains-banner-wide.png', w: 1962, h: 802 }} textOnly />
         )}
 
         {/* 甜點 */}
         {desserts && (
           <CardSection id="desserts" kicker="Sweet Endings" title={lang === 'zh' ? '甜點' : 'Desserts'}
-            items={desserts.items} lang={lang} name={name} subName={subName} desc={desc} fmt={fmt} icon={CakeSlice} />
+            items={desserts.items} lang={lang} name={name} subName={subName} desc={desc} fmt={fmt} icon={CakeSlice}
+            banner={{ src: '/images/menu-cards/desserts-banner.png', w: 1536, h: 1024 }} textOnly />
         )}
 
-        {/* 飲品 */}
+        {/* 飲品（一大類一張卡） */}
         <section id="drinks" className="scroll-mt-36 pt-6">
           <GroupHeader kicker="Hand-Shaken Teas · Coffee" title={lang === 'zh' ? '飲品' : 'Drinks'} />
-          {DRINK_IDS.map((id) => {
-            const c = catById(id)
-            if (!c) return null
-            return (
-              <div key={id} className="mb-9">
-                <SubHeader title={catTitle(c)} />
-                <div className="grid gap-x-12 gap-y-4 md:grid-cols-2">
-                  {c.items.map((item, i) => (
-                    <ListRow key={i} name={name(item)} sub={subName(item)} desc={desc(item)} options={item.options} price={item.price ? fmt(item.price) : undefined} />
-                  ))}
-                </div>
-              </div>
-            )
-          })}
+          <div className="grid items-start gap-5 md:grid-cols-2">
+            {DRINK_IDS.map((id) => {
+              const c = catById(id)
+              if (!c) return null
+              return <DrinkCard key={id} title={catTitle(c)} isCoffee={id === 'coffee'} items={c.items} name={name} subName={subName} fmt={fmt} />
+            })}
+          </div>
         </section>
 
         {/* 套餐 */}
@@ -259,22 +262,23 @@ export function MenuFull() {
   )
 }
 
-function CardSection({ id, kicker, title, items, lang, name, subName, desc, fmt, icon, banner }: {
+function CardSection({ id, kicker, title, items, lang, name, subName, desc, fmt, icon, banner, textOnly }: {
   id: string; kicker: string; title: string; items: MenuItemData[]; lang: Lang
   name: (i: MenuItemData) => string; subName: (i: MenuItemData) => string
-  desc: (i: MenuItemData) => string | undefined; fmt: (p: string) => string; icon: LucideIcon; banner?: string
+  desc: (i: MenuItemData) => string | undefined; fmt: (p: string) => string; icon: LucideIcon
+  banner?: { src: string; w: number; h: number }; textOnly?: boolean
 }) {
   return (
     <section id={id} className="scroll-mt-36 pt-6">
       <GroupHeader kicker={kicker} title={title} />
       {banner && (
-        <div className="mx-auto mb-10 max-w-md overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5">
-          <Image src={banner} alt={title} width={1122} height={1402} className="h-auto w-full" sizes="(max-width:768px) 100vw, 448px" />
+        <div className="mb-10 overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5">
+          <Image src={banner.src} alt={title} width={banner.w} height={banner.h} className="h-auto w-full" sizes="(max-width:1152px) 100vw, 1152px" />
         </div>
       )}
-      <div className="grid grid-cols-1 items-start gap-5 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 md:gap-6">
         {items.map((item, i) => (
-          <DishCard key={i} photo={PHOTOS[item.nameZh]} icon={icon} name={name(item)} sub={subName(item)}
+          <DishCard key={i} photo={textOnly ? undefined : PHOTOS[item.nameZh]} icon={icon} dishIcon={ICON_SVG[item.nameZh]} name={name(item)} sub={subName(item)}
             desc={desc(item)} options={item.options} price={item.price ? fmt(item.price) : undefined}
             tags={(TAGS[item.nameZh] || []).map((k) => ({ label: T[k].label[lang], kind: T[k].kind }))} />
         ))}
@@ -289,8 +293,8 @@ function tagClass(kind: TagKind) {
   return 'rounded-full bg-primary/[0.08] px-2 py-0.5 font-body text-[11px] font-medium text-primary/80'
 }
 
-function DishCard({ photo, icon: Icon, name, sub, desc, options, price, tags }: {
-  photo?: string; icon?: LucideIcon; name: string; sub?: string; desc?: string; options?: string; price?: string
+function DishCard({ photo, icon: Icon, dishIcon, name, sub, desc, options, price, tags }: {
+  photo?: string; icon?: LucideIcon; dishIcon?: string; name: string; sub?: string; desc?: string; options?: string; price?: string
   tags?: { label: string; kind: TagKind }[]
 }) {
   return (
@@ -298,6 +302,11 @@ function DishCard({ photo, icon: Icon, name, sub, desc, options, price, tags }: 
       {photo ? (
         <div className="relative aspect-[4/3]">
           <Image src={`/images/food/${photo}`} alt={name} fill className="object-cover" sizes="(max-width:640px) 100vw, 33vw" quality={80} />
+        </div>
+      ) : dishIcon ? (
+        <div className="px-5 pt-5">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={dishIcon} alt="" width={44} height={44} className="h-11 w-11" aria-hidden="true" />
         </div>
       ) : Icon ? (
         <div className="px-5 pt-5">
@@ -308,18 +317,20 @@ function DishCard({ photo, icon: Icon, name, sub, desc, options, price, tags }: 
         <h4 className="font-body text-lg font-bold text-foreground">{name}</h4>
         {sub && <p className="font-body text-sm text-muted-foreground">{sub}</p>}
         {desc && <p className="mt-1.5 font-body text-sm leading-relaxed text-foreground/70">{desc}</p>}
-        <div className="mt-auto pt-3">
-          <div className="flex items-baseline justify-between gap-2">
-            {options ? <span className="font-body text-xs text-muted-foreground">{options}</span> : <span />}
-            {price && <span className="font-body text-lg font-bold text-primary">{price}</span>}
-          </div>
-          {tags && tags.length > 0 && (
-            <div className="mt-2 flex flex-wrap gap-1.5">
+        <div className="mt-auto flex items-center justify-between gap-3 pt-3">
+          {tags && tags.length > 0 ? (
+            <div className="flex flex-wrap gap-1.5">
               {tags.map((t) => (
                 <span key={t.label} className={tagClass(t.kind)}>{t.label}</span>
               ))}
             </div>
+          ) : (
+            <span />
           )}
+          <div className="flex shrink-0 items-baseline gap-2">
+            {options && <span className="font-body text-xs text-muted-foreground">{options}</span>}
+            {price && <span className="whitespace-nowrap font-body text-lg font-bold text-primary">{price}</span>}
+          </div>
         </div>
       </div>
     </div>
@@ -336,28 +347,31 @@ function GroupHeader({ kicker, title }: { kicker: string; title: string }) {
   )
 }
 
-function SubHeader({ title }: { title: string }) {
+function DrinkCard({ title, isCoffee, items, name, subName, fmt }: {
+  title: string; isCoffee?: boolean; items: MenuItemData[]
+  name: (i: MenuItemData) => string; subName: (i: MenuItemData) => string; fmt: (p: string) => string
+}) {
+  const Icon = isCoffee ? Coffee : CupSoda
   return (
-    <div className="mb-5 flex items-center gap-3">
-      <h3 className="font-heading text-xl font-bold text-primary">{title}</h3>
-      <span className="h-px flex-1 bg-primary/15" />
-    </div>
-  )
-}
-
-function ListRow({ name, sub, desc, options, price }: { name: string; sub?: string; desc?: string; options?: string; price?: string }) {
-  return (
-    <div className="border-b border-black/[0.06] pb-3">
-      <div className="flex items-baseline gap-2.5">
-        <h4 className="font-body text-base font-semibold text-foreground">{name}</h4>
-        <span className="mb-1 h-0 flex-1 border-b border-dotted border-foreground/25" aria-hidden="true" />
-        <div className="flex shrink-0 items-baseline gap-2">
-          {options && <span className="whitespace-nowrap font-body text-xs text-muted-foreground">{options}</span>}
-          {price && <span className="whitespace-nowrap font-body font-bold text-primary">{price}</span>}
-        </div>
+    <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5">
+      <div className="mb-4 flex items-center gap-2.5 border-b border-primary/15 pb-3">
+        <Icon className="h-5 w-5 shrink-0 text-primary" strokeWidth={1.5} aria-hidden="true" />
+        <h3 className="font-heading text-lg font-bold text-primary">{title}</h3>
       </div>
-      {sub && <p className="font-body text-xs text-muted-foreground">{sub}</p>}
-      {desc && <p className="mt-1 font-body text-sm leading-relaxed text-foreground/70">{desc}</p>}
+      <ul className="space-y-3">
+        {items.map((item, i) => (
+          <li key={i} className="flex items-baseline justify-between gap-3">
+            <div className="min-w-0">
+              <p className="font-body text-sm font-semibold text-foreground">{name(item)}</p>
+              <p className="font-body text-xs text-muted-foreground">{subName(item)}</p>
+            </div>
+            <div className="flex shrink-0 items-baseline gap-2">
+              {item.options && <span className="whitespace-nowrap font-body text-[11px] text-muted-foreground">{item.options}</span>}
+              {item.price && <span className="whitespace-nowrap font-body text-sm font-bold text-primary">{fmt(item.price)}</span>}
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

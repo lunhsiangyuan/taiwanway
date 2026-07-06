@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title" color="#C43A2C">
+  <title id="title">雞肉飯 / Chicken Rice</title>
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- scallions -->
+    <path d="M42 19c4 0 6 2 8 5-4 0-7-1-8-5z" fill="currentColor" fill-opacity="0.15"/>
+    <path d="M17 25c4-1 7 0 9 3-4 1-7 0-9-3z" fill="currentColor" fill-opacity="0.15"/>
+    <circle cx="35" cy="22" r="1.2" fill="currentColor" stroke="none"/>
+    <circle cx="39" cy="28" r="1.2" fill="currentColor" stroke="none"/>
+    <!-- shredded chicken -->
+    <path d="M21 31c6-6 15-7 22-2"/>
+    <path d="M24 35c4-5 12-7 18-4"/>
+    <path d="M28 39c3-4 9-5 13-2"/>
+    <path d="M18 37c4 3 8 4 13 3"/>
+    <!-- sauce drop -->
+    <path d="M46 35c2 4 1 7-2 8-3-1-4-4-2-8l2-3 2 3z" fill="currentColor" fill-opacity="0.10"/>
+    <!-- rice bowl -->
+    <path d="M12 39c5 5 35 5 40 0"/>
+    <path d="M15 40c1 8 8 14 17 14s16-6 17-14"/>
+    <path d="M23 48c5 2 13 2 18 0"/>
+  </g>
+</svg>
