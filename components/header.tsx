@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 import { Menu, Globe, ChevronDown } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
@@ -29,8 +29,6 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { language, setLanguage, t } = useLanguage()
-  const pathname = usePathname()
-  const isHome = pathname === '/'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,16 +39,14 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // 內頁沒有深色 hero，nav 應永遠使用深色文字
-  const useDarkText = scrolled || !isHome
+  // 新版 Hero 改為明亮米底，header 一律採淺色底＋深色文字，確保可讀
+  const useDarkText = true
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        useDarkText
-          ? 'bg-cream/95 backdrop-blur-md shadow-sm'
-          : 'bg-transparent'
+        'sticky top-0 z-50 transition-all duration-300 bg-cream/95 backdrop-blur-md',
+        scrolled ? 'shadow-sm' : 'shadow-none'
       )}
     >
       <a
@@ -60,15 +56,16 @@ export function Header() {
         Skip to main content
       </a>
       <div className="w-full px-4 md:px-6 lg:px-8 max-w-screen-2xl mx-auto flex h-20 items-center justify-between">
-        {/* Logo */}
-        <Link
-          href="/"
-          className={cn(
-            'font-heading text-xl font-bold tracking-wide transition-colors duration-300',
-            useDarkText ? 'text-foreground' : 'text-white'
-          )}
-        >
-          TaiwanWay
+        {/* Logo — 橫式文字 logo（LOGO-B） */}
+        <Link href="/" className="flex items-center shrink-0" aria-label="TaiwanWay home">
+          <Image
+            src="/brand/logo-horizontal-trim.png"
+            alt="TaiwanWay"
+            width={2246}
+            height={506}
+            priority
+            className="h-10 w-auto md:h-12"
+          />
         </Link>
 
         {/* Desktop Nav */}

@@ -10,11 +10,11 @@
     --card-foreground: 17 40% 12%;
     --popover: 35 33% 96%;
     --popover-foreground: 17 40% 12%;
-    --primary: 17 45% 57%;
+    --primary: 8 62% 45%;
     --primary-foreground: 35 33% 96%;
     --secondary: 36 25% 74%;
     --secondary-foreground: 17 40% 12%;
-    --accent: 12 100% 27%;
+    --accent: 8 58% 36%;
     --accent-foreground: 35 33% 96%;
     --muted: 30 20% 90%;
     --muted-foreground: 17 20% 40%;
@@ -22,13 +22,14 @@
     --destructive-foreground: 0 0% 98%;
     --border: 30 15% 85%;
     --input: 30 15% 85%;
-    --ring: 17 45% 57%;
+    --ring: 8 62% 45%;
     --radius: 0.5rem;
     --gold: 44 80% 40%;
     --cream: 35 33% 96%;
-    --terracotta: 17 45% 57%;
+    --terracotta: 8 62% 45%;
     --sand: 36 25% 74%;
     --dark: 17 40% 8%;
+    --brick: 8 62% 45%;
   }
 
   html {
