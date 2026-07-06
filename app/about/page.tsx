@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/i18n/language-context"
 import Image from "next/image"
+import { StorySection } from "@/components/story-section"
 
 export default function AboutPage() {
   const { t } = useLanguage()
@@ -41,6 +42,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* 我們的故事（由首頁移來） */}
+      <StorySection />
     </main>
   )
 }

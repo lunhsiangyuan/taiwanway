@@ -32,8 +32,9 @@ export const metadata: Metadata = {
 import { ValueStrip } from "@/components/value-strip"
 import { PopularPicks } from "@/components/popular-picks"
 import { SnackShowcase } from "@/components/snack-showcase"
-import { StorySection } from "@/components/story-section"
+import { Testimonials } from "@/components/testimonials"
 import { ContactSection } from "@/components/contact-section"
+import { TeaBand } from "@/components/tea-band"
 
 export default function Home() {
   return (
@@ -43,8 +44,9 @@ export default function Home() {
       <ValueStrip />
       <PopularPicks />
       <SnackShowcase />
-      <StorySection />
+      <Testimonials />
       <ContactSection />
+      <TeaBand />
     </main>
   )
 }

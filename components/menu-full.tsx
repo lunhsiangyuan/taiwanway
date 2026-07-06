@@ -129,14 +129,14 @@ export function MenuFull() {
                       )}
                     </div>
                     <div className="flex flex-1 flex-col p-4">
-                      <h4 className="font-heading text-lg font-bold text-foreground">{foodName(it)}</h4>
+                      <h4 className="font-body text-lg font-bold text-foreground">{foodName(it)}</h4>
                       <p className="font-body text-sm text-muted-foreground">{foodSub(it)}</p>
                       <p className="mt-1.5 flex-1 font-body text-sm leading-relaxed text-foreground/70">{foodDesc(it)}</p>
                       <div className="mt-3 flex flex-wrap gap-2">
                         {it.prices.map(([size, price]) => (
                           <span key={size} className="inline-flex items-baseline gap-1.5 rounded-lg bg-cream px-2.5 py-1">
                             <span className="font-body text-xs text-muted-foreground">{size}</span>
-                            <span className="font-heading text-sm font-bold text-primary">{price}</span>
+                            <span className="font-body text-sm font-bold text-primary">{price}</span>
                           </span>
                         ))}
                       </div>
@@ -148,7 +148,7 @@ export function MenuFull() {
           ))}
 
           {/* Combo Deal */}
-          <div className="mb-12 rounded-2xl border-2 border-dashed border-primary/40 bg-white/60 px-6 py-6">
+          <div className="mx-auto mb-12 max-w-3xl rounded-2xl border-2 border-dashed border-primary/30 bg-[#f2e7d2] px-6 py-6">
             <p className="mb-4 text-center font-heading text-xl font-bold text-primary">
               {lang === 'zh' ? '超值套餐 · 加點享優惠' : 'Combo Deal · Add to Any Meal'}
             </p>
@@ -159,8 +159,8 @@ export function MenuFull() {
                   <div key={c.name.en} className="flex items-center gap-3">
                     <Icon className="h-8 w-8 text-primary" strokeWidth={1.5} aria-hidden="true" />
                     <div>
-                      <p className="font-heading font-semibold text-foreground">{c.name[lang]}</p>
-                      <p className="font-heading font-bold text-primary">{c.price}</p>
+                      <p className="font-body font-semibold text-foreground">{c.name[lang]}</p>
+                      <p className="font-body font-bold text-primary">{c.price}</p>
                     </div>
                   </div>
                 )
@@ -232,11 +232,12 @@ function SubHeader({ title }: { title: string }) {
 function ListRow({ name, sub, desc, options, price }: { name: string; sub?: string; desc?: string; options?: string; price?: string }) {
   return (
     <div className="border-b border-black/[0.06] pb-3">
-      <div className="flex items-baseline justify-between gap-3">
-        <h4 className="font-heading text-base font-semibold text-foreground">{name}</h4>
+      <div className="flex items-baseline gap-2.5">
+        <h4 className="font-body text-base font-semibold text-foreground">{name}</h4>
+        <span className="mb-1 h-0 flex-1 border-b border-dotted border-foreground/25" aria-hidden="true" />
         <div className="flex shrink-0 items-baseline gap-2">
           {options && <span className="whitespace-nowrap font-body text-xs text-muted-foreground">{options}</span>}
-          {price && <span className="whitespace-nowrap font-heading font-bold text-primary">{price}</span>}
+          {price && <span className="whitespace-nowrap font-body font-bold text-primary">{price}</span>}
         </div>
       </div>
       {sub && <p className="font-body text-xs text-muted-foreground">{sub}</p>}

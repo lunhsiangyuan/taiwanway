@@ -20,14 +20,6 @@ export function StorySection() {
     return () => observer.disconnect()
   }, [])
 
-  const title = language === 'zh' ? '我們的故事' : language === 'es' ? 'Nuestra Historia' : 'Our Story'
-
-  const intro = language === 'zh'
-    ? '在 Middletown 的家鄉味台式咖啡館，我們用做茶的講究搖每一杯珍奶，也慢燉每一碗牛肉麵和滷肉飯。點杯手搖配碗飯、帶筆電待一個下午，或和朋友分享一壺阿里山烏龍——這裡，是你在 Hudson Valley 像家一樣的小角落。'
-    : language === 'es'
-      ? 'Un café taiwanés en Middletown — preparamos cada té de burbujas con el esmero de una casa de té y cocinamos a fuego lento cada tazón de fideos con res y arroz con cerdo. Toma un té con el almuerzo o comparte una tetera de oolong con amigos. Más que un café: es tu rincón del Hudson Valley donde Taiwán sabe a casa.'
-      : "A home-style Taiwanese café in Middletown — we shake every bubble tea with the care of a tea house, and slow-simmer every bowl of beef noodle soup and braised pork rice. Grab a tea with lunch, bring your laptop for the afternoon, or share a pot of Alishan oolong with friends. More than a café — it's your corner of the Hudson Valley where Taiwan tastes like home."
-
   const quote = language === 'zh'
     ? '「門推開，就像回到台灣的家。」'
     : language === 'es'
@@ -41,24 +33,12 @@ export function StorySection() {
       <div className="absolute -bottom-20 -left-20 h-[300px] w-[300px] rounded-full bg-[hsl(44,80%,40%)]/[0.06] blur-2xl" />
 
       <div className="relative mx-auto max-w-6xl px-4">
-        {/* 區塊標題 */}
-        <div className={`mb-20 text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="font-heading text-4xl font-bold text-[#2D1810] md:text-5xl">
-            {title}
-          </h2>
-          <div className="mx-auto mt-4 h-0.5 w-20 bg-[hsl(44,80%,40%)]" />
-        </div>
-
-        {/* 兩欄佈局 */}
+        {/* 兩欄佈局：引言 + 雙圖拼貼 */}
         <div className="grid gap-16 lg:grid-cols-2 items-center">
-          {/* 左欄 - 故事文字 */}
-          <div className={`flex flex-col justify-center space-y-6 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <p className="font-body text-lg leading-relaxed text-[hsl(17,20%,40%)]">
-              {intro}
-            </p>
-
+          {/* 左欄 - 引言 */}
+          <div className={`flex flex-col justify-center transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
             {/* 引用 */}
-            <blockquote className="mt-4 border-l-4 border-[hsl(44,80%,40%)] pl-6">
+            <blockquote className="border-l-4 border-[hsl(44,80%,40%)] pl-6">
               <p className="font-heading text-xl italic text-[#2D1810]">
                 {quote}
               </p>
