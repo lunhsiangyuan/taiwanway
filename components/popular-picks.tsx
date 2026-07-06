@@ -8,7 +8,7 @@ type Card = { img: string; alt: Record<string, string> }
 
 const cards: Card[] = [
   { img: '/images/menu-cards/beef-noodle-sq.png', alt: { zh: '牛肉麵', en: 'Beef Noodle Soup', es: 'Sopa de fideos con res' } },
-  { img: '/images/menu-cards/pork-rice-sq.png', alt: { zh: '滷肉飯', en: 'Braised Pork Rice', es: 'Arroz con cerdo' } },
+  { img: '/images/menu-cards/pork-rice-sq-v2.png', alt: { zh: '滷肉飯', en: 'Braised Pork Rice', es: 'Arroz con cerdo' } },
   { img: '/images/menu-cards/bubble-tea-sq.png', alt: { zh: '黑糖珍珠鮮奶', en: 'Brown Sugar Bubble Milk', es: 'Té de burbujas' } },
   { img: '/images/menu-cards/dessert-sq.png', alt: { zh: '甜點推薦', en: 'Dessert Favorites', es: 'Postres' } },
 ]
