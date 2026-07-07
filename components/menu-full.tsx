@@ -5,12 +5,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n/language-context'
 import { menuCategories, type MenuCategory, type MenuItemData } from './menu-carousel'
-import { Soup, CupSoda, Coffee, CakeSlice, MapPin, Phone, Clock, Truck, type LucideIcon } from 'lucide-react'
+import { Soup, CupSoda, Coffee, CakeSlice, MapPin, Phone, Clock, type LucideIcon } from 'lucide-react'
+import { OrderButton } from './order-button'
 
 type Lang = 'zh' | 'en' | 'es'
 
-const UBER = 'https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A'
-const DOORDASH = 'https://www.doordash.com/store/taiwan-way-middletown-42843267/'
 const MAPS = 'https://www.google.com/maps/search/?api=1&query=TaiwanWay+26+South+St+Middletown+NY+10940'
 
 /* 品項 → 照片檔名 */
@@ -128,7 +127,6 @@ export function MenuFull() {
     : lang === 'es'
       ? 'Platos taiwaneses, tés artesanales, café y postres del día — el sabor de casa.'
       : 'Taiwanese comfort food, hand-shaken teas, fresh coffee & daily desserts — the taste of home.'
-  const orderLabel = lang === 'zh' ? '線上點餐' : lang === 'es' ? 'Pedir en línea' : 'Order Online'
   const callLabel = lang === 'zh' ? '來電洽詢' : lang === 'es' ? 'Llámanos' : 'Call Us'
 
   const mains = catById('main-dishes')
@@ -142,12 +140,7 @@ export function MenuFull() {
         <h1 className="font-heading text-5xl font-bold text-[#5b3a2e] md:text-6xl">{heading}</h1>
         <p className="mx-auto mt-4 max-w-xl font-body text-base text-muted-foreground md:text-lg">{intro}</p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-          <a href={UBER} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#06C167] px-6 py-3 font-body font-semibold text-white transition hover:bg-[#05a557]">
-            <Truck className="h-4 w-4" />Uber Eats
-          </a>
-          <a href={DOORDASH} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#FF3008] px-6 py-3 font-body font-semibold text-white transition hover:bg-[#d92806]">
-            <Truck className="h-4 w-4" />DoorDash
-          </a>
+          <OrderButton className="px-6 py-3" />
           <a href="tel:+18453811002" className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-6 py-3 font-body font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground">
             <Phone className="h-4 w-4" />{callLabel}
           </a>
@@ -267,11 +260,7 @@ export function MenuFull() {
 
       {/* 固定底部點餐條（手機） */}
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-black/10 bg-cream/95 px-4 py-3 backdrop-blur-md md:hidden">
-        <div className="flex items-center gap-2">
-          <span className="shrink-0 font-heading text-sm font-bold text-primary">{orderLabel}</span>
-          <a href={UBER} target="_blank" rel="noopener noreferrer" className="flex flex-1 items-center justify-center rounded-full bg-[#06C167] px-3 py-2.5 text-sm font-semibold text-white">Uber Eats</a>
-          <a href={DOORDASH} target="_blank" rel="noopener noreferrer" className="flex flex-1 items-center justify-center rounded-full bg-[#FF3008] px-3 py-2.5 text-sm font-semibold text-white">DoorDash</a>
-        </div>
+        <OrderButton fullWidth side="top" className="py-2.5 text-sm" />
       </div>
     </div>
   )

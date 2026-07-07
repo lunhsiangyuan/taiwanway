@@ -1,10 +1,9 @@
 'use client'
 
-import { Clock, MapPin, Phone, Mail, Truck, Instagram, Navigation } from 'lucide-react'
+import { Clock, MapPin, Phone, Mail, Instagram, Navigation } from 'lucide-react'
 import { useLanguage } from '@/lib/i18n/language-context'
+import { OrderButton } from './order-button'
 
-const UBER = 'https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A'
-const DOORDASH = 'https://www.doordash.com/store/taiwan-way-middletown-42843267/'
 const MAPS = 'https://www.google.com/maps/search/?api=1&query=TaiwanWay+26+South+St+Middletown+NY+10940'
 
 export function Contact() {
@@ -24,7 +23,6 @@ export function Contact() {
     address: { zh: '地址', en: 'Address', es: 'Dirección' }[lang],
     phone: { zh: '電話', en: 'Phone', es: 'Teléfono' }[lang],
     email: { zh: '電子郵件', en: 'Email', es: 'Correo' }[lang],
-    order: { zh: '線上點餐', en: 'Order Online', es: 'Pedir en línea' }[lang],
     directions: { zh: '導航到店', en: 'Get Directions', es: 'Cómo llegar' }[lang],
     call: { zh: '來電洽詢', en: 'Call Us', es: 'Llámanos' }[lang],
     findUs: { zh: '來找我們', en: 'Find Us', es: 'Encuéntranos' }[lang],
@@ -57,13 +55,8 @@ export function Contact() {
             </InfoRow>
 
             {/* CTA 按鈕 */}
-            <div className="flex flex-wrap gap-3 pt-2">
-              <a href={UBER} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#06C167] px-5 py-2.5 font-body text-sm font-semibold text-white transition hover:bg-[#05a557]">
-                <Truck className="h-4 w-4" />Uber Eats
-              </a>
-              <a href={DOORDASH} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#FF3008] px-5 py-2.5 font-body text-sm font-semibold text-white transition hover:bg-[#d92806]">
-                <Truck className="h-4 w-4" />DoorDash
-              </a>
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <OrderButton align="start" className="px-5 py-2.5 text-sm" />
               <a href="tel:+18453811002" className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-5 py-2.5 font-body text-sm font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground">
                 <Phone className="h-4 w-4" />{t.call}
               </a>
