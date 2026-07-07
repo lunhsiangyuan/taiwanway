@@ -26,7 +26,7 @@ const POSTERS: Record<string, string> = {
 };
 
 const CATS: { id: CatId; kicker: string; title: Record<Lang, string> }[] = [
-  { id: 'tea', kicker: 'High-Mountain Tea', title: { zh: '台灣高山茶', en: 'Taiwan High-Mountain Tea', es: 'Té de Alta Montaña' } },
+  { id: 'tea', kicker: 'Taiwan Tea', title: { zh: '台灣好茶', en: 'Taiwan Tea', es: 'Té de Taiwán' } },
   { id: 'fruit', kicker: 'Dried Fruit & Preserves', title: { zh: '台灣果乾蜜餞', en: 'Dried Fruit & Preserves', es: 'Frutas Secas y Confitadas' } },
   { id: 'snack', kicker: 'Snacks & Crackers', title: { zh: '零食餅乾', en: 'Snacks & Crackers', es: 'Snacks y Galletas' } },
 ];
@@ -39,13 +39,11 @@ const FILTERS: { id: FilterId; label: Record<Lang, string> }[] = [
   { id: 'gift', label: { zh: '禮盒', en: 'Gift Boxes', es: 'Regalos' } },
 ];
 
-/* 分類卡的子分組（每個大類拆成幾張大卡） */
-const SUBGROUPS: { id: string; cat: CatId; label: Record<Lang, string> }[] = [
-  { id: 'oolong', cat: 'tea', label: { zh: '烏龍茶', en: 'Oolong Tea', es: 'Té Oolong' } },
-  { id: 'otherTea', cat: 'tea', label: { zh: '紅茶・綠茶・其他', en: 'Black · Green & More', es: 'Negro · Verde y Más' } },
-  { id: 'plum', cat: 'fruit', label: { zh: '蜜餞・梅子・糖果', en: 'Preserved Plums & Candy', es: 'Ciruelas y Dulces' } },
-  { id: 'driedFruit', cat: 'fruit', label: { zh: '果乾脆片', en: 'Dried Fruit & Chips', es: 'Fruta Seca' } },
-  { id: 'snack', cat: 'snack', label: { zh: '鹹食零嘴', en: 'Savory Snacks', es: 'Snacks Salados' } },
+/* 茶葉依「形式」分小標組（順序即顯示順序） */
+const TEA_FORMATS: { id: string; label: Record<Lang, string> }[] = [
+  { id: 'looseTea', label: { zh: '台灣高山茶', en: 'High-Mountain Loose Tea', es: 'Té de Alta Montaña' } },
+  { id: 'teaBags', label: { zh: '茶包', en: 'Tea Bags', es: 'Bolsitas de Té' } },
+  { id: 'teaBlock', label: { zh: '茶磚', en: 'Tea Bricks', es: 'Ladrillos de Té' } },
 ];
 
 function categorize(p: Product): CatId {
@@ -60,11 +58,11 @@ function isGift(p: Product): boolean {
   return /禮盒|gift box/i.test(`${p.name_zh || ''} ${p.name_en || ''}`);
 }
 
-function subGroupOf(p: Product, cat: CatId): string {
+function teaFormat(p: Product): string {
   const n = `${p.name_zh || ''} ${p.name_en || ''}`;
-  if (cat === 'tea') return /烏龍|Oolong|鐵觀音|Tieguanyin/.test(n) ? 'oolong' : 'otherTea';
-  if (cat === 'fruit') return /乾|脆片|Dried|Chips|柑|Mandarin/.test(n) ? 'driedFruit' : 'plum';
-  return 'snack';
+  if (/磚|黑糖|Brick/.test(n)) return 'teaBlock';
+  if (/入|Bags|茶包/.test(n)) return 'teaBags';
+  return 'looseTea';
 }
 
 /* ── 海報卡 ── */
@@ -96,35 +94,7 @@ function PosterCard({ p, language, detail, inStore }: { p: Product; language: st
   );
 }
 
-/* ── 分類列表大卡（品項列在卡內，可點進詳情） ── */
-function ListCard({ title, items, lang, language }: { title: string; items: Product[]; lang: Lang; language: string }) {
-  return (
-    <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5">
-      <div className="mb-3 border-b border-primary/15 pb-3">
-        <h3 className="font-heading text-lg font-bold text-primary">{title}</h3>
-      </div>
-      <ul>
-        {items.map((p) => (
-          <li key={p.id}>
-            <Link
-              href={`/product/${p.slug}`}
-              className="group -mx-2 flex items-baseline justify-between gap-3 rounded-lg px-2 py-2 transition-colors hover:bg-primary/[0.05]"
-            >
-              <span className="min-w-0 font-body text-sm font-medium leading-snug text-foreground group-hover:text-primary">
-                {getProductName(p, language)}
-              </span>
-              {p.price != null && (
-                <span className="shrink-0 font-body text-sm font-bold text-primary">${Number(p.price).toFixed(2)}</span>
-              )}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-/* ── 個別小卡（果乾蜜餞 / 零食用） ── */
+/* ── 個別小卡 ── */
 function TextCard({ p, language, detail }: { p: Product; language: string; detail: string }) {
   return (
     <Link
@@ -145,7 +115,9 @@ function TextCard({ p, language, detail }: { p: Product; language: string; detai
   );
 }
 
-/* ── 單一分類區塊：海報卡 + 分類列表大卡 ── */
+const SMALL_GRID = 'grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6';
+
+/* ── 單一分類區塊：海報卡 + （茶葉再依形式分小標）小卡 ── */
 function CategoryBlock({
   catId,
   items,
@@ -167,9 +139,6 @@ function CategoryBlock({
   const posters = items.filter((p) => POSTERS[p.slug]);
   const lists = items.filter((p) => !POSTERS[p.slug]);
   const cat = CATS.find((c) => c.id === catId)!;
-  const groups = SUBGROUPS.filter((sg) => sg.cat === catId)
-    .map((sg) => ({ sg, list: lists.filter((p) => subGroupOf(p, catId) === sg.id) }))
-    .filter((g) => g.list.length);
 
   return (
     <section className="mb-16">
@@ -180,22 +149,39 @@ function CategoryBlock({
           <span className="mx-auto mt-3 block h-1 w-14 rounded-full bg-primary/70" />
         </div>
       )}
+
       {posters.length > 0 && (
-        <div className="mb-6 grid grid-cols-2 gap-5 md:grid-cols-3 md:gap-6">
+        <div className="mb-8 grid grid-cols-2 gap-5 md:grid-cols-3 md:gap-6">
           {posters.map((p) => (
             <PosterCard key={p.id} p={p} language={language} detail={detail} inStore={inStore} />
           ))}
         </div>
       )}
+
       {lists.length > 0 &&
         (catId === 'tea' ? (
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {groups.map(({ sg, list }) => (
-              <ListCard key={sg.id} title={sg.label[lang]} items={list} lang={lang} language={language} />
-            ))}
+          /* 茶葉：依 台灣高山茶 / 茶包 / 茶磚 小標分組 */
+          <div className="space-y-8">
+            {TEA_FORMATS.map((tf) => {
+              const sub = lists.filter((p) => teaFormat(p) === tf.id);
+              if (!sub.length) return null;
+              return (
+                <div key={tf.id}>
+                  <div className="mb-4 flex items-center gap-3">
+                    <h3 className="font-heading text-xl font-bold text-primary">{tf.label[lang]}</h3>
+                    <span className="h-px flex-1 bg-primary/15" />
+                  </div>
+                  <div className={SMALL_GRID}>
+                    {sub.map((p) => (
+                      <TextCard key={p.id} p={p} language={language} detail={detail} />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          <div className={SMALL_GRID}>
             {lists.map((p) => (
               <TextCard key={p.id} p={p} language={language} detail={detail} />
             ))}
