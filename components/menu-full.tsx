@@ -134,11 +134,20 @@ export function MenuFull() {
 
   return (
     <div className="bg-cream pb-24 md:pb-0">
-      {/* 標題 + 介紹 + CTA */}
-      <div className="mx-auto max-w-6xl px-6 pt-28 pb-8 text-center md:px-8">
-        <p className="mb-2 font-heading text-sm uppercase tracking-[0.28em] text-primary/70">Snacks · Cafe · Bakery</p>
-        <h1 className="font-heading text-5xl font-bold text-[#5b3a2e] md:text-6xl">{heading}</h1>
-        <p className="mx-auto mt-4 max-w-xl font-body text-base text-muted-foreground md:text-lg">{intro}</p>
+      {/* 頁首 banner + CTA */}
+      <div className="mx-auto max-w-6xl px-6 pt-24 pb-8 md:px-8">
+        <h1 className="sr-only">{heading} — {intro}</h1>
+        <div className="overflow-hidden rounded-2xl">
+          <Image
+            src="/images/menu-banner-wide.png"
+            alt="TaiwanWay Menu — 台灣茶飲・點心・咖啡・甜點"
+            width={2560}
+            height={640}
+            priority
+            className="h-auto w-full"
+            sizes="(max-width:1152px) 100vw, 1152px"
+          />
+        </div>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <OrderButton className="px-6 py-3" />
           <a href="tel:+18453811002" className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-6 py-3 font-body font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground">
