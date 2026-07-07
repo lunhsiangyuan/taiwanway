@@ -132,13 +132,10 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
                         href={`/product/${p.slug}`}
                         className="group relative flex flex-col overflow-hidden rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:ring-primary/30"
                       >
-                        {/* 品牌 + 名稱 */}
-                        <div className="relative">
-                          {p.brand && <p className="font-body text-[11px] uppercase tracking-wide text-primary/60">{p.brand}</p>}
-                          <h3 className="mt-1 font-body text-[15px] font-bold leading-snug text-foreground group-hover:text-primary">
-                            {getProductName(p, language)}
-                          </h3>
-                        </div>
+                        {/* 名稱 */}
+                        <h3 className="relative font-body text-[15px] font-bold leading-snug text-foreground group-hover:text-primary">
+                          {getProductName(p, language)}
+                        </h3>
                         {/* 標籤 chips */}
                         {tags.length > 0 && (
                           <div className="relative mt-2 flex flex-wrap gap-1">
@@ -152,8 +149,8 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
                             ))}
                           </div>
                         )}
-                        {/* 價格 + 看詳情 */}
-                        <div className="relative mt-3 flex items-center justify-between gap-2 border-t border-black/5 pt-2.5">
+                        {/* 價格 + 看詳情（貼底對齊） */}
+                        <div className="relative mt-auto flex items-center justify-between gap-2 border-t border-black/5 pt-2.5">
                           {p.price != null && <span className="font-body text-sm font-bold text-primary">${Number(p.price).toFixed(2)}</span>}
                           <span className="inline-flex items-center gap-0.5 font-body text-xs font-semibold text-primary/70 transition-colors group-hover:text-primary">
                             {detail}
