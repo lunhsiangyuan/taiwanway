@@ -131,7 +131,7 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
                     >
                       <div>
                         {p.brand && <p className="font-body text-[11px] uppercase tracking-wide text-primary/60">{p.brand}</p>}
-                        <h3 className="mt-0.5 font-heading text-base font-semibold leading-snug text-foreground group-hover:text-primary">
+                        <h3 className="mt-1 font-body text-[15px] font-bold leading-snug text-foreground group-hover:text-primary">
                           {getProductName(p, language)}
                         </h3>
                       </div>
