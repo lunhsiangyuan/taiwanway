@@ -132,7 +132,7 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
                       <Link
                         key={p.id}
                         href={`/product/${p.slug}`}
-                        className="group relative flex min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl border-l-[3px] border-primary/60 bg-white p-3.5 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-md"
+                        className="group relative flex min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-3.5 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-md"
                       >
                         <Icon
                           className="pointer-events-none absolute -bottom-4 -right-3 h-20 w-20 text-primary/[0.07] transition-transform duration-500 group-hover:scale-110"
