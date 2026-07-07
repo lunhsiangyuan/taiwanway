@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { Instagram, MapPin, Phone, Clock } from 'lucide-react'
 import { useLanguage } from '@/lib/i18n/language-context'
 
@@ -9,6 +10,7 @@ export function Footer() {
   const lang = ['zh', 'en', 'es'].includes(language) ? language : 'en'
 
   const cafeName = lang === 'zh' ? 'TaiwanWay 臺灣味' : 'Taiwan Way Cafe'
+  const blogLabel = lang === 'zh' ? '部落格' : 'Blog'
   const hoursLabel =
     lang === 'zh' ? '週一 · 二 · 五 · 六　11:00am – 7:00pm'
       : 'Mon · Tue · Fri · Sat　11:00am – 7:00pm'
@@ -100,6 +102,14 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-black/10 pt-6 text-center">
+          <nav className="mb-3">
+            <Link
+              href="/blog"
+              className="font-body text-sm font-medium text-foreground/70 transition-colors hover:text-primary"
+            >
+              {blogLabel}
+            </Link>
+          </nav>
           <p className="font-body text-xs text-foreground/50">
             &copy; 2026 TaiwanWay · Middletown, NY
           </p>
