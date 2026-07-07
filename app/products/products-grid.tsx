@@ -135,9 +135,8 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
                           {getProductName(p, language)}
                         </h3>
                       </div>
-                      <div className="mt-3 flex items-center justify-between gap-2">
+                      <div className="mt-3">
                         <span className="rounded-full bg-primary/[0.08] px-2 py-0.5 font-body text-[11px] font-medium text-primary/80">{inStore}</span>
-                        {p.price != null && <span className="font-body text-sm font-bold text-primary">${Number(p.price).toFixed(2)}</span>}
                       </div>
                     </Link>
                   ))}
