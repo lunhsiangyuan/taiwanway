@@ -11,7 +11,7 @@ export default {
   	extend: {
   		fontFamily: {
   			heading: ['var(--font-heading)', 'Playfair Display', 'serif'],
-  			body: ['var(--font-body)', 'Karla', 'sans-serif'],
+  			body: ['var(--font-body)', 'Inter', 'sans-serif'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',
