@@ -25,13 +25,28 @@ const PHOTOS: Record<string, string> = {
   '每日現做各式起司蛋糕': 'cheesecake.jpg',
 }
 
-/* 品項 → 手繪 SVG icon */
+/* 品項 → 紅色線稿 icon（主餐＋甜點） */
 const ICON_SVG: Record<string, string> = {
   '紅燒牛肉麵': '/images/icons/icon-braised-beef-noodle-soup.svg',
   '麻醬牛肉乾麵': '/images/icons/icon-sesame-beef-dry-noodles.svg',
   '古早味滷肉飯': '/images/icons/icon-braised-pork-rice.svg',
   '雞肉飯': '/images/icons/icon-chicken-rice.svg',
   '櫻花蝦米糕': '/images/icons/icon-sakura-shrimp-sticky-rice.svg',
+  '台灣鳳梨酥': '/images/icons/dessert-pineapple.png',
+  '每日現做各式起司蛋糕': '/images/icons/dessert-cheesecake.png',
+  '戚風蛋糕': '/images/icons/dessert-chiffon.png',
+}
+
+/* 飲品分類 → 紅色線稿 icon */
+const DRINK_ICON: Record<string, string> = {
+  'taiwanese-black-tea': '/images/icons/drink-black-tea.png',
+  'jasmine': '/images/icons/drink-jasmine.png',
+  'oolong': '/images/icons/drink-oolong.png',
+  'matcha': '/images/icons/drink-matcha.png',
+  'coffee': '/images/icons/drink-coffee.png',
+  'caffeine-free': '/images/icons/drink-caffeine-free.png',
+  'pot-brewed': '/images/icons/drink-pot-brewed.png',
+  'summer': '/images/icons/drink-summer.png',
 }
 
 /* 標籤定義：hot=人氣、rec=主廚推薦、diet=成分/過敏原 */
@@ -189,7 +204,7 @@ export function MenuFull() {
             {DRINK_IDS.map((id) => {
               const c = catById(id)
               if (!c) return null
-              return <DrinkCard key={id} title={catTitle(c)} isCoffee={id === 'coffee'} items={c.items} name={name} subName={subName} fmt={fmt} />
+              return <DrinkCard key={id} title={catTitle(c)} icon={DRINK_ICON[id]} items={c.items} name={name} subName={subName} fmt={fmt} />
             })}
           </div>
         </section>
@@ -304,9 +319,9 @@ function DishCard({ photo, icon: Icon, dishIcon, name, sub, desc, options, price
           <Image src={`/images/food/${photo}`} alt={name} fill className="object-cover" sizes="(max-width:640px) 100vw, 33vw" quality={80} />
         </div>
       ) : dishIcon ? (
-        <div className="px-5 pt-5">
+        <div className="px-5 pt-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={dishIcon} alt="" width={44} height={44} className="h-11 w-11" aria-hidden="true" />
+          <img src={dishIcon} alt="" className="h-14 w-auto" aria-hidden="true" />
         </div>
       ) : Icon ? (
         <div className="px-5 pt-5">
@@ -347,15 +362,17 @@ function GroupHeader({ kicker, title }: { kicker: string; title: string }) {
   )
 }
 
-function DrinkCard({ title, isCoffee, items, name, subName, fmt }: {
-  title: string; isCoffee?: boolean; items: MenuItemData[]
+function DrinkCard({ title, icon, items, name, subName, fmt }: {
+  title: string; icon?: string; items: MenuItemData[]
   name: (i: MenuItemData) => string; subName: (i: MenuItemData) => string; fmt: (p: string) => string
 }) {
-  const Icon = isCoffee ? Coffee : CupSoda
   return (
     <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5">
       <div className="mb-4 flex items-center gap-2.5 border-b border-primary/15 pb-3">
-        <Icon className="h-5 w-5 shrink-0 text-primary" strokeWidth={1.5} aria-hidden="true" />
+        {icon && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={icon} alt="" className="h-9 w-auto shrink-0" aria-hidden="true" />
+        )}
         <h3 className="font-heading text-lg font-bold text-primary">{title}</h3>
       </div>
       <ul className="space-y-3">
