@@ -124,6 +124,27 @@ function ListCard({ title, items, lang, language }: { title: string; items: Prod
   );
 }
 
+/* ── 個別小卡（果乾蜜餞 / 零食用） ── */
+function TextCard({ p, language, detail }: { p: Product; language: string; detail: string }) {
+  return (
+    <Link
+      href={`/product/${p.slug}`}
+      className="group relative flex min-h-[104px] flex-col overflow-hidden rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:ring-primary/30"
+    >
+      <h3 className="font-body text-[15px] font-bold leading-snug text-foreground group-hover:text-primary">
+        {getProductName(p, language)}
+      </h3>
+      <div className="mt-auto flex items-center justify-between gap-2 border-t border-black/5 pt-2.5">
+        {p.price != null && <span className="font-body text-sm font-bold text-primary">${Number(p.price).toFixed(2)}</span>}
+        <span className="inline-flex items-center gap-0.5 font-body text-xs font-semibold text-primary/70 transition-colors group-hover:text-primary">
+          {detail}
+          <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+        </span>
+      </div>
+    </Link>
+  );
+}
+
 /* ── 單一分類區塊：海報卡 + 分類列表大卡 ── */
 function CategoryBlock({
   catId,
@@ -166,13 +187,20 @@ function CategoryBlock({
           ))}
         </div>
       )}
-      {groups.length > 0 && (
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {groups.map(({ sg, list }) => (
-            <ListCard key={sg.id} title={sg.label[lang]} items={list} lang={lang} language={language} />
-          ))}
-        </div>
-      )}
+      {lists.length > 0 &&
+        (catId === 'tea' ? (
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {groups.map(({ sg, list }) => (
+              <ListCard key={sg.id} title={sg.label[lang]} items={list} lang={lang} language={language} />
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {lists.map((p) => (
+              <TextCard key={p.id} p={p} language={language} detail={detail} />
+            ))}
+          </div>
+        ))}
     </section>
   );
 }
