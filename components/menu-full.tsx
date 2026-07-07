@@ -63,7 +63,7 @@ const T: Record<string, { label: Record<Lang, string>; kind: TagKind }> = {
   veg: { label: { zh: '素食', en: 'Veg', es: 'Veg' }, kind: 'diet' },
 }
 const TAGS: Record<string, string[]> = {
-  '紅燒牛肉麵': ['hot', 'beef'],
+  '紅燒牛肉麵': ['hot', 'rec', 'beef'],
   '麻醬牛肉乾麵': ['beef', 'peanut'],
   '古早味滷肉飯': ['hot', 'pork', 'egg'],
   '雞肉飯': ['chicken'],
