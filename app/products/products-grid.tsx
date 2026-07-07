@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/language-context';
 import type { Product } from '@/types/product';
 import { getProductName } from '@/types/product';
+import { getProductTags } from './product-tags';
 import { MapPin, Phone, Clock, ArrowRight, Leaf, Cherry, Cookie, type LucideIcon } from 'lucide-react';
 
 type CatId = 'tea' | 'fruit' | 'snack';
@@ -128,26 +129,47 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                   {texts.map((p) => {
                     const Icon = CAT_ICON[cat.id];
+                    const tags = getProductTags(p.slug, lang);
                     return (
                       <Link
                         key={p.id}
                         href={`/product/${p.slug}`}
-                        className="group relative flex min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-3.5 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-md"
+                        className="group relative flex flex-col overflow-hidden rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:ring-primary/30"
                       >
                         <Icon
-                          className="pointer-events-none absolute -bottom-4 -right-3 h-20 w-20 text-primary/[0.07] transition-transform duration-500 group-hover:scale-110"
+                          className="pointer-events-none absolute -bottom-4 -right-3 h-20 w-20 text-primary/[0.06] transition-transform duration-500 group-hover:scale-110"
                           strokeWidth={1.5}
                           aria-hidden
                         />
+                        {/* 品牌 + 名稱 */}
                         <div className="relative">
                           {p.brand && <p className="font-body text-[11px] uppercase tracking-wide text-primary/60">{p.brand}</p>}
                           <h3 className="mt-1 font-body text-[15px] font-bold leading-snug text-foreground group-hover:text-primary">
                             {getProductName(p, language)}
                           </h3>
                         </div>
+                        {/* 標籤 chips */}
+                        {tags.length > 0 && (
+                          <div className="relative mt-2 flex flex-wrap gap-1">
+                            {tags.map((t) => (
+                              <span
+                                key={t}
+                                className="rounded-md bg-primary/[0.07] px-1.5 py-0.5 font-body text-[10px] font-medium leading-none text-primary/80"
+                              >
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        {/* 店內販售 + 價格 */}
                         <div className="relative mt-3 flex items-center justify-between gap-2">
-                          <span className="rounded-full bg-primary/[0.08] px-2 py-0.5 font-body text-[11px] font-medium text-primary/80">{inStore}</span>
+                          <span className="font-body text-[11px] font-medium text-muted-foreground">{inStore}</span>
                           {p.price != null && <span className="font-body text-sm font-bold text-primary">${Number(p.price).toFixed(2)}</span>}
+                        </div>
+                        {/* 看詳情箭頭 */}
+                        <div className="relative mt-2 flex items-center gap-1 border-t border-black/5 pt-2 font-body text-xs font-semibold text-primary/70 transition-colors group-hover:text-primary">
+                          {detail}
+                          <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                         </div>
                       </Link>
                     );
