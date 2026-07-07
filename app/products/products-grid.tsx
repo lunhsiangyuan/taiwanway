@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/language-context';
 import type { Product } from '@/types/product';
 import { getProductName } from '@/types/product';
+import { getShortName } from './product-short-names';
 import { MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 
 type CatId = 'tea' | 'fruit' | 'snack';
@@ -102,7 +103,7 @@ function TextCard({ p, language, detail }: { p: Product; language: string; detai
       className="group relative flex min-h-[104px] flex-col overflow-hidden rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:ring-primary/30"
     >
       <h3 className="font-body text-[15px] font-bold leading-snug text-foreground group-hover:text-primary">
-        {getProductName(p, language)}
+        {getShortName(p, language)}
       </h3>
       <div className="mt-auto flex items-center justify-between gap-2 border-t border-black/5 pt-2.5">
         {p.price != null && <span className="font-body text-sm font-bold text-primary">${Number(p.price).toFixed(2)}</span>}
