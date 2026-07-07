@@ -61,9 +61,9 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
         <div className="overflow-hidden rounded-2xl shadow-sm ring-1 ring-black/5">
           <Image
             src="/images/products/gift-wall-banner.png"
-            alt="TaiwanWay Gift Wall — 台灣茶點伴手禮 · Tea · Snacks · Gifts"
-            width={1536}
-            height={1024}
+            alt="TaiwanWay — Taiwan Tea & Snack 台灣茶伴手禮"
+            width={1774}
+            height={887}
             priority
             className="h-auto w-full"
             sizes="(max-width:1024px) 100vw, 1024px"
