@@ -5,9 +5,12 @@ import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/language-context';
 import type { Product } from '@/types/product';
 import { getProductName } from '@/types/product';
-import { MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Clock, ArrowRight, Leaf, Cherry, Cookie, type LucideIcon } from 'lucide-react';
 
 type CatId = 'tea' | 'fruit' | 'snack';
+
+/* 分類底紋圖示 */
+const CAT_ICON: Record<CatId, LucideIcon> = { tea: Leaf, fruit: Cherry, snack: Cookie };
 
 /* 有精緻直式海報的商品（slug → 海報路徑） */
 const POSTERS: Record<string, string> = {
@@ -123,23 +126,32 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
               {/* 文字卡 */}
               {texts.length > 0 && (
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-                  {texts.map((p) => (
-                    <Link
-                      key={p.id}
-                      href={`/product/${p.slug}`}
-                      className="group flex min-h-[150px] flex-col justify-between rounded-2xl border-l-[3px] border-primary/60 bg-white p-4 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-md"
-                    >
-                      <div>
-                        {p.brand && <p className="font-body text-[11px] uppercase tracking-wide text-primary/60">{p.brand}</p>}
-                        <h3 className="mt-1 font-body text-[15px] font-bold leading-snug text-foreground group-hover:text-primary">
-                          {getProductName(p, language)}
-                        </h3>
-                      </div>
-                      <div className="mt-3">
-                        <span className="rounded-full bg-primary/[0.08] px-2 py-0.5 font-body text-[11px] font-medium text-primary/80">{inStore}</span>
-                      </div>
-                    </Link>
-                  ))}
+                  {texts.map((p) => {
+                    const Icon = CAT_ICON[cat.id];
+                    return (
+                      <Link
+                        key={p.id}
+                        href={`/product/${p.slug}`}
+                        className="group relative flex min-h-[160px] flex-col justify-between overflow-hidden rounded-2xl border-l-[3px] border-primary/60 bg-white p-4 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-md"
+                      >
+                        <Icon
+                          className="pointer-events-none absolute -bottom-5 -right-4 h-24 w-24 text-primary/[0.07] transition-transform duration-500 group-hover:scale-110"
+                          strokeWidth={1.5}
+                          aria-hidden
+                        />
+                        <div className="relative">
+                          {p.brand && <p className="font-body text-[11px] uppercase tracking-wide text-primary/60">{p.brand}</p>}
+                          <h3 className="mt-1 font-body text-[15px] font-bold leading-snug text-foreground group-hover:text-primary">
+                            {getProductName(p, language)}
+                          </h3>
+                        </div>
+                        <div className="relative mt-3 flex items-center justify-between gap-2">
+                          <span className="rounded-full bg-primary/[0.08] px-2 py-0.5 font-body text-[11px] font-medium text-primary/80">{inStore}</span>
+                          {p.price != null && <span className="font-body text-sm font-bold text-primary">${Number(p.price).toFixed(2)}</span>}
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
               )}
             </section>
