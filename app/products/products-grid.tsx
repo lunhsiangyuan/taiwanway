@@ -55,11 +55,21 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
 
   return (
     <div className="bg-cream">
-      {/* 頁首 */}
-      <div className="mx-auto max-w-6xl px-6 pt-8 pb-6 text-center md:px-8">
-        <p className="mb-2 font-heading text-sm uppercase tracking-[0.28em] text-primary/70">Snacks · Gifts · Tea</p>
-        <h1 className="font-heading text-5xl font-bold text-[#5b3a2e] md:text-6xl">{title}</h1>
-        <p className="mx-auto mt-4 max-w-xl font-body text-base text-muted-foreground md:text-lg">{intro}</p>
+      {/* 頁首 banner */}
+      <div className="mx-auto max-w-5xl px-6 pt-6 pb-4 md:px-8">
+        <h1 className="sr-only">{title} — Tea · Snacks · Gifts | TaiwanWay 台灣茶點伴手禮</h1>
+        <div className="overflow-hidden rounded-2xl shadow-sm ring-1 ring-black/5">
+          <Image
+            src="/images/products/gift-wall-banner.png"
+            alt="TaiwanWay Gift Wall — 台灣茶點伴手禮 · Tea · Snacks · Gifts"
+            width={1536}
+            height={1024}
+            priority
+            className="h-auto w-full"
+            sizes="(max-width:1024px) 100vw, 1024px"
+          />
+        </div>
+        <p className="mx-auto mt-6 max-w-xl text-center font-body text-base text-muted-foreground md:text-lg">{intro}</p>
       </div>
 
       <div className="mx-auto max-w-6xl px-6 py-8 md:px-8">
