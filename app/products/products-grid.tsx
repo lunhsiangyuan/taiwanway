@@ -125,17 +125,17 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
 
               {/* 文字卡 */}
               {texts.length > 0 && (
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                   {texts.map((p) => {
                     const Icon = CAT_ICON[cat.id];
                     return (
                       <Link
                         key={p.id}
                         href={`/product/${p.slug}`}
-                        className="group relative flex min-h-[160px] flex-col justify-between overflow-hidden rounded-2xl border-l-[3px] border-primary/60 bg-white p-4 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-md"
+                        className="group relative flex min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl border-l-[3px] border-primary/60 bg-white p-3.5 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-md"
                       >
                         <Icon
-                          className="pointer-events-none absolute -bottom-5 -right-4 h-24 w-24 text-primary/[0.07] transition-transform duration-500 group-hover:scale-110"
+                          className="pointer-events-none absolute -bottom-4 -right-3 h-20 w-20 text-primary/[0.07] transition-transform duration-500 group-hover:scale-110"
                           strokeWidth={1.5}
                           aria-hidden
                         />
