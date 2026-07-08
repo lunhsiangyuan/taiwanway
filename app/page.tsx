@@ -3,15 +3,15 @@ import { AnnouncementMarquee } from "@/components/announcement-marquee"
 import { Hero } from "@/components/hero"
 
 export const metadata: Metadata = {
-  title: 'TaiwanWay | Taiwanese Street Bowls · Bubble Tea · Bakery in Middletown, NY',
+  title: 'TaiwanWay | Beef Noodle Soup, Boba & Café · Middletown NY',
   description:
-    'A Taiwanese café in Middletown, NY 10940 — beef noodle soup, braised pork rice, bubble tea, and comforting flavors from home. Serving Orange County and the Hudson Valley.',
+    'A Taiwanese café in Middletown, NY 10940 — beef noodle soup, braised pork rice, boba, and comforting flavors from home. Serving Orange County and the Hudson Valley.',
   keywords: [
     'Taiwanese restaurant near me',
     'Middletown NY Taiwanese food',
     'Middletown 10940 restaurants',
-    'Taiwan Street Bowls',
-    'bubble tea Middletown',
+    'beef noodle soup Middletown NY',
+    'boba Middletown NY',
     'beef noodle soup',
     'braised pork rice',
     'home-style Taiwanese cafe',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'TaiwanWay | Taiwanese Street Bowls · Bubble Tea · Bakery in Middletown, NY',
-    description: 'A home-style Taiwanese café in Middletown, NY 10940. Slow-braised beef noodle soup, classic braised pork rice, handcrafted bubble tea, and freshly baked pineapple cakes. Made with care, served with warmth.',
+    title: 'TaiwanWay | Beef Noodle Soup, Boba & Café · Middletown NY',
+    description: 'A home-style Taiwanese café in Middletown, NY 10940. Slow-braised beef noodle soup, classic braised pork rice, handcrafted boba, and freshly baked pineapple cakes. Made with care, served with warmth.',
     url: '/',
     images: ['/images/og-cover.jpg'],
   },

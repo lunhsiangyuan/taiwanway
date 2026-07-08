@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/language-context';
 import type { Product } from '@/types/product';
-import { getProductName } from '@/types/product';
+import { getProductName, type Language } from '@/types/product';
 import { getShortName } from './product-short-names';
 import { POSTERS } from './posters';
 import { MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
@@ -64,7 +64,7 @@ function teaFormat(p: Product): string {
 }
 
 /* ── 海報卡 ── */
-function PosterCard({ p, language, detail, inStore }: { p: Product; language: string; detail: string; inStore: string }) {
+function PosterCard({ p, language, detail, inStore }: { p: Product; language: Language; detail: string; inStore: string }) {
   return (
     <Link
       href={`/product/${p.slug}`}
@@ -93,7 +93,7 @@ function PosterCard({ p, language, detail, inStore }: { p: Product; language: st
 }
 
 /* ── 個別小卡 ── */
-function TextCard({ p, language, detail }: { p: Product; language: string; detail: string }) {
+function TextCard({ p, language, detail }: { p: Product; language: Language; detail: string }) {
   return (
     <Link
       href={`/product/${p.slug}`}
@@ -129,7 +129,7 @@ function CategoryBlock({
   items: Product[];
   showHeader: boolean;
   lang: Lang;
-  language: string;
+  language: Language;
   detail: string;
   inStore: string;
 }) {
