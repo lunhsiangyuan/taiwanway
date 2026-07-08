@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title" color="#C43A2C">
+  <title id="title">櫻花蝦米糕 / Sakura Shrimp Sticky Rice</title>
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- bamboo steamer rim -->
+    <path d="M13 39c5 6 33 6 38 0"/>
+    <path d="M16 43h32"/>
+    <path d="M19 48h26"/>
+    <!-- sticky rice mound -->
+    <path d="M18 37c2-10 9-15 16-15s13 5 16 15"/>
+    <path d="M24 33l3-2"/>
+    <path d="M32 31l3-2"/>
+    <path d="M39 34l3-2"/>
+    <!-- sakura shrimp -->
+    <path d="M24 24c-4-1-7 2-6 5 3 1 7 0 8-3"/>
+    <path d="M22 26l-3-3"/>
+    <path d="M39 23c4-1 7 2 6 5-3 1-7 0-8-3"/>
+    <path d="M42 25l3-3"/>
+    <path d="M31 18c2-3 7-2 8 1-2 3-6 4-9 1"/>
+    <circle cx="35" cy="18" r="0.7" fill="currentColor" stroke="none"/>
+    <!-- small garnish -->
+    <circle cx="29" cy="38" r="1.1" fill="currentColor" stroke="none"/>
+    <circle cx="35" cy="36" r="1.1" fill="currentColor" stroke="none"/>
+  </g>
+</svg>

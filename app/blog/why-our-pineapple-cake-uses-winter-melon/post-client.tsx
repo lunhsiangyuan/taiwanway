@@ -26,13 +26,13 @@ export function PineappleCakePostClient() {
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-muted-foreground">
           <ol className="flex items-center gap-2 flex-wrap">
             <li>
-              <Link href="/" className="hover:text-terracotta">
+              <Link href="/" className="hover:text-primary">
                 {language === 'zh' ? '首頁' : language === 'es' ? 'Inicio' : 'Home'}
               </Link>
             </li>
             <li aria-hidden>/</li>
             <li>
-              <Link href="/blog" className="hover:text-terracotta">
+              <Link href="/blog" className="hover:text-primary">
                 Blog
               </Link>
             </li>
@@ -50,7 +50,7 @@ export function PineappleCakePostClient() {
               <span aria-hidden>·</span>
               <span>{minutesLabel}</span>
             </div>
-            <h1 className="font-body text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight mb-5">
+            <h1 className="font-heading text-3xl md:text-4xl font-bold text-[#5b3a2e] leading-tight mb-5">
               {post.title[language] || post.title.en}
             </h1>
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-sand/30 shadow-sm">
@@ -89,7 +89,7 @@ export function PineappleCakePostClient() {
             </p>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta hover:underline"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
             >
               {backLabel}
             </Link>
@@ -113,7 +113,7 @@ function PostBodyZh() {
         TaiwanWay 的鳳梨酥只做一種——<strong>用台灣空運的土鳳梨，搭配古法冬瓜餡</strong>。為什麼這麼搞工？因為這才是「真的」台灣鳳梨酥該有的味道。
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         土鳳梨 vs 金鑽鳳梨：一字之差，風味天差地遠
       </h2>
       <p>走進台灣任何一家水果攤，會看到兩種鳳梨：</p>
@@ -129,7 +129,7 @@ function PostBodyZh() {
         台灣做鳳梨酥的名店——微熱山丘、佳德、舊振南——<strong>全部使用土鳳梨</strong>。這不是行銷話術，是工藝選擇。TaiwanWay 的內餡也照這套規格走，我們從台灣南部契作土鳳梨園下單、熬煮成餡、空運到紐約。
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         冬瓜的角色：不是偷工，是講究
       </h2>
       <p>很多人第一次聽到「鳳梨酥加冬瓜」都會愣一下——「冬瓜？不是鳳梨酥嗎？」</p>
@@ -146,7 +146,7 @@ function PostBodyZh() {
         你在台灣吃到的<strong>任何老字號鳳梨酥，幾乎都是冬瓜鳳梨餡</strong>。純鳳梨餡是近十年興起的「土鳳梨酥」變種，強調果酸、鳳梨比例拉高到 50–60%——但冬瓜依然是基底。
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         為什麼要空運，不在美國生產？
       </h2>
       <p>我們在紐約開店，很多朋友建議：「美國也買得到鳳梨啊，買罐頭鳳梨打一打不就好？」</p>
@@ -163,7 +163,7 @@ function PostBodyZh() {
         所以我們的做法是：<strong>餡料從台灣完成，空運到紐約</strong>。到店後才現烤酥皮、現包現做。每一顆鳳梨酥都是當天做的——在 Middletown 的 26 South St，你咬下去的是<strong>台灣當地的風土</strong>。
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         一顆 $3.25，你買到的不只是鳳梨酥
       </h2>
       <p>很多人覺得 $3.25 一顆貴。我們算過：</p>
@@ -178,7 +178,7 @@ function PostBodyZh() {
         但你買到的是：<strong>從台南鳳梨田到 Middletown 你手上、完整沒有打折的味道</strong>。
       </p>
 
-      <p className="font-body text-lg font-semibold text-foreground mt-10 border-l-4 border-terracotta pl-4">
+      <p className="font-body text-lg font-semibold text-foreground mt-10 border-l-4 border-primary pl-4">
         如果你只在超市買過「pineapple cake」那種塑膠盒裝的點心，來 TaiwanWay 試一顆。咬下去的瞬間你會知道，這不是同一個東西。
       </p>
     </>
@@ -198,7 +198,7 @@ function PostBodyEn() {
         At TaiwanWay, we make only one version — <strong>native Taiwanese pineapple air-freighted from Taiwan, combined with a traditional winter melon base</strong>. Here&apos;s why we go through all this trouble.
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         Native Pineapple vs. Golden Pineapple: A World of Flavor Apart
       </h2>
       <p>Walk into any fruit market in Taiwan and you&apos;ll see two kinds of pineapple:</p>
@@ -214,7 +214,7 @@ function PostBodyEn() {
         Taiwan&apos;s most revered pineapple cake bakeries — Sunnyhills, Chia Te, Kuo Yuan Ye — <strong>all use native pineapple</strong>. It&apos;s not marketing; it&apos;s craft. TaiwanWay sources from contract native-pineapple farms in southern Taiwan, cooks the filling on-site in Taiwan, and air-freights it to New York.
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         The Role of Winter Melon: Not a Shortcut, a Tradition
       </h2>
       <p>
@@ -233,7 +233,7 @@ function PostBodyEn() {
         Any <strong>decades-old Taiwanese pineapple cake shop</strong> you walk into — the filling is winter melon + pineapple, not pure pineapple. The &ldquo;100% pineapple&rdquo; variety (<em>tǔ fènglí sū</em>) is a newer, tangier interpretation of the classic — but even those still use winter melon as the backbone.
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         Why Airfreight, Why Not Make It Here?
       </h2>
       <p>
@@ -250,7 +250,7 @@ function PostBodyEn() {
         Our solution: <strong>filling made in Taiwan by experienced artisans, then air-freighted to New York</strong>. At the shop, we handcraft the butter pastry fresh daily and fill each cake by hand. Every pineapple cake on our counter was baked today — and what you bite into is <strong>the actual soil and climate of southern Taiwan</strong>, unchanged.
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         $3.25 a Piece — Here&apos;s What That Buys
       </h2>
       <p>Some customers find $3.25 expensive. Breaking it down:</p>
@@ -265,7 +265,7 @@ function PostBodyEn() {
         But what you&apos;re buying is: <strong>the actual flavor of a Tainan pineapple farm, delivered complete and undiluted to Middletown, NY</strong>.
       </p>
 
-      <p className="font-body text-lg font-semibold text-foreground mt-10 border-l-4 border-terracotta pl-4">
+      <p className="font-body text-lg font-semibold text-foreground mt-10 border-l-4 border-primary pl-4">
         If you&apos;ve only had the plastic-tray &ldquo;pineapple cake&rdquo; from supermarket aisles, come try one at TaiwanWay. The moment you bite in, you&apos;ll know — these are not the same thing.
       </p>
     </>
@@ -285,7 +285,7 @@ function PostBodyEs() {
         En TaiwanWay solo hacemos una versión — <strong>piña nativa taiwanesa enviada por aire desde Taiwán, combinada con relleno tradicional de melón de invierno</strong>. He aquí por qué nos tomamos esta molestia.
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         Piña Nativa vs. Piña Dorada: Un Mundo de Diferencia
       </h2>
       <p>Si entras a cualquier frutería en Taiwán, verás dos tipos de piña:</p>
@@ -301,7 +301,7 @@ function PostBodyEs() {
         Las panaderías de pastel de piña más reverenciadas de Taiwán — Sunnyhills, Chia Te, Kuo Yuan Ye — <strong>todas usan piña nativa</strong>. No es marketing; es oficio. TaiwanWay se abastece de granjas de piña nativa por contrato en el sur de Taiwán, cocina el relleno in situ en Taiwán, y lo envía por aire a Nueva York.
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         El Papel del Melón de Invierno: No Un Atajo, Una Tradición
       </h2>
       <p>
@@ -320,7 +320,7 @@ function PostBodyEs() {
         Cualquier <strong>panadería taiwanesa de décadas de tradición</strong> que visites — el relleno es melón de invierno + piña, no piña pura. La variedad &ldquo;100% piña&rdquo; (<em>tǔ fènglí sū</em>) es una interpretación más nueva y ácida del clásico — pero incluso esas siguen usando melón de invierno como columna vertebral.
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         ¿Por Qué Traer por Aire, No Hacerlo Aquí?
       </h2>
       <p>
@@ -337,7 +337,7 @@ function PostBodyEs() {
         Nuestra solución: <strong>relleno hecho en Taiwán por artesanos experimentados, luego enviado por aire a Nueva York</strong>. En la tienda, elaboramos la masa de mantequilla a mano cada día y rellenamos cada pastel manualmente. Cada pastel de piña en nuestra barra se horneó hoy — y lo que muerdes es <strong>el suelo y el clima reales del sur de Taiwán</strong>, sin alteración.
       </p>
 
-      <h2 className="font-body text-2xl font-bold text-foreground mt-10 mb-4">
+      <h2 className="font-heading text-2xl font-bold text-foreground mt-10 mb-4">
         $3.25 la Pieza — Esto Es Lo Que Compras
       </h2>
       <p>Algunos clientes piensan que $3.25 es caro. Desglose:</p>
@@ -352,7 +352,7 @@ function PostBodyEs() {
         Pero lo que compras es: <strong>el sabor real de una granja de piña de Tainan, entregado completo y sin diluir a Middletown, NY</strong>.
       </p>
 
-      <p className="font-body text-lg font-semibold text-foreground mt-10 border-l-4 border-terracotta pl-4">
+      <p className="font-body text-lg font-semibold text-foreground mt-10 border-l-4 border-primary pl-4">
         Si solo has probado el &ldquo;pineapple cake&rdquo; de bandeja de plástico de los pasillos de supermercado, ven a probar uno en TaiwanWay. En el momento que muerdes, lo sabrás — no son la misma cosa.
       </p>
     </>

@@ -29,22 +29,24 @@ export const metadata: Metadata = {
     images: ['/images/og-cover.jpg'],
   },
 }
-import { StorySection } from "@/components/story-section"
-import { MenuShowcase } from "@/components/menu-showcase"
-import { SnackShop } from "@/components/snack-shop"
+import { ValueStrip } from "@/components/value-strip"
+import { PopularPicks } from "@/components/popular-picks"
+import { SnackShowcase } from "@/components/snack-showcase"
 import { Testimonials } from "@/components/testimonials"
 import { ContactSection } from "@/components/contact-section"
+import { TeaBand } from "@/components/tea-band"
 
 export default function Home() {
   return (
     <main id="main-content">
       <AnnouncementMarquee />
       <Hero />
-      <StorySection />
-      <MenuShowcase />
-      <SnackShop />
+      <ValueStrip />
+      <PopularPicks />
+      <SnackShowcase />
       <Testimonials />
       <ContactSection />
+      <TeaBand />
     </main>
   )
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Playfair_Display_SC, Karla } from "next/font/google"
+import { Playfair_Display, Inter } from "next/font/google"
 import { cookies } from "next/headers"
 import "./globals.css"
 import { LanguageProvider } from "@/lib/i18n/language-context"
@@ -16,14 +16,14 @@ const LANG_ATTR: Record<string, string> = {
   es: 'es',
 }
 
-const playfairDisplaySC = Playfair_Display_SC({
+const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '900'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-heading',
   display: 'swap',
 })
 
-const karla = Karla({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-body',
@@ -106,7 +106,7 @@ export default async function RootLayout({
       <head>
         <GoogleAnalyticsScript />
       </head>
-      <body className={`${playfairDisplaySC.variable} ${karla.variable} font-body antialiased`}>
+      <body className={`${playfairDisplay.variable} ${inter.variable} font-body antialiased`}>
         <JsonLd />
         <FacebookPixelNoScript />
         <GTMNoScript />

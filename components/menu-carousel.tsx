@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 /* ── 資料型別 ── */
-type MenuItemData = {
+export type MenuItemData = {
   nameZh: string
   nameEn: string
   nameEs: string
@@ -17,7 +17,7 @@ type MenuItemData = {
   price?: string
 }
 
-type MenuCategory = {
+export type MenuCategory = {
   id: string
   titleZh: string
   titleEn: string
@@ -30,7 +30,7 @@ type MenuCategory = {
 }
 
 /* ── 菜單資料 ── */
-const menuCategories: MenuCategory[] = [
+export const menuCategories: MenuCategory[] = [
   {
     id: 'signature',
     titleZh: '招牌推薦',
@@ -162,7 +162,7 @@ const menuCategories: MenuCategory[] = [
     subtitleEs: 'Bocados Clásicos Taiwaneses',
     image: '/images/taiwanese-kimchi-v3.jpg',
     items: [
-      { nameZh: '芋頭餅', nameEn: 'Fried Taro Cakes', nameEs: 'Pasteles de Taro Fritos', descZh: '酥脆金黃、內餡香濃的芋頭小點', descEn: 'Crispy golden pastry with fragrant taro filling', descEs: 'Pastelitos crujientes con relleno aromático de taro', price: '$4.99 / 2pcs' },
+      { nameZh: '芋頭餅', nameEn: 'Fried Taro Cakes', nameEs: 'Pasteles de Taro Fritos', descZh: '酥脆金黃、內餡香濃的芋頭小點', descEn: 'Crispy golden pastry with fragrant taro filling', descEs: 'Pastelitos crujientes con relleno aromático de taro', price: '$5.99 / 2pcs' },
       { nameZh: '涼拌花生芹菜', nameEn: 'Chilled Peanuts with Celery', nameEs: 'Cacahuetes Fríos con Apio', descZh: '滷花生、爽脆芹菜、甜胡蘿蔔，清爽開胃', descEn: 'Marinated peanuts, crisp celery and sweet carrots in a light savory dressing', descEs: 'Cacahuetes marinados, apio crujiente y zanahorias dulces', price: '4.50' },
       { nameZh: '台式泡菜', nameEn: 'Taiwanese Kimchi', nameEs: 'Kimchi Taiwanés', descZh: '微酸微甜的台式醃高麗菜', descEn: 'Tangy-sweet Taiwanese-style pickled cabbage', descEs: 'Col encurtida taiwanesa agridulce', price: '3.99' },
     ],

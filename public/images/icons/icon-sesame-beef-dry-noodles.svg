@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title" color="#C43A2C">
+  <title id="title">麻醬牛肉乾麵 / Sesame Beef Dry Noodles</title>
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- sesame dots -->
+    <circle cx="19" cy="17" r="1.2" fill="currentColor" stroke="none"/>
+    <circle cx="25" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+    <circle cx="31" cy="17" r="1.2" fill="currentColor" stroke="none"/>
+    <circle cx="39" cy="15" r="1.2" fill="currentColor" stroke="none"/>
+    <!-- beef slices -->
+    <path d="M39 24c5-3 10-2 12 2-4 1-9 1-12-2z" fill="currentColor" fill-opacity="0.14"/>
+    <path d="M36 30c5-3 11-1 13 3-4 2-9 1-13-3z" fill="currentColor" fill-opacity="0.14"/>
+    <!-- dry noodle swirl -->
+    <path d="M18 31c4-7 17-8 21-2 3 5-3 9-10 7-6-2-5-7 1-8 5-1 9 2 7 6"/>
+    <path d="M20 39c7 3 18 3 25-1"/>
+    <!-- sauce ribbon -->
+    <path d="M26 23c2 5 1 10-3 15"/>
+    <!-- shallow bowl -->
+    <path d="M12 41c6 7 34 7 40 0"/>
+    <path d="M15 39c2-5 32-5 34 0"/>
+    <path d="M18 43l4 8h20l4-8"/>
+  </g>
+</svg>

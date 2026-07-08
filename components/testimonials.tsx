@@ -188,7 +188,7 @@ export function Testimonials() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#2D1810] py-24 overflow-hidden"
+      className="relative bg-cream py-20 overflow-hidden"
     >
       {/* 背景裝飾 */}
       <div className="absolute -top-32 -left-32 h-[400px] w-[400px] rounded-full bg-[hsl(44,80%,40%)]/[0.04] blur-3xl" />
@@ -201,24 +201,24 @@ export function Testimonials() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="font-heading text-4xl md:text-5xl text-[#FAF7F2] mb-4">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">
             {sectionTitles[language] || sectionTitles.en}
           </h2>
-          <div className="mx-auto h-0.5 w-20 bg-[hsl(44,80%,40%)] mb-6" />
+          <div className="mx-auto h-0.5 w-20 bg-primary/70 mb-6" />
 
           {/* 整體評分摘要 */}
-          <div className="flex items-center justify-center gap-6 font-body text-[#FAF7F2]/80">
+          <div className="flex items-center justify-center gap-6 font-body text-foreground/70">
             <div className="flex items-center gap-2">
-              <Star className="w-5 h-5 fill-[hsl(44,80%,40%)] text-[hsl(44,80%,40%)]" />
-              <span className="text-lg font-semibold text-[#FAF7F2]">
+              <Star className="w-5 h-5 fill-[hsl(44,80%,45%)] text-[hsl(44,80%,45%)]" />
+              <span className="text-lg font-semibold text-foreground">
                 Google 4.9★
               </span>
               <span className="text-sm">(69 reviews)</span>
             </div>
-            <span className="text-[#FAF7F2]/30">|</span>
+            <span className="text-foreground/25">|</span>
             <div className="flex items-center gap-2">
-              <Star className="w-5 h-5 fill-[hsl(44,80%,40%)] text-[hsl(44,80%,40%)]" />
-              <span className="text-lg font-semibold text-[#FAF7F2]">
+              <Star className="w-5 h-5 fill-[hsl(44,80%,45%)] text-[hsl(44,80%,45%)]" />
+              <span className="text-lg font-semibold text-foreground">
                 Yelp 4.8★
               </span>
               <span className="text-sm">(8 reviews)</span>
@@ -263,7 +263,7 @@ export function Testimonials() {
             href="https://www.google.com/maps/place//@41.4437301,-74.4206521,17z/data=!4m8!3m7!1s0x89c33262597cb655:0x968db5356171d2eb!8m2!3d41.4437301!4d-74.4206521!9m1!1b1"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-body text-sm text-[#FAF7F2]/60 hover:text-[hsl(44,80%,40%)] transition-colors"
+            className="inline-flex items-center gap-2 font-body text-sm text-foreground/60 hover:text-primary transition-colors"
           >
             View all reviews on Google →
           </a>

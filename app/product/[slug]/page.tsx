@@ -3,7 +3,37 @@ import { notFound } from 'next/navigation';
 import { getSupabaseClient } from '@/lib/supabase';
 import type { Product } from '@/types/product';
 import { isValidSlug } from '@/types/product';
+import { POSTERS } from '@/app/products/posters';
 import ProductDetail from './product-detail';
+
+const SITE = 'https://taiwanwayny.com';
+
+/** 商品結構化資料（schema.org/Product）— 助 Google 複合式結果與 AI 引擎（GEO） */
+function productJsonLd(product: Product) {
+  const poster = POSTERS[product.slug];
+  const jsonLd: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name_en,
+    alternateName: product.name_zh,
+    image: [poster ? `${SITE}${poster}` : product.image_url],
+    description: product.description_en,
+    url: `${SITE}/product/${product.slug}`,
+  };
+  if (product.brand) jsonLd.brand = { '@type': 'Brand', name: product.brand };
+  if (product.price != null) {
+    jsonLd.offers = {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price: Number(product.price).toFixed(2),
+      availability: 'https://schema.org/InStoreOnly',
+      itemCondition: 'https://schema.org/NewCondition',
+      seller: { '@type': 'CafeOrCoffeeShop', name: 'TaiwanWay 臺灣味', '@id': `${SITE}/#business` },
+      areaServed: { '@type': 'City', name: 'Middletown, NY' },
+    };
+  }
+  return jsonLd;
+}
 
 async function getProduct(slug: string): Promise<Product | null> {
   if (!isValidSlug(slug)) return null;
@@ -83,5 +113,13 @@ export default async function ProductPage({
     notFound();
   }
 
-  return <ProductDetail product={product} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd(product)) }}
+      />
+      <ProductDetail product={product} />
+    </>
+  );
 }

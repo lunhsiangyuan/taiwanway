@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title" color="#C43A2C">
+  <title id="title">紅燒牛肉麵 / Braised Beef Noodle Soup</title>
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- steam -->
+    <path d="M20 9c-3 4 3 5 0 9"/>
+    <path d="M32 7c-3 4 3 6 0 10"/>
+    <path d="M44 9c-3 4 3 5 0 9"/>
+    <!-- chopsticks -->
+    <path d="M42 21l12-7"/>
+    <path d="M45 24l12-7"/>
+    <!-- toppings -->
+    <rect x="35" y="25" width="7" height="6" rx="1.5" fill="currentColor" fill-opacity="0.16"/>
+    <rect x="43" y="27" width="6" height="5" rx="1.3" fill="currentColor" fill-opacity="0.16"/>
+    <path d="M20 28c3-4 8-4 11 0"/>
+    <path d="M22 32c3 3 6 3 9 0s6-3 9 0"/>
+    <!-- bowl -->
+    <path d="M12 32c3-5 37-5 40 0"/>
+    <path d="M14 33c1 11 8 19 18 19s17-8 18-19"/>
+    <path d="M19 38c7 3 19 3 26 0"/>
+  </g>
+</svg>

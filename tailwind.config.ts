@@ -10,8 +10,8 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			heading: ['var(--font-heading)', 'Playfair Display SC', 'serif'],
-  			body: ['var(--font-body)', 'Karla', 'sans-serif'],
+  			heading: ['var(--font-heading)', 'Playfair Display', 'serif'],
+  			body: ['var(--font-body)', 'Inter', 'sans-serif'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',

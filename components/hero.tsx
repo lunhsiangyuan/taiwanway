@@ -1,135 +1,75 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
 import { useLanguage } from '@/lib/i18n/language-context'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ChevronDown, Truck, ShoppingBag } from 'lucide-react'
+import { BookOpen } from 'lucide-react'
 
 export function Hero() {
   const { language } = useLanguage()
-  const [scrollY, setScrollY] = useState(0)
-  const heroRef = useRef<HTMLDivElement>(null)
+  const lang = ['zh', 'en', 'es'].includes(language) ? language : 'en'
 
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReducedMotion) return
+  const tagline = 'A Cozy Taste of Taiwan'
 
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const headline1 = lang === 'zh' ? '台灣的味道，' : lang === 'es' ? 'Un sabor de Taiwán,' : 'A Taste of Taiwan,'
+  const headline2 = lang === 'zh' ? '為你而做。' : lang === 'es' ? 'hecho para ti.' : 'Made for You.'
 
-  // Brand tagline — kept in English across languages (it's a brand mark, like "Taiwan Beer")
-  const subtitle = 'Beef Noodle Soup · Boba · Café'
+  const description = lang === 'zh'
+    ? '滷肉飯、牛肉麵、珍珠奶茶，還有更多家鄉味，從我們的家鄉，端上你的桌。'
+    : lang === 'es'
+      ? 'Arroz con cerdo, fideos con res, té de burbujas y más — de nuestra tierra a tu mesa.'
+      : 'Braised Pork Rice, Beef Noodle Soup, Bubble Tea, and more cozy favorites — from our hometown to your table.'
 
-  const description = language === 'zh'
-    ? '位於紐約 Middletown 的家鄉味台式咖啡館 — 牛肉麵、滷肉飯、珍珠奶茶，以及來自家鄉的溫暖風味。'
-    : language === 'es'
-      ? 'Un café taiwanés en Middletown, NY — sopa de fideos con res, arroz con cerdo guisado, té de burbujas y sabores reconfortantes de casa.'
-      : 'A Taiwanese café in Middletown, NY — beef noodle soup, braised pork rice, bubble tea, and comforting flavors from home.'
+  const viewMenu = lang === 'zh' ? '看菜單' : lang === 'es' ? 'Ver menú' : 'View Menu'
 
-  const viewMenu = language === 'zh' ? '瀏覽菜單' : language === 'es' ? 'Ver Menu' : 'View Menu'
-  const ourStory = language === 'zh' ? '我們的故事' : language === 'es' ? 'Nuestra Historia' : 'Our Story'
+  // SEO/GEO：畫面顯示品牌標語，但真 h1 用關鍵字完整的在地描述（螢幕閱讀器/搜尋引擎讀）
+  const srHeading = lang === 'zh'
+    ? 'TaiwanWay 台灣味 — 紐約 Middletown 家鄉味台式咖啡館｜牛肉麵、滷肉飯、珍珠奶茶、鳳梨酥'
+    : lang === 'es'
+      ? 'TaiwanWay — Café taiwanés casero en Middletown, NY | Sopa de fideos con res, arroz con cerdo estofado, bubble tea'
+      : 'TaiwanWay — Home-Style Taiwanese Café in Middletown, NY | Beef Noodle Soup, Braised Pork Rice, Bubble Tea & Pineapple Cake'
 
   return (
-    <section ref={heroRef} className="relative h-screen w-full overflow-hidden">
-      {/* 背景圖片 */}
-      <div
-        className="absolute inset-0"
-        style={{ transform: `translateY(${scrollY * 0.15}px)` }}
-      >
+    <section className="relative w-full bg-cream">
+      <div className="relative h-[440px] w-full overflow-hidden sm:h-[500px] md:h-[560px]">
         <Image
-          src="/images/hero-bg-v2.jpg"
-          alt="TaiwanWay 臺灣味 — Taiwanese café table with beef noodle soup, bubble tea, sea-salt caramel latte, Alishan oolong tea, braised pork rice and pineapple cakes in Middletown, NY"
+          src="/images/store/hero-food.png"
+          alt={lang === 'zh'
+            ? 'TaiwanWay 招牌 — 滷肉飯、珍珠奶茶、牛肉麵擺在木桌上'
+            : 'TaiwanWay signatures — braised pork rice, bubble tea and beef noodle soup on a wood table'}
           fill
           priority
-          className="object-cover scale-110"
+          className="object-cover object-right"
           sizes="100vw"
           quality={85}
         />
-      </div>
+        {/* 左側米色柔化，確保文字清楚（手機也可讀） */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cream from-5% via-cream/85 via-40% to-transparent to-70%" />
+        <div className="absolute inset-0 bg-gradient-to-t from-cream/60 to-transparent md:hidden" />
 
-      {/* 暗色漸層覆蓋層 */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
-
-      {/* 主要內容 */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
-        {/* 小標題 */}
-        <p
-          className="mb-4 font-body text-sm font-medium uppercase tracking-[0.3em] text-[hsl(44,80%,60%)] animate-fade-in-up"
-          style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
-        >
-          {subtitle}
-        </p>
-
-        {/* 主標題 */}
-        <h1
-          className="font-heading text-4xl font-black text-white sm:text-6xl md:text-7xl lg:text-8xl animate-fade-in-up drop-shadow-2xl"
-          style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
-        >
-          TaiwanWay
-        </h1>
-
-        {/* 中文副標題 */}
-        <p
-          className="mt-2 font-heading text-3xl text-white/80 md:text-4xl animate-fade-in-up"
-          style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
-        >
-          臺灣味
-        </p>
-
-        {/* 描述 */}
-        <p
-          className="mt-8 max-w-2xl font-body text-xl md:text-2xl leading-relaxed text-white/85 animate-fade-in-up"
-          style={{ animationDelay: '0.8s', animationFillMode: 'both' }}
-        >
-          {description}
-        </p>
-
-        {/* CTA 按鈕 */}
-        <div
-          className="mt-8 w-full max-w-md animate-fade-in-up"
-          style={{ animationDelay: '1s', animationFillMode: 'both' }}
-        >
-          {/* 訂餐 — Uber Eats + DoorDash 並列 */}
-          <div className="flex flex-wrap justify-center gap-3">
-            <a
-              href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#06C167] px-6 py-3 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[#05a557] hover:scale-105 shadow-lg shadow-black/20"
-            >
-              <Truck className="h-4 w-4" />
-              Uber Eats
-            </a>
-            <a
-              href="https://www.doordash.com/store/taiwan-way-middletown-42843267/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FF3008] px-6 py-3 font-body text-sm font-semibold text-white transition-all duration-300 hover:bg-[#d92806] hover:scale-105 shadow-lg shadow-black/20"
-            >
-              <Truck className="h-4 w-4" />
-              DoorDash
-            </a>
-          </div>
-          {/* 瀏覽菜單 */}
-          <div className="mt-3 flex justify-center">
-            <Link
-              href="/menu"
-              className="inline-flex items-center justify-center rounded-full border-2 border-white/30 px-8 py-2.5 font-body text-xs font-medium text-white/80 backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/10"
-            >
-              {viewMenu}
-            </Link>
+        <div className="relative z-10 mx-auto flex h-full max-w-screen-xl items-center px-6 md:px-12">
+          <div className="max-w-lg text-left">
+            <h1 className="sr-only">{srHeading}</h1>
+            <p className="mb-2 font-heading text-base italic text-primary/80 md:text-lg">{tagline}</p>
+            <div className="font-heading text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl">
+              <span className="text-[#5b3a2e]">{headline1}</span>
+              <br />
+              <span className="text-primary">{headline2}</span>
+            </div>
+            <p className="mt-5 max-w-md font-body text-base leading-relaxed text-foreground/75 md:text-lg">
+              {description}
+            </p>
+            <div className="mt-7">
+              <Link
+                href="/menu"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 font-heading text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-105 hover:bg-accent"
+              >
+                <BookOpen className="h-5 w-5" />
+                {viewMenu}
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* 滾動指示器 */}
-      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 animate-bounce">
-        <span className="font-body text-xs uppercase tracking-widest">Scroll</span>
-        <ChevronDown className="h-5 w-5" />
       </div>
     </section>
   )

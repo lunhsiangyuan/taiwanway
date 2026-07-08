@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 import { Menu, Globe, ChevronDown } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
@@ -25,12 +25,16 @@ const languages = [
   { code: 'es', label: 'Espanol' },
 ] as const
 
+const UBER_URL = 'https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A'
+const DOORDASH_URL = 'https://www.doordash.com/store/taiwan-way-middletown-42843267/'
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [orderOpen, setOrderOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { language, setLanguage, t } = useLanguage()
-  const pathname = usePathname()
-  const isHome = pathname === '/'
+
+  const orderLabel = language === 'zh' ? '線上訂餐' : language === 'es' ? 'Pedir en línea' : 'Order Online'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,16 +45,14 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // 內頁沒有深色 hero，nav 應永遠使用深色文字
-  const useDarkText = scrolled || !isHome
+  // 新版 Hero 改為明亮米底，header 一律採淺色底＋深色文字，確保可讀
+  const useDarkText = true
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        useDarkText
-          ? 'bg-cream/95 backdrop-blur-md shadow-sm'
-          : 'bg-transparent'
+        'sticky top-0 z-50 transition-all duration-300 bg-cream/95 backdrop-blur-md',
+        scrolled ? 'shadow-sm' : 'shadow-none'
       )}
     >
       <a
@@ -60,15 +62,16 @@ export function Header() {
         Skip to main content
       </a>
       <div className="w-full px-4 md:px-6 lg:px-8 max-w-screen-2xl mx-auto flex h-20 items-center justify-between">
-        {/* Logo */}
-        <Link
-          href="/"
-          className={cn(
-            'font-heading text-xl font-bold tracking-wide transition-colors duration-300',
-            useDarkText ? 'text-foreground' : 'text-white'
-          )}
-        >
-          TaiwanWay
+        {/* Logo — 橫式文字 logo（LOGO-B） */}
+        <Link href="/" className="flex items-center shrink-0" aria-label="TaiwanWay home">
+          <Image
+            src="/brand/logo-horizontal-trim.png"
+            alt="TaiwanWay"
+            width={2246}
+            height={506}
+            priority
+            className="h-10 w-auto md:h-12"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -125,17 +128,27 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Order CTA — Uber Eats + DoorDash 並列 */}
-          <Button asChild className="bg-[#06C167] text-white hover:bg-[#05a557] font-body font-semibold rounded-full px-4">
-            <a href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A" target="_blank" rel="noopener noreferrer">
-              🛵 Uber Eats
-            </a>
-          </Button>
-          <Button asChild className="bg-[#FF3008] text-white hover:bg-[#d92806] font-body font-semibold rounded-full px-4">
-            <a href="https://www.doordash.com/store/taiwan-way-middletown-42843267/" target="_blank" rel="noopener noreferrer">
-              🛵 DoorDash
-            </a>
-          </Button>
+          {/* Order CTA — 線上訂餐（合併 Uber Eats + DoorDash） */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="bg-primary text-primary-foreground hover:bg-accent font-body font-semibold rounded-full px-5 flex items-center gap-1.5">
+                🛵 {orderLabel}
+                <ChevronDown className="h-3.5 w-3.5" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="min-w-[11rem]">
+              <DropdownMenuItem asChild className="cursor-pointer font-body font-medium">
+                <a href={UBER_URL} target="_blank" rel="noopener noreferrer">
+                  <span className="mr-2 text-[#06C167]">●</span> Uber Eats
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="cursor-pointer font-body font-medium">
+                <a href={DOORDASH_URL} target="_blank" rel="noopener noreferrer">
+                  <span className="mr-2 text-[#FF3008]">●</span> DoorDash
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Mobile Hamburger */}
@@ -197,17 +210,36 @@ export function Header() {
                     {t(item.key)}
                   </Link>
                 ))}
-                <div className="flex flex-col gap-3 mt-4">
-                  <Button asChild className="bg-[#06C167] text-white hover:bg-[#05a557] font-body font-semibold rounded-full">
-                    <a href="https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
-                      🛵 Uber Eats
-                    </a>
+                <div className="mt-4">
+                  <Button
+                    onClick={() => setOrderOpen(!orderOpen)}
+                    className="w-full bg-primary text-primary-foreground hover:bg-accent font-body font-semibold rounded-full flex items-center justify-center gap-1.5"
+                  >
+                    🛵 {orderLabel}
+                    <ChevronDown className={cn('h-4 w-4 transition-transform', orderOpen && 'rotate-180')} />
                   </Button>
-                  <Button asChild className="bg-[#FF3008] text-white hover:bg-[#d92806] font-body font-semibold rounded-full">
-                    <a href="https://www.doordash.com/store/taiwan-way-middletown-42843267/" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
-                      🛵 DoorDash
-                    </a>
-                  </Button>
+                  {orderOpen && (
+                    <div className="mt-3 flex flex-col gap-2">
+                      <a
+                        href={UBER_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center gap-2 rounded-full border border-primary/30 px-4 py-2.5 font-body text-sm font-medium text-foreground hover:bg-primary/[0.06]"
+                      >
+                        <span className="text-[#06C167]">●</span> Uber Eats
+                      </a>
+                      <a
+                        href={DOORDASH_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center gap-2 rounded-full border border-primary/30 px-4 py-2.5 font-body text-sm font-medium text-foreground hover:bg-primary/[0.06]"
+                      >
+                        <span className="text-[#FF3008]">●</span> DoorDash
+                      </a>
+                    </div>
+                  )}
                 </div>
               </nav>
             </SheetContent>

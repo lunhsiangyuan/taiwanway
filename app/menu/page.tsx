@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ProductsShowcase } from "@/components/products-showcase"
+import { MenuFull } from "@/components/menu-full"
 
 export const metadata: Metadata = {
   title: 'Menu · Beef Noodle Soup, Boba & More',
@@ -27,18 +27,11 @@ export const metadata: Metadata = {
     images: ['/images/og-cover.jpg'],
   },
 }
-import { MenuCarousel } from "@/components/menu-carousel"
-
 export default function MenuPage() {
   return (
     <main id="main-content">
-      <h1 className="sr-only">TaiwanWay Menu — Beef Noodle Soup, Boba & Taiwanese Cuisine</h1>
-
-      {/* 輪播展示 */}
-      <MenuCarousel />
-
-      {/* 產品展示 - 春水堂風格 */}
-      <ProductsShowcase />
+      {/* 明亮完整菜單 */}
+      <MenuFull />
     </main>
   )
 }

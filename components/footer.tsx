@@ -1,171 +1,116 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
-import { Instagram, MapPin, Phone, Mail } from 'lucide-react'
+import { Instagram, MapPin, Phone, Clock } from 'lucide-react'
 import { useLanguage } from '@/lib/i18n/language-context'
 
-const navLinks = [
-  { key: 'nav.home', href: '/' },
-  { key: 'nav.menu', href: '/menu' },
-  { key: 'nav.blog', href: '/blog' },
-  { key: 'nav.about', href: '/about' },
-  { key: 'nav.contact', href: '/contact' },
-] as const
-
-const hours = [
-  { day: 'Mon', dayZh: '週一', dayEs: 'Lun', hours: '11AM - 7PM' },
-  { day: 'Tue', dayZh: '週二', dayEs: 'Mar', hours: '11AM - 7PM' },
-  { day: 'Wed', dayZh: '週三', dayEs: 'Mié', hours: null },
-  { day: 'Thu', dayZh: '週四', dayEs: 'Jue', hours: null },
-  { day: 'Fri', dayZh: '週五', dayEs: 'Vie', hours: '11AM - 7PM' },
-  { day: 'Sat', dayZh: '週六', dayEs: 'Sáb', hours: '11AM - 7PM' },
-  { day: 'Sun', dayZh: '週日', dayEs: 'Dom', hours: null },
-] as const
-
-const closedLabels: Record<string, string> = {
-  zh: '公休',
-  en: 'Closed',
-  es: 'Cerrado',
-}
-
 export function Footer() {
-  const { t, language } = useLanguage()
+  const { language } = useLanguage()
+  const lang = ['zh', 'en', 'es'].includes(language) ? language : 'en'
 
-  const getDayName = (item: typeof hours[number]) => {
-    if (language === 'zh') return item.dayZh
-    if (language === 'es') return item.dayEs
-    return item.day
-  }
+  const cafeName = lang === 'zh' ? 'TaiwanWay 臺灣味' : 'TaiwanWay'
+  const blogLabel = lang === 'zh' ? '部落格' : 'Blog'
+  const hoursLabel =
+    lang === 'zh' ? '週一 · 二 · 五 · 六　11:00am – 7:00pm'
+      : 'Mon · Tue · Fri · Sat　11:00am – 7:00pm'
+  const closedNote =
+    lang === 'zh' ? '週三 · 四 · 日 公休'
+      : lang === 'es' ? 'Cerrado Mié · Jue · Dom'
+        : 'Closed Wed · Thu · Sun'
 
-  const columnTitles = {
-    quickLinks: { zh: '快速連結', en: 'Quick Links', es: 'Enlaces' },
-    hours: { zh: '營業時間', en: 'Hours', es: 'Horario' },
-    contact: { zh: '聯絡資訊', en: 'Contact', es: 'Contacto' },
-  }
-
-  const getTitle = (section: keyof typeof columnTitles) =>
-    columnTitles[section][language] || columnTitles[section].en
+  const note = lang === 'zh'
+    ? ['謝謝你來到這裡，', '希望我們的味道，', '能成為你生活的一部分。']
+    : lang === 'es'
+      ? ['Gracias por venir.', 'Ojalá nuestro sabor', 'sea parte de tu día.']
+      : ['Thank you for stopping by.', 'We hope our flavors become', 'a small part of your everyday.']
 
   return (
-    <footer className="bg-[#1A0F0A] pt-16 pb-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Column 1 - Brand */}
-          <div>
-            <Link href="/" className="font-heading text-2xl text-white hover:text-white/80 transition-colors">
-              TaiwanWay
-            </Link>
-            <p className="text-white/60 font-body mt-1 text-lg">
-              {language === 'zh' ? '臺灣味' : language === 'es' ? 'Sabor de Taiwán' : 'Taste of Taiwan'}
-            </p>
-            <p className="text-white/50 font-body text-sm mt-3 leading-relaxed">
-              {language === 'zh'
-                ? '家鄉味台式咖啡館 · Middletown, NY 10940'
-                : language === 'es'
-                  ? 'Café taiwanés casero · Middletown, NY 10940'
-                  : 'Home-style Taiwanese café · Middletown, NY 10940'}
-            </p>
-            {/* Social Icons */}
-            <div className="flex items-center gap-4 mt-5">
+    <footer className="border-t border-black/5 bg-[#f0e7d6] text-foreground">
+      <div className="mx-auto max-w-screen-xl px-6 py-12 md:px-12 md:py-14">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[auto_1fr_auto] md:items-center md:gap-12">
+          {/* 左：磚紅 logo（淺底上清楚可見） */}
+          <div className="flex justify-center md:justify-start">
+            <Image
+              src="/brand/logo-mascot-trim.png"
+              alt="TaiwanWay 臺灣味"
+              width={1673}
+              height={1208}
+              className="h-28 w-auto md:h-32"
+            />
+          </div>
+
+          {/* 中：店家資訊 */}
+          <div className="text-center md:text-left">
+            <h3 className="font-heading text-2xl font-bold text-primary">{cafeName}</h3>
+            <div className="mt-4 space-y-2.5 font-body text-sm text-foreground/80">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=TaiwanWay+26+South+St+Middletown+NY+10940"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 transition-colors hover:text-primary md:justify-start"
+              >
+                <MapPin className="h-4 w-4 shrink-0 text-primary" />
+                26 South St, Middletown, NY 10940
+              </a>
+              <a
+                href="tel:+18453811002"
+                className="flex items-center justify-center gap-2 transition-colors hover:text-primary md:justify-start"
+              >
+                <Phone className="h-4 w-4 shrink-0 text-primary" />
+                (845) 381-1002
+              </a>
+              <p className="flex items-center justify-center gap-2 md:justify-start">
+                <Clock className="h-4 w-4 shrink-0 text-primary" />
+                {hoursLabel}
+              </p>
+              <p className="pl-6 text-xs text-foreground/50">{closedNote}</p>
+            </div>
+            <div className="mt-5 flex items-center justify-center gap-4 md:justify-start">
               <a
                 href="https://www.instagram.com/taiwanway10940/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/60 hover:text-white transition-colors"
+                className="text-foreground/60 transition-colors hover:text-primary"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="https://www.facebook.com/taiwanway10940/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/60 hover:text-white transition-colors"
+                className="text-foreground/60 transition-colors hover:text-primary"
                 aria-label="Facebook"
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </a>
+              <span aria-hidden className="h-4 w-px bg-foreground/20" />
+              <Link
+                href="/blog"
+                className="font-body text-sm font-medium text-foreground/70 transition-colors hover:text-primary"
+              >
+                {blogLabel}
+              </Link>
             </div>
           </div>
 
-          {/* Column 2 - Quick Links */}
-          <div>
-            <h3 className="text-white font-body font-semibold uppercase tracking-wider text-xs mb-4">
-              {getTitle('quickLinks')}
-            </h3>
-            <ul className="space-y-3">
-              {navLinks.map((item) => (
-                <li key={item.key}>
-                  <Link
-                    href={item.href}
-                    className="text-white/50 hover:text-white font-body text-sm transition-colors"
-                  >
-                    {t(item.key)}
-                  </Link>
-                </li>
+          {/* 右：手寫暖心話 */}
+          <div className="text-center md:text-right">
+            <p className="font-heading text-xl italic leading-relaxed text-primary/90 md:text-2xl">
+              {note.map((line, i) => (
+                <span key={i} className="block">{line}</span>
               ))}
-            </ul>
-          </div>
-
-          {/* Column 3 - Hours */}
-          <div>
-            <h3 className="text-white font-body font-semibold uppercase tracking-wider text-xs mb-4">
-              {getTitle('hours')}
-            </h3>
-            <div className="space-y-2">
-              {hours.map((item) => (
-                <div key={item.day} className="flex justify-between gap-4">
-                  <span className={`font-body text-sm ${item.hours ? 'text-white/50' : 'text-white/60'}`}>
-                    {getDayName(item)}
-                  </span>
-                  <span className={`font-body text-sm ${item.hours ? 'text-white/50' : 'text-white/60'}`}>
-                    {item.hours || closedLabels[language] || 'Closed'}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Column 4 - Contact */}
-          <div>
-            <h3 className="text-white font-body font-semibold uppercase tracking-wider text-xs mb-4">
-              {getTitle('contact')}
-            </h3>
-            <div className="space-y-3">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-white/60 mt-0.5 flex-shrink-0" />
-                <p className="text-white/50 font-body text-sm leading-relaxed">
-                  26 South St,<br />Middletown, NY 10940
-                </p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-white/60 flex-shrink-0" />
-                <a
-                  href="tel:845-381-1002"
-                  className="text-white/50 hover:text-white font-body text-sm transition-colors"
-                >
-                  845-381-1002
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-white/60 flex-shrink-0" />
-                <a
-                  href="mailto:taiwanway10940@gmail.com"
-                  className="text-white/50 hover:text-white font-body text-sm transition-colors"
-                >
-                  taiwanway10940@gmail.com
-                </a>
-              </div>
-            </div>
+            </p>
+            <span className="mt-2 inline-block text-primary/50">♡</span>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 mt-12 pt-8">
-          <p className="text-white/60 text-sm text-center font-body">
-            &copy; 2026 TaiwanWay. {t('footer.allRights')}.
+        <div className="mt-10 border-t border-black/10 pt-6 text-center">
+          <p className="font-body text-xs text-foreground/50">
+            &copy; 2026 TaiwanWay · Middletown, NY
           </p>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/i18n/language-context"
 import Image from "next/image"
+import { StorySection } from "@/components/story-section"
 
 export default function AboutPage() {
   const { t } = useLanguage()
@@ -9,13 +10,14 @@ export default function AboutPage() {
   return (
     <main id="main-content">
       {/* Hero Image Section */}
-      <section className="relative h-[50vh] min-h-[400px] w-full">
+      <section className="relative h-[50vh] min-h-[360px] w-full">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0329-4xKjbDPxXgMadO2d2D81rsDbqYYh6q.jpeg"
-          alt="Taiwanway Store Front with Cherry Blossoms"
+          src="/images/store/about-hero.png"
+          alt="TaiwanWay 店內空間 — 溫暖的午後茶席，Middletown, NY 的家鄉味台式咖啡館"
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
       </section>
 
@@ -41,6 +43,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* 我們的故事（由首頁移來） */}
+      <StorySection />
     </main>
   )
 }
