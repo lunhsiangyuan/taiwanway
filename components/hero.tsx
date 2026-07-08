@@ -22,6 +22,13 @@ export function Hero() {
 
   const viewMenu = lang === 'zh' ? '看菜單' : lang === 'es' ? 'Ver menú' : 'View Menu'
 
+  // SEO/GEO：畫面顯示品牌標語，但真 h1 用關鍵字完整的在地描述（螢幕閱讀器/搜尋引擎讀）
+  const srHeading = lang === 'zh'
+    ? 'TaiwanWay 台灣味 — 紐約 Middletown 家鄉味台式咖啡館｜牛肉麵、滷肉飯、珍珠奶茶、鳳梨酥'
+    : lang === 'es'
+      ? 'TaiwanWay — Café taiwanés casero en Middletown, NY | Sopa de fideos con res, arroz con cerdo estofado, bubble tea'
+      : 'TaiwanWay — Home-Style Taiwanese Café in Middletown, NY | Beef Noodle Soup, Braised Pork Rice, Bubble Tea & Pineapple Cake'
+
   return (
     <section className="relative w-full bg-cream">
       <div className="relative h-[440px] w-full overflow-hidden sm:h-[500px] md:h-[560px]">
@@ -42,12 +49,13 @@ export function Hero() {
 
         <div className="relative z-10 mx-auto flex h-full max-w-screen-xl items-center px-6 md:px-12">
           <div className="max-w-lg text-left">
+            <h1 className="sr-only">{srHeading}</h1>
             <p className="mb-2 font-heading text-base italic text-primary/80 md:text-lg">{tagline}</p>
-            <h1 className="font-heading text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl">
+            <div className="font-heading text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl">
               <span className="text-[#5b3a2e]">{headline1}</span>
               <br />
               <span className="text-primary">{headline2}</span>
-            </h1>
+            </div>
             <p className="mt-5 max-w-md font-body text-base leading-relaxed text-foreground/75 md:text-lg">
               {description}
             </p>
