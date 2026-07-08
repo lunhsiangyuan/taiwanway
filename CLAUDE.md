@@ -181,6 +181,29 @@ if (hasConsent('analytics')) {
 - Use Tailwind CSS classes, avoid inline styles
 - Test responsive design (mobile-first approach)
 
+## Fork 協作工作流（Amy / amyheish-prog）
+
+> 適用於在 fork（`amyheish-prog/taiwanway-website`）上開發時。正式 repo（上游）是
+> `lunhsiangyuan/taiwanway`，Vercel production 跟著上游 main。
+
+**上游有 auto-merge 管線**：由 amyheish-prog 開到上游 main 的 PR，檢查通過後一小時內
+自動 squash merge 並部署上線。**開 PR ≈ 直接上 production**，未完成的東西不要開 PR。
+
+### 每次開工（session 開始先做，防衝突）
+1. 同步 fork：`gh repo sync amyheish-prog/taiwanway-website --source lunhsiangyuan/taiwanway`，
+   然後 `git checkout main && git pull`。
+2. 從最新 main 開新分支；絕不從舊分支續長（2026-07 曾因此與 main 大衝突）。
+
+### 開 PR（鐵律，防迷路 PR）
+- 一律：`gh pr create --repo lunhsiangyuan/taiwanway --head amyheish-prog:<分支名> --base main`
+- ❌ 禁止 fork 內部 PR（head、base 都在 fork）——上游看不到、永遠不會部署
+  （2026-07 品牌改版 PR 曾因此卡住）。網頁開 PR 時 base repository 必選 `lunhsiangyuan/taiwanway`。
+- 開 PR 前必跑 `bun run build`，過了才開。
+
+### 已知型別地雷
+- `types/product.ts` 的 `getProductName` 等函式要求 `Language` 型別（`'zh' | 'en' | 'es'`）——
+  元件 props 寫 `language: Language`，不要寫 `string`（會在 build 才炸）。
+
 <!-- SESSION-PROGRESS-START -->
 
 ## 🔄 Last Session (auto-generated)
