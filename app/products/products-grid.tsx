@@ -11,7 +11,7 @@ import { POSTERS } from './posters';
 import { MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 
 type CatId = 'tea' | 'fruit' | 'snack';
-type FilterId = 'all' | CatId | 'gift';
+type FilterId = 'all' | 'new' | CatId | 'gift';
 type Lang = 'zh' | 'en' | 'es';
 
 const CATS: { id: CatId; kicker: string; title: Record<Lang, string> }[] = [
@@ -22,6 +22,7 @@ const CATS: { id: CatId; kicker: string; title: Record<Lang, string> }[] = [
 
 const FILTERS: { id: FilterId; label: Record<Lang, string> }[] = [
   { id: 'all', label: { zh: '全部', en: 'All', es: 'Todos' } },
+  { id: 'new', label: { zh: '🆕 新到貨', en: '🆕 New Arrivals', es: '🆕 Novedades' } },
   { id: 'tea', label: { zh: '茶葉', en: 'Tea', es: 'Té' } },
   { id: 'fruit', label: { zh: '果乾蜜餞', en: 'Dried Fruit', es: 'Fruta Seca' } },
   { id: 'snack', label: { zh: '零食', en: 'Snacks', es: 'Snacks' } },
@@ -45,6 +46,14 @@ function categorize(p: Product): CatId {
 
 function isGift(p: Product): boolean {
   return /禮盒|gift box/i.test(`${p.name_zh || ''} ${p.name_en || ''}`);
+}
+
+/** 目前有效的新到貨（勾選 + 未過截止日），與首頁 snack-shop 判斷一致 */
+function isActiveNewArrival(p: Product): boolean {
+  if (!p.is_new_arrival) return false;
+  if (!p.featured_until) return true;
+  const today = new Date().toISOString().slice(0, 10);
+  return p.featured_until >= today;
 }
 
 function teaFormat(p: Product): string {
@@ -200,12 +209,18 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
 
   const emptyLabel = lang === 'zh' ? '此分類目前沒有商品' : lang === 'es' ? 'No hay productos en esta categoría' : 'No products in this category';
 
-  // 依篩選決定要呈現的分類區塊
+  // 有沒有「有效的新到貨」— 沒有就不顯示該篩選 chip
+  const hasNew = products.some(isActiveNewArrival);
+  const visibleFilters = FILTERS.filter((f) => f.id !== 'new' || hasNew);
+
+  // 依篩選決定要呈現的分類區塊（跨類的用 CategoryBlock 依分類拆）
   let blocks: { catId: CatId; items: Product[] }[] = [];
   if (filter === 'all') {
     blocks = CATS.map((c) => ({ catId: c.id, items: grouped[c.id] }));
   } else if (filter === 'gift') {
     blocks = CATS.map((c) => ({ catId: c.id, items: grouped[c.id].filter(isGift) })).filter((b) => b.items.length);
+  } else if (filter === 'new') {
+    blocks = CATS.map((c) => ({ catId: c.id, items: grouped[c.id].filter(isActiveNewArrival) })).filter((b) => b.items.length);
   } else {
     blocks = [{ catId: filter, items: grouped[filter] }];
   }
@@ -240,7 +255,7 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
       <nav className="sticky top-20 z-30 border-y border-black/5 bg-cream/95 backdrop-blur-md">
         <div className="scrollbar-hide mx-auto max-w-6xl overflow-x-auto px-4 py-3">
           <div className="flex min-w-max justify-center gap-2">
-            {FILTERS.map((f) => (
+            {visibleFilters.map((f) => (
               <button
                 key={f.id}
                 onClick={() => setFilter(f.id)}
@@ -264,7 +279,7 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
               key={b.catId}
               catId={b.catId}
               items={b.items}
-              showHeader={filter === 'all' || filter === 'gift'}
+              showHeader={filter === 'all' || filter === 'gift' || filter === 'new'}
               lang={lang}
               language={language}
               detail={detail}
