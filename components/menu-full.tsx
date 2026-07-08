@@ -136,7 +136,13 @@ export function MenuFull() {
     <div className="bg-cream pb-24 md:pb-0">
       {/* 頁首 banner + CTA */}
       <div className="mx-auto max-w-6xl px-6 pt-24 pb-8 md:px-8">
-        <h1 className="sr-only">{heading} — {intro}</h1>
+        <h1 className="sr-only">
+          {lang === 'zh'
+            ? 'TaiwanWay 菜單 — 牛肉麵、珍珠奶茶、滷肉飯、甜點｜紐約 Middletown'
+            : lang === 'es'
+              ? 'Menú TaiwanWay — Sopa de Fideos, Bubble Tea, Arroz con Cerdo | Middletown, NY'
+              : 'TaiwanWay Menu — Beef Noodle Soup, Bubble Tea, Braised Pork Rice & Desserts in Middletown, NY'}
+        </h1>
         <div className="overflow-hidden rounded-2xl">
           <Image
             src="/images/menu-banner-wide.png"

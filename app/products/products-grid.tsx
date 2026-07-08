@@ -7,24 +7,12 @@ import { useLanguage } from '@/lib/i18n/language-context';
 import type { Product } from '@/types/product';
 import { getProductName } from '@/types/product';
 import { getShortName } from './product-short-names';
+import { POSTERS } from './posters';
 import { MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 
 type CatId = 'tea' | 'fruit' | 'snack';
 type FilterId = 'all' | CatId | 'gift';
 type Lang = 'zh' | 'en' | 'es';
-
-/* 有精緻直式海報的商品（slug → 海報路徑） */
-const POSTERS: Record<string, string> = {
-  'honey-aroma-oolong-tea': '/images/products/honey-aroma-oolong-tea.png',
-  'dong-pian-oolong-tea': '/images/products/dong-pian-oolong-tea.png',
-  'taiwan-roasted-black-bean-tea-15bags': '/images/products/taiwan-roasted-black-bean-tea-15bags.png',
-  'fullten-dried-guava': '/images/products/fullten-dried-guava.png',
-  'taiwan-osmanthus-plum': '/images/products/taiwan-osmanthus-plum.png',
-  'taiwan-perilla-plum': '/images/products/taiwan-perilla-plum.png',
-  'jin-he-tai-dried-roselle': '/images/products/jin-he-tai-dried-roselle.png',
-  'liao-hsin-lan-dried-tofu-shacha': '/images/products/liao-hsin-lan-dried-tofu-shacha.png',
-  'sun-moon-lake-stewed-mushrooms': '/images/products/sun-moon-lake-stewed-mushrooms.png',
-};
 
 const CATS: { id: CatId; kicker: string; title: Record<Lang, string> }[] = [
   { id: 'tea', kicker: 'Taiwan Tea', title: { zh: '台灣好茶', en: 'Taiwan Tea', es: 'Té de Taiwán' } },
@@ -227,7 +215,13 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
     <div className="bg-cream">
       {/* 頁首 banner */}
       <div className="mx-auto max-w-5xl px-6 pt-6 pb-4 md:px-8">
-        <h1 className="sr-only">{title} — Tea · Snacks · Gifts | TaiwanWay 台灣茶點伴手禮</h1>
+        <h1 className="sr-only">
+          {lang === 'zh'
+            ? '台灣零食・茶葉・伴手禮｜紐約 Middletown TaiwanWay 台灣味'
+            : lang === 'es'
+              ? 'Snacks, Té y Regalos Taiwaneses en Middletown, NY | TaiwanWay'
+              : 'Taiwanese Snacks, Tea & Gifts in Middletown, NY | TaiwanWay'}
+        </h1>
         <div className="overflow-hidden rounded-2xl shadow-sm ring-1 ring-black/5">
           <Image
             src="/images/products/gift-wall-banner-wide.png"
