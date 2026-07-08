@@ -9,7 +9,7 @@ export function Footer() {
   const { language } = useLanguage()
   const lang = ['zh', 'en', 'es'].includes(language) ? language : 'en'
 
-  const cafeName = lang === 'zh' ? 'TaiwanWay 臺灣味' : 'Taiwan Way Cafe'
+  const cafeName = lang === 'zh' ? 'TaiwanWay 臺灣味' : 'TaiwanWay'
   const blogLabel = lang === 'zh' ? '部落格' : 'Blog'
   const hoursLabel =
     lang === 'zh' ? '週一 · 二 · 五 · 六　11:00am – 7:00pm'
