@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { AnnouncementMarquee } from "@/components/announcement-marquee"
 import { Hero } from "@/components/hero"
 
 export const metadata: Metadata = {
@@ -39,7 +38,6 @@ import { TeaBand } from "@/components/tea-band"
 export default function Home() {
   return (
     <main id="main-content">
-      <AnnouncementMarquee />
       <Hero />
       <ValueStrip />
       <PopularPicks />
