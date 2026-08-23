@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     title: 'Menu | TaiwanWay - Taiwanese Restaurant Middletown NY',
     description: 'Browse our full menu — beef noodle soup, braised pork rice, boba, oolong tea & handmade Taiwanese desserts.',
     url: '/menu',
+    type: 'website',
     images: ['/images/og-cover.jpg'],
   },
 }

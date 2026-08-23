@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: 'Taiwanese Products | TaiwanWay Shop',
     description: 'Shop premium Taiwanese tea, handmade pineapple cakes, and specialty goods imported from Taiwan.',
     url: '/products',
+    type: 'website',
     images: ['/images/og-cover.jpg'],
   },
 };

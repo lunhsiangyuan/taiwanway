@@ -68,7 +68,7 @@ export const PRODUCTS: Product[] = [
       en: 'The Taiwanese classic — beef brisket slow-simmered all day in a rich spiced soy broth, served over springy noodles with seasonal greens. Every bowl captures a Taiwan afternoon.',
       es: 'El clásico taiwanés — pecho de res cocinado a fuego lento todo el día en caldo especiado de salsa de soja, servido sobre fideos artesanales con verduras de temporada. Un bol que captura una tarde en Taiwán.',
     },
-    priceRange: { regular: 13.99, large: 15.99 },
+    priceRange: { regular: 14.85, large: 16.85 },
     allergens: ['麩質', '大豆'],
   },
   {
@@ -90,7 +90,7 @@ export const PRODUCTS: Product[] = [
       en: 'Hand-pulled chewy noodles tossed in rich sesame paste, topped with tender braised beef shank and seasonal greens. Mix to release a bowlful of toasted-sesame aroma.',
       es: 'Fideos artesanales al dente con pasta de sésamo, cubiertos con jarrete de ternera estofado y verduras de temporada. Mezcla para liberar el aroma del sésamo tostado.',
     },
-    priceRange: { regular: 13.99, large: 15.99 },
+    priceRange: { regular: 14.85, large: 16.85 },
     allergens: ['麩質', '芝麻', '大豆'],
   },
   {
@@ -112,7 +112,7 @@ export const PRODUCTS: Product[] = [
       en: 'Grandma\u2019s traditional braise — minced pork belly slow-cooked in soy, sugar, and five-spice until melt-in-your-mouth tender, ladled over steaming rice. The classic taste of Taiwan street food.',
       es: 'La receta tradicional de la abuela — panceta de cerdo picada cocinada a fuego lento con soja, azúcar y cinco especias, servida sobre arroz humeante. El sabor clásico de la comida callejera taiwanesa.',
     },
-    priceRange: { regular: 10.99, large: 12.99 },
+    priceRange: { regular: 11.45, large: 13.45 },
     allergens: ['大豆'],
   },
   {
@@ -184,7 +184,7 @@ export const PRODUCTS: Product[] = [
     allergens: ['乳製品'],
   },
   {
-    id: 'bubble-tea',
+    id: 'taiwanese-bubble-tea',
     category: CATEGORIES.BUBBLE_TEA,
     image: {
       hero: '/images/products/bubble-tea-iced-v3.jpg',
@@ -192,7 +192,7 @@ export const PRODUCTS: Product[] = [
       thumbnail: '/images/products/bubble-tea-iced-v3.jpg',
     },
     name: {
-      zh: '台灣珍珠奶茶',
+      zh: '招牌珍珠奶茶',
       en: 'Taiwanese Bubble Tea',
       es: 'Té de Burbujas Taiwanés',
     },
@@ -202,7 +202,7 @@ export const PRODUCTS: Product[] = [
       en: 'The classic original Taiwanese bubble tea — premium honey-scented black tea perfectly blended with fresh milk and daily-handcrafted chewy tapioca pearls. Available hot or iced: crisp and refreshing on ice, warm and soothing when hot. Every sip is the purest taste of Taiwan.',
       es: 'El clásico té de burbujas taiwanés — té negro con miel premium perfectamente mezclado con leche fresca y perlas artesanales diarias. Disponible frío o caliente, cada sorbo es el sabor más puro de Taiwán.',
     },
-    price: 6.45,
+    price: 6.85,
     allergens: ['乳製品'],
   },
   {
@@ -224,7 +224,7 @@ export const PRODUCTS: Product[] = [
       en: 'Premium high-mountain jasmine green tea with elegant floral aroma and lingering tea notes. Paired with chewy tapioca pearls for a refreshing, non-greasy experience. The jasmine fragrance intertwines with green tea sweetness while pearls add delightful texture.',
       es: 'Té verde de jazmín premium de alta montaña con elegante aroma floral y notas de té persistentes. Combinado con perlas de tapioca masticables para una experiencia refrescante y sin grasa.',
     },
-    price: 6.25,
+    price: 6.85,
     allergens: [],
   },
   {
@@ -246,7 +246,7 @@ export const PRODUCTS: Product[] = [
       en: 'Taiwan high-mountain oolong tea with unique honey fragrance from leafhopper bites. Golden amber tea with rich honey aroma and lingering sweet aftertaste. Paired with handcrafted pearls for complex layers, the ultimate treat for oolong tea lovers.',
       es: 'Té oolong de alta montaña de Taiwán con fragancia única de miel de picaduras de saltahojas. Té ámbar dorado con rico aroma a miel y regusto dulce persistente. Combinado con perlas artesanales.',
     },
-    price: 6.25,
+    price: 6.85,
     allergens: [],
   },
 
@@ -270,7 +270,7 @@ export const PRODUCTS: Product[] = [
       en: 'Classic Taiwanese milk tea with Ceylon black tea and rich fresh milk in perfect proportion. Tea aroma and milk fragrance beautifully balanced-not too sweet, not too rich, smooth and refreshing. The purest taste of Taiwan and a childhood memory for every Taiwanese.',
       es: 'Té con leche taiwanés clásico con té negro de Ceilán y leche fresca rica en proporción perfecta. Aroma a té y fragancia a leche bellamente equilibrados, no demasiado dulce, ni demasiado rico, suave y refrescante.',
     },
-    price: 4.95,
+    price: 6.25,
     allergens: ['乳製品'],
   },
   {
@@ -340,7 +340,7 @@ export const PRODUCTS: Product[] = [
       en: 'Traditional Taiwanese beverage with handcrafted winter melon syrup and fresh lemon juice. The subtle sweetness of winter melon perfectly balances the tangy lemon, refreshing and thirst-quenching. The ultimate summer companion-every sip brings cooling satisfaction.',
       es: 'Bebida tradicional taiwanesa con jarabe de melón de invierno artesanal y jugo de limón fresco. La dulzura sutil del melón de invierno equilibra perfectamente el limón picante, refrescante y que quita la sed.',
     },
-    price: 5.25,
+    price: 6.25,
     allergens: [],
   },
 

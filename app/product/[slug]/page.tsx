@@ -80,21 +80,29 @@ export async function generateMetadata({
     return { title: 'Product Not Found' };
   }
 
+  const productUrl = `${SITE}/product/${product.slug}`;
+  const poster = POSTERS[product.slug];
+  const ogImage = poster ? `${SITE}${poster}` : product.image_url;
+
   return {
     title: `${product.name_en}`,
     description: product.description_en,
+    alternates: {
+      canonical: productUrl,
+    },
     openGraph: {
       title: `${product.name_zh} ${product.name_en}`,
       description: product.description_en,
-      images: [{ url: product.image_url, width: 800, height: 800, alt: product.name_en }],
+      url: productUrl,
+      images: [{ url: ogImage, width: 800, height: 800, alt: product.name_en }],
       type: 'website',
-      siteName: 'Taiwanway 台灣味',
+      siteName: 'TaiwanWay 臺灣味',
     },
     twitter: {
       card: 'summary_large_image',
       title: `${product.name_zh} ${product.name_en}`,
       description: product.description_en,
-      images: [product.image_url],
+      images: [ogImage],
     },
   };
 }

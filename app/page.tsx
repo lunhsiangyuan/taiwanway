@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     title: 'TaiwanWay | Beef Noodle Soup, Boba & Café · Middletown NY',
     description: 'A home-style Taiwanese café in Middletown, NY 10940. Slow-braised beef noodle soup, classic braised pork rice, handcrafted boba, and freshly baked pineapple cakes. Made with care, served with warmth.',
     url: '/',
+    type: 'website',
     images: ['/images/og-cover.jpg'],
   },
 }

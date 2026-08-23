@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     description:
       'Answers to common questions about TaiwanWay — the Taiwanese restaurant at 26 South St, Middletown, NY.',
     url: 'https://taiwanwayny.com/faq',
+    type: 'website',
+    images: ['/images/og-cover.jpg'],
   },
 }
 

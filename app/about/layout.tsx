@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     title: 'About TaiwanWay · Taiwanese Café in Middletown NY',
     description: 'From Taiwan to Middletown, NY — our journey of bringing authentic Taiwanese cuisine to Hudson Valley.',
     url: '/about',
+    type: 'website',
     images: ['/images/og-cover.jpg'],
   },
 }
