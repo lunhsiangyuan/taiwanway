@@ -1,6 +1,6 @@
 # TaiwanWay 臺灣味
 
-> Authentic Taiwanese restaurant and café at 26 South St, Middletown, NY 10940, serving Orange County and the Hudson Valley region. Specializing in Taiwanese comfort food, handmade desserts, and authentic Taiwan-imported bubble tea.
+> Authentic Taiwanese restaurant and café at 26 South St, Middletown, NY 10940, serving Orange County and the Hudson Valley region. Specializing in Taiwanese comfort food, handmade desserts, and authentic Taiwan-imported bubble tea with Kyoto matcha.
 
 ## Quick Facts
 
@@ -35,8 +35,10 @@
 Tea leaves imported directly from Taiwan. Fresh milk (no powder). Tapioca pearls cooked fresh daily. Sugar and ice levels customizable.
 
 - **Bubble Tea:** Taiwanese Bubble Tea 台灣珍珠奶茶 ($6.45), Brown Sugar Bubble Milk 黑糖珍珠鮮奶 ($6.45), Jasmine Green Bubble Tea 茉莉珍珠綠奶茶 ($6.25), Honey Oolong Bubble Tea 蜜香烏龍珍珠奶茶 ($6.25)
-- **Milk Tea:** Taiwanese Milk Tea 台灣蜜香奶茶 ($4.95), Jasmine Green Milk Tea 茉莉綠奶茶 ($5.25)
+- **Milk Tea:** Taiwanese Milk Tea 台灣蜜香奶茶 ($4.95), Jasmine Green Milk Tea 茉莉綠奶茶 ($5.25), Honey Oolong Milk Tea 蜜香烏龍奶茶 ($5.85)
 - **Green Tea:** Honey Jasmine Green Tea 蜂蜜綠茶 ($5.25)
+- **Ippodo Matcha (Kyoto, Japan):** Matcha Latte 抹茶拿鐵 ($5.95)
+- **Pot-Brewed Taiwan Loose-Leaf Tea (sugar-free):** Dong Pian 冬片 ($5), Spring Tea 春茶 ($5), Jin Xuan 金萱 ($5), Tieguanyin 鐵觀音 ($6), Alishan Black Tea 阿里山紅茶 ($5)
 - **Lemonade:** Winter Melon Lemonade 冬瓜檸檬 ($5.25)
 
 ## Desserts
