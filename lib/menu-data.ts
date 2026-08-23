@@ -134,7 +134,7 @@ export const PRODUCTS: Product[] = [
       en: 'A classic from Chiayi, Taiwan — hand-shredded turkey over fluffy steamed rice, finished with golden fried shallots and a signature sauce. Three simple layers every Taiwanese dreams of.',
       es: 'Un clásico de Chiayi, Taiwán — pavo desmenuzado a mano sobre arroz al vapor, terminado con chalotas doradas fritas y salsa de la casa. Tres capas simples con las que sueña todo taiwanés.',
     },
-    priceRange: { regular: 10.99, large: 12.99 },
+    priceRange: { regular: 11.45, large: 13.45 },
     allergens: ['大豆'],
   },
   {
@@ -156,7 +156,7 @@ export const PRODUCTS: Product[] = [
       en: 'Taiwanese sticky rice steamed to a glossy finish, tossed with fragrant sakura shrimp, dried shiitake, and golden fried shallots. Savory and complex — a harmony of sea and forest.',
       es: 'Arroz glutinoso taiwanés cocido al vapor, mezclado con gambas sakura fragantes, shiitake seco y chalotas doradas. Sabroso y complejo — una armonía de mar y bosque.',
     },
-    price: 12.99,
+    price: 13.45,
     allergens: ['甲殼類', '大豆'],
   },
 
@@ -180,7 +180,7 @@ export const PRODUCTS: Product[] = [
       en: 'Rich brown sugar syrup cascades down the cup creating mesmerizing tiger stripes. Fresh milk paired with handcrafted brown sugar tapioca pearls-each pearl perfectly chewy with caramel notes. The sweetness of brown sugar and creaminess of milk create pure bliss in every sip.',
       es: 'El rico jarabe de azúcar morena cae por la taza creando rayas de tigre fascinantes. Leche fresca combinada con perlas de tapioca de azúcar morena hechas a mano, cada perla perfectamente masticable con notas de caramelo.',
     },
-    price: 6.45,
+    price: 6.85,
     allergens: ['乳製品'],
   },
   {
@@ -292,7 +292,7 @@ export const PRODUCTS: Product[] = [
       en: 'Refreshing jasmine green tea meets creamy fresh milk in an elegant flavor collision. Subtle jasmine fragrance complements the sweet green tea and smooth milk. Light and refreshing, perfect for those who prefer delicate flavors-a symphony of floral and tea notes.',
       es: 'El refrescante té verde de jazmín se encuentra con leche fresca cremosa en una elegante colisión de sabores. La sutil fragancia de jazmín complementa el té verde dulce y la leche suave.',
     },
-    price: 5.25,
+    price: 6.25,
     allergens: ['乳製品'],
   },
 
@@ -364,7 +364,7 @@ export const PRODUCTS: Product[] = [
       en: 'Italian pannacotta meets tropical flavors-coconut milk fragrance intertwines with sweet mango. Silky smooth texture paired with fresh mango cubes delivers sunshine in every bite. Light and refreshing, the perfect ending to any meal.',
       es: 'La pannacotta italiana se encuentra con sabores tropicales: la fragancia de leche de coco se entrelaza con el mango dulce. Textura sedosa y suave combinada con cubos de mango fresco.',
     },
-    price: 4.50,
+    price: 4.85,
     allergens: ['乳製品'],
   },
   {

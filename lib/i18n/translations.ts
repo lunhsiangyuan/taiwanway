@@ -83,7 +83,7 @@ export const translations = {
             items: {
               brownSugarMilk: {
                 name: "黑糖珍珠鮮奶",
-                price: "6.45",
+                price: "6.85",
                 options: "(熱/冷)"
               }
             }
@@ -113,7 +113,7 @@ export const translations = {
               },
               honeyOolongMilk: {
                 name: "蜂蜜烏龍奶茶",
-                price: "5.85",
+                price: "6.25",
                 options: "(熱/冷)"
               }
             }
@@ -178,12 +178,12 @@ export const translations = {
               braisedPork: {
                 name: "滷肉飯",
                 description: "入味滷肉，搭配香Q白飯",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               },
               chickenRice: {
                 name: "雞肉飯",
                 description: "雞胸肉絲，搭配油蔥與醬汁",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               }
             }
           },
@@ -193,7 +193,7 @@ export const translations = {
               beefNoodle: {
                 name: "牛肉麵",
                 description: "香濃湯頭，嫩滑牛肉，Q彈麵條",
-                price: "13.99 / 15.99"
+                price: "14.85 / 16.85"
               }
             }
           }
@@ -311,7 +311,7 @@ export const translations = {
             items: {
               brownSugarMilk: {
                 name: "Brown Sugar Bubble Milk",
-                price: "6.45",
+                price: "6.85",
                 options: "(Hot/Cold)"
               }
             }
@@ -341,7 +341,7 @@ export const translations = {
               },
               honeyOolongMilk: {
                 name: "Honey Oolong Milk Tea",
-                price: "5.85",
+                price: "6.25",
                 options: "(Hot/Cold)"
               }
             }
@@ -406,12 +406,12 @@ export const translations = {
               braisedPork: {
                 name: "Braised Pork Rice",
                 description: "Savory braised pork over steamed rice",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               },
               chickenRice: {
                 name: "Chicken Rice",
                 description: "Shredded chicken breast with fried shallots and sauce",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               }
             }
           },
@@ -421,7 +421,7 @@ export const translations = {
               beefNoodle: {
                 name: "Beef Noodle Soup",
                 description: "Rich broth, tender beef, springy noodles",
-                price: "13.99 / 15.99"
+                price: "14.85 / 16.85"
               }
             }
           }
@@ -539,7 +539,7 @@ export const translations = {
             items: {
               brownSugarMilk: {
                 name: "Leche con Burbujas y Azúcar Moreno",
-                price: "6.45",
+                price: "6.85",
                 options: "(Caliente/Frío)"
               }
             }
@@ -569,7 +569,7 @@ export const translations = {
               },
               honeyOolongMilk: {
                 name: "Té Oolong con Miel y Leche",
-                price: "5.85",
+                price: "6.25",
                 options: "(Caliente/Frío)"
               }
             }
@@ -634,12 +634,12 @@ export const translations = {
               braisedPork: {
                 name: "Arroz con Cerdo Guisado",
                 description: "Cerdo guisado sabroso sobre arroz al vapor",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               },
               chickenRice: {
                 name: "Arroz con Pollo",
                 description: "Pechuga de pollo desmenuzada con chalotes fritos y salsa",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               }
             }
           },
@@ -649,7 +649,7 @@ export const translations = {
               beefNoodle: {
                 name: "Sopa de Fideos con Res",
                 description: "Caldo rico, res tierna, fideos hechos a mano",
-                price: "13.99 / 15.99"
+                price: "14.85 / 16.85"
               }
             }
           }

@@ -41,9 +41,9 @@ export const menuCategories: MenuCategory[] = [
     subtitleEs: 'Clásicos Imperdibles',
     image: '/images/signature-trio.jpg',
     items: [
-      { nameZh: '台灣珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas Especial', descZh: 'Q彈珍珠配濃郁奶香，經典臺灣味', descEn: 'Chewy tapioca pearls with rich milk tea, classic Taiwan flavor', descEs: 'Perlas de tapioca con té de leche', price: '6.45' },
-      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，Q彈麵條', descEn: 'Rich broth with tender beef and springy noodles', descEs: 'Caldo con res y fideos al estilo tradicional', price: '$13.99 / $15.99' },
-      { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '慢火燉煮，古早味入味白飯', descEn: 'Slow-braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz', price: '$10.99 / $12.99' },
+      { nameZh: '台灣珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas Especial', descZh: 'Q彈珍珠配濃郁奶香，經典臺灣味', descEn: 'Chewy tapioca pearls with rich milk tea, classic Taiwan flavor', descEs: 'Perlas de tapioca con té de leche', price: '6.85' },
+      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，Q彈麵條', descEn: 'Rich broth with tender beef and springy noodles', descEs: 'Caldo con res y fideos al estilo tradicional', price: '$14.85 / $16.85' },
+      { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '慢火燉煮，古早味入味白飯', descEn: 'Slow-braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz', price: '$11.45 / $13.45' },
     ],
   },
   {
@@ -56,8 +56,8 @@ export const menuCategories: MenuCategory[] = [
     subtitleEs: 'Aroma del Té Local',
     image: '/images/honey-black-tea.png',
     items: [
-      { nameZh: '台灣珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas', options: '熱 / 冷', price: '6.45' },
-      { nameZh: '台灣蜜香奶茶', nameEn: 'Honey Milk Tea', nameEs: 'Té de Leche con Miel', options: '熱 / 冷', price: '5.65' },
+      { nameZh: '台灣珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas', options: '熱 / 冷', price: '6.85' },
+      { nameZh: '台灣蜜香奶茶', nameEn: 'Honey Milk Tea', nameEs: 'Té de Leche con Miel', options: '熱 / 冷', price: '6.25' },
       { nameZh: '古早味奶茶', nameEn: 'Classic Milk Tea', nameEs: 'Té con Leche Clásico', options: '熱 / 冷', price: '4.65' },
       { nameZh: '荔枝椰果紅茶', nameEn: 'Lychee Jelly Black Tea', nameEs: 'Té Negro con Gelatina de Lichi', options: '冷飲', price: '5.85' },
     ],
@@ -87,7 +87,7 @@ export const menuCategories: MenuCategory[] = [
     subtitleEs: 'Suave y Ligero',
     image: '/images/brown-sugar-milk.png',
     items: [
-      { nameZh: '黑糖珍珠鮮奶', nameEn: 'Brown Sugar Pearl Fresh Milk', nameEs: 'Leche con Perlas de Azúcar Morena', options: '熱 / 冷', price: '6.45' },
+      { nameZh: '黑糖珍珠鮮奶', nameEn: 'Brown Sugar Pearl Fresh Milk', nameEs: 'Leche con Perlas de Azúcar Morena', options: '熱 / 冷', price: '6.85' },
       { nameZh: '芋香拿鐵', nameEn: 'Taro Latte', nameEs: 'Latte de Taro', options: '熱 / 冷', price: '5.25' },
       { nameZh: '冬瓜鮮奶', nameEn: 'Wintermelon Milk', nameEs: 'Leche con Melón de Invierno', options: '熱 / 冷', price: '5.35' },
     ],
@@ -102,8 +102,8 @@ export const menuCategories: MenuCategory[] = [
     subtitleEs: 'Frescura Floral',
     image: '/images/jasmine-tea.png',
     items: [
-      { nameZh: '蜂蜜綠茶', nameEn: 'Jasmine Honey Green Tea', nameEs: 'Té Verde Jazmín con Miel', options: '冷飲', price: '4.85' },
-      { nameZh: '茉莉珍珠綠奶茶', nameEn: 'Jasmine Pearl Milk Green Tea', nameEs: 'Té Verde Jazmín con Perlas', options: '熱 / 冷', price: '6.45' },
+      { nameZh: '蜂蜜綠茶', nameEn: 'Jasmine Honey Green Tea', nameEs: 'Té Verde Jazmín con Miel', options: '冷飲', price: '5.25' },
+      { nameZh: '茉莉珍珠綠奶茶', nameEn: 'Jasmine Pearl Milk Green Tea', nameEs: 'Té Verde Jazmín con Perlas', options: '熱 / 冷', price: '6.85' },
       { nameZh: '桂花綠茶', nameEn: 'Osmanthus Green Tea', nameEs: 'Té Verde con Osmanto', options: '冷飲', price: '4.85' },
       { nameZh: '梅子綠茶', nameEn: 'Plum Jasmine Green Tea', nameEs: 'Té Verde Jazmín con Ciruela', options: '冷飲', price: '5.85' },
     ],
@@ -118,8 +118,8 @@ export const menuCategories: MenuCategory[] = [
     subtitleEs: 'Elegancia Semi-Fermentada',
     image: '/images/oolong-tea.png',
     items: [
-      { nameZh: '蜜香烏龍珍珠奶茶', nameEn: 'Honey Oolong Bubble Tea', nameEs: 'Oolong con Miel y Perlas', options: '熱 / 冷', price: '6.65' },
-      { nameZh: '蜜香烏龍奶茶', nameEn: 'Honey Oolong Milk Tea', nameEs: 'Oolong con Miel y Leche', options: '熱 / 冷', price: '5.85' },
+      { nameZh: '蜜香烏龍珍珠奶茶', nameEn: 'Honey Oolong Bubble Tea', nameEs: 'Oolong con Miel y Perlas', options: '熱 / 冷', price: '6.85' },
+      { nameZh: '蜜香烏龍奶茶', nameEn: 'Honey Oolong Milk Tea', nameEs: 'Oolong con Miel y Leche', options: '熱 / 冷', price: '6.25' },
     ],
   },
   {
@@ -132,7 +132,7 @@ export const menuCategories: MenuCategory[] = [
     subtitleEs: 'Belleza de la Ceremonia',
     image: '/images/matcha-latte.png',
     items: [
-      { nameZh: '抹茶拿鐵', nameEn: 'Matcha Latte', nameEs: 'Latte de Matcha', options: '熱 / 冷', price: '5.95' },
+      { nameZh: '抹茶拿鐵', nameEn: 'Matcha Latte', nameEs: 'Latte de Matcha', options: '熱 / 冷', price: '6.25' },
     ],
   },
   {
@@ -177,11 +177,11 @@ export const menuCategories: MenuCategory[] = [
     subtitleEs: 'Sabor Auténtico',
     image: '/images/beef-noodle.png',
     items: [
-      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，Q彈麵條', descEn: 'Rich broth, tender beef, springy noodles', descEs: 'Caldo, res tierna, fideos al estilo tradicional', price: '$13.99 / $15.99' },
-      { nameZh: '麻醬牛肉乾麵', nameEn: 'Sesame Beef Noodles', nameEs: 'Fideos Secos con Res y Sésamo', descZh: 'Q彈麵條淋上芝麻醬，配滷牛肉與青菜', descEn: 'Chewy noodles tossed in fragrant sesame sauce with braised beef and greens', descEs: 'Fideos con salsa de sésamo, res estofada y verduras', price: '$13.99 / $15.99' },
-      { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '入味滷肉，搭配香Q白飯', descEn: 'Savory braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz', price: '$10.99 / $12.99' },
-      { nameZh: '雞肉飯', nameEn: 'Chicken Rice', nameEs: 'Arroz con Pollo', descZh: '雞胸肉絲，搭配油蔥與醬汁', descEn: 'Shredded chicken breast with fried shallots and sauce', descEs: 'Pechuga de pollo desmenuzada con chalotes fritos y salsa', price: '$10.99 / $12.99' },
-      { nameZh: '櫻花蝦米糕', nameEn: 'Sakura Shrimp Sticky Rice', nameEs: 'Arroz Glutinoso con Camarón Sakura', descZh: '糯米蒸煮，拌入櫻花蝦、香菇與油蔥', descEn: 'Savory glutinous rice steamed with sakura shrimp, mushrooms & crispy shallots', descEs: 'Arroz glutinoso al vapor con camarón sakura, setas y chalotes', price: '12.99' },
+      { nameZh: '紅燒牛肉麵', nameEn: 'Braised Beef Noodle Soup', nameEs: 'Sopa de Fideos con Res', descZh: '香濃湯頭，嫩滑牛肉，Q彈麵條', descEn: 'Rich broth, tender beef, springy noodles', descEs: 'Caldo, res tierna, fideos al estilo tradicional', price: '$14.85 / $16.85' },
+      { nameZh: '麻醬牛肉乾麵', nameEn: 'Sesame Beef Noodles', nameEs: 'Fideos Secos con Res y Sésamo', descZh: 'Q彈麵條淋上芝麻醬，配滷牛肉與青菜', descEn: 'Chewy noodles tossed in fragrant sesame sauce with braised beef and greens', descEs: 'Fideos con salsa de sésamo, res estofada y verduras', price: '$14.85 / $16.85' },
+      { nameZh: '古早味滷肉飯', nameEn: 'Braised Pork Rice', nameEs: 'Arroz con Cerdo', descZh: '入味滷肉，搭配香Q白飯', descEn: 'Savory braised pork over steamed rice', descEs: 'Cerdo estofado sobre arroz', price: '$11.45 / $13.45' },
+      { nameZh: '雞肉飯', nameEn: 'Chicken Rice', nameEs: 'Arroz con Pollo', descZh: '雞胸肉絲，搭配油蔥與醬汁', descEn: 'Shredded chicken breast with fried shallots and sauce', descEs: 'Pechuga de pollo desmenuzada con chalotes fritos y salsa', price: '$11.45 / $13.45' },
+      { nameZh: '櫻花蝦米糕', nameEn: 'Sakura Shrimp Sticky Rice', nameEs: 'Arroz Glutinoso con Camarón Sakura', descZh: '糯米蒸煮，拌入櫻花蝦、香菇與油蔥', descEn: 'Savory glutinous rice steamed with sakura shrimp, mushrooms & crispy shallots', descEs: 'Arroz glutinoso al vapor con camarón sakura, setas y chalotes', price: '13.45' },
     ],
   },
   {

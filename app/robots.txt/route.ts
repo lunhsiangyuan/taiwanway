@@ -26,6 +26,10 @@ export function GET() {
     '# Sitemaps & AI-friendly summary',
     'Sitemap: https://taiwanwayny.com/sitemap.xml',
     '',
+    '# LLM / AI agent content signal (RFC 9309 extension proposal)',
+    '# Human-readable structured info for AI assistants',
+    'Llms: https://taiwanwayny.com/llms.txt',
+    '',
   ]
   return new Response(lines.join('\n'), {
     headers: {

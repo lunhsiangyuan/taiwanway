@@ -89,7 +89,7 @@ export function JsonLd() {
                             "description": "Taiwanese-style chicken over rice",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "10.99",
+                                "price": "11.45",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -160,7 +160,7 @@ export function JsonLd() {
                             "name": "Brown Sugar Bubble Milk (黑糖珍珠鮮奶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "6.45",
+                                "price": "6.85",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -208,7 +208,7 @@ export function JsonLd() {
                             "name": "Honey Oolong Milk Tea (蜂蜜烏龍奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "5.85",
+                                "price": "6.25",
                                 "priceCurrency": "USD"
                             }
                         }
