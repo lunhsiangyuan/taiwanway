@@ -685,4 +685,4 @@ export const translations = {
       description: '¡Bienvenido a visitar y probar nuestra comida, o contáctenos por teléfono o correo electrónico. ¡Esperamos poder servirle!',
     },
   },
-} as const; 
+} as const;

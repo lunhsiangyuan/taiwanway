@@ -57,7 +57,7 @@ export const menuCategories: MenuCategory[] = [
     image: '/images/honey-black-tea.png',
     items: [
       { nameZh: '台灣珍珠奶茶', nameEn: 'Signature Bubble Tea', nameEs: 'Té de Burbujas', options: '熱 / 冷', price: '6.85' },
-      { nameZh: '台灣蜜香奶茶', nameEn: 'Honey Milk Tea', nameEs: 'Té de Leche con Miel', options: '熱 / 冷', price: '6.25' },
+      { nameZh: '台灣蜜香奶茶', nameEn: 'Taiwanese Milk Tea', nameEs: 'Té de Leche Taiwanés', options: '熱 / 冷', price: '6.25' },
       { nameZh: '古早味奶茶', nameEn: 'Classic Milk Tea', nameEs: 'Té con Leche Clásico', options: '熱 / 冷', price: '4.65' },
       { nameZh: '荔枝椰果紅茶', nameEn: 'Lychee Jelly Black Tea', nameEs: 'Té Negro con Gelatina de Lichi', options: '冷飲', price: '5.85' },
     ],
@@ -211,7 +211,7 @@ export const menuCategories: MenuCategory[] = [
     items: [
       { nameZh: '蘋果玉露青茶', nameEn: 'Apple Jade Dew Green Tea', nameEs: 'Té Verde Jade Dew con Manzana', options: '冷飲', price: '6.25' },
       { nameZh: '香橙茉莉綠茶', nameEn: 'Orange Jasmine Green Tea', nameEs: 'Té Verde Jazmín con Naranja', options: '冷飲', price: '6.25' },
-      { nameZh: '冬瓜檸檬', nameEn: 'Wintermelon Lemonade', nameEs: 'Limonada de Melón de Invierno', options: '冷飲', price: '5.85' },
+      { nameZh: '冬瓜檸檬', nameEn: 'Wintermelon Lemonade', nameEs: 'Limonada de Melón de Invierno', options: '冷飲', price: '6.25' },
       { nameZh: '百香綠茶', nameEn: 'Passionfruit Green Tea', nameEs: 'Té Verde con Maracuyá', options: '冷飲', price: '5.85' },
     ],
   },
