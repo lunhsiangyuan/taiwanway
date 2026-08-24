@@ -10,13 +10,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,
-      alternates: {
-        languages: {
-          en: BASE_URL,
-          'zh-TW': BASE_URL,
-          es: BASE_URL,
-        },
-      },
     },
     {
       url: `${BASE_URL}/menu`,

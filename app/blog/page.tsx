@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     description:
       'The why behind our menu — pineapple cake, bubble tea, beef noodle soup, and more.',
     url: 'https://taiwanwayny.com/blog',
+    type: 'website',
+    images: ['/images/og-cover.jpg'],
   },
 }
 

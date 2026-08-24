@@ -79,7 +79,7 @@ export function JsonLd() {
                             "description": "Traditional Taiwanese braised pork over rice",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "10.99",
+                                "price": "11.45",
                                 "priceCurrency": "USD"
                             }
                         },
@@ -89,7 +89,7 @@ export function JsonLd() {
                             "description": "Taiwanese-style chicken over rice",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "10.99",
+                                "price": "11.45",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -105,7 +105,7 @@ export function JsonLd() {
                             "description": "Signature Taiwanese braised beef noodle soup",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "13.99",
+                                "price": "14.85",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -136,16 +136,16 @@ export function JsonLd() {
                             "name": "Taiwanese Bubble Tea (招牌珍珠奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "6.45",
+                                "price": "6.85",
                                 "priceCurrency": "USD"
                             }
                         },
                         {
                             "@type": "MenuItem",
-                            "name": "Taiwanese Milk Tea (蜜香奶茶)",
+                            "name": "Taiwanese Milk Tea (台灣蜜香奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "5.65",
+                                "price": "6.25",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -160,7 +160,7 @@ export function JsonLd() {
                             "name": "Brown Sugar Bubble Milk (黑糖珍珠鮮奶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "6.45",
+                                "price": "6.85",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -172,19 +172,19 @@ export function JsonLd() {
                     "hasMenuItem": [
                         {
                             "@type": "MenuItem",
-                            "name": "Honey Jasmine Green Tea (茉莉蜂蜜綠茶)",
+                            "name": "Honey Jasmine Green Tea (蜂蜜綠茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "4.85",
+                                "price": "5.25",
                                 "priceCurrency": "USD"
                             }
                         },
                         {
                             "@type": "MenuItem",
-                            "name": "Jasmine Green Bubble Tea (茉莉珍珠奶綠)",
+                            "name": "Jasmine Green Bubble Tea (茉莉珍珠綠奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "6.45",
+                                "price": "6.85",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -196,10 +196,10 @@ export function JsonLd() {
                     "hasMenuItem": [
                         {
                             "@type": "MenuItem",
-                            "name": "Honey Oolong Bubble Tea (蜂蜜烏龍珍珠奶茶)",
+                            "name": "Honey Oolong Bubble Tea (蜜香烏龍珍珠奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "6.65",
+                                "price": "6.85",
                                 "priceCurrency": "USD"
                             }
                         },
@@ -208,7 +208,7 @@ export function JsonLd() {
                             "name": "Honey Oolong Milk Tea (蜂蜜烏龍奶茶)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "5.85",
+                                "price": "6.25",
                                 "priceCurrency": "USD"
                             }
                         }
@@ -223,7 +223,7 @@ export function JsonLd() {
                             "name": "Matcha Latte (抹茶拿鐵)",
                             "offers": {
                                 "@type": "Offer",
-                                "price": "5.95",
+                                "price": "6.25",
                                 "priceCurrency": "USD"
                             }
                         }

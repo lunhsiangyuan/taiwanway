@@ -68,12 +68,12 @@ export const translations = {
             items: {
               bubbleTea: {
                 name: "招牌珍珠奶茶",
-                price: "6.45",
+                price: "6.85",
                 options: "(熱/冷)"
               },
               milkTea: {
                 name: "蜜香奶茶",
-                price: "5.65",
+                price: "6.25",
                 options: "(熱/冷)"
               }
             }
@@ -83,7 +83,7 @@ export const translations = {
             items: {
               brownSugarMilk: {
                 name: "黑糖珍珠鮮奶",
-                price: "6.45",
+                price: "6.85",
                 options: "(熱/冷)"
               }
             }
@@ -92,13 +92,13 @@ export const translations = {
             title: "茉莉綠茶",
             items: {
               honeyJasmine: {
-                name: "茉莉蜂蜜綠茶",
-                price: "4.85",
+                name: "蜂蜜綠茶",
+                price: "5.25",
                 options: "(冷飲)"
               },
               jasmineBubble: {
-                name: "茉莉珍珠奶綠",
-                price: "6.45",
+                name: "茉莉珍珠綠奶茶",
+                price: "6.85",
                 options: "(熱/冷)"
               }
             }
@@ -107,13 +107,13 @@ export const translations = {
             title: "台灣烏龍茶",
             items: {
               honeyOolongBubble: {
-                name: "蜂蜜烏龍珍珠奶茶",
-                price: "6.65",
+                name: "蜜香烏龍珍珠奶茶",
+                price: "6.85",
                 options: "(熱/冷)"
               },
               honeyOolongMilk: {
                 name: "蜂蜜烏龍奶茶",
-                price: "5.85",
+                price: "6.25",
                 options: "(熱/冷)"
               }
             }
@@ -123,7 +123,7 @@ export const translations = {
             items: {
               matchaLatte: {
                 name: "抹茶拿鐵",
-                price: "5.95",
+                price: "6.25",
                 options: "(熱/冷)"
               }
             }
@@ -178,12 +178,12 @@ export const translations = {
               braisedPork: {
                 name: "滷肉飯",
                 description: "入味滷肉，搭配香Q白飯",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               },
               chickenRice: {
                 name: "雞肉飯",
                 description: "雞胸肉絲，搭配油蔥與醬汁",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               }
             }
           },
@@ -193,7 +193,7 @@ export const translations = {
               beefNoodle: {
                 name: "牛肉麵",
                 description: "香濃湯頭，嫩滑牛肉，Q彈麵條",
-                price: "13.99 / 15.99"
+                price: "14.85 / 16.85"
               }
             }
           }
@@ -296,12 +296,12 @@ export const translations = {
             items: {
               bubbleTea: {
                 name: "Taiwanese Bubble Tea",
-                price: "6.45",
+                price: "6.85",
                 options: "(Hot/Cold)"
               },
               milkTea: {
                 name: "Taiwanese Milk Tea",
-                price: "5.65",
+                price: "6.25",
                 options: "(Hot/Cold)"
               }
             }
@@ -311,7 +311,7 @@ export const translations = {
             items: {
               brownSugarMilk: {
                 name: "Brown Sugar Bubble Milk",
-                price: "6.45",
+                price: "6.85",
                 options: "(Hot/Cold)"
               }
             }
@@ -321,12 +321,12 @@ export const translations = {
             items: {
               honeyJasmine: {
                 name: "Honey Jasmine Green Tea",
-                price: "4.85",
+                price: "5.25",
                 options: "(Cold)"
               },
               jasmineBubble: {
                 name: "Jasmine Green Bubble Tea",
-                price: "6.45",
+                price: "6.85",
                 options: "(Hot/Cold)"
               }
             }
@@ -336,12 +336,12 @@ export const translations = {
             items: {
               honeyOolongBubble: {
                 name: "Honey Oolong Bubble Tea",
-                price: "6.65",
+                price: "6.85",
                 options: "(Hot/Cold)"
               },
               honeyOolongMilk: {
                 name: "Honey Oolong Milk Tea",
-                price: "5.85",
+                price: "6.25",
                 options: "(Hot/Cold)"
               }
             }
@@ -351,7 +351,7 @@ export const translations = {
             items: {
               matchaLatte: {
                 name: "Matcha Latte",
-                price: "5.95",
+                price: "6.25",
                 options: "(Hot/Cold)"
               }
             }
@@ -406,12 +406,12 @@ export const translations = {
               braisedPork: {
                 name: "Braised Pork Rice",
                 description: "Savory braised pork over steamed rice",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               },
               chickenRice: {
                 name: "Chicken Rice",
                 description: "Shredded chicken breast with fried shallots and sauce",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               }
             }
           },
@@ -421,7 +421,7 @@ export const translations = {
               beefNoodle: {
                 name: "Beef Noodle Soup",
                 description: "Rich broth, tender beef, springy noodles",
-                price: "13.99 / 15.99"
+                price: "14.85 / 16.85"
               }
             }
           }
@@ -524,12 +524,12 @@ export const translations = {
             items: {
               bubbleTea: {
                 name: "Té de Burbujas Taiwanés",
-                price: "6.45",
+                price: "6.85",
                 options: "(Caliente/Frío)"
               },
               milkTea: {
                 name: "Té con Leche Taiwanés",
-                price: "5.65",
+                price: "6.25",
                 options: "(Caliente/Frío)"
               }
             }
@@ -539,7 +539,7 @@ export const translations = {
             items: {
               brownSugarMilk: {
                 name: "Leche con Burbujas y Azúcar Moreno",
-                price: "6.45",
+                price: "6.85",
                 options: "(Caliente/Frío)"
               }
             }
@@ -549,12 +549,12 @@ export const translations = {
             items: {
               honeyJasmine: {
                 name: "Té Verde al Jazmín con Miel",
-                price: "4.85",
+                price: "5.25",
                 options: "(Frío)"
               },
               jasmineBubble: {
                 name: "Té Verde al Jazmín con Burbujas",
-                price: "6.45",
+                price: "6.85",
                 options: "(Caliente/Frío)"
               }
             }
@@ -564,12 +564,12 @@ export const translations = {
             items: {
               honeyOolongBubble: {
                 name: "Té Oolong con Miel y Burbujas",
-                price: "6.65",
+                price: "6.85",
                 options: "(Caliente/Frío)"
               },
               honeyOolongMilk: {
                 name: "Té Oolong con Miel y Leche",
-                price: "5.85",
+                price: "6.25",
                 options: "(Caliente/Frío)"
               }
             }
@@ -579,7 +579,7 @@ export const translations = {
             items: {
               matchaLatte: {
                 name: "Matcha Latte",
-                price: "5.95",
+                price: "6.25",
                 options: "(Caliente/Frío)"
               }
             }
@@ -634,12 +634,12 @@ export const translations = {
               braisedPork: {
                 name: "Arroz con Cerdo Guisado",
                 description: "Cerdo guisado sabroso sobre arroz al vapor",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               },
               chickenRice: {
                 name: "Arroz con Pollo",
                 description: "Pechuga de pollo desmenuzada con chalotes fritos y salsa",
-                price: "10.99 / 12.99"
+                price: "11.45 / 13.45"
               }
             }
           },
@@ -649,7 +649,7 @@ export const translations = {
               beefNoodle: {
                 name: "Sopa de Fideos con Res",
                 description: "Caldo rico, res tierna, fideos hechos a mano",
-                price: "13.99 / 15.99"
+                price: "14.85 / 16.85"
               }
             }
           }
@@ -685,4 +685,4 @@ export const translations = {
       description: '¡Bienvenido a visitar y probar nuestra comida, o contáctenos por teléfono o correo electrónico. ¡Esperamos poder servirle!',
     },
   },
-} as const; 
+} as const;

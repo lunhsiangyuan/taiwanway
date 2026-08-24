@@ -56,12 +56,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://taiwanwayny.com',
-    languages: {
-      'en-US': 'https://taiwanwayny.com',
-      'zh-TW': 'https://taiwanwayny.com',
-      'es': 'https://taiwanwayny.com',
-      'x-default': 'https://taiwanwayny.com',
-    },
   },
   openGraph: {
     siteName: 'TaiwanWay',
