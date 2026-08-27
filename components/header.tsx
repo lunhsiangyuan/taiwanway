@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/lib/i18n/language-context'
+import { UBER_ENABLED, UBER_URL, DOORDASH_URL } from '@/components/order-button'
 import { cn } from '@/lib/utils'
 
 const navItems = [
@@ -25,8 +26,6 @@ const languages = [
   { code: 'es', label: 'Espanol' },
 ] as const
 
-const UBER_URL = 'https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A'
-const DOORDASH_URL = 'https://www.doordash.com/store/taiwan-way-middletown-42843267/'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -128,27 +127,38 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Order CTA — 線上訂餐（合併 Uber Eats + DoorDash） */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="bg-primary text-primary-foreground hover:bg-accent font-body font-semibold rounded-full px-5 flex items-center gap-1.5">
+          {/* Order CTA — 線上訂餐（Uber Eats 暫停中，只剩 DoorDash 直連） */}
+          {!UBER_ENABLED ? (
+            <Button
+              asChild
+              className="bg-primary text-primary-foreground hover:bg-accent font-body font-semibold rounded-full px-5 flex items-center gap-1.5"
+            >
+              <a href={DOORDASH_URL} target="_blank" rel="noopener noreferrer">
                 🛵 {orderLabel}
-                <ChevronDown className="h-3.5 w-3.5" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="min-w-[11rem]">
-              <DropdownMenuItem asChild className="cursor-pointer font-body font-medium">
-                <a href={UBER_URL} target="_blank" rel="noopener noreferrer">
-                  <span className="mr-2 text-[#06C167]">●</span> Uber Eats
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className="cursor-pointer font-body font-medium">
-                <a href={DOORDASH_URL} target="_blank" rel="noopener noreferrer">
-                  <span className="mr-2 text-[#FF3008]">●</span> DoorDash
-                </a>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+              </a>
+            </Button>
+          ) : (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button className="bg-primary text-primary-foreground hover:bg-accent font-body font-semibold rounded-full px-5 flex items-center gap-1.5">
+                  🛵 {orderLabel}
+                  <ChevronDown className="h-3.5 w-3.5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="min-w-[11rem]">
+                <DropdownMenuItem asChild className="cursor-pointer font-body font-medium">
+                  <a href={UBER_URL} target="_blank" rel="noopener noreferrer">
+                    <span className="mr-2 text-[#06C167]">●</span> Uber Eats
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="cursor-pointer font-body font-medium">
+                  <a href={DOORDASH_URL} target="_blank" rel="noopener noreferrer">
+                    <span className="mr-2 text-[#FF3008]">●</span> DoorDash
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          )}
         </div>
 
         {/* Mobile Hamburger */}
@@ -211,6 +221,22 @@ export function Header() {
                   </Link>
                 ))}
                 <div className="mt-4">
+                  {!UBER_ENABLED ? (
+                    <Button
+                      asChild
+                      className="w-full bg-primary text-primary-foreground hover:bg-accent font-body font-semibold rounded-full flex items-center justify-center gap-1.5"
+                    >
+                      <a
+                        href={DOORDASH_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        🛵 {orderLabel}
+                      </a>
+                    </Button>
+                  ) : (
+                    <>
                   <Button
                     onClick={() => setOrderOpen(!orderOpen)}
                     className="w-full bg-primary text-primary-foreground hover:bg-accent font-body font-semibold rounded-full flex items-center justify-center gap-1.5"
@@ -239,6 +265,8 @@ export function Header() {
                         <span className="text-[#FF3008]">●</span> DoorDash
                       </a>
                     </div>
+                  )}
+                    </>
                   )}
                 </div>
               </nav>

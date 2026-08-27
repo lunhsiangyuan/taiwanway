@@ -335,8 +335,8 @@ export function JsonLd() {
         "priceRange": "$$",
         "currenciesAccepted": "USD",
         "paymentAccepted": "Cash, Credit Card",
+        // Uber Eats 於 2026-08-27 暫停，恢復時把該網址加回這個陣列
         "sameAs": [
-            "https://www.ubereats.com/store/taiwanway-middletown/sELndOIGX42P7drGC5jC1A",
             "https://www.doordash.com/store/taiwan-way-middletown-42843267/"
         ],
         "openingHoursSpecification": [

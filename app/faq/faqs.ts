@@ -17,11 +17,11 @@ export const faqs = [
   },
   {
     q_en: 'Do you offer delivery?',
-    a_en: 'Yes. TaiwanWay offers delivery and online ordering through both Uber Eats and DoorDash throughout Middletown and nearby Orange County areas.',
+    a_en: 'Yes. TaiwanWay offers delivery and online ordering through DoorDash throughout Middletown and nearby Orange County areas.',
     q_zh: '有外送嗎？',
-    a_zh: '有。我們透過 Uber Eats 和 DoorDash 提供外送與線上點餐服務，涵蓋 Middletown 及 Orange County 周邊地區。',
+    a_zh: '有。我們透過 DoorDash 提供外送與線上點餐服務，涵蓋 Middletown 及 Orange County 周邊地區。',
     q_es: '¿Ofrecen entrega a domicilio?',
-    a_es: 'Sí. TaiwanWay ofrece entrega y pedidos en línea a través de Uber Eats y DoorDash en Middletown y áreas cercanas del condado de Orange.',
+    a_es: 'Sí. TaiwanWay ofrece entrega y pedidos en línea a través de DoorDash en Middletown y áreas cercanas del condado de Orange.',
   },
   {
     q_en: 'What is TaiwanWay\u2019s signature dish?',
