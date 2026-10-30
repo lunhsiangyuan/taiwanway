@@ -7,7 +7,7 @@ import { useLanguage } from '@/lib/i18n/language-context'
 const businessHours = [
   { day: 'Monday', dayZh: '週一', dayEs: 'Lunes', hours: '11AM - 7PM' },
   { day: 'Tuesday', dayZh: '週二', dayEs: 'Martes', hours: '11AM - 7PM' },
-  { day: 'Wednesday', dayZh: '週三', dayEs: 'Miércoles', hours: 'Closed', closed: true },
+  { day: 'Wednesday', dayZh: '週三', dayEs: 'Miércoles', hours: '11AM - 7PM' },
   { day: 'Thursday', dayZh: '週四', dayEs: 'Jueves', hours: 'Closed', closed: true },
   { day: 'Friday', dayZh: '週五', dayEs: 'Viernes', hours: '11AM - 7PM' },
   { day: 'Saturday', dayZh: '週六', dayEs: 'Sábado', hours: '11AM - 7PM' },

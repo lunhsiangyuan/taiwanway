@@ -12,12 +12,12 @@ export function Footer() {
   const cafeName = lang === 'zh' ? 'TaiwanWay 臺灣味' : 'TaiwanWay'
   const blogLabel = lang === 'zh' ? '部落格' : 'Blog'
   const hoursLabel =
-    lang === 'zh' ? '週一 · 二 · 五 · 六　11:00am – 7:00pm'
-      : 'Mon · Tue · Fri · Sat　11:00am – 7:00pm'
+    lang === 'zh' ? '週一 · 二 · 三 · 五 · 六　11:00am – 7:00pm'
+      : 'Mon · Tue · Wed · Fri · Sat　11:00am – 7:00pm'
   const closedNote =
-    lang === 'zh' ? '週三 · 四 · 日 公休'
-      : lang === 'es' ? 'Cerrado Mié · Jue · Dom'
-        : 'Closed Wed · Thu · Sun'
+    lang === 'zh' ? '週四 · 日 公休'
+      : lang === 'es' ? 'Cerrado Jue · Dom'
+        : 'Closed Thu · Sun'
 
   const note = lang === 'zh'
     ? ['謝謝你來到這裡，', '希望我們的味道，', '能成為你生活的一部分。']

@@ -149,7 +149,7 @@ if (hasConsent('analytics')) {
 - **Address**: 26 South St, Middletown, NY
 - **Phone**: 845-381-1002
 - **Email**: taiwanway10940@gmail.com
-- **Hours**: Mon/Tue/Fri/Sat 11AM-7PM
+- **Hours**: Mon/Tue/Wed/Fri/Sat 11AM-7PM
 
 ## Common Tasks
 

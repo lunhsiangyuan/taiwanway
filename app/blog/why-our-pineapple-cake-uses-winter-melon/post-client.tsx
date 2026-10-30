@@ -82,10 +82,10 @@ export function PineappleCakePostClient() {
             <p className="font-body text-sm text-muted-foreground mb-4">
               TaiwanWay · 26 South St, Middletown, NY 10940 ·{' '}
               {language === 'zh'
-                ? '週一、二、五、六 11AM–7PM'
+                ? '週一、二、三、五、六 11AM–7PM'
                 : language === 'es'
-                  ? 'Lun / Mar / Vie / Sáb 11AM–7PM'
-                  : 'Mon / Tue / Fri / Sat 11AM–7PM'}
+                  ? 'Lun / Mar / Mié / Vie / Sáb 11AM–7PM'
+                  : 'Mon / Tue / Wed / Fri / Sat 11AM–7PM'}
             </p>
             <Link
               href="/blog"
