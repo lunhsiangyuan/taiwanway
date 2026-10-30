@@ -249,7 +249,7 @@ export function MenuFull() {
             </h3>
             <ul className="space-y-2 font-body text-sm text-foreground/75">
               <li>{lang === 'zh' ? '如有食物過敏，請於點餐時告知我們。' : lang === 'es' ? 'Si tienes alguna alergia, por favor avísanos al pedir.' : 'Please let us know of any food allergies when ordering.'}</li>
-              <li>{lang === 'zh' ? '供應時段：週一・二・五・六 11:00am–7:00pm（週三・四・日 公休）。' : 'Serving hours: Mon · Tue · Fri · Sat 11:00am–7:00pm (closed Wed · Thu · Sun).'}</li>
+              <li>{lang === 'zh' ? '供應時段：週一・二・三・五・六 11:00am–7:00pm（週四・日 公休）。' : 'Serving hours: Mon · Tue · Wed · Fri · Sat 11:00am–7:00pm (closed Thu · Sun).'}</li>
               <li>{lang === 'zh' ? '菜單內容與價格可能隨季節調整，以店內為準。' : 'Menu items and prices may vary by season; in-store menu prevails.'}</li>
             </ul>
           </div>
@@ -267,7 +267,7 @@ export function MenuFull() {
             </a>
             <p className="flex items-center gap-3">
               <Clock className="h-5 w-5 shrink-0 text-primary" />
-              {lang === 'zh' ? '週一・二・五・六　11:00am – 7:00pm' : 'Mon · Tue · Fri · Sat　11:00am – 7:00pm'}
+              {lang === 'zh' ? '週一・二・三・五・六　11:00am – 7:00pm' : 'Mon · Tue · Wed · Fri · Sat　11:00am – 7:00pm'}
             </p>
           </div>
         </section>

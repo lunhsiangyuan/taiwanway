@@ -304,7 +304,7 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
               <Phone className="h-4 w-4 text-primary" />(845) 381-1002
             </a>
             <p className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-primary" />{lang === 'zh' ? '週一・二・五・六 11AM–7PM' : 'Mon · Tue · Fri · Sat 11AM–7PM'}
+              <Clock className="h-4 w-4 text-primary" />{lang === 'zh' ? '週一・二・三・五・六 11AM–7PM' : 'Mon · Tue · Wed · Fri · Sat 11AM–7PM'}
             </p>
           </div>
         </section>

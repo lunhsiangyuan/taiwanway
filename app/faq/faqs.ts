@@ -9,11 +9,11 @@ export const faqs = [
   },
   {
     q_en: 'What are TaiwanWay\u2019s hours?',
-    a_en: 'We are open Monday, Tuesday, Friday, and Saturday from 11:00 AM to 7:00 PM. We are closed on Wednesdays, Thursdays, and Sundays.',
+    a_en: 'We are open Monday, Tuesday, Wednesday, Friday, and Saturday from 11:00 AM to 7:00 PM. We are closed on Thursdays and Sundays.',
     q_zh: '營業時間是？',
-    a_zh: '週一、週二、週五、週六 11:00 AM – 7:00 PM。週三、週四、週日公休。',
+    a_zh: '週一、週二、週三、週五、週六 11:00 AM – 7:00 PM。週四、週日公休。',
     q_es: '¿Cuál es el horario?',
-    a_es: 'Abrimos lunes, martes, viernes y sábado de 11:00 AM a 7:00 PM. Cerrado miércoles, jueves y domingo.',
+    a_es: 'Abrimos lunes, martes, miércoles, viernes y sábado de 11:00 AM a 7:00 PM. Cerrado jueves y domingo.',
   },
   {
     q_en: 'Do you offer delivery?',

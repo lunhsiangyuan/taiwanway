@@ -44,6 +44,12 @@ export function JsonLd() {
             },
             {
                 "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Wednesday",
+                "opens": "11:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "Friday",
                 "opens": "11:00",
                 "closes": "19:00"
@@ -342,6 +348,7 @@ export function JsonLd() {
         "openingHoursSpecification": [
             { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "11:00", "closes": "19:00" },
             { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "11:00", "closes": "19:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "11:00", "closes": "19:00" },
             { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "19:00" },
             { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:00", "closes": "19:00" }
         ]
