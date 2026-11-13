@@ -31,9 +31,13 @@ export async function POST(request: NextRequest) {
     const ext = file.name.split('.').pop() || 'jpg';
     const filename = `products/${timestamp}.${ext}`;
 
+    // @vercel/blob v1 起 addRandomSuffix 預設改為 false，且同路徑重複上傳
+    // 會直接丟錯（需 allowOverwrite）。這裡明確帶 true，維持升級前的行為，
+    // 同時避免同一毫秒內兩筆上傳撞檔名而失敗。
     const blob = await put(filename, file, {
       access: 'public',
       contentType: file.type,
+      addRandomSuffix: true,
     });
 
     return NextResponse.json({ url: blob.url });
