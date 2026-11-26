@@ -19,5 +19,6 @@ export const POSTERS: Record<string, string> = {
   'tang-ding-brown-sugar-longan-red-date': '/images/products/tang-ding-brown-sugar-longan-red-date.jpg',
   'huixiang-red-date-chips': '/images/products/huixiang-red-date-chips.jpg',
   'jin-he-tai-licorice-preserved-plum': '/images/products/jin-he-tai-licorice-preserved-plum.jpg',
+  'handmade-egg-rolls': '/images/products/handmade-egg-rolls.jpg',
 };
 
